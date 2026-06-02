@@ -1,0 +1,454 @@
+"use client";
+
+import React, { useState } from "react";
+import { Sun, Cloud, Moon } from "lucide-react";
+
+const services = [
+  { value: "Asthma Specialist", icon: "🫁" },
+  { value: "Bronchoscopy", icon: "🔬" },
+  { value: "Chronic Cough Management", icon: "💨" },
+  { value: "ILD Services", icon: "🩺" },
+  { value: "Sleep Apnea & Snoring", icon: "😴" },
+  { value: "COPD & Smoking Related Disease", icon: "🚭" },
+  { value: "Lung Cancer Screening", icon: "🎯" },
+  { value: "EBUS & Lymph Node Evaluation", icon: "🧬" },
+  { value: "Pleural Services", icon: "💙" },
+  { value: "Foreign Body Extraction", icon: "👶" },
+  { value: "Pollution Related Queries", icon: "🌫️" },
+  { value: "Sarcoidosis Management", icon: "❤️" },
+];
+
+const slots = [
+  { label: "Morning", time: "09:00 AM – 12:00 PM", icon: Sun },
+  { label: "Afternoon", time: "12:00 PM – 04:00 PM", icon: Cloud },
+  { label: "Evening", time: "04:00 PM – 07:00 PM", icon: Moon },
+];
+
+const defaultForm = {
+  name: "",
+  phone: "",
+  specialty: "Asthma Specialist",
+  date: "",
+  time: "",
+  notes: "",
+};
+
+/* ─── shared input class ─────────────────────────────── */
+const inputCls =
+  "w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15";
+
+const labelCls =
+  "mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]";
+
+export default function BookAppointmentContact() {
+  const [form, setForm] = useState(defaultForm);
+  const [submitted, setSubmitted] = useState(false);
+
+  const set = (k: keyof typeof defaultForm, v: string) =>
+    setForm((f) => ({ ...f, [k]: v }));
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setForm(defaultForm);
+    }, 3000);
+  };
+
+  return (
+    <section className="relative w-full overflow-hidden bg-[#f0f4f8] font-sans">
+      {/* ══ HERO ══════════════════════════════════════════════ */}
+      <div className="relative mx-auto max-w-7xl px-6 pt-14 pb-0 lg:px-16 lg:pt-20">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+          {/* Left copy */}
+          <div className="relative z-10 max-w-xl">
+            <span
+              className="mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-white"
+              style={{ background: "var(--gradient-health)" }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
+              Delhi Lung &amp; Sleep Centre
+            </span>
+
+            <h1
+              className="text-[2.6rem] font-extrabold leading-[1.08] text-[#0f172a] lg:text-[3.4rem]"
+              style={{ letterSpacing: "-0.04em" }}
+            >
+              Specialist Care
+              <br />
+              <span
+                className="bg-clip-text text-transparent"
+                style={{ backgroundImage: "var(--gradient-primary)" }}
+              >
+                At Your Service
+              </span>
+            </h1>
+
+            <p className="mt-5 text-base leading-relaxed text-[#64748b] lg:text-lg">
+              Breathe better, sleep well. Our pulmonology specialists deliver
+              world-class diagnostics and personalised treatment — right here in
+              Delhi.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#book"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                style={{
+                  background: "var(--gradient-primary)",
+                  boxShadow: "var(--shadow-primary)",
+                }}
+              >
+                Book Appointment
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white px-6 py-3 text-sm font-semibold text-[#0f172a] transition-colors hover:bg-slate-50"
+              >
+                Learn More
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="mt-10 flex flex-wrap gap-6 border-t border-[#e2e8f0] pt-8">
+              {[
+                { value: "12+", label: "Specialties" },
+                { value: "10k+", label: "Patients Treated" },
+                { value: "15 yr", label: "Experience" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <p
+                    className="text-2xl font-extrabold tracking-tight"
+                    style={{ color: "var(--primary)" }}
+                  >
+                    {s.value}
+                  </p>
+                  <p className="mt-0.5 text-xs font-medium text-[#64748b]">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right visual */}
+          <div className="relative flex items-end justify-center lg:justify-end">
+            <div
+              className="absolute right-0 top-0 h-[420px] w-[420px] rounded-[40px] lg:h-[500px] lg:w-[500px]"
+              style={{
+                background: "linear-gradient(135deg,#1fa8e8,#6dbb45)",
+                opacity: 0.18,
+              }}
+            />
+            <div
+              className="absolute right-4 top-4 h-[400px] w-[400px] rounded-[36px] lg:h-[480px] lg:w-[480px]"
+              style={{
+                background:
+                  "linear-gradient(135deg,#0c7dc2 0%,#1fa8e8 60%,#6dbb45 100%)",
+              }}
+            />
+            <div className="relative z-10 flex h-[380px] w-[340px] items-end justify-center overflow-hidden rounded-[28px] lg:h-[460px] lg:w-[420px]">
+              <div className="absolute inset-0 flex flex-col items-center justify-end pb-0">
+                <div className="flex w-full justify-center gap-4">
+                  <svg
+                    viewBox="0 0 120 220"
+                    className="h-[200px] w-[100px] lg:h-[260px] lg:w-[120px]"
+                    fill="none"
+                  >
+                    <ellipse
+                      cx="60"
+                      cy="38"
+                      rx="28"
+                      ry="30"
+                      fill="white"
+                      opacity="0.9"
+                    />
+                    <rect
+                      x="18"
+                      y="68"
+                      width="84"
+                      height="130"
+                      rx="20"
+                      fill="white"
+                      opacity="0.9"
+                    />
+                    <rect
+                      x="30"
+                      y="100"
+                      width="16"
+                      height="60"
+                      rx="8"
+                      fill="white"
+                      opacity="0.6"
+                    />
+                    <rect
+                      x="74"
+                      y="100"
+                      width="16"
+                      height="60"
+                      rx="8"
+                      fill="white"
+                      opacity="0.6"
+                    />
+                  </svg>
+                  <svg
+                    viewBox="0 0 120 220"
+                    className="h-[200px] w-[100px] lg:h-[260px] lg:w-[120px]"
+                    fill="none"
+                  >
+                    <ellipse
+                      cx="60"
+                      cy="38"
+                      rx="26"
+                      ry="28"
+                      fill="white"
+                      opacity="0.85"
+                    />
+                    <rect
+                      x="20"
+                      y="66"
+                      width="80"
+                      height="130"
+                      rx="20"
+                      fill="white"
+                      opacity="0.85"
+                    />
+                    <rect
+                      x="28"
+                      y="98"
+                      width="16"
+                      height="60"
+                      rx="8"
+                      fill="white"
+                      opacity="0.55"
+                    />
+                    <rect
+                      x="76"
+                      y="98"
+                      width="16"
+                      height="60"
+                      rx="8"
+                      fill="white"
+                      opacity="0.55"
+                    />
+                  </svg>
+                </div>
+                <p className="mb-4 text-xs font-medium text-white/60 tracking-widest uppercase">
+                  Replace with &lt;Image /&gt;
+                </p>
+              </div>
+            </div>
+            <div className="absolute right-0 top-8 lg:-right-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-dashed border-white/60 bg-white/20 backdrop-blur-sm lg:h-16 lg:w-16">
+                <span className="text-2xl">👨‍⚕️</span>
+              </div>
+            </div>
+            <div className="absolute bottom-24 right-0 lg:-right-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-dashed border-white/60 bg-white/20 backdrop-blur-sm lg:h-16 lg:w-16">
+                <span className="text-2xl">👩‍⚕️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ══ BOOKING CARD ══════════════════════════════════════ */}
+      <div
+        id="book"
+        className="relative z-20 mx-auto mt-10 max-w-7xl px-4 pb-14 lg:px-8"
+      >
+        <div className="rounded-3xl bg-white px-6 py-8 shadow-xl shadow-slate-200/80 lg:px-10 lg:py-10">
+          <p className="mb-8 text-center text-xl font-bold tracking-tight text-[#0f172a] lg:text-2xl">
+            Book An Appointment Today
+          </p>
+
+          {submitted ? (
+            <div className="flex flex-col items-center gap-3 py-6 text-center">
+              <div
+                className="flex h-16 w-16 items-center justify-center rounded-full text-white text-3xl"
+                style={{ background: "var(--gradient-health)" }}
+              >
+                ✓
+              </div>
+              <p className="text-lg font-semibold text-[#0f172a]">
+                Request sent!
+              </p>
+              <p className="text-sm text-[#64748b]">
+                Our team will contact you shortly to confirm.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Row 1 — Name + Phone */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label className={labelCls}>Full Name</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Your full name"
+                    value={form.name}
+                    onChange={(e) => set("name", e.target.value)}
+                    className={inputCls}
+                  />
+                </div>
+                <div>
+                  <label className={labelCls}>Phone Number</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+91 XXXXX XXXXX"
+                    value={form.phone}
+                    onChange={(e) => set("phone", e.target.value)}
+                    className={inputCls}
+                  />
+                </div>
+              </div>
+
+              {/* Row 2 — Service grid */}
+              <div>
+                <label className={labelCls}>Select Treatment</label>
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                  {services.map((s) => {
+                    const active = form.specialty === s.value;
+                    return (
+                      <button
+                        key={s.value}
+                        type="button"
+                        onClick={() => set("specialty", s.value)}
+                        className={`flex flex-col gap-1.5 rounded-xl border p-3 text-left transition-all duration-200 ${
+                          active
+                            ? "border-[#1fa8e8] bg-[#1fa8e8]/[0.06] shadow-sm"
+                            : "border-[#e2e8f0] bg-white hover:border-[#1fa8e8]/50 hover:bg-slate-50"
+                        }`}
+                      >
+                        <span className="text-xl leading-none">{s.icon}</span>
+                        <span
+                          className={`text-[11px] font-semibold leading-snug ${
+                            active ? "text-[#0c7dc2]" : "text-[#475569]"
+                          }`}
+                        >
+                          {s.value}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Row 3 — Date + Time slots */}
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                {/* Date */}
+                <div>
+                  <label className={labelCls}>Appointment Date</label>
+                  <div className="relative">
+                    <svg
+                      className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#1fa8e8]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <input
+                      type="date"
+                      required
+                      value={form.date}
+                      onChange={(e) => set("date", e.target.value)}
+                      className={`${inputCls} pl-10`}
+                    />
+                  </div>
+                </div>
+
+                {/* Time slots */}
+                <div>
+                  <label className={labelCls}>Preferred Time</label>
+                  <div className="grid grid-cols-3 gap-2">
+                    {slots.map((slot) => {
+                      const Icon = slot.icon;
+                      const active = form.time === slot.label;
+                      return (
+                        <button
+                          key={slot.label}
+                          type="button"
+                          onClick={() => set("time", slot.label)}
+                          className={`flex flex-col items-center gap-1.5 rounded-xl border py-3 px-2 transition-all duration-200 ${
+                            active
+                              ? "border-[#6dbb45] bg-[#6dbb45]/[0.06] shadow-sm"
+                              : "border-[#e2e8f0] bg-white hover:border-[#6dbb45]/50 hover:bg-slate-50"
+                          }`}
+                        >
+                          <Icon
+                            className={`h-4 w-4 ${active ? "text-[#6dbb45]" : "text-[#94a3b8]"}`}
+                          />
+                          <span
+                            className={`text-[11px] font-semibold ${
+                              active ? "text-[#3a7a1a]" : "text-[#475569]"
+                            }`}
+                          >
+                            {slot.label}
+                          </span>
+                          <span className="text-center text-[10px] leading-tight text-[#94a3b8]">
+                            {slot.time}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 4 — Notes */}
+              <div>
+                <label className={labelCls}>
+                  Symptoms / Notes{" "}
+                  <span className="normal-case tracking-normal font-normal text-[#94a3b8]">
+                    (optional)
+                  </span>
+                </label>
+                <textarea
+                  rows={2}
+                  placeholder="Describe your symptoms briefly…"
+                  value={form.notes}
+                  onChange={(e) => set("notes", e.target.value)}
+                  className={`${inputCls} resize-none`}
+                />
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="w-full rounded-2xl py-3.5 text-sm font-bold tracking-wide text-white transition-all hover:opacity-90 active:scale-[0.985]"
+                style={{
+                  background: "var(--gradient-primary)",
+                  boxShadow: "var(--shadow-primary)",
+                }}
+              >
+                Book Now
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
