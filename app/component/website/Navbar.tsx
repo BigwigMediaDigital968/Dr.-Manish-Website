@@ -65,7 +65,7 @@ export default function Navbar() {
               {/* Logo Image */}
               <div className="relative flex-shrink-0">
                 <Image
-                  src="/logo.png"
+                  src="/logo-new.png"
                   alt="Dr Manish Aggarwal Clinic Logo"
                   width={350}
                   height={80}

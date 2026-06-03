@@ -1,7 +1,13 @@
+import Footer from "../component/website/Footer";
+import Navbar from "../component/website/Navbar";
+import ServiceHero from "./component/ServiceHero";
+
 export default function Contact() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f0f4f8]">
-      <h1 className="text-3xl font-bold text-gray-700">Contact Page</h1>
-    </div>
+    <>
+      <Navbar />
+      <ServiceHero />
+      <Footer />
+    </>
   );
 }
