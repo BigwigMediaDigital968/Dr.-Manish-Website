@@ -312,7 +312,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full mt-20">
+    <footer className="relative w-full mt-28">
       {/* ── wave top shape ─────────────────────────────────── */}
       <div className="relative bg-transparent">
         {/* The pointed mountain / wave svg */}
@@ -360,7 +360,7 @@ export default function Footer() {
               }}
             />
             <Image
-              src="/favicon.jpeg"
+              src="/footer-logo.jpeg"
               alt="Delhi Lung & Sleep Centre"
               width={100}
               height={100}

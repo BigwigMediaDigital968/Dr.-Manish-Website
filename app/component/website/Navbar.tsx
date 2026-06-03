@@ -48,12 +48,12 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out px-4 py-4 md:px-8">
+      <header className="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out px-4 py-2 md:px-8">
         <div
           className={`mx-auto max-w-7xl transition-all duration-500 ease-in-out ${
             scrolled
-              ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-sky-100/40 rounded-full py-2.5 px-5 md:px-7 border border-white/50 scale-[0.99]"
-              : "bg-white/70 backdrop-blur-md shadow-sm rounded-[32px] py-4.5 px-6 md:px-8 border border-white/30"
+              ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-sky-100/40 rounded-full py-2 px-5 md:px-7 border border-white/50 scale-[0.99]"
+              : "bg-white/70 backdrop-blur-md shadow-sm rounded-[32px] py-3.5 px-6 md:px-8 border border-white/30"
           }`}
         >
           <div className="flex items-center justify-between">
@@ -81,7 +81,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setActiveSection(link.name)}
-                  className={`relative px-4 py-2 rounded-full text-md font-semibold tracking-wide transition-all duration-300 ${
+                  className={`relative px-4 py-2 rounded-full text-md tracking-wide transition-all duration-300 ${
                     isActiveLink(link.href)
                       ? "text-[#1fa8e8]"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/50"
