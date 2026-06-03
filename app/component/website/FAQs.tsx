@@ -23,7 +23,7 @@ export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
   return (
     <section
       id="faqs"
-      className="relative py-14 px-4 bg-slate-50 overflow-hidden text-slate-900 border-t border-slate-100"
+      className="relative py-14 px-4 overflow-hidden text-slate-900 border-t border-slate-100"
     >
       {/* Premium Ambient Background Glows */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[#1fa8e8]/5 rounded-full blur-[100px] -z-10" />

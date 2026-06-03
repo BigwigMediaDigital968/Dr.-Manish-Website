@@ -4,15 +4,26 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Calendar, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Popup from "./Popup";
+import { usePathname } from "next/navigation";
 
 /* ==========================================
    2. MAIN HEADER NAVBAR COMPONENT (Exported)
    ========================================== */
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
+
+  const isActiveLink = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname.startsWith(href);
+  };
 
   // Monitor scroll height to transform capsule styling
   useEffect(() => {
@@ -71,13 +82,13 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setActiveSection(link.name)}
                   className={`relative px-4 py-2 rounded-full text-md font-semibold tracking-wide transition-all duration-300 ${
-                    activeSection === link.name
+                    isActiveLink(link.href)
                       ? "text-[#1fa8e8]"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/50"
                   }`}
                 >
                   {link.name}
-                  {activeSection === link.name && (
+                  {isActiveLink(link.href) && (
                     <span className="absolute bottom-1.5 left-4.5 right-4.5 h-0.5 bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] rounded-full" />
                   )}
                 </a>

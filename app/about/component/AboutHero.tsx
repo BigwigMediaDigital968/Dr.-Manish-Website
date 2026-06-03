@@ -1,0 +1,79 @@
+"use client";
+
+import React from "react";
+import {
+  Play,
+  Clock,
+  ShieldAlert,
+  PhoneCall,
+  ArrowRight,
+  Sparkles,
+  Activity,
+} from "lucide-react";
+
+interface AboutHeroProps {
+  onContactClick?: () => void;
+  onBookClick?: () => void;
+}
+
+export default function AboutHero({
+  onContactClick = () => (window.location.href = "/contact"),
+}: AboutHeroProps) {
+  return (
+    <section
+      id="about-hero"
+      className="=min-h-screen pt-36 pb-14 flex flex-col justify-center overflow-x-hidden bg-gradient-to-r from-[#1fa8e8] via-[#0c7dc2] to-[#1289cf] text-white"
+    >
+      {/* Main Grid: Info text Left & Clinician Cutout Right */}
+      <div className="mx-auto max-w-7xl w-full px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        {/* ================= LEFT PANEL: HEADLINE & CONTENT ================= */}
+        <div className="lg:col-span-7 space-y-6 text-center lg:text-left flex flex-col justify-center">
+          {/* Subtitle Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-wider self-center lg:self-start">
+            <Activity className="w-3.5 h-3.5 text-[#6dbb45]" /> Caring For Your
+            Breath & Sleep
+          </div>
+
+          {/* Large Headliner */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6.5xl font-extrabold tracking-tight leading-[1.12]">
+            Best Care For Your <br />
+            <span className="text-emerald-100">Good Health.</span>
+          </h1>
+
+          {/* Subtext Paragraph */}
+          <p className="text-white/85 text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+            At Delhi Lung & Sleep Centre, Dr. Manish Aggarwal and our expert
+            chest physicians deliver the highest standards of diagnostic
+            precision, advanced intervention, and comprehensive sleep disorders
+            management.
+          </p>
+
+          {/* Primary Action Button linking to Contact */}
+          <div className="pt-2 flex justify-center lg:justify-start">
+            <button
+              onClick={onContactClick}
+              className="group w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-extrabold text-sm tracking-wide shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              Contact Our Clinic
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+            </button>
+          </div>
+        </div>
+
+        {/* ================= RIGHT PANEL: CLINICIAN PORTRAIT CUTOUT ================= */}
+        <div className="lg:col-span-5 relative flex justify-center lg:justify-end select-none h-full min-h-[350px] lg:min-h-[460px] self-end">
+          {/* Glowing Aura ring backdrop */}
+          <div className="absolute bottom-10 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-4 w-72 h-72 sm:w-96 sm:h-96 bg-white/5 border border-white/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
+          {/* Clinician Cutout Frame pointing inwards exactly resembling image_598ec4.jpg */}
+          <img
+            src="/about-hero.png"
+            alt="Male Chest Physician Delhi"
+            className="relative object-cover object-top h-[320px] lg:h-[450px] w-auto rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] shrink-0 z-10"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
