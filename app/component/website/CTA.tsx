@@ -15,8 +15,6 @@ export default function CTA() {
 
         {/* Simplified Brand Gradient Banner Band */}
         <div className="max-w-7xl mx-auto rounded-[32px] bg-gradient-to-r from-[#1fa8e8] via-[#0c7dc2] to-[#6dbb45] text-white overflow-hidden shadow-xl relative">
-          {/* Subtle geometric overlay for clinical depth */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:3rem_3rem]" />
           <div className="absolute -top-12 -left-12 w-72 h-72 bg-white/5 rounded-full blur-2xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

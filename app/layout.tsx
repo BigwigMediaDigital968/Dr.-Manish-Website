@@ -17,7 +17,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Delhi Lung & Sleep Centre",
-  description: "Advanced Pulmonary & Sleep Care Services in Delhi",
+  description: "Advanced Care for Asthma, Breathlessness & Sleep Disorders",
   icons: {
     icon: "/favicon.jpeg",
   },

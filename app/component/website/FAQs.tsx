@@ -14,10 +14,10 @@ interface FAQsProps {
 }
 
 export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
-  const [openId, setOpenId] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const toggleFaq = (id: number) => {
-    setOpenId(openId === id ? null : id);
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
@@ -48,11 +48,11 @@ export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
         {/* --- EXPANDABLE ACCORDION CONTAINER --- */}
         <div className="space-y-4">
           {faqs.length > 0 ? (
-            faqs.map((faq) => {
-              const isOpen = openId === faq.id;
+            faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
               return (
                 <div
-                  key={faq.id}
+                  key={faq.question}
                   className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${
                     isOpen
                       ? "border-[#1fa8e8]/30 shadow-lg shadow-sky-100/30 ring-1 ring-[#1fa8e8]/10"
@@ -61,7 +61,7 @@ export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
                 >
                   {/* Accordion Trigger Button Header */}
                   <button
-                    onClick={() => toggleFaq(faq.id)}
+                    onClick={() => toggleFaq(index)}
                     className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 focus:outline-none group cursor-pointer"
                     aria-expanded={isOpen}
                   >
@@ -107,16 +107,6 @@ export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
                         {faq.answer}
                       </p>
-
-                      {/* Badge representation of context category inside the open FAQ */}
-                      <div className="flex items-center gap-1.5 mt-4">
-                        <span className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md bg-[#6dbb45]/10 text-[#4d8f2d]">
-                          {faq.category}
-                        </span>
-                        <span className="text-[10px] text-slate-400 font-bold">
-                          &bull; Verified Pulmonology Resource
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>

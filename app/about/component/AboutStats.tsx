@@ -58,11 +58,11 @@ export default function AboutStats({
       id="clinic-stats"
       className="relative py-20 px-4 overflow-hidden text-slate-900 border-t border-slate-100"
     >
-      {/* Full-Section Premium Clinical Background Image */}
+      {/* Background Image */}
       <div
-        className="inset-0 bg-cover bg-center bg-no-repeat -z-30 fixed opacity-55"
+        className="absolute inset-0 -z-30 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/about-fixed.png')",
+          backgroundImage: "url('/about-stats.png')",
         }}
       />
 
@@ -71,16 +71,16 @@ export default function AboutStats({
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         {/* --- HEADER BLOCK --- */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-[#1fa8e8]/20">
-            <HeartPulse className="w-3.5 h-3.5 animate-pulse" /> Clinic
-            Benchmarks
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-white">
+            <HeartPulse className="w-3.5 h-3.5 animate-pulse text-indigo-400" />{" "}
+            Clinic Benchmarks
           </div>
 
-          <h2 className="text-3xl sm:text-4.5xl font-black tracking-tight text-slate-950 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
             Our Clinical Accomplishments
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-semibold">
+          <p className="text-slate-100 text-sm sm:text-base leading-relaxed">
             Delhi Lung & Sleep Centre operates under absolute precision and
             diagnostic standards, ensuring our patients receive reliable
             pulmonary care pathways.
@@ -118,7 +118,7 @@ export default function AboutStats({
                   </div>
 
                   {/* Metric Sub-text Details */}
-                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-medium">
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function AboutStats({
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
               Leading the Standard for Pulmonary Recovery
             </h3>
-            <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-semibold">
+            <p className="text-slate-500 text-sm md:text-md leading-relaxed">
               We focus heavily on outcome metrics. Over 99% of our sleep apnea
               and respiratory checkups lead to stable treatment cycles within 30
               days.

@@ -26,9 +26,7 @@ import Image from "next/image";
 export default function Speciality() {
   const router = useRouter();
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<
-    "All" | "Pulmonary" | "Interventional" | "Pediatric & General"
-  >("All");
+  const [activeTab, setActiveTab] = useState<"All" | "Pulmonary">("All");
   const autoSlideRef = useRef<NodeJS.Timeout | null>(null);
 
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -52,99 +50,94 @@ export default function Speciality() {
 
   const specialities = [
     {
-      id: "asthma",
-      title: "Asthma Specialist",
-      desc: "Expert diagnostic testing, spirometry evaluations, and personalized long-term asthma action plans for absolute control.",
+      id: "asthma-diagnosis",
+      title: "Asthma Diagnosis & Treatment",
+      desc: "Comprehensive asthma evaluation with advanced diagnostics, personalized medication plans, and long-term respiratory care.",
       category: "Pulmonary",
       icon: Wind,
       color: "#1fa8e8",
       badge: "Advanced Care",
     },
     {
-      id: "bronchoscopy",
-      title: "Bronchoscopy Specialist",
-      desc: "Advanced minimally invasive diagnostic & therapeutic airway procedures to examine lung pathways precisely.",
-      category: "Interventional",
-      icon: Compass,
+      id: "allergy-wheezing",
+      title: "Allergy & Wheezing Management",
+      desc: "Expert assessment of allergic airway diseases and wheezing disorders with tailored treatment strategies.",
+      category: "Pulmonary",
+      icon: Activity,
       color: "#0c7dc2",
       badge: "Specialized",
     },
     {
       id: "chronic-cough",
-      title: "Chronic Cough Management",
-      desc: "Comprehensive multi-trigger diagnostic assessments to target and resolve prolonged, persistent cough conditions.",
+      title: "Chronic Cough Evaluation",
+      desc: "Detailed investigation and management of persistent cough through comprehensive pulmonary diagnostics.",
       category: "Pulmonary",
-      icon: Activity,
+      icon: Compass,
       color: "#1fa8e8",
-      badge: "Expert Opinion",
+      badge: "Expert Care",
     },
     {
-      id: "ild",
-      title: "ILD Services",
-      desc: "Comprehensive protocols for Interstitial Lung Diseases, tracking diffusion capacity, high-resolution chest imaging & management.",
+      id: "pft",
+      title: "Pulmonary Function Test (PFT)",
+      desc: "Advanced pulmonary function analysis to accurately measure lung capacity, airflow, and respiratory performance.",
       category: "Pulmonary",
       icon: Layers,
       color: "#0c7dc2",
+      badge: "Diagnostic",
     },
     {
-      id: "sleep-apnea",
-      title: "Sleep Apnea & Snoring",
-      desc: "Comprehensive overnight sleep studies (Polysomnography) paired with personalized PAP/CPAP therapeutic setups.",
+      id: "spirometry",
+      title: "Spirometry Testing",
+      desc: "Quick and precise spirometry evaluations for asthma, COPD, and other chronic respiratory conditions.",
       category: "Pulmonary",
-      icon: Moon,
-      color: "#6dbb45",
-      badge: "Sleep Lab",
+      icon: Award,
+      color: "#1fa8e8",
+      badge: "Essential Test",
     },
     {
-      id: "copd-cancer",
-      title: "COPD & Lung Cancer Screening",
-      desc: "Focused screening plans for smokers and COPD sufferers incorporating low-dose CT guidance and early detection biomarkers.",
+      id: "inhaler-technique",
+      title: "Inhaler Technique Optimization",
+      desc: "Professional guidance to ensure proper inhaler usage and maximize medication effectiveness.",
+      category: "Pulmonary",
+      icon: Heart,
+      color: "#6dbb45",
+      badge: "Patient Education",
+    },
+    {
+      id: "severe-asthma",
+      title: "Severe Asthma Management",
+      desc: "Specialized treatment protocols for difficult-to-control and severe asthma conditions.",
       category: "Pulmonary",
       icon: ShieldAlert,
       color: "#4d8f2d",
-      badge: "High Risk Care",
+      badge: "Advanced Therapy",
     },
     {
-      id: "ebus",
-      title: "EBUS Service",
-      desc: "Endobronchial Ultrasound for highly accurate mediastinal lymph node staging and rapid chest malignancy evaluation.",
-      category: "Interventional",
-      icon: Award,
-      color: "#1fa8e8",
-      badge: "State of Art",
-    },
-    {
-      id: "pleural",
-      title: "Pleural Services",
-      desc: "Advanced diagnostic & palliative management of Pleural Effusion and Pneumothorax via pigtail insertion or chest drains.",
-      category: "Interventional",
-      icon: Heart,
-      color: "#0c7dc2",
-    },
-    {
-      id: "kids-foreign-body",
-      title: "Foreign Body Extraction in Kids",
-      desc: "Urgent and delicate interventional pediatric bronchoscopy for quick, safe extraction of aspirated items in young children.",
-      category: "Pediatric & General",
-      icon: Baby,
+      id: "nebulization",
+      title: "Nebulization Guidance",
+      desc: "Expert recommendations and supervised nebulization therapy for acute and chronic respiratory issues.",
+      category: "Pulmonary",
+      icon: Moon,
       color: "#6dbb45",
-      badge: "Urgent Intervention",
+      badge: "Supportive Care",
     },
     {
-      id: "pollution-queries",
-      title: "Pollution Related Queries",
-      desc: "Preventative care, custom anti-pollution routines, and tailored lung defenses against Delhi’s toxic particulate cycles.",
-      category: "Pediatric & General",
+      id: "pollution-related",
+      title: "Pollution-Related Breathing Problems",
+      desc: "Preventive and therapeutic care for respiratory issues triggered by air pollution and environmental exposure.",
+      category: "Pulmonary",
       icon: Cloud,
       color: "#4d8f2d",
+      badge: "Delhi Care",
     },
     {
-      id: "sarcoidosis",
-      title: "Sarcoidosis Comprehensive Care",
-      desc: "Multi-organ assessment and specialized immuno-modulator therapy courses for systematic sarcoidosis stabilization.",
-      category: "Pediatric & General",
-      icon: FileSpreadsheet,
+      id: "exercise-induced-asthma",
+      title: "Exercise-Induced Asthma Care",
+      desc: "Targeted diagnosis and treatment plans for breathing difficulties associated with physical activity.",
+      category: "Pulmonary",
+      icon: Baby,
       color: "#1fa8e8",
+      badge: "Sports Lung Care",
     },
   ];
 
@@ -268,16 +261,14 @@ export default function Speciality() {
 
             <div className="lg:col-span-8 space-y-6">
               <h4 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                Welcome to Dr. Manish Aggarwal's Pulmonology & Interventional
-                Lung Clinic
+                Asthma & Allergy Clinic in Delhi
               </h4>
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                At Delhi Lung & Sleep Centre, Dr. Manish Aggarwal provides
-                diagnostic solutions for intricate bronchial path obstacles,
-                malignant lung staging, child-focused foreign body extractions,
-                and critical chronic asthma or sleep apnea anomalies. Equipped
-                with advanced technology like EBUS, CT-guided diagnostics, and
-                high-tier spirometry.
+                Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in
+                Pitampura, Delhi, provides comprehensive care for asthma,
+                allergy-related breathing problems, wheezing, chronic cough,
+                chest tightness, and recurrent respiratory symptoms in children
+                and adults.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="flex items-start gap-2.5">
@@ -285,7 +276,7 @@ export default function Speciality() {
                     ✓
                   </span>
                   <span className="text-xs font-bold text-slate-700">
-                    Pioneering EBUS Staging Diagnostics
+                    Personalized Asthma Control Plans
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
@@ -327,14 +318,7 @@ export default function Speciality() {
 
             {/* Filtering Tabs */}
             <div className="flex flex-wrap items-center justify-center gap-1.5 p-1 bg-slate-100/80 backdrop-blur-md rounded-2xl self-center md:self-end">
-              {(
-                [
-                  "All",
-                  "Pulmonary",
-                  "Interventional",
-                  "Pediatric & General",
-                ] as const
-              ).map((tab) => (
+              {(["All", "Pulmonary"] as const).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}

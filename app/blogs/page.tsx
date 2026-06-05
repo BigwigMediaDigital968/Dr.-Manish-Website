@@ -1,7 +1,17 @@
+import CTA from "../component/website/CTA";
+import Footer from "../component/website/Footer";
+import Navbar from "../component/website/Navbar";
+import BlogGrid from "./component/BlogGrid";
+import BlogHero from "./component/BlogHero";
+
 export default function Blogs() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800">Blogs Page</h1>
-    </div>
+    <>
+      <Navbar />
+      <BlogHero />
+      <BlogGrid />
+      <CTA />
+      <Footer />
+    </>
   );
 }

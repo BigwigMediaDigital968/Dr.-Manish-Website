@@ -12,6 +12,9 @@ import { homeFaqs } from "./faqsData";
 import ClinicFeatures from "./component/website/ClinicFeatures";
 import Navbar from "./component/website/Navbar";
 import Footer from "./component/website/Footer";
+import WhyChooseUs from "./component/website/WhyChooseUs";
+import Different from "./component/website/Different";
+import LungDisease from "./component/website/LungDisease";
 
 export default function Home() {
   return (
@@ -21,7 +24,10 @@ export default function Home() {
       <Speciality />
       <About />
       <FeaturedService />
+      <WhyChooseUs />
+      <Different />
       <CTA />
+      {/* <LungDisease /> */}
       <Testimonials />
       <AppointmentProcess />
       <BookAppointment />

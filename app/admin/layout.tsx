@@ -1,133 +1,64 @@
-// app/admin/layout.tsx
+"use client";
 
-import type { ReactNode } from "react";
-import Link from "next/link";
-import {
-  LayoutDashboard,
-  CalendarDays,
-  Users,
-  UserRound,
-  Settings,
-  LogOut,
-  Stethoscope,
-} from "lucide-react";
+import { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import AdminSidebar from "./components/AdminSidebar";
+import AdminHeader from "./components/AdminHeader";
 
-interface AdminLayoutProps {
-  children: ReactNode;
-}
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
 
-const sidebarLinks = [
-  {
-    label: "Dashboard",
-    href: "/admin",
-    icon: LayoutDashboard,
-  },
-  {
-    label: "Appointments",
-    href: "/admin/appointments",
-    icon: CalendarDays,
-  },
-  {
-    label: "Doctors",
-    href: "/admin/doctors",
-    icon: Stethoscope,
-  },
-  {
-    label: "Patients",
-    href: "/admin/patients",
-    icon: Users,
-  },
-  {
-    label: "Profile",
-    href: "/admin/profile",
-    icon: UserRound,
-  },
-  {
-    label: "Settings",
-    href: "/admin/settings",
-    icon: Settings,
-  },
-];
+  const [loading, setLoading] = useState(true);
 
-export default function AdminLayout({ children }: AdminLayoutProps) {
+  useEffect(() => {
+    if (pathname === "/admin/login") {
+      setLoading(false);
+      return;
+    }
+
+    const auth = localStorage.getItem("admin-auth");
+
+    if (auth !== "true") {
+      router.replace("/admin/login");
+      return;
+    }
+
+    setLoading(false);
+  }, [pathname, router]);
+
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
+
+  if (pathname === "/admin/login") {
+    return children;
+  }
+
   return (
-    <div className="min-h-screen bg-slate-50 flex">
+    <div className="bg-slate-100">
       {/* Sidebar */}
-      <aside className="hidden lg:flex w-72 bg-white border-r border-slate-200 flex-col">
-        {/* Logo */}
-        <div className="h-20 border-b border-slate-200 px-6 flex items-center">
-          <div>
-            <h2 className="text-xl font-black text-slate-900">Delhi Lung</h2>
-            <p className="text-xs text-slate-500 font-medium">Admin Panel</p>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 px-4 py-6">
-          <ul className="space-y-2">
-            {sidebarLinks.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-all"
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span className="font-semibold text-sm">{item.label}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-
-        {/* Logout */}
-        <div className="p-4 border-t border-slate-200">
-          <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 transition-all cursor-pointer">
-            <LogOut className="w-5 h-5" />
-            <span className="font-semibold text-sm">Logout</span>
-          </button>
-        </div>
+      <aside className="fixed left-0 top-0 h-screen w-64 z-50">
+        <AdminSidebar />
       </aside>
 
-      {/* Main Section */}
-      <div className="flex-1 flex flex-col">
-        {/* Top Navbar */}
-        <header className="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-4 md:px-8">
-          <div>
-            <h1 className="text-xl font-bold text-slate-900">
-              Admin Dashboard
-            </h1>
-            <p className="text-sm text-slate-500">Welcome back</p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <button className="relative">
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full" />
-              🔔
-            </button>
-
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-sky-500 to-emerald-500 flex items-center justify-center text-white font-bold">
-                A
-              </div>
-
-              <div className="hidden md:block">
-                <p className="text-sm font-semibold text-slate-900">
-                  Admin User
-                </p>
-                <p className="text-xs text-slate-500">Administrator</p>
-              </div>
-            </div>
-          </div>
+      {/* Right Section */}
+      <div className="ml-64">
+        {/* Header */}
+        <header className="fixed top-0 left-64 right-0 h-16 bg-white border-b border-slate-200 z-40">
+          <AdminHeader />
         </header>
 
-        {/* Page Content */}
-        <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
-          {children}
-        </main>
+        {/* Main Content */}
+        <main className="pt-24 p-6 min-h-screen">{children}</main>
       </div>
     </div>
   );

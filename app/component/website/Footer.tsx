@@ -264,18 +264,14 @@ import {
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Departments", href: "/departments" },
-  { label: "Doctors", href: "/doctors" },
-  { label: "Timetable", href: "/timetable" },
-  { label: "Appointment", href: "/appointment" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "#" },
 ];
 
 const supportLinks = [
   { label: "Blog", href: "/blog" },
   { label: "Contact Us", href: "/contact" },
-  { label: "FAQs", href: "/faqs" },
-  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms and Conditions", href: "/terms" },
 ];
 
@@ -297,19 +293,6 @@ const contactItems = [
 
 export default function Footer() {
   const pathname = usePathname();
-  const [email, setEmail] = useState("");
-  const [subState, setSubState] = useState<"idle" | "loading" | "done">("idle");
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubState("loading");
-    setTimeout(() => {
-      setSubState("done");
-      setEmail("");
-      setTimeout(() => setSubState("idle"), 3500);
-    }, 1200);
-  };
 
   return (
     <footer className="relative w-full mt-28">
@@ -379,7 +362,7 @@ export default function Footer() {
         }}
       >
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1.6fr] lg:gap-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_1fr_1fr_1.6fr] lg:gap-8">
             {/* Col 1 — brand + contact */}
             <div
               className="animate-[footerFadeUp_0.6s_ease_both]"
@@ -430,107 +413,65 @@ export default function Footer() {
               delay={200}
             />
 
-            {/* Col 4 — newsletter */}
+            {/* Col 4 — Doctor Profile */}
             <div
-              className="animate-[footerFadeUp_0.6s_ease_both]"
+              className="animate-[footerFadeUp_0.6s_ease_both] text-center flex flex-col items-center"
               style={{ animationDelay: "300ms" }}
             >
-              <h3
-                className="text-xl font-extrabold leading-tight text-[#0f172a]"
-                style={{ letterSpacing: "-0.03em" }}
-              >
-                Be Our Subscribers
+              <h3 className="text-sm font-bold uppercase tracking-widest text-[#0c7dc2]">
+                MEET THE DOC
               </h3>
-              <p className="mt-2 text-sm text-[#3d6b8a]">
-                Get the latest news about lung &amp; sleep health from our
-                experts.
-              </p>
 
-              <form onSubmit={handleSubscribe} className="mt-5">
-                {subState === "done" ? (
+              <span
+                className="mt-2 mb-3 block h-0.5 w-8 rounded-full"
+                style={{
+                  background: "linear-gradient(90deg,#1fa8e8,#6dbb45)",
+                }}
+              />
+
+              <div className="overflow-hidden rounded-3xl border border-white/70 bg-white/80 p-5 shadow-lg backdrop-blur-sm">
+                {/* Header */}
+                <div className="flex items-center gap-4">
                   <div
-                    className="flex items-center gap-2 rounded-2xl px-4 py-3.5 text-sm font-semibold text-white"
-                    style={{
-                      background: "linear-gradient(110deg,#1fa8e8,#6dbb45)",
-                    }}
+                    className="relative overflow-hidden rounded-xl border-2 border-[#1fa8e8]/20"
+                    style={{ width: "160px" }}
                   >
-                    <svg
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2.5}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Subscribed! Thank you.
-                  </div>
-                ) : (
-                  <div className="flex overflow-hidden rounded-2xl border border-white/70 bg-white/80 shadow-md backdrop-blur-sm focus-within:border-[#1fa8e8] focus-within:ring-2 focus-within:ring-[#1fa8e8]/20 transition-all">
-                    <input
-                      type="email"
-                      required
-                      placeholder="example@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none"
+                    <img
+                      src="/dr-image.png" // Replace with your image
+                      alt="Dr Manish Aggarwal"
+                      className="h-full w-full object-cover"
                     />
-                    <button
-                      type="submit"
-                      disabled={subState === "loading"}
-                      className="flex shrink-0 items-center gap-1.5 rounded-xl px-4 py-2 my-1 mr-1 text-sm font-bold text-white transition-all hover:opacity-90 active:scale-95 disabled:opacity-70"
-                      style={{
-                        background: "linear-gradient(110deg,#0c7dc2,#1fa8e8)",
-                      }}
-                    >
-                      {subState === "loading" ? (
-                        <svg
-                          className="h-4 w-4 animate-spin"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          />
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v8H4z"
-                          />
-                        </svg>
-                      ) : (
-                        <>
-                          Submit
-                          <ArrowRight className="h-3.5 w-3.5" />
-                        </>
-                      )}
-                    </button>
                   </div>
-                )}
-              </form>
 
-              {/* Trust badges */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["NABH Accredited", "ISO Certified", "24/7 Care"].map(
-                  (badge) => (
-                    <span
-                      key={badge}
-                      className="rounded-full px-3 py-1 text-[11px] font-semibold text-[#0c7dc2]"
-                      style={{ background: "rgba(31,168,232,0.14)" }}
+                  <div className="text-left">
+                    <h3
+                      className="text-xl font-extrabold text-[#0f172a]"
+                      style={{ letterSpacing: "-0.03em" }}
                     >
-                      {badge}
-                    </span>
-                  ),
-                )}
+                      Dr. Manish Aggarwal
+                    </h3>
+
+                    <p className="mt-1 text-xs bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
+                      Senior Pulmonologist & Interventional Chest Specialist
+                    </p>
+
+                    <div className="mt-2 inline-flex items-center rounded-full bg-[#1fa8e8]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0c7dc2]">
+                      15+ Years Experience
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom CTA */}
+                <a
+                  href="/about"
+                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-bold text-white transition-all hover:opacity-90 active:scale-[0.98]"
+                  style={{
+                    background: "linear-gradient(110deg,#1fa8e8,#6dbb45)",
+                  }}
+                >
+                  View Doctor Profile
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -545,6 +486,12 @@ export default function Footer() {
           }}
         >
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-4 sm:flex-row lg:px-12">
+            {/* Copyright */}
+            <p className="text-center text-xs text-[#2d5a78]">
+              © {new Date().getFullYear()} Delhi Lung & Sleep Centre. All rights
+              reserved.
+            </p>
+
             {/* Socials */}
             <div className="flex items-center gap-3">
               <span className="text-xs font-semibold text-[#2d5a78]">
@@ -564,10 +511,12 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Copyright */}
+            {/* Brand Integration */}
             <p className="text-center text-xs text-[#2d5a78]">
-              © {new Date().getFullYear()} Delhi Lung &amp; Sleep Centre. All
-              rights reserved.
+              Design & Developed by{" "}
+              <a href="https://www.bigwigmediadigital.com/">
+                Bigwig Media Digital
+              </a>
             </p>
           </div>
         </div>

@@ -11,53 +11,57 @@ import {
   Sparkles,
   ArrowRight,
   Compass,
+  HeartPulse,
 } from "lucide-react";
 import Link from "next/link";
 
 const FEATURED_SERVICES = [
   {
     id: 1,
-    title: "Advanced Lung Diagnostics",
-    desc: "Equipped with state-of-the-art Spirometry and DLCO machinery to capture bronchial responses with complete clinical accuracy.",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
-    tag: "PFT Laboratory",
+    title: "Pulmonary Function Testing (PFT)",
+    desc: "Comprehensive lung function assessment using advanced spirometry and diffusion capacity analysis for accurate diagnosis and treatment planning.",
+    image: "/pft.png",
+    tag: "Lung Function Lab",
     icon: Wind,
   },
   {
     id: 2,
-    title: "Interventional Pulmonology",
-    desc: "Advanced therapeutic airway procedures, endobronchial ultrasound (EBUS), and staging diagnostics led by top physicians.",
-    image:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
-    tag: "Specialized Suite",
+    title: "HRCT Chest Interpretation",
+    desc: "Expert evaluation of High-Resolution CT scans for Interstitial Lung Disease, infections, fibrosis, nodules, and other complex respiratory conditions.",
+    image: "/hrct.png",
+    tag: "Advanced Imaging",
     icon: Compass,
   },
   {
     id: 3,
-    title: "Overnight Sleep Studies",
-    desc: "Full comprehensive polysomnography in premium diagnostic suites designed to target and resolve severe obstructive sleep apnea.",
-    image:
-      "https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&w=800&q=80",
-    tag: "Sleep Disorders",
+    title: "Bronchoscopy & BAL",
+    desc: "Advanced bronchoscopic examination with Bronchoalveolar Lavage (BAL) for diagnosis of infections, tuberculosis, chronic cough, and airway disorders.",
+    image: "/bronchoscopy.png",
+    tag: "Airway Diagnostics",
     icon: Moon,
   },
   {
     id: 4,
-    title: "Pleural & Effusion Services",
-    desc: "Compassionate bedside drainage, pigtail catheter insertions, and focused therapies for prolonged fluid build-ups.",
-    image:
-      "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=800&q=80",
-    tag: "Thoracic Care",
+    title: "EBUS-TBNA",
+    desc: "State-of-the-art Endobronchial Ultrasound guided Transbronchial Needle Aspiration for accurate mediastinal lymph node sampling and lung cancer staging.",
+    image: "/ebus.png",
+    tag: "Interventional Pulmonology",
     icon: ShieldCheck,
   },
   {
     id: 5,
-    title: "Urgent Pediatric Extractions",
-    desc: "Delicate emergency pediatric bronchoscopy procedures for rapid and safe foreign body removals in young kids.",
-    image:
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
-    tag: "Pediatric Emergency",
+    title: "Ultrasound-Guided Pleural Procedures",
+    desc: "Precision-guided pleural aspiration and pigtail catheter placement for pleural effusion and pneumothorax management.",
+    image: "/ultrasound-guided-pleural-procedures.png",
+    tag: "Pleural Care",
+    icon: HeartPulse,
+  },
+  {
+    id: 6,
+    title: "Multidisciplinary Respiratory Evaluation",
+    desc: "Integrated assessment combining clinical examination, imaging, pulmonary function testing, and specialist consultation for complex lung diseases.",
+    image: "/multidisciplinary-respiratory-evaluation.png",
+    tag: "Comprehensive Care",
     icon: Sparkles,
   },
 ];
