@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { LayoutDashboard, Users, FileText, LogOut } from "lucide-react";
+import Image from "next/image";
 
 export default function AdminSidebar() {
   const pathname = usePathname();
@@ -35,9 +36,8 @@ export default function AdminSidebar() {
     <aside className="h-screen w-full bg-slate-900 text-white flex flex-col">
       {/* Logo */}
 
-      <div className="h-16 flex items-center flex-col px-6 border-b border-slate-800">
-        <h2 className="font-bold text-xl">Delhi Lung & Sleep Centre</h2>
-        <p>Admin Console</p>
+      <div className="h-20 flex items-center pt-5 flex-col px-6 border-b border-slate-800 justify-center">
+        <Image src="/logo-white.png" width={400} height={200} alt="logo" />
       </div>
 
       {/* Menu */}

@@ -22,6 +22,7 @@ import {
 import Popup from "./Popup";
 import Link from "next/link";
 import Image from "next/image";
+import WhoSeeUs from "./WhoSeeUs";
 
 export default function Speciality() {
   const router = useRouter();
@@ -254,15 +255,16 @@ export default function Speciality() {
                 </h3>
 
                 <p className="text-sm font-bold text-[#6dbb45] mt-1">
-                  Interventional Pulmonologist & Chest Physician
+                  Principle Director - Department of Chest Disease &
+                  Interventional Pulmonologist{" "}
                 </p>
               </div>
             </div>
 
             <div className="lg:col-span-8 space-y-6">
-              <h4 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                Asthma & Allergy Clinic in Delhi
-              </h4>
+              <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
+                Delhi Lung & Bronchoscopy Center
+              </h2>
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">
                 Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in
                 Pitampura, Delhi, provides comprehensive care for asthma,
@@ -284,7 +286,7 @@ export default function Speciality() {
                     ✓
                   </span>
                   <span className="text-xs font-bold text-slate-700">
-                    Expert Pediatric Airway Interventions
+                    Advanced Pediatric Airway Interventions
                   </span>
                 </div>
               </div>
@@ -292,11 +294,13 @@ export default function Speciality() {
                 href="/about"
                 className="text-md font-bold text-[#1fa8e8] hover:text-[#0c7dc2] flex items-center gap-1 mt-4"
               >
-                Learn More
+                Know More
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
+
+          <WhoSeeUs />
 
           {/* --- SECTION HEADER & FILTERS --- */}
           <div

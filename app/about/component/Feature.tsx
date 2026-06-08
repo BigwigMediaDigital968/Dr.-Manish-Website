@@ -24,11 +24,11 @@ export default function Feature() {
             </div>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+919899554095"
               className="mt-6 pt-3 border-t border-white/25 flex items-center justify-between text-xs font-bold hover:text-emerald-100 transition-colors"
             >
               <span className="flex items-center gap-1.5">
-                <PhoneCall className="w-3.5 h-3.5" /> +91 98765 43210
+                <PhoneCall className="w-3.5 h-3.5" /> +91 98995 54095
               </span>
               <ArrowRight className="w-4 h-4" />
             </a>

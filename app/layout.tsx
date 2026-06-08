@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
+import WhatsappFloat from "./component/website/WhatsappFloat";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -33,7 +34,11 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        <WhatsappFloat />
+      </body>
     </html>
   );
 }

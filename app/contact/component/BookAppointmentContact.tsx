@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sun, Cloud, Moon } from "lucide-react";
+import { Sun, Cloud, Moon, UploadCloud, CheckCircle, X } from "lucide-react";
 import Image from "next/image";
+import MultiImageUpload from "@/app/component/website/ImageUpload";
 
 const services = [
   { value: "Asthma Specialist", icon: "🫁" },
@@ -32,6 +33,7 @@ const defaultForm = {
   specialty: "Asthma Specialist",
   date: "",
   time: "",
+  image: "",
   notes: "",
 };
 
@@ -45,6 +47,8 @@ const labelCls =
 export default function BookAppointmentContact() {
   const [form, setForm] = useState(defaultForm);
   const [submitted, setSubmitted] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState("");
 
   const set = (k: keyof typeof defaultForm, v: string) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -149,7 +153,6 @@ export default function BookAppointmentContact() {
             </div>
 
             {/* Right visual */}
-            {/* Right visual */}
             <div className="relative flex items-center justify-center lg:justify-end">
               {/* Decorative background glow */}
               <div
@@ -241,7 +244,7 @@ export default function BookAppointmentContact() {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+91 7859 8578 87"
                       value={form.phone}
                       onChange={(e) => set("phone", e.target.value)}
                       className={inputCls}
@@ -346,6 +349,9 @@ export default function BookAppointmentContact() {
                     </div>
                   </div>
                 </div>
+
+                {/* Upload Reports */}
+                <MultiImageUpload />
 
                 {/* Row 4 — Notes */}
                 <div>

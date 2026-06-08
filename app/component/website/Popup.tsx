@@ -1,7 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, CheckCircle, Calendar, Sun, Cloud, Moon } from "lucide-react";
+import {
+  X,
+  CheckCircle,
+  Calendar,
+  Sun,
+  Cloud,
+  Moon,
+  UploadCloud,
+} from "lucide-react";
 
 interface PopupProps {
   isOpen: boolean;
@@ -47,6 +55,7 @@ const defaultForm = {
   specialty: "Asthma Specialist",
   date: "",
   time: "",
+  image: "",
   notes: "",
 };
 
@@ -174,7 +183,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                 <input
                   type="tel"
                   required
-                  placeholder="+91 XXXXX XXXXX"
+                  placeholder="+91 97592 65242"
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
@@ -298,6 +307,78 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                   );
                 })}
               </div>
+            </div>
+
+            {/* Upload Reports */}
+            <div>
+              <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
+                Upload Previous Reports
+                <span className="normal-case tracking-normal font-normal text-slate-400">
+                  {" "}
+                  (optional)
+                </span>
+              </label>
+
+              <label
+                htmlFor="reportUpload"
+                className="group relative flex flex-col items-center justify-center w-full h-36 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 hover:border-[#1fa8e8] hover:bg-[#1fa8e8]/[0.03] transition-all duration-300 cursor-pointer overflow-hidden"
+              >
+                {/* Background Glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#1fa8e8]/5 to-[#6dbb45]/5" />
+
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1fa8e8] to-[#6dbb45] flex items-center justify-center shadow-lg">
+                    <UploadCloud className="w-7 h-7 text-white" />
+                  </div>
+
+                  <h4 className="mt-3 text-sm font-bold text-slate-700">
+                    Click to upload reports
+                  </h4>
+
+                  <p className="mt-1 text-xs text-slate-400 text-center">
+                    PDF, JPG, PNG
+                    <br />
+                    Maximum 10 MB
+                  </p>
+                </div>
+
+                <input
+                  id="reportUpload"
+                  type="file"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  className="hidden"
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      image: e.target.files?.[0]?.name || "",
+                    })
+                  }
+                />
+              </label>
+
+              {formData.image && (
+                <div className="mt-3 flex items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-emerald-500" />
+                    <span className="text-sm font-medium text-slate-700 truncate">
+                      {formData.image}
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setFormData({
+                        ...formData,
+                        image: "",
+                      })
+                    }
+                    className="text-slate-400 hover:text-red-500 transition-colors"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Notes */}

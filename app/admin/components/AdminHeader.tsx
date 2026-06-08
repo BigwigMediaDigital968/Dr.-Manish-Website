@@ -14,7 +14,7 @@ export default function AdminHeader() {
   const title = pageTitles[pathname] || "Admin Panel";
 
   return (
-    <div className="h-16 px-6 flex items-center justify-between bg-white">
+    <div className="h-20 px-6 flex items-center justify-between bg-white">
       <div>
         <h1 className="text-2xl font-bold text-slate-800">{title}</h1>
         <p className="text-xs text-slate-400 mt-0.5">

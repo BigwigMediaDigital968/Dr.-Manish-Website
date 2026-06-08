@@ -247,7 +247,6 @@
 
 "use client";
 
-import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -265,6 +264,7 @@ import {
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Gallery", href: "#" },
 ];
 
@@ -284,8 +284,11 @@ const socials = [
 ];
 
 const contactItems = [
-  { icon: MapPin, text: "Sector 14, Dwarka, New Delhi – 110075" },
-  { icon: Phone, text: "+91 98100 XXXXX" },
+  {
+    icon: MapPin,
+    text: "JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034",
+  },
+  { icon: Phone, text: "+91 98995 54095" },
   { icon: Mail, text: "hello@delhilungsleep.com" },
 ];
 
@@ -372,21 +375,21 @@ export default function Footer() {
                 className="text-lg font-bold leading-snug text-[#0f172a]"
                 style={{ letterSpacing: "-0.02em" }}
               >
-                Delhi Lung &amp; Sleep Centre
+                Delhi Lung & Sleep Centre
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-[#3d6b8a]">
-                Expert pulmonology &amp; sleep medicine care in New Delhi.
-                Breathe better, live fuller.
+                Expert pulmonology & sleep medicine care in New Delhi. Breathe
+                better, live fuller.
               </p>
 
               <ul className="mt-6 space-y-3">
                 {contactItems.map(({ icon: Icon, text }) => (
                   <li
                     key={text}
-                    className="flex items-start gap-3 text-sm text-[#2d5a78]"
+                    className="flex items-center gap-3 text-sm text-[#2d5a78]"
                   >
                     <span
-                      className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
+                      className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-full"
                       style={{ background: "rgba(31,168,232,0.18)" }}
                     >
                       <Icon className="h-3.5 w-3.5 text-[#1fa8e8]" />
@@ -429,7 +432,7 @@ export default function Footer() {
                 }}
               />
 
-              <div className="overflow-hidden rounded-3xl border border-white/70 bg-white/80 p-5 shadow-lg backdrop-blur-sm">
+              <div className="overflow-hidden rounded-3xl border border-white/70 bg-white/80 p-4 shadow-lg backdrop-blur-sm">
                 {/* Header */}
                 <div className="flex items-center gap-4">
                   <div
@@ -452,11 +455,12 @@ export default function Footer() {
                     </h3>
 
                     <p className="mt-1 text-xs bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-                      Senior Pulmonologist & Interventional Chest Specialist
+                      Principle Director <br /> Chest Disease & Interventional
+                      Pulmonology
                     </p>
 
                     <div className="mt-2 inline-flex items-center rounded-full bg-[#1fa8e8]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0c7dc2]">
-                      15+ Years Experience
+                      25+ Years Experience
                     </div>
                   </div>
                 </div>
@@ -488,8 +492,8 @@ export default function Footer() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-4 sm:flex-row lg:px-12">
             {/* Copyright */}
             <p className="text-center text-xs text-[#2d5a78]">
-              © {new Date().getFullYear()} Delhi Lung & Sleep Centre. All rights
-              reserved.
+              © {new Date().getFullYear()} Delhi Lung & Bronchoscopy Center. All
+              rights reserved.
             </p>
 
             {/* Socials */}

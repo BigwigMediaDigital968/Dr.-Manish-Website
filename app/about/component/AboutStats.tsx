@@ -21,7 +21,7 @@ export default function AboutStats({
   const stats = [
     {
       id: 1,
-      value: "28+",
+      value: "25+",
       label: "Years of Expert Care",
       desc: "An unmatched tenure of respiratory medicine, chest procedures, and clinical critical care.",
       icon: Award,

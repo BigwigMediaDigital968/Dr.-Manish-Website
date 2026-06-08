@@ -92,6 +92,7 @@ button,
 input,
 textarea,
 select,
+li,
 label {
   font-family: var(--font-body), sans-serif;
 }

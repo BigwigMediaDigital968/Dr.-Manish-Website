@@ -163,3 +163,46 @@ export const aboutFaqs: FAQItem[] = [
       "Dr. Manish Aggarwal consults at Delhi Lung & Sleep Centre in Pitampura, Delhi, where patients receive comprehensive respiratory care, advanced diagnostic services, and personalized treatment plans.",
   },
 ];
+
+export const caseFaqs: FAQItem[] = [
+  {
+    question: "What is included in this case study?",
+    answer:
+      "This case study provides a detailed overview of the client's challenges, our strategic approach, the implementation process, and the measurable results achieved.",
+  },
+  {
+    question: "How were the results measured?",
+    answer:
+      "Performance was tracked using key metrics such as website traffic, lead generation, conversion rates, engagement, and overall business growth over the project duration.",
+  },
+  {
+    question: "Are the statistics and outcomes authentic?",
+    answer:
+      "Yes. All figures and performance indicators presented in this case study are based on actual project data and verified campaign analytics.",
+  },
+  {
+    question: "Can similar results be expected for every business?",
+    answer:
+      "Every business has unique goals and market conditions. While strategies can be adapted, actual results may vary depending on competition, budget, and implementation.",
+  },
+  {
+    question: "How long did it take to achieve these results?",
+    answer:
+      "The timeline varies by project, but most measurable improvements are observed within the first few months after implementing the recommended strategies.",
+  },
+  {
+    question: "What industries do these case studies cover?",
+    answer:
+      "Our case studies span healthcare, digital marketing, local businesses, eCommerce, technology, and professional service industries.",
+  },
+  {
+    question: "Can I request a similar strategy for my business?",
+    answer:
+      "Absolutely. Our team can evaluate your current challenges and develop a customized strategy tailored to your industry and growth objectives.",
+  },
+  {
+    question: "How can I get started?",
+    answer:
+      "You can contact our team through the inquiry form or schedule a consultation to discuss your project requirements and business goals.",
+  },
+];

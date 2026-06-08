@@ -14,20 +14,20 @@ import Navbar from "./component/website/Navbar";
 import Footer from "./component/website/Footer";
 import WhyChooseUs from "./component/website/WhyChooseUs";
 import Different from "./component/website/Different";
-import LungDisease from "./component/website/LungDisease";
+import Stats from "./component/website/Stats";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <HomeHero />
+      <Stats />
       <Speciality />
       <About />
       <FeaturedService />
       <WhyChooseUs />
       <Different />
       <CTA />
-      {/* <LungDisease /> */}
       <Testimonials />
       <AppointmentProcess />
       <BookAppointment />

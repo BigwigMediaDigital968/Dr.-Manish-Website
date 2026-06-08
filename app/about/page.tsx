@@ -2,6 +2,7 @@ import FAQs from "../component/website/FAQs";
 import Footer from "../component/website/Footer";
 import Navbar from "../component/website/Navbar";
 import Patients from "../component/website/Patients";
+import WhyChooseUs from "../component/website/WhyChooseUs";
 import { aboutFaqs } from "../faqsData";
 import AboutHero from "./component/AboutHero";
 import AboutManish from "./component/AboutManish";
@@ -17,6 +18,7 @@ export default function About() {
       <Feature />
       <AboutManish />
       <AboutStats />
+      <WhyChooseUs />
       <Patients />
       <Awards />
       <FAQs

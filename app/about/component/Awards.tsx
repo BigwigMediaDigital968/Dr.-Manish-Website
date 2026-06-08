@@ -30,72 +30,95 @@ export default function Awards() {
     setImageErrors((prev) => ({ ...prev, [idKey]: true }));
   };
 
-  // 6 Prestigious Awards and Certifications with Premium Visual Assets
   const awardsData: AwardItem[] = [
     {
       id: 1,
-      title: "FRCP (Glasgow, UK)",
-      issuer: "Royal College of Physicians & Surgeons",
-      year: "Honorary Fellowship",
-      desc: "Awarded the highly prestigious Fellowship for outstanding contributions to advanced global pulmonary clinical practice.",
-      image:
-        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+      title: "FRCP (Glasgow)",
+      issuer: "Royal College of Physicians, Glasgow",
+      year: "United Kingdom",
+      desc: "Awarded the prestigious Fellowship of the Royal College of Physicians (FRCP), recognizing advanced clinical expertise and contributions to respiratory medicine.",
+      image: "/awards/frcp.png",
       icon: Award,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },
     {
       id: 2,
-      title: "Aeromed Global Rescue Pioneer",
-      issuer: "International Air Ambulance Consortium",
-      year: "Founder Excellence",
-      desc: "Recognized as the Founder Director of Aeromed, safely transferring critical respiratory patients globally.",
-      image:
-        "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=600&q=80",
-      icon: Globe,
+      title: "NBEMS Faculty",
+      issuer: "Accredited DTCD Program",
+      year: "",
+      desc: "Faculty member for the NBEMS Accredited DTCD Program, actively involved in postgraduate respiratory medicine education.",
+      image: "/awards/nbmes.png",
+      icon: Sparkles,
       color: "from-[#6dbb45] to-[#4d8f2d]",
     },
     {
       id: 3,
-      title: "Pioneering EBUS Interventions",
-      issuer: "Delhi Pulmonology Association",
-      year: "Clinical Excellence",
-      desc: "Lauded for outstanding achievements in introducing high-resolution EBUS bronchoscopy diagnostics in East Delhi.",
-      image:
-        "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80",
-      icon: Compass,
+      title: "National Bronchoscopy Faculty",
+      issuer: "Interventional Pulmonology Courses",
+      year: "Academic Leadership",
+      desc: "Faculty and organizer for national bronchoscopy and interventional pulmonology workshops, mentoring respiratory medicine trainees.",
+      image: "/awards/bronchoscopy.png",
+      icon: Activity,
       color: "from-[#1fa8e8] to-[#6dbb45]",
     },
     {
       id: 4,
-      title: "NABL Compliance Certification",
-      issuer: "National Accreditation Board",
-      year: "Certified Quality Standards",
-      desc: "Excellence certificate for laboratory procedures in respiratory function testing and sleep diagnostics.",
-      image:
-        "https://images.unsplash.com/photo-1579153138244-3917f01f01d7?auto=format&fit=crop&w=600&q=80",
-      icon: ShieldCheck,
+      title: "NHS (United Kingdom) Experience",
+      issuer: "National Health Service",
+      year: "Clinical Training",
+      desc: "Acquired valuable international clinical experience while practicing medicine in the United Kingdom healthcare system.",
+      image: "/awards/nhs.png",
+      icon: Globe,
       color: "from-[#0f172a] to-[#1e293b]",
     },
     {
       id: 5,
-      title: "Best Sleep Disorders Clinic",
-      issuer: "National Health & Wellness Summit",
-      year: "Summit Award Winner",
-      desc: "Honored for premium-tier overnight Polysomnography suites and high patient-recovery index.",
-      image:
-        "https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&w=600&q=80",
+      title: "Lung India Publication",
+      issuer: "Indian Chest Society",
+      year: "Research",
+      desc: "Contributed peer-reviewed publications in respiratory medicine, bronchoscopy, pleural disease, and COVID-related pulmonary complications.",
+      image: "/awards/lung-india.png",
       icon: HeartPulse,
       color: "from-[#6dbb45] to-[#4d8f2d]",
     },
     {
       id: 6,
-      title: "28+ Years Healthcare Icon",
-      issuer: "Medical Directors Council",
-      year: "Lifetime Dedication",
-      desc: "A special recognition award honoring nearly three decades of serving patients with respiratory issues.",
-      image:
-        "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
+      title: "Affordable Use of Indwelling Pleural Catheters",
+      issuer: "Selected Publication",
+      year: "",
+      desc: "Research contribution focusing on cost-effective management of malignant pleural effusion through indwelling pleural catheters.",
+      image: "/awards/research.png",
+      icon: ShieldCheck,
+      color: "from-[#1fa8e8] to-[#0c7dc2]",
+    },
+    {
+      id: 7,
+      title: "Bronchoscopic Treatment of Bronchopleural Fistula",
+      issuer: "Selected Publication",
+      year: "",
+      desc: "Published work detailing advanced bronchoscopic management of bronchopleural fistula associated with COVID-19 complications.",
+      image: "/awards/covid.png",
+      icon: Compass,
+      color: "from-[#1fa8e8] to-[#6dbb45]",
+    },
+    {
+      id: 8,
+      title: "Interventional Pulmonology During COVID Times",
+      issuer: "Selected Publication",
+      year: "",
+      desc: "Academic work highlighting evolving interventional pulmonology practices during the COVID-19 pandemic.",
+      image: "/awards/interventional.png",
       icon: Activity,
+      color: "from-[#6dbb45] to-[#4d8f2d]",
+    },
+    {
+      id: 9,
+      title: "Endobronchial Capillary Hemangioma",
+      issuer: "Rare Clinical Case Publication",
+      year: "",
+      desc: "Published a rare case report describing endobronchial capillary hemangioma as an unusual cause of hemoptysis.",
+      image: "/awards/hemoptysis.png",
+      icon: HeartPulse,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },
   ];
@@ -134,20 +157,21 @@ export default function Awards() {
 
       <div className="max-w-7xl mx-auto space-y-12">
         {/* --- HEADER BLOCK --- */}
-        <div className="text-center space-y-4 max-w-2xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-[#1fa8e8]/25">
-            <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Honors &
-            Recognitions
+        <div className="text-center space-y-4 max-w-3xl mx-auto px-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 animate-pulse" />
+            Academic Excellence
           </div>
 
           <h2 className="text-3xl sm:text-4.5xl font-black tracking-tight text-slate-950 leading-tight">
-            Awards & Clinical Milestones
+            Academic Leadership & Research Contributions
           </h2>
 
-          <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-semibold">
-            Honoring nearly three decades of healthcare excellence, global
-            emergency rescue initiatives, and advanced pulmonology staging by
-            Dr. Manish Aggarwal.
+          <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
+            Dr. Manish Aggarwal actively contributes to postgraduate medical
+            education, interventional pulmonology training, and peer-reviewed
+            respiratory research, with publications in{" "}
+            <strong>Lung India</strong> and other academic forums.
           </p>
         </div>
 
@@ -163,12 +187,12 @@ export default function Awards() {
               return (
                 <div
                   key={idKey}
-                  className="w-[280px] sm:w-[320px] flex-shrink-0 bg-slate-50 hover:bg-white border border-slate-100 hover:border-[#1fa8e8]/30 p-5 rounded-[36px] shadow-sm hover:shadow-xl hover:shadow-sky-100/30 transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1"
+                  className="w-[280px] sm:w-[320px] flex-shrink-0 bg-slate-50 hover:bg-white border border-slate-100 hover:border-[#1fa8e8]/30 p-5 rounded-[14px] shadow-sm hover:shadow-xl hover:shadow-sky-100/30 transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1"
                 >
                   <div className="space-y-4">
                     {/* Award Visual Image Header */}
                     {!isImgError ? (
-                      <div className="relative aspect-[16/10] rounded-[24px] overflow-hidden bg-slate-200">
+                      <div className="relative aspect-[4/3] rounded-[14px] overflow-hidden bg-slate-200">
                         <img
                           src={item.image}
                           alt={item.title}

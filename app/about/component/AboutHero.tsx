@@ -1,15 +1,6 @@
 "use client";
 
-import React from "react";
-import {
-  Play,
-  Clock,
-  ShieldAlert,
-  PhoneCall,
-  ArrowRight,
-  Sparkles,
-  Activity,
-} from "lucide-react";
+import { ArrowRight, Activity } from "lucide-react";
 
 interface AboutHeroProps {
   onContactClick?: () => void;
@@ -30,29 +21,36 @@ export default function AboutHero({
         <div className="lg:col-span-7 space-y-6 text-center lg:text-left flex flex-col justify-center">
           {/* Subtitle Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-wider self-center lg:self-start">
-            <Activity className="w-3.5 h-3.5 text-[#6dbb45]" /> Caring For Your
-            Breath & Sleep
+            <Activity className="w-3.5 h-3.5 text-[#6dbb45]" /> India's Trusted
+            Name in Advanced Lung & Respiratory Care
           </div>
+          <h3 className="text-md font-medium uppercase">
+            Meet Dr. Manish Aggarwal
+          </h3>
 
           {/* Large Headliner */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6.5xl font-extrabold tracking-tight leading-[1.12]">
-            Best Care For Your <br />
-            <span className="text-emerald-100">Good Health.</span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.12]">
+            Leading Interventional Pulmonologist <br />
+            <span className="text-emerald-100">
+              & Chest Specialist in Delhi.
+            </span>
           </h1>
 
           {/* Subtext Paragraph */}
-          <p className="text-white/85 text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-            At Delhi Lung & Sleep Centre, Dr. Manish Aggarwal and our expert
-            chest physicians deliver the highest standards of diagnostic
-            precision, advanced intervention, and comprehensive sleep disorders
-            management.
+          <p className="text-white/85 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Dr. Manish Aggarwal is a renowned pulmonologist and interventional
+            chest physician, recognized for his expertise in bronchoscopy,
+            asthma, COPD, ILD, sleep medicine, and advanced lung disease
+            management. Backed by extensive academic leadership and
+            international experience, he is committed to delivering world-class
+            respiratory care with precision, transparency, and compassion.
           </p>
 
           {/* Primary Action Button linking to Contact */}
           <div className="pt-2 flex justify-center lg:justify-start">
             <button
               onClick={onContactClick}
-              className="group w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-extrabold text-sm tracking-wide shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="group w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-medium text-sm tracking-wide shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               Contact Our Clinic
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -67,9 +65,9 @@ export default function AboutHero({
 
           {/* Clinician Cutout Frame pointing inwards exactly resembling image_598ec4.jpg */}
           <img
-            src="/about-hero.png"
+            src="/dr-image.png"
             alt="Male Chest Physician Delhi"
-            className="relative object-cover object-top h-[320px] lg:h-[450px] w-auto rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] shrink-0 z-10"
+            className="relative object-cover object-top h-[320px] lg:h-[550px] w-auto rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] shrink-0 z-10"
             loading="lazy"
           />
         </div>

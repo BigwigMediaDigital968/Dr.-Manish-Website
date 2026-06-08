@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import {
-  Award,
-  BookOpen,
   MapPin,
   CheckCircle2,
   Calendar,
@@ -11,9 +9,14 @@ import {
   Sparkles,
   Plane,
   ArrowRight,
-  ShieldCheck,
-  Globe,
   Stethoscope,
+  GraduationCap,
+  Building2,
+  ShieldCheck,
+  Users,
+  Award,
+  Globe,
+  BookOpen,
 } from "lucide-react";
 import Popup from "@/app/component/website/Popup";
 
@@ -22,33 +25,81 @@ export default function AboutManish() {
   const [imgError, setImgError] = useState(false);
 
   const qualifications = [
-    { title: "MBBS", institution: "Delhi University" },
-    { title: "MD - TB & Chest", institution: "Delhi University" },
     {
-      title: "MD - Tuberculosis and Chest Diseases",
+      title: "MBBS",
       institution: "Delhi University",
     },
-    { title: "FRCP", institution: "Royal College of Physicians, Glasgow (UK)" },
+    {
+      title: "MD (Tuberculosis & Chest Diseases)",
+      institution: "Delhi University",
+    },
+    {
+      title: "FRCP (Glasgow)",
+      institution: "Royal College of Physicians, United Kingdom",
+    },
+    {
+      title: "NHS Clinical Experience",
+      institution: "United Kingdom",
+    },
   ];
 
   const highlights = [
     {
-      title: "28 Years Experience",
-      desc: "Distinguished career in Pulmonology, general medicine, and critical respiratory care.",
+      title: "25+ Years Experience",
+      desc: "Dedicated expertise in Pulmonology, Bronchoscopy and Critical Respiratory Care.",
       icon: Calendar,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },
     {
-      title: "FRCP (Glasgow, UK)",
-      desc: "Gained invaluable clinical experience in medicine in England and awarded Fellowship of the Royal College of Physicians.",
+      title: "FRCP (Glasgow) & NHS Experience",
+      desc: "International clinical exposure with advanced respiratory medicine training.",
       icon: Award,
       color: "from-[#6dbb45] to-[#4d8f2d]",
     },
     {
-      title: "Verified Registration",
-      desc: "Medical Registration fully verified by official Indian & Delhi Medical Councils.",
-      icon: ShieldCheck,
+      title: "Academic & National Faculty",
+      desc: "NBEMS Faculty, National Workshop Organizer and Respiratory Medicine Mentor.",
+      icon: BookOpen,
       color: "from-[#1fa8e8] to-[#6dbb45]",
+    },
+  ];
+
+  const academicRoles = [
+    {
+      title: "NBEMS Faculty",
+      description: "Faculty, NBEMS Accredited DTCD Program (2023–2027)",
+      icon: GraduationCap,
+    },
+    {
+      title: "Respiratory Medicine",
+      description: "Former Head, Department of Respiratory Medicine",
+      icon: Building2,
+    },
+    {
+      title: "Critical Care",
+      description: "Former Head, Critical Care",
+      icon: ShieldCheck,
+    },
+    {
+      title: "National Faculty",
+      description:
+        "Faculty & Organizer, National Bronchoscopy & Interventional Pulmonology Courses",
+      icon: BookOpen,
+    },
+    {
+      title: "Medical Mentor",
+      description: "Mentor for Respiratory Medicine Trainees",
+      icon: Users,
+    },
+    {
+      title: "FRCP (Glasgow)",
+      description: "Fellowship of the Royal College of Physicians",
+      icon: Award,
+    },
+    {
+      title: "NHS Experience",
+      description: "Clinical Experience in the United Kingdom",
+      icon: Globe,
     },
   ];
 
@@ -96,8 +147,8 @@ export default function AboutManish() {
 
                 {/* Verified Badge overlay */}
                 <div className="absolute top-5 left-5 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-sm text-[10px] font-black text-[#0c7dc2] uppercase tracking-wider shadow-md flex items-center gap-1.5 z-10">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#6dbb45]" /> Meet
-                  the doc
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#6dbb45]" /> FRCP
+                  (Glasgow) ✓ Verified
                 </div>
 
                 {/* Design Gradient overlay vignette */}
@@ -111,15 +162,15 @@ export default function AboutManish() {
                     Experience Status
                   </span>
                   <span className="font-bold text-emerald-600 flex items-center gap-1">
-                    28 Years ✓
+                    25+ Years ✓
                   </span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
                   <span className="text-slate-400 font-bold uppercase tracking-wider">
-                    Clinical Affiliations
+                    Academic Leadership
                   </span>
                   <span className="font-bold text-slate-700 text-right max-w-[200px]">
-                    Aeromed International Rescue & prestige institutes
+                    NBEMS Faculty • FRCP (Glasgow) • NHS (UK)
                   </span>
                 </div>
               </div>
@@ -136,38 +187,40 @@ export default function AboutManish() {
                 <h2 className="text-3xl sm:text-4.5xl font-black text-slate-950 tracking-tight leading-tight">
                   About Dr. Manish Aggarwal
                 </h2>
-                <p className="text-base sm:text-lg font-bold text-[#6dbb45] leading-snug">
-                  Senior Chest Physician & Interventional Pulmonologist
+                <p className="text-base sm:text-lg font-medium text-[#6dbb45] leading-snug">
+                  Principle Director • Chest Disease & Interventional
+                  Pulmonology
                 </p>
               </div>
 
               {/* Editorial Bio Description */}
               <div className="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
                 <p>
-                  Dr. Manish Aggarwal is a highly distinguished and experienced
-                  pulmonologist with an impressive clinical career spanning over{" "}
-                  <span className="font-bold text-slate-800">
-                    28 years overall
-                  </span>
-                  . He received his MBBS and MD qualifications from the
-                  prestigious{" "}
+                  Dr. Manish Aggarwal is one of Delhi's leading Pulmonologists
+                  and Interventional Pulmonologists, with over{" "}
+                  <span className="font-bold text-slate-800">25+ years</span> of
+                  experience in respiratory medicine, critical care,
+                  bronchoscopy, and advanced lung disease management.
+                  <br />
+                  <br /> After completing his MBBS and MD (Tuberculosis & Chest
+                  Diseases) from{" "}
                   <span className="font-bold text-slate-800">
                     Delhi University
                   </span>
-                  . Following this, he spent valuable years in England gaining
-                  advanced clinical skills in internal medicine and pulmonology
-                  before being awarded the prestigious{" "}
+                  , he gained valuable NHS (United Kingdom) experience and was
+                  later awarded the prestigious FRCP (Glasgow). Throughout his
+                  career, he has specialized in the diagnosis and treatment of
+                  asthma, chronic cough, COPD, ILD (Interstitial Lung Disease),
+                  lung fibrosis, sleep apnea, pleural diseases, pulmonary
+                  hypertension, and advanced bronchoscopic interventions.
+                  <br />
+                  <br />
                   <span className="font-bold text-[#0c7dc2]">
-                    FRCP (Fellowship of the Royal College of Physicians) from
-                    Glasgow, UK
+                    He is widely recognized for combining evidence-based
+                    medicine with compassionate patient care, helping thousands
+                    of patients suffering from complex respiratory illnesses.
                   </span>
                   .
-                </p>
-                <p>
-                  Dr. Aggarwal is associated with numerous prestigious clinical
-                  institutions in India and abroad, and has actively contributed
-                  to medical science through presenting papers at major national
-                  and international respiratory conferences.
                 </p>
               </div>
 
@@ -279,8 +332,63 @@ export default function AboutManish() {
               </div>
             </div>
           </div>
+
+          {/* ================================
+    Academic Leadership Section
+================================ */}
+
+          <div className="pt-8 border-t border-slate-100">
+            <div className="mb-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-black uppercase tracking-widest">
+                <BookOpen className="w-3.5 h-3.5" />
+                Academic Leadership
+              </span>
+
+              <h3 className="mt-3 text-2xl sm:text-3xl font-black text-slate-900">
+                Academic Leadership & National Roles
+              </h3>
+
+              <p className="mt-2 text-sm text-slate-500 max-w-2xl">
+                Dr. Manish Aggarwal actively contributes to postgraduate medical
+                education, respiratory medicine training, and advanced
+                interventional pulmonology programs across India.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {academicRoles.map((item, idx) => {
+                const Icon = item.icon;
+
+                return (
+                  <div
+                    key={idx}
+                    className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-xl hover:shadow-sky-100"
+                  >
+                    <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[#1fa8e8] to-[#6dbb45]" />
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1fa8e8] to-[#6dbb45] text-white flex items-center justify-center shadow-md shrink-0 group-hover:scale-105 transition-transform">
+                        <Icon className="w-5 h-5" />
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-black text-slate-900 uppercase tracking-wide">
+                          {item.title}
+                        </h4>
+
+                        <p className="mt-1 text-xs text-slate-500 leading-relaxed font-medium">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
+
       <Popup
         isOpen={isBookModalOpen}
         onClose={() => setIsBookModalOpen(false)}
