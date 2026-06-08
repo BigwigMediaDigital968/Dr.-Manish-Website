@@ -90,7 +90,7 @@ export default function ServiceHero() {
         {/* Dynamic Badge Selector indicating active clinical node */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-300/10 border border-white/20 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Delhi Lung & Sleep Centre</span>
+          <span>Delhi Lung & Bronchoscopy Center</span>
         </div>
 
         {/* Dynamic Title Slide Header with Smooth key transitions */}

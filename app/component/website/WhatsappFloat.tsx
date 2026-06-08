@@ -22,12 +22,12 @@ export default function WhatsappFloat() {
 
   const whatsappNumber = "919899554095"; // Configured target number
 
-  // 5 Quick Enquiry Templates based on Delhi Lung & Sleep Centre specialty scope
+  // 5 Quick Enquiry Templates based on Delhi Lung & Bronchoscopy Center specialty scope
   const quickQueries = [
     {
       id: 1,
       label: "Book Appointment",
-      text: "Hello Delhi Lung & Sleep Centre, I would like to book an appointment for a physical consultation with Dr. Manish Aggarwal.",
+      text: "Hello Delhi Lung & Bronchoscopy Center, I would like to book an appointment for a physical consultation with Dr. Manish Aggarwal.",
       icon: Activity,
       color: "bg-[#1fa8e8]/10 text-[#0c7dc2]",
     },
@@ -104,7 +104,7 @@ export default function WhatsappFloat() {
               <div className="relative w-11 h-11 rounded-full bg-white p-0.5 shadow-md">
                 <img
                   src="/favicon.jpeg"
-                  alt="Delhi Lung & Sleep Centre Support Desk"
+                  alt="Delhi Lung & Bronchoscopy Center Support Desk"
                   onError={(e) => {
                     // Fallback to beautiful doctor avatar illustration if favicon does not resolve
                     (e.target as HTMLImageElement).src =
@@ -123,7 +123,7 @@ export default function WhatsappFloat() {
                   <Sparkles className="w-3.5 h-3.5 text-emerald-300 animate-pulse" />
                 </div>
                 <p className="text-[10px] text-emerald-100 font-semibold uppercase tracking-wider">
-                  Delhi Lung & Sleep Centre
+                  Delhi Lung & Bronchoscopy Center
                 </p>
                 <div className="flex items-center gap-1 mt-0.5">
                   <Clock className="w-3 h-3 text-emerald-200" />

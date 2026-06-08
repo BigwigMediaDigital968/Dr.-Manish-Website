@@ -378,7 +378,7 @@ export default function PatientsTestimonials() {
                 {/* Card verification footer standard */}
                 <div className="pt-4 mt-5 border-t border-slate-50 flex items-center gap-1.5 text-[10px] font-bold text-slate-400">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Delhi Lung & Sleep Centre Patient</span>
+                  <span>Delhi Lung & Bronchoscopy Center Patient</span>
                 </div>
               </div>
             ))}

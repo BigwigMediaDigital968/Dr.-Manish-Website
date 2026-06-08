@@ -22,7 +22,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
 
   // Address and coordinate specifics for Google Maps directions
   const mapAddress =
-    "Delhi Lung & Sleep Centre, Vikas Marg, East Delhi, Delhi, India";
+    "Delhi Lung & Bronchoscopy Center, Vikas Marg, East Delhi, Delhi, India";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
 
   const amenities = [
@@ -58,7 +58,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           onLoad={() => setMapLoaded(true)}
-          title="Delhi Lung & Sleep Centre Location Map"
+          title="Delhi Lung & Bronchoscopy Center Location Map"
         />
 
         {/* Map aesthetic visual overlays matching brand guidelines */}
@@ -87,7 +87,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
           {/* Location Title & Verified Address */}
           <div className="space-y-3">
             <h3 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight leading-none">
-              Delhi Lung & Sleep Centre
+              Delhi Lung & Bronchoscopy Center
             </h3>
 
             <div className="flex items-start gap-2.5 text-slate-500 text-xs sm:text-sm">

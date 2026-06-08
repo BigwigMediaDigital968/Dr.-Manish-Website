@@ -23,9 +23,13 @@ export default function BookAppointment() {
   const [form, setForm] = useState({
     name: "",
     phone: "",
+    email: "",
     date: "",
+    time: "",
     treatment: "",
+    message: "",
   });
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -33,7 +37,15 @@ export default function BookAppointment() {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setForm({ name: "", phone: "", date: "", treatment: "" });
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        date: "",
+        time: "",
+        treatment: "",
+        message: "",
+      });
     }, 3000);
   };
 
@@ -163,7 +175,6 @@ export default function BookAppointment() {
         </div>
       </div>
 
-      {/* ── Booking Bar ────────────────────────────────────── */}
       <div
         id="book-appointment"
         className="relative z-20 mx-auto mt-10 max-w-7xl px-4 pb-14 lg:px-8"
@@ -187,96 +198,139 @@ export default function BookAppointment() {
               </p>
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col gap-3 lg:flex-row lg:items-end lg:gap-3"
-            >
-              {/* Name */}
-              <div className="flex-1">
-                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Your full name"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
-                />
-              </div>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                {/* Name */}
+                <div>
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Your full name"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
+                  />
+                </div>
 
-              {/* Phone */}
-              <div className="flex-1">
-                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
-                  Phone
-                </label>
-                <input
-                  type="phone"
-                  required
-                  placeholder="+91 98765 43210"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
-                />
-              </div>
+                {/* Phone */}
+                <div>
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+91 98765 43210"
+                    value={form.phone}
+                    onChange={(e) =>
+                      setForm({ ...form, phone: e.target.value })
+                    }
+                    className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
+                  />
+                </div>
 
-              {/* Date */}
-              <div className="flex-1">
-                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
-                  Date
-                </label>
-                <input
-                  type="date"
-                  required
-                  value={form.date}
-                  onChange={(e) => setForm({ ...form, date: e.target.value })}
-                  className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
-                />
-              </div>
+                {/* Email */}
+                <div>
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="your@email.com"
+                    value={form.email}
+                    onChange={(e) =>
+                      setForm({ ...form, email: e.target.value })
+                    }
+                    className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
+                  />
+                </div>
 
-              {/* Treatment */}
-              <div className="flex-1">
-                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
-                  Treatment
-                </label>
-                <select
-                  required
-                  value={form.treatment}
-                  onChange={(e) =>
-                    setForm({ ...form, treatment: e.target.value })
-                  }
-                  className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15 appearance-none cursor-pointer"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "right 12px center",
-                    backgroundSize: "16px",
-                    paddingRight: "36px",
-                  }}
-                >
-                  <option value="" disabled>
-                    Select treatment
-                  </option>
-                  {specialties.map((s) => (
-                    <option key={s} value={s}>
-                      {s}
-                    </option>
-                  ))}
-                </select>
+                {/* Date */}
+                <div>
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Preferred Date
+                  </label>
+                  <input
+                    type="date"
+                    required
+                    value={form.date}
+                    onChange={(e) => setForm({ ...form, date: e.target.value })}
+                    className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
+                  />
+                </div>
+
+                {/* Time Slot */}
+                <div>
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Time Slot
+                  </label>
+                  <select
+                    value={form.time}
+                    onChange={(e) => setForm({ ...form, time: e.target.value })}
+                    className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15 appearance-none"
+                  >
+                    <option value="">Select Time</option>
+                    <option>09:00 AM - 11:00 AM</option>
+                    <option>11:00 AM - 01:00 PM</option>
+                    <option>02:00 PM - 04:00 PM</option>
+                    <option>04:00 PM - 06:00 PM</option>
+                    <option>06:00 PM - 07:00 PM</option>
+                  </select>
+                </div>
+
+                {/* Treatment */}
+                <div>
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Treatment
+                  </label>
+                  <select
+                    required
+                    value={form.treatment}
+                    onChange={(e) =>
+                      setForm({ ...form, treatment: e.target.value })
+                    }
+                    className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15 appearance-none"
+                  >
+                    <option value="">Select Treatment</option>
+                    {specialties.map((s) => (
+                      <option key={s} value={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Message */}
+                <div className="md:col-span-2 xl:col-span-2">
+                  <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
+                    Symptoms / Message
+                  </label>
+                  <textarea
+                    rows={1}
+                    placeholder="Briefly describe your symptoms..."
+                    value={form.message}
+                    onChange={(e) =>
+                      setForm({ ...form, message: e.target.value })
+                    }
+                    className="w-full resize-none rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] placeholder-[#94a3b8] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
+                  />
+                </div>
               </div>
 
               {/* CTA */}
-              <div className="lg:pb-0">
+              <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="w-full rounded-xl px-7 py-3 text-sm font-bold text-white shadow-md transition-all active:scale-[0.97] hover:opacity-90 lg:w-auto lg:whitespace-nowrap cursor-pointer"
+                  className="w-full md:w-auto rounded-xl px-10 py-3 text-sm font-bold text-white shadow-md transition-all hover:opacity-90 active:scale-[0.97] cursor-pointer"
                   style={{
                     background: "var(--gradient-primary)",
                     boxShadow: "var(--shadow-primary)",
                   }}
                 >
-                  Book Now
+                  Book Appointment
                 </button>
               </div>
             </form>

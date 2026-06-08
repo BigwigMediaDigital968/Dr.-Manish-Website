@@ -231,9 +231,9 @@ export default function LungDisease() {
             </h2>
 
             <p className="text-slate-500 text-sm sm:text-base font-medium max-w-2xl leading-relaxed mx-auto lg:mx-0">
-              Delhi Lung & Sleep Centre delivers precise clinical profiling,
-              advanced spirometry parameters, and specialized therapeutic
-              courses for critical respiratory anomalies.
+              Delhi Lung & Bronchoscopy Center delivers precise clinical
+              profiling, advanced spirometry parameters, and specialized
+              therapeutic courses for critical respiratory anomalies.
             </p>
           </div>
 

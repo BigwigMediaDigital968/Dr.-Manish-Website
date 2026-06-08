@@ -137,7 +137,7 @@ export default function CaseHero() {
                       Advanced Respiratory Consultation Suite
                     </span>
                     <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">
-                      Delhi Lung & Sleep Centre
+                      Delhi Lung & Bronchoscopy Center
                     </span>
                   </div>
                 )}

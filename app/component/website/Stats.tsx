@@ -91,24 +91,6 @@ export default function Stats() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-20 opacity-55" />
 
       <div className="max-w-7xl mx-auto space-y-12 relative z-10 px-4">
-        {/* --- HEADER BLOCK --- */}
-        <div className="text-center space-y-4 max-w-2xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-[#1fa8e8]/25">
-            <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Clinical
-            Milestones
-          </div>
-
-          <h2 className="text-3xl sm:text-4.5xl font-black tracking-tight text-slate-950 leading-tight">
-            Our Healthcare Benchmarks
-          </h2>
-
-          <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-            Highlighting nearly three decades of dedicated interventional chest
-            procedures, high-level respiratory diagnostics, and top academic
-            clinical standards.
-          </p>
-        </div>
-
         {/* Mobile Carousel */}
         <div className="md:hidden -mx-4 px-4 overflow-x-auto scrollbar-none snap-x snap-mandatory">
           <div className="flex gap-3 w-max pb-2">

@@ -81,8 +81,8 @@ export default function AboutStats({
           </h2>
 
           <p className="text-slate-100 text-sm sm:text-base leading-relaxed">
-            Delhi Lung & Sleep Centre operates under absolute precision and
-            diagnostic standards, ensuring our patients receive reliable
+            Delhi Lung & Bronchoscopy Center operates under absolute precision
+            and diagnostic standards, ensuring our patients receive reliable
             pulmonary care pathways.
           </p>
         </div>

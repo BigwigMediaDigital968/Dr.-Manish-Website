@@ -35,7 +35,7 @@ export default function Home() {
       <BlogSection />
       <FAQs
         title="Frequently Asked Questions"
-        description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Sleep Centre."
+        description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Center"
         faqs={homeFaqs}
       />
       <Footer />

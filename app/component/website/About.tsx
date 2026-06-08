@@ -86,8 +86,8 @@ export default function About() {
 
                 {/* Core Journey Narrative */}
                 <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
-                  At Delhi Lung & Sleep Centre, we started with a clear clinical
-                  mission: to make advanced pulmonology, bronchoscopy
+                  At Delhi Lung & Bronchoscopy Center, we started with a clear
+                  clinical mission: to make advanced pulmonology, bronchoscopy
                   interventions, and state-of-the-art sleep studies highly
                   accessible, accurate, and deeply compassionate.
                 </p>

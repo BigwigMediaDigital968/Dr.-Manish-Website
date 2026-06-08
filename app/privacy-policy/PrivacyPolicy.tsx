@@ -67,13 +67,13 @@ export default function PrivacyPolicy() {
               A Commitment to Patient Trust & Safety
             </h2>
             <p>
-              At <strong>Delhi Lung & Sleep Centre</strong> (under the clinical
-              administration of Dr. Manish Aggarwal and registered healthcare
-              practitioners), patient confidentiality is treated as a core
-              medical standard. This Privacy Policy outlines how our clinical
-              facilities, digital portals, and administrative desks collect,
-              store, encrypt, and manage personal data, including highly
-              critical **Personally Identifiable Information (PII)** and
+              At <strong>Delhi Lung & Bronchoscopy Center</strong> (under the
+              clinical administration of Dr. Manish Aggarwal and registered
+              healthcare practitioners), patient confidentiality is treated as a
+              core medical standard. This Privacy Policy outlines how our
+              clinical facilities, digital portals, and administrative desks
+              collect, store, encrypt, and manage personal data, including
+              highly critical **Personally Identifiable Information (PII)** and
               **Protected Health Information (PHI)**.
             </p>
             <p>
@@ -197,9 +197,9 @@ export default function PrivacyPolicy() {
               Advanced Clinical Encryption Standards
             </h2>
             <p>
-              Patient databases at Delhi Lung & Sleep Centre are housed behind
-              highly fortified clinical firewalls. Digital files are protected
-              using{" "}
+              Patient databases at Delhi Lung & Bronchoscopy Center are housed
+              behind highly fortified clinical firewalls. Digital files are
+              protected using{" "}
               <strong>$256$-bit Advanced Encryption Standards (AES-256)</strong>{" "}
               during resting database phases and Secure Socket Layer / Transport
               Layer Security (SSL/TLS) during transmission over online networks.

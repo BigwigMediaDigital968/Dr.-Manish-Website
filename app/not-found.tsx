@@ -110,7 +110,7 @@ export default function NotFound({
           <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-4 text-slate-500 text-xs font-semibold">
             <span className="flex items-center gap-1.5">
               <HeartPulse className="w-4 h-4 text-[#6dbb45] animate-pulse" />{" "}
-              Delhi Lung & Sleep Centre
+              Delhi Lung & Bronchoscopy Center
             </span>
             <span className="hidden sm:inline text-slate-300">|</span>
             <a

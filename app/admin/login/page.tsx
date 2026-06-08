@@ -39,7 +39,7 @@ export default function AdminLogin() {
           </h1>
 
           <p className="mt-2 text-sm text-slate-500">
-            Delhi Lung & Sleep Centre
+            Delhi Lung & Bronchoscopy Center
           </p>
         </div>
 

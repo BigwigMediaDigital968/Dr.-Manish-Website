@@ -430,8 +430,8 @@ export default function Speciality() {
               </h3>
               <p className="text-white/80 text-sm leading-relaxed">
                 Book a direct specialty evaluation with Dr. Manish Aggarwal at
-                Delhi Lung & Sleep Centre. Get customized solutions for coughing
-                issues, sleep disturbances, or respiratory ailments.
+                Delhi Lung & Bronchoscopy Center. Get customized solutions for
+                coughing issues, sleep disturbances, or respiratory ailments.
               </p>
             </div>
 
