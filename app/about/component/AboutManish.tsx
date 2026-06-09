@@ -215,7 +215,7 @@ export default function AboutManish() {
                   hypertension, and advanced bronchoscopic interventions.
                   <br />
                   <br />
-                  <span className="font-bold text-[#0c7dc2]">
+                  <span className="text-[#0c7dc2]">
                     He is widely recognized for combining evidence-based
                     medicine with compassionate patient care, helping thousands
                     of patients suffering from complex respiratory illnesses.
