@@ -1,23 +1,11 @@
 "use client";
 
+import { FormServices } from "@/app/Data/Services";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const specialties = [
-  "Asthma Specialist",
-  "Bronchoscopy",
-  "Chronic Cough Management",
-  "ILD Services",
-  "Sleep Apnea & Snoring",
-  "COPD & Smoking Related Disease",
-  "Lung Cancer Screening",
-  "EBUS & Lymph Node Evaluation",
-  "Pleural Services",
-  "Foreign Body Extraction",
-  "Pollution Related Queries",
-  "Sarcoidosis Management",
-];
+const specialties = FormServices;
 
 export default function BookAppointment() {
   const [form, setForm] = useState({
@@ -296,8 +284,8 @@ export default function BookAppointment() {
                   >
                     <option value="">Select Treatment</option>
                     {specialties.map((s) => (
-                      <option key={s} value={s}>
-                        {s}
+                      <option key={s.value} value={s.value}>
+                        {s.value}
                       </option>
                     ))}
                   </select>

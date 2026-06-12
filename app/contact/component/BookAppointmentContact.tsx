@@ -1,24 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Sun, Cloud, Moon, UploadCloud, CheckCircle, X } from "lucide-react";
 import Image from "next/image";
-import MultiImageUpload from "@/app/component/website/ImageUpload";
+import { FormServices } from "@/app/Data/Services";
 
-const services = [
-  { value: "Asthma Specialist", icon: "🫁" },
-  { value: "Bronchoscopy", icon: "🔬" },
-  { value: "Chronic Cough Management", icon: "💨" },
-  { value: "ILD Services", icon: "🩺" },
-  { value: "Sleep Apnea & Snoring", icon: "😴" },
-  { value: "COPD & Smoking Related Disease", icon: "🚭" },
-  { value: "Lung Cancer Screening", icon: "🎯" },
-  { value: "EBUS & Lymph Node Evaluation", icon: "🧬" },
-  { value: "Pleural Services", icon: "💙" },
-  { value: "Foreign Body Extraction", icon: "👶" },
-  { value: "Pollution Related Queries", icon: "🌫️" },
-  { value: "Sarcoidosis Management", icon: "❤️" },
-];
+const services = FormServices;
 
 const slots = [
   { label: "Morning", time: "09:00 AM – 12:00 PM", icon: Sun },
@@ -30,7 +17,7 @@ const defaultForm = {
   name: "",
   email: "",
   phone: "",
-  specialty: "Asthma Specialist",
+  specialty: "",
   date: "",
   time: "",
   image: "",
@@ -47,19 +34,66 @@ const labelCls =
 export default function BookAppointmentContact() {
   const [form, setForm] = useState(defaultForm);
   const [submitted, setSubmitted] = useState(false);
-  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
-  const [previewUrl, setPreviewUrl] = useState("");
+  const [fileName, setFileName] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Find the currently selected service object
+  const selectedService = services.find((s) => s.value === form.specialty);
 
   const set = (k: keyof typeof defaultForm, v: string) =>
     setForm((f) => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm(defaultForm);
-    }, 3000);
+
+    if (!form.specialty) {
+      alert("Please select a treatment.");
+      return;
+    }
+    if (!form.time) {
+      alert("Please select a preferred time.");
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const result = await res.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setForm(defaultForm);
+          setFileName("");
+        }, 3000);
+      } else {
+        throw new Error(result.message || "Failed to submit lead");
+      }
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -253,7 +287,7 @@ export default function BookAppointmentContact() {
                 </div>
 
                 {/* Row 2 — Service grid */}
-                <div>
+                <div className="hidden md:block">
                   <label className={labelCls}>Select Treatment</label>
                   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                     {services.map((s) => {
@@ -263,23 +297,97 @@ export default function BookAppointmentContact() {
                           key={s.value}
                           type="button"
                           onClick={() => set("specialty", s.value)}
-                          className={`flex flex-col gap-1.5 rounded-xl border p-3 text-left transition-all duration-200 ${
-                            active
-                              ? "border-[#1fa8e8] bg-[#1fa8e8]/[0.06] shadow-sm"
-                              : "border-[#e2e8f0] bg-white hover:border-[#1fa8e8]/50 hover:bg-slate-50"
-                          }`}
+                          className={`flex flex-col gap-1.5 rounded-xl border p-3 text-left transition-all duration-200 ${active
+                            ? "border-[#1fa8e8] bg-[#1fa8e8]/[0.06] shadow-sm"
+                            : "border-[#e2e8f0] bg-white hover:border-[#1fa8e8]/50 hover:bg-slate-50"
+                            }`}
                         >
                           <span className="text-xl leading-none">{s.icon}</span>
                           <span
-                            className={`text-[11px] font-semibold leading-snug ${
-                              active ? "text-[#0c7dc2]" : "text-[#475569]"
-                            }`}
+                            className={`text-[11px] font-semibold leading-snug ${active ? "text-[#0c7dc2]" : "text-[#475569]"
+                              }`}
                           >
                             {s.value}
                           </span>
                         </button>
                       );
                     })}
+                  </div>
+                </div>
+
+                <div className="w-full block md:hidden" ref={dropdownRef}>
+                  <label className={labelCls}>Select Treatment</label>
+
+                  <div className="relative mt-2">
+                    {/* Dropdown Trigger */}
+                    <button
+                      type="button"
+                      onClick={() => setIsOpen(!isOpen)}
+                      className={`
+          w-full p-3 rounded-xl border text-left transition-all duration-200
+          flex items-center justify-between cursor-pointer bg-white
+          ${isOpen ? "border-[#1fa8e8] shadow-sm" : "border-[#e2e8f0] hover:border-slate-300"}
+        `}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        {selectedService ? (
+                          <>
+                            <span className="text-xl leading-none">{selectedService.icon}</span>
+                            <span className="text-[11px] font-semibold text-[#0c7dc2] leading-none">
+                              {selectedService.value}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-[11px] text-slate-400 font-semibold tracking-wide">
+                            CHOOSE A TREATMENT...
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Chevron Indicator */}
+                      <svg
+                        className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown Menu Overlay */}
+                    {isOpen && (
+                      <div className="absolute z-50 w-full mt-1.5 bg-white border border-[#e2e8f0] rounded-xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
+                        <div className="max-h-52 overflow-y-auto p-1.5 [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]">
+                          {services.map((s) => {
+                            const active = form.specialty === s.value;
+                            return (
+                              <button
+                                key={s.value}
+                                type="button"
+                                onClick={() => {
+                                  set("specialty", s.value);
+                                  setIsOpen(false);
+                                }}
+                                className={`
+                    w-full p-2.5 rounded-lg text-left transition-all duration-150
+                    flex items-center gap-3 cursor-pointer mb-0.5 last:mb-0
+                    ${active
+                                    ? "bg-[#1fa8e8]/[0.08] text-[#0c7dc2]"
+                                    : "text-[#475569] hover:bg-slate-50 hover:text-slate-900"
+                                  }
+                  `}
+                              >
+                                <span className="text-xl leading-none">{s.icon}</span>
+                                <span className="text-[11px] font-semibold leading-none">
+                                  {s.value}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -324,19 +432,17 @@ export default function BookAppointmentContact() {
                             key={slot.label}
                             type="button"
                             onClick={() => set("time", slot.label)}
-                            className={`flex flex-col items-center gap-1.5 rounded-xl border py-3 px-2 transition-all duration-200 ${
-                              active
-                                ? "border-[#6dbb45] bg-[#6dbb45]/[0.06] shadow-sm"
-                                : "border-[#e2e8f0] bg-white hover:border-[#6dbb45]/50 hover:bg-slate-50"
-                            }`}
+                            className={`flex flex-col items-center gap-1.5 rounded-xl border py-3 px-2 transition-all duration-200 ${active
+                              ? "border-[#6dbb45] bg-[#6dbb45]/[0.06] shadow-sm"
+                              : "border-[#e2e8f0] bg-white hover:border-[#6dbb45]/50 hover:bg-slate-50"
+                              }`}
                           >
                             <Icon
                               className={`h-4 w-4 ${active ? "text-[#6dbb45]" : "text-[#94a3b8]"}`}
                             />
                             <span
-                              className={`text-[11px] font-semibold ${
-                                active ? "text-[#3a7a1a]" : "text-[#475569]"
-                              }`}
+                              className={`text-[11px] font-semibold ${active ? "text-[#3a7a1a]" : "text-[#475569]"
+                                }`}
                             >
                               {slot.label}
                             </span>
@@ -351,7 +457,85 @@ export default function BookAppointmentContact() {
                 </div>
 
                 {/* Upload Reports */}
-                <MultiImageUpload />
+                <div>
+                  <label className={labelCls}>
+                    Upload Previous Reports
+                    <span className="normal-case tracking-normal font-normal text-[#94a3b8]">
+                      {" "}
+                      (optional)
+                    </span>
+                  </label>
+
+                  <label
+                    htmlFor="reportUpload"
+                    className="group relative flex flex-col items-center justify-center w-full h-36 rounded-2xl border-2 border-dashed border-[#1fa8e8]/30 bg-slate-50 hover:border-[#1fa8e8] hover:bg-[#1fa8e8]/[0.03] transition-all duration-300 cursor-pointer overflow-hidden"
+                  >
+                    {/* Background Glow */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#1fa8e8]/5 to-[#6dbb45]/5" />
+
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1fa8e8] to-[#6dbb45] flex items-center justify-center shadow-lg">
+                        <UploadCloud className="w-7 h-7 text-white" />
+                      </div>
+
+                      <h4 className="mt-3 text-sm font-bold text-slate-700">
+                        Click to upload reports
+                      </h4>
+
+                      <p className="mt-1 text-xs text-slate-400 text-center">
+                        PDF, JPG, PNG
+                        <br />
+                        Maximum 10 MB
+                      </p>
+                    </div>
+
+                    <input
+                      id="reportUpload"
+                      type="file"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      className="hidden"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          setFileName(file.name);
+                          const reader = new FileReader();
+                          reader.onloadend = () => {
+                            setForm((f) => ({
+                              ...f,
+                              image: reader.result as string,
+                            }));
+                          };
+                          reader.readAsDataURL(file);
+                        }
+                      }}
+                    />
+                  </label>
+
+                  {fileName && (
+                    <div className="mt-3 flex items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-emerald-500" />
+                        <span className="text-sm font-medium text-slate-700 truncate">
+                          {fileName}
+                        </span>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setFileName("");
+                          setForm((f) => ({
+                            ...f,
+                            image: "",
+                          }));
+                        }}
+                        className="text-slate-400 hover:text-red-500 transition-colors"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
 
                 {/* Row 4 — Notes */}
                 <div>

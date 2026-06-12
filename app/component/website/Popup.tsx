@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   X,
   CheckCircle,
@@ -9,27 +9,16 @@ import {
   Cloud,
   Moon,
   UploadCloud,
+  ChevronDown,
 } from "lucide-react";
+import { FormServices } from "@/app/Data/Services";
 
 interface PopupProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const services = [
-  { value: "Asthma Specialist", icon: "🫁" },
-  { value: "Bronchoscopy", icon: "🔬" },
-  { value: "Chronic Cough Management", icon: "💨" },
-  { value: "ILD Services", icon: "🩺" },
-  { value: "Sleep Apnea & Snoring", icon: "😴" },
-  { value: "COPD & Smoking Related Disease", icon: "🚭" },
-  { value: "Lung Cancer Screening", icon: "🎯" },
-  { value: "EBUS & Lymph Node Evaluation", icon: "🧬" },
-  { value: "Pleural Services", icon: "💙" },
-  { value: "Foreign Body Extraction", icon: "👶" },
-  { value: "Pollution Related Queries", icon: "🌫️" },
-  { value: "Sarcoidosis Management", icon: "❤️" },
-];
+const services = FormServices;
 
 const slots = [
   {
@@ -52,7 +41,7 @@ const slots = [
 const defaultForm = {
   name: "",
   phone: "",
-  specialty: "Asthma Specialist",
+  specialty: "",
   date: "",
   time: "",
   image: "",
@@ -61,25 +50,79 @@ const defaultForm = {
 
 export default function Popup({ isOpen, onClose }: PopupProps) {
   const [formData, setFormData] = useState(defaultForm);
+  const [fileName, setFileName] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  if (!isOpen) return null;
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const handleClose = () => {
     onClose();
     setTimeout(() => {
       setFormSubmitted(false);
       setFormData(defaultForm);
+      setFileName("");
     }, 300);
   };
 
-  const handleBookingSubmit = (e: React.FormEvent) => {
+  const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      handleClose();
-    }, 2800);
+
+    if (!formData.specialty) {
+      alert("Please select a treatment.");
+      return;
+    }
+    if (!formData.time) {
+      alert("Please select a preferred time.");
+      return;
+    }
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const result = await res.json();
+
+      if (result.success) {
+        setFormSubmitted(true);
+        setTimeout(() => {
+          handleClose();
+        }, 2800);
+      } else {
+        throw new Error(result.message || "Failed to submit lead");
+      }
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsSelectOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Find the currently selected service object to display its details in the trigger
+  const selectedService = services.find(s => s.value === formData.specialty);
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -197,7 +240,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
             </div>
 
             {/* Service Selection */}
-            <div>
+            <div className="hidden">
               <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                 Select treatment
               </label>
@@ -217,10 +260,9 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                       className={`
                         p-2.5 rounded-xl border text-left transition-all duration-200
                         flex flex-col gap-1 cursor-pointer
-                        ${
-                          active
-                            ? "border-[#1fa8e8] bg-[#1fa8e8]/[0.06] shadow-sm shadow-sky-100"
-                            : "border-slate-200 bg-white hover:border-[#1fa8e8]/50 hover:bg-slate-50"
+                        ${active
+                          ? "border-[#1fa8e8] bg-[#1fa8e8]/[0.06] shadow-sm shadow-sky-100"
+                          : "border-slate-200 bg-white hover:border-[#1fa8e8]/50 hover:bg-slate-50"
                         }
                       `}
                     >
@@ -228,15 +270,85 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                         {service.icon}
                       </span>
                       <span
-                        className={`text-[11px] font-semibold leading-snug ${
-                          active ? "text-[#0c7dc2]" : "text-slate-600"
-                        }`}
+                        className={`text-[11px] font-semibold leading-snug ${active ? "text-[#0c7dc2]" : "text-slate-600"
+                          }`}
                       >
                         {service.value}
                       </span>
                     </button>
                   );
                 })}
+              </div>
+            </div>
+
+            <div className="w-full" ref={dropdownRef}>
+              <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
+                Select treatment
+              </label>
+
+              <div className="relative">
+                {/* Dropdown Trigger Button */}
+                <button
+                  type="button"
+                  onClick={() => setIsSelectOpen(!isSelectOpen)}
+                  className={`
+          w-full p-3 rounded-xl border text-left transition-all duration-200
+          flex items-center justify-between cursor-pointer bg-white
+          ${isSelectOpen ? "border-[#1fa8e8] shadow-sm shadow-sky-100" : "border-slate-200 hover:border-slate-300"}
+        `}
+                >
+                  <div className="flex items-center gap-2.5">
+                    {selectedService ? (
+                      <>
+                        <span className="text-lg leading-none">{selectedService.icon}</span>
+                        <span className="text-xs font-semibold text-slate-700 leading-none">
+                          {selectedService.value}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-xs text-slate-400 font-medium">Choose a treatment...</span>
+                    )}
+                  </div>
+
+                  {/* Chevron Icon */}
+                  <div className={`${isSelectOpen ? "rotate-180" : ""} transition-transform duration-200`}><ChevronDown className="w-4 h-4 text-slate-400" /></div>
+                </button>
+
+                {/* Dropdown Menu Menu Options */}
+                {isSelectOpen && (
+                  <div className="absolute z-50 w-full mt-1.5 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
+                    <div
+                      className="max-h-52 overflow-y-auto p-1.5 [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]"
+                    >
+                      {services.map((service) => {
+                        const active = formData.specialty === service.value;
+                        return (
+                          <button
+                            key={service.value}
+                            type="button"
+                            onClick={() => {
+                              setFormData({ ...formData, specialty: service.value });
+                              setIsSelectOpen(false);
+                            }}
+                            className={`
+                    w-full p-2.5 rounded-lg text-left transition-all duration-150
+                    flex items-center gap-3 cursor-pointer mb-0.5 last:mb-0
+                    ${active
+                                ? "bg-[#1fa8e8]/[0.08] text-[#0c7dc2]"
+                                : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                              }
+                  `}
+                          >
+                            <span className="text-lg leading-none">{service.icon}</span>
+                            <span className="text-xs font-semibold leading-none">
+                              {service.value}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -281,22 +393,19 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                       className={`
                         flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl border
                         transition-all duration-200 cursor-pointer
-                        ${
-                          active
-                            ? "border-[#6dbb45] bg-[#6dbb45]/[0.06] shadow-sm shadow-green-100"
-                            : "border-slate-200 bg-white hover:border-[#6dbb45]/50 hover:bg-slate-50"
+                        ${active
+                          ? "border-[#6dbb45] bg-[#6dbb45]/[0.06] shadow-sm shadow-green-100"
+                          : "border-slate-200 bg-white hover:border-[#6dbb45]/50 hover:bg-slate-50"
                         }
                       `}
                     >
                       <SlotIcon
-                        className={`w-4 h-4 ${
-                          active ? "text-[#6dbb45]" : "text-slate-400"
-                        }`}
+                        className={`w-4 h-4 ${active ? "text-[#6dbb45]" : "text-slate-400"
+                          }`}
                       />
                       <span
-                        className={`text-[11px] font-semibold ${
-                          active ? "text-[#3a7a1a]" : "text-slate-700"
-                        }`}
+                        className={`text-[11px] font-semibold ${active ? "text-[#3a7a1a]" : "text-slate-700"
+                          }`}
                       >
                         {slot.label}
                       </span>
@@ -347,32 +456,41 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                   type="file"
                   accept=".pdf,.jpg,.jpeg,.png"
                   className="hidden"
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      image: e.target.files?.[0]?.name || "",
-                    })
-                  }
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) {
+                      setFileName(file.name);
+                      const reader = new FileReader();
+                      reader.onloadend = () => {
+                        setFormData({
+                          ...formData,
+                          image: reader.result as string,
+                        });
+                      };
+                      reader.readAsDataURL(file);
+                    }
+                  }}
                 />
               </label>
 
-              {formData.image && (
+              {fileName && (
                 <div className="mt-3 flex items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-emerald-500" />
                     <span className="text-sm font-medium text-slate-700 truncate">
-                      {formData.image}
+                      {fileName}
                     </span>
                   </div>
 
                   <button
                     type="button"
-                    onClick={() =>
+                    onClick={() => {
+                      setFileName("");
                       setFormData({
                         ...formData,
                         image: "",
-                      })
-                    }
+                      });
+                    }}
                     className="text-slate-400 hover:text-red-500 transition-colors"
                   >
                     <X className="w-4 h-4" />
