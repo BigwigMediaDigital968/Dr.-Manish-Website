@@ -21,7 +21,7 @@ const defaultForm = {
   date: "",
   time: "",
   image: "",
-  notes: "",
+  message: "",
 };
 
 /* ─── shared input class ─────────────────────────────── */
@@ -35,6 +35,7 @@ export default function BookAppointmentContact() {
   const [form, setForm] = useState(defaultForm);
   const [submitted, setSubmitted] = useState(false);
   const [fileName, setFileName] = useState("");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -68,10 +69,22 @@ export default function BookAppointmentContact() {
     }
 
     try {
+      const payload = new FormData();
+      payload.append("name", form.name);
+      payload.append("phone", form.phone);
+      payload.append("email", form.email);
+      payload.append("service", form.specialty);
+      payload.append("date", form.date);
+      payload.append("time", form.time);
+      payload.append("message", form.message);
+
+      if (selectedFile) {
+        payload.append("file", selectedFile);
+      }
+
       const res = await fetch("/api/leads", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: payload,
       });
 
       if (!res.ok) {
@@ -86,6 +99,7 @@ export default function BookAppointmentContact() {
           setSubmitted(false);
           setForm(defaultForm);
           setFileName("");
+          setSelectedFile(null);
         }, 3000);
       } else {
         throw new Error(result.message || "Failed to submit lead");
@@ -498,6 +512,7 @@ export default function BookAppointmentContact() {
                         const file = e.target.files?.[0];
                         if (file) {
                           setFileName(file.name);
+                          setSelectedFile(file);
                           const reader = new FileReader();
                           reader.onloadend = () => {
                             setForm((f) => ({
@@ -524,6 +539,7 @@ export default function BookAppointmentContact() {
                         type="button"
                         onClick={() => {
                           setFileName("");
+                          setSelectedFile(null);
                           setForm((f) => ({
                             ...f,
                             image: "",
@@ -548,8 +564,8 @@ export default function BookAppointmentContact() {
                   <textarea
                     rows={2}
                     placeholder="Describe your symptoms briefly…"
-                    value={form.notes}
-                    onChange={(e) => set("notes", e.target.value)}
+                    value={form.message}
+                    onChange={(e) => set("message", e.target.value)}
                     className={`${inputCls} resize-none`}
                   />
                 </div>

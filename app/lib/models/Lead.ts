@@ -4,11 +4,12 @@ export interface ILead extends Document {
     name: string;
     phone: string;
     email?: string;
-    specialty: string;
+    service: string;
     date: string;
     time: string;
     image?: string;
-    notes?: string;
+    message?: string;
+    status: "new" | "contacted" | "rejected";
     createdAt: Date;
 }
 
@@ -17,11 +18,16 @@ const LeadSchema = new Schema<ILead>(
         name: { type: String, required: true },
         phone: { type: String, required: true },
         email: { type: String, default: "" },
-        specialty: { type: String, required: true },
+        service: { type: String, required: true },
         date: { type: String, required: true },
         time: { type: String, required: true },
         image: { type: String, default: "" },
-        notes: { type: String, default: "" },
+        message: { type: String, default: "" },
+        status: {
+            type: String,
+            enum: ["new", "contacted", "rejected"],
+            default: "new",
+        },
     },
     { timestamps: true }
 );

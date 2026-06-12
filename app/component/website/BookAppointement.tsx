@@ -1,7 +1,7 @@
 "use client";
 
 import { FormServices } from "@/app/Data/Services";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle, UploadCloud, X } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -17,24 +17,57 @@ export default function BookAppointment() {
     treatment: "",
     message: "",
   });
-
+  const [image, setImage] = useState("");      // base64 data URL
+  const [fileName, setFileName] = useState(""); // friendly display name
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm({
-        name: "",
-        phone: "",
-        email: "",
-        date: "",
-        time: "",
-        treatment: "",
-        message: "",
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          service: form.treatment,
+          date: form.date,
+          time: form.time,
+          message: form.message,
+          image: image,
+        }),
       });
-    }, 3000);
+
+      if (!res.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const result = await res.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setForm({
+            name: "",
+            phone: "",
+            email: "",
+            date: "",
+            time: "",
+            treatment: "",
+            message: "",
+          });
+          setImage("");
+          setFileName("");
+        }, 2800);
+      } else {
+        throw new Error(result.message || "Failed to submit lead");
+      }
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -261,11 +294,9 @@ export default function BookAppointment() {
                     className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15 appearance-none"
                   >
                     <option value="">Select Time</option>
-                    <option>09:00 AM - 11:00 AM</option>
-                    <option>11:00 AM - 01:00 PM</option>
-                    <option>02:00 PM - 04:00 PM</option>
-                    <option>04:00 PM - 06:00 PM</option>
-                    <option>06:00 PM - 07:00 PM</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
                   </select>
                 </div>
 

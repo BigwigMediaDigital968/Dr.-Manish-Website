@@ -9,15 +9,51 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+const isFileUpload = (value: FormDataEntryValue | null): value is File =>
+    typeof File !== "undefined" && value instanceof File && value.size > 0;
+
+const uploadToCloudinary = async (file: File) => {
+    const arrayBuffer = await file.arrayBuffer();
+    const base64 = Buffer.from(arrayBuffer).toString("base64");
+    const dataUri = `data:${file.type};base64,${base64}`;
+
+    const resourceType = file.type === "application/pdf" ? "raw" : "image";
+    const uploadRes = await cloudinary.uploader.upload(dataUri, {
+        folder: "DRManish/leads",
+        resource_type: resourceType,
+        use_filename: true,
+        unique_filename: true,
+        overwrite: false,
+    });
+
+    const prefix = resourceType === "raw" ? "pdf" : "image";
+    return `${prefix}:${uploadRes.secure_url}`;
+};
+
 // POST /api/leads — Submit a new lead (from the form)
 export async function POST(req: NextRequest) {
     try {
         await connectDB();
-        const body = await req.json();
+        const contentType = req.headers.get("content-type") || "";
+        const isMultipart = contentType.includes("multipart/form-data");
 
-        const { name, phone, specialty, date, time, image } = body;
+        const body = isMultipart ? await req.formData() : await req.json();
 
-        if (!name || !phone || !specialty || !date || !time) {
+        const getValue = (key: string) =>
+            isMultipart ? body.get(key) : (body as Record<string, unknown>)[key];
+
+        const name = String(getValue("name") ?? "").trim();
+        const phone = String(getValue("phone") ?? "").trim();
+        const email = String(getValue("email") ?? "").trim();
+        const service = String(getValue("service") ?? "").trim();
+        const date = String(getValue("date") ?? "").trim();
+        const time = String(getValue("time") ?? "").trim();
+        const message = String(getValue("message") ?? "").trim();
+
+        const uploadedFile = isMultipart ? body.get("file") : null;
+        const image = String(getValue("image") ?? "").trim();
+
+        if (!name || !phone || !service || !date || !time) {
             return NextResponse.json(
                 { success: false, message: "Missing required fields" },
                 { status: 400 }
@@ -25,7 +61,7 @@ export async function POST(req: NextRequest) {
         }
 
         let imageUrl = "";
-        if (image) {
+        if (isFileUpload(uploadedFile)) {
             // Check if Cloudinary is configured
             if (
                 !process.env.CLOUDINARY_CLOUD_NAME ||
@@ -41,27 +77,7 @@ export async function POST(req: NextRequest) {
             }
 
             try {
-                if (image.startsWith("data:application/pdf")) {
-                    const uploadRes = await cloudinary.uploader.upload(image, {
-                        folder: "DRManish/leads",
-                        resource_type: "raw",
-                    });
-                    imageUrl = `pdf:${uploadRes.secure_url}`;
-                } else if (image.startsWith("data:image/")) {
-                    const uploadRes = await cloudinary.uploader.upload(image, {
-                        folder: "DRManish/leads",
-                        resource_type: "image",
-                    });
-                    imageUrl = `image:${uploadRes.secure_url}`;
-                } else if (image.startsWith("data:")) {
-                    const uploadRes = await cloudinary.uploader.upload(image, {
-                        folder: "DRManish/leads",
-                        resource_type: "auto",
-                    });
-                    imageUrl = `file:${uploadRes.secure_url}`;
-                } else {
-                    imageUrl = image;
-                }
+                imageUrl = await uploadToCloudinary(uploadedFile);
             } catch (uploadError) {
                 console.error("Cloudinary upload failed:", uploadError);
                 return NextResponse.json(
@@ -69,10 +85,18 @@ export async function POST(req: NextRequest) {
                     { status: 500 }
                 );
             }
+        } else if (image) {
+            imageUrl = image;
         }
 
         const lead = await Lead.create({
-            ...body,
+            name,
+            phone,
+            email,
+            service,
+            date,
+            time,
+            message,
             image: imageUrl,
         });
 

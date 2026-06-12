@@ -41,16 +41,18 @@ const slots = [
 const defaultForm = {
   name: "",
   phone: "",
+  email: "",
   specialty: "",
   date: "",
   time: "",
   image: "",
-  notes: "",
+  message: "",
 };
 
 export default function Popup({ isOpen, onClose }: PopupProps) {
   const [formData, setFormData] = useState(defaultForm);
   const [fileName, setFileName] = useState("");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -61,6 +63,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       setFormSubmitted(false);
       setFormData(defaultForm);
       setFileName("");
+      setSelectedFile(null);
     }, 300);
   };
 
@@ -76,10 +79,22 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       return;
     }
     try {
+      const payload = new FormData();
+      payload.append("name", formData.name);
+      payload.append("phone", formData.phone);
+      payload.append("email", formData.email);
+      payload.append("service", formData.specialty);
+      payload.append("date", formData.date);
+      payload.append("time", formData.time);
+      payload.append("message", formData.message);
+
+      if (selectedFile) {
+        payload.append("file", selectedFile);
+      }
+
       const res = await fetch("/api/leads", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: payload,
       });
 
       if (!res.ok) {
@@ -281,76 +296,97 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
               </div>
             </div>
 
-            <div className="w-full" ref={dropdownRef}>
-              <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
-                Select treatment
-              </label>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="Your email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50
+                    text-sm text-slate-800 placeholder:text-slate-400
+                    focus:outline-none focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15
+                    transition-all duration-200"
+                />
+              </div>
+              <div className="" ref={dropdownRef}>
+                <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
+                  Select treatment
+                </label>
 
-              <div className="relative">
-                {/* Dropdown Trigger Button */}
-                <button
-                  type="button"
-                  onClick={() => setIsSelectOpen(!isSelectOpen)}
-                  className={`
+                <div className="relative">
+                  {/* Dropdown Trigger Button */}
+                  <button
+                    type="button"
+                    onClick={() => setIsSelectOpen(!isSelectOpen)}
+                    className={`
           w-full p-3 rounded-xl border text-left transition-all duration-200
           flex items-center justify-between cursor-pointer bg-white
           ${isSelectOpen ? "border-[#1fa8e8] shadow-sm shadow-sky-100" : "border-slate-200 hover:border-slate-300"}
         `}
-                >
-                  <div className="flex items-center gap-2.5">
-                    {selectedService ? (
-                      <>
-                        <span className="text-lg leading-none">{selectedService.icon}</span>
-                        <span className="text-xs font-semibold text-slate-700 leading-none">
-                          {selectedService.value}
-                        </span>
-                      </>
-                    ) : (
-                      <span className="text-xs text-slate-400 font-medium">Choose a treatment...</span>
-                    )}
-                  </div>
+                  >
+                    <div className="flex items-center gap-2.5">
+                      {selectedService ? (
+                        <>
+                          <span className="text-lg leading-none">{selectedService.icon}</span>
+                          <span className="text-xs font-semibold text-slate-700 leading-none">
+                            {selectedService.value}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-xs text-slate-400 font-medium">Choose a treatment...</span>
+                      )}
+                    </div>
 
-                  {/* Chevron Icon */}
-                  <div className={`${isSelectOpen ? "rotate-180" : ""} transition-transform duration-200`}><ChevronDown className="w-4 h-4 text-slate-400" /></div>
-                </button>
+                    {/* Chevron Icon */}
+                    <div className={`${isSelectOpen ? "rotate-180" : ""} transition-transform duration-200`}><ChevronDown className="w-4 h-4 text-slate-400" /></div>
+                  </button>
 
-                {/* Dropdown Menu Menu Options */}
-                {isSelectOpen && (
-                  <div className="absolute z-50 w-full mt-1.5 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
-                    <div
-                      className="max-h-52 overflow-y-auto p-1.5 [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]"
-                    >
-                      {services.map((service) => {
-                        const active = formData.specialty === service.value;
-                        return (
-                          <button
-                            key={service.value}
-                            type="button"
-                            onClick={() => {
-                              setFormData({ ...formData, specialty: service.value });
-                              setIsSelectOpen(false);
-                            }}
-                            className={`
+                  {/* Dropdown Menu Menu Options */}
+                  {isSelectOpen && (
+                    <div className="absolute z-50 w-full mt-1.5 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
+                      <div
+                        className="max-h-52 overflow-y-auto p-1.5 [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]"
+                      >
+                        {services.map((service) => {
+                          const active = formData.specialty === service.value;
+                          return (
+                            <button
+                              key={service.value}
+                              type="button"
+                              onClick={() => {
+                                setFormData({ ...formData, specialty: service.value });
+                                setIsSelectOpen(false);
+                              }}
+                              className={`
                     w-full p-2.5 rounded-lg text-left transition-all duration-150
                     flex items-center gap-3 cursor-pointer mb-0.5 last:mb-0
                     ${active
-                                ? "bg-[#1fa8e8]/[0.08] text-[#0c7dc2]"
-                                : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
-                              }
+                                  ? "bg-[#1fa8e8]/[0.08] text-[#0c7dc2]"
+                                  : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                                }
                   `}
-                          >
-                            <span className="text-lg leading-none">{service.icon}</span>
-                            <span className="text-xs font-semibold leading-none">
-                              {service.value}
-                            </span>
-                          </button>
-                        );
-                      })}
+                            >
+                              <span className="text-lg leading-none">{service.icon}</span>
+                              <span className="text-xs font-semibold leading-none">
+                                {service.value}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
+
 
             {/* Date */}
             <div>
@@ -460,6 +496,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                     const file = e.target.files?.[0];
                     if (file) {
                       setFileName(file.name);
+                      setSelectedFile(file);
                       const reader = new FileReader();
                       reader.onloadend = () => {
                         setFormData({
@@ -486,6 +523,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                     type="button"
                     onClick={() => {
                       setFileName("");
+                      setSelectedFile(null);
                       setFormData({
                         ...formData,
                         image: "",
@@ -502,7 +540,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
             {/* Notes */}
             <div>
               <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
-                Symptoms / notes{" "}
+                Symptoms / message{" "}
                 <span className="normal-case tracking-normal font-normal text-slate-400">
                   (optional)
                 </span>
@@ -510,9 +548,9 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
               <textarea
                 placeholder="Describe your symptoms briefly…"
                 rows={2}
-                value={formData.notes}
+                value={formData.message}
                 onChange={(e) =>
-                  setFormData({ ...formData, notes: e.target.value })
+                  setFormData({ ...formData, message: e.target.value })
                 }
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50
                   text-sm text-slate-800 placeholder:text-slate-400
