@@ -21,6 +21,7 @@ const uploadToCloudinary = async (file: File) => {
     const uploadRes = await cloudinary.uploader.upload(dataUri, {
         folder: "DRManish/leads",
         resource_type: resourceType,
+        format: file.type === "application/pdf" ? "pdf" : undefined,
         use_filename: true,
         unique_filename: true,
         overwrite: false,
