@@ -20,9 +20,11 @@ export default function BookAppointment() {
   const [image, setImage] = useState("");      // base64 data URL
   const [fileName, setFileName] = useState(""); // friendly display name
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
       const res = await fetch("/api/leads", {
         method: "POST",
@@ -67,6 +69,8 @@ export default function BookAppointment() {
     } catch (error) {
       console.error("Error submitting lead:", error);
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -343,13 +347,16 @@ export default function BookAppointment() {
               <div className="flex justify-center">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full md:w-auto rounded-xl px-10 py-3 text-sm font-bold text-white shadow-md transition-all hover:opacity-90 active:scale-[0.97] cursor-pointer"
                   style={{
                     background: "var(--gradient-primary)",
                     boxShadow: "var(--shadow-primary)",
+                    opacity: isSubmitting ? 0.75 : 1,
+                    cursor: isSubmitting ? "not-allowed" : "pointer",
                   }}
                 >
-                  Book Appointment
+                  {isSubmitting ? "Submitting..." : "Book Appointment"}
                 </button>
               </div>
             </form>

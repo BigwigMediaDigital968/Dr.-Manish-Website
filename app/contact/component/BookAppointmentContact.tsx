@@ -36,6 +36,7 @@ export default function BookAppointmentContact() {
   const [submitted, setSubmitted] = useState(false);
   const [fileName, setFileName] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -67,6 +68,7 @@ export default function BookAppointmentContact() {
       alert("Please select a preferred time.");
       return;
     }
+    setIsSubmitting(true);
 
     try {
       const payload = new FormData();
@@ -107,6 +109,8 @@ export default function BookAppointmentContact() {
     } catch (error) {
       console.error("Error submitting lead:", error);
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -573,13 +577,16 @@ export default function BookAppointmentContact() {
                 {/* Submit */}
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full rounded-2xl py-3.5 text-sm font-bold tracking-wide text-white transition-all hover:opacity-90 active:scale-[0.985]"
                   style={{
                     background: "var(--gradient-primary)",
                     boxShadow: "var(--shadow-primary)",
+                    opacity: isSubmitting ? 0.75 : 1,
+                    cursor: isSubmitting ? "not-allowed" : "pointer",
                   }}
                 >
-                  Book Now
+                  {isSubmitting ? "Submitting..." : "Book Now"}
                 </button>
               </form>
             )}

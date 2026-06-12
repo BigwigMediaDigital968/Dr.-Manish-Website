@@ -54,6 +54,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
   const [fileName, setFileName] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -78,6 +79,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       alert("Please select a preferred time.");
       return;
     }
+    setIsSubmitting(true);
     try {
       const payload = new FormData();
       payload.append("name", formData.name);
@@ -114,6 +116,8 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
     } catch (error) {
       console.error("Error submitting lead:", error);
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -562,6 +566,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
             {/* Submit */}
             <button
               type="submit"
+              disabled={isSubmitting}
               className="w-full py-3.5 rounded-2xl
                 bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45]
                 hover:from-[#0c7dc2] hover:to-[#4d8f2d]
@@ -569,8 +574,12 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                 text-white text-sm font-semibold tracking-wide
                 shadow-md shadow-sky-200/50
                 transition-all duration-200 cursor-pointer"
+              style={{
+                opacity: isSubmitting ? 0.75 : 1,
+                cursor: isSubmitting ? "not-allowed" : "pointer",
+              }}
             >
-              Send appointment request
+              {isSubmitting ? "Submitting..." : "Send appointment request"}
             </button>
           </form>
         )}
