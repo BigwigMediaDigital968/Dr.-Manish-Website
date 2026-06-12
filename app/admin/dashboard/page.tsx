@@ -46,10 +46,6 @@ export default function DashboardPage() {
       title: "Published Blogs",
       value: "0",
     },
-    {
-      title: "Today's Enquiries",
-      value: "12",
-    },
   ];
 
   return (
