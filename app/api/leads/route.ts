@@ -99,6 +99,7 @@ export async function POST(req: NextRequest) {
             time,
             message,
             image: imageUrl,
+            source: String(getValue("source") ?? "website").trim()
         });
 
         return NextResponse.json(

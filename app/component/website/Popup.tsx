@@ -12,6 +12,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { FormServices } from "@/app/Data/Services";
+import { usePathname } from "next/navigation";
 
 interface PopupProps {
   isOpen: boolean;
@@ -57,6 +58,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname();
 
   const handleClose = () => {
     onClose();
@@ -81,6 +83,11 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
     }
     setIsSubmitting(true);
     try {
+      const source =
+        pathname === "/"
+          ? "home"
+          : pathname.split("/").filter(Boolean).pop();
+
       const payload = new FormData();
       payload.append("name", formData.name);
       payload.append("phone", formData.phone);
@@ -89,6 +96,8 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       payload.append("date", formData.date);
       payload.append("time", formData.time);
       payload.append("message", formData.message);
+      payload.append("source", source || "pop-up")
+
 
       if (selectedFile) {
         payload.append("file", selectedFile);

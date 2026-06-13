@@ -11,6 +11,7 @@ export interface ILead extends Document {
     message?: string;
     status: "new" | "contacted" | "rejected";
     createdAt: Date;
+    source?:string;
 }
 
 const LeadSchema = new Schema<ILead>(
@@ -28,6 +29,7 @@ const LeadSchema = new Schema<ILead>(
             enum: ["new", "contacted", "rejected"],
             default: "new",
         },
+        source: { type: String, default: "website" },
     },
     { timestamps: true }
 );

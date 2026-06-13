@@ -79,6 +79,7 @@ export default function BookAppointmentContact() {
       payload.append("date", form.date);
       payload.append("time", form.time);
       payload.append("message", form.message);
+      payload.append("source", "contact-page");
 
       if (selectedFile) {
         payload.append("file", selectedFile);

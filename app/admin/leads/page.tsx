@@ -30,6 +30,7 @@ interface Lead {
   message?: string;
   status: "new" | "contacted" | "rejected";
   createdAt: string;
+  source?: string | null;
 }
 
 export default function LeadsPage() {
@@ -415,10 +416,16 @@ export default function LeadsPage() {
             {/* Header */}
             <div className="bg-gradient-to-r from-[#0c7dc2] to-[#6dbb45] px-6 py-5 flex items-center justify-between text-white">
               <div>
-                <h3 className="text-lg font-bold">Consultation Details</h3>
+                <div>
+                  <h3 className="text-lg font-bold">Consultation Details</h3>
                 <p className="text-white/70 text-xs mt-0.5">
-                  Lead ID: {selectedLead._id}
+                  <span className="text-white">Lead ID:</span> {selectedLead._id}
                 </p>
+                 <p className="text-white/70 text-xs mt-0.5">
+                 <span className="text-white">Source:</span> <span className="capitalize">{(selectedLead.source)?.split("-") .join(" ") || "website"}</span>
+                </p>
+                </div>
+                
               </div>
               <button
                 onClick={() => setSelectedLead(null)}
