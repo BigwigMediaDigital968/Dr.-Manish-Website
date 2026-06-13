@@ -273,30 +273,39 @@ export default function Speciality() {
                 and adults.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] flex items-center justify-center font-bold text-xs">
-                    ✓
-                  </span>
-                  <span className="text-xs font-bold text-slate-700">
-                    Personalized Asthma Control Plans
-                  </span>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#6dbb45]/10 text-[#6dbb45] flex items-center justify-center font-bold text-xs">
-                    ✓
-                  </span>
-                  <span className="text-xs font-bold text-slate-700">
-                    Advanced Pediatric Airway Interventions
-                  </span>
-                </div>
+                {[
+                  "Chronic Cough Evaluation & Management",
+                  "Bronchoscopy Services",
+                  "Tuberculosis (TB) Diagnosis & Treatment",
+                  "Asthma & COPD Care",
+                  "EBUS (Endobronchial Ultrasound)",
+                  "Pleural Services",
+                  "Lung Cancer Diagnosis & Management",
+                ].map((service, index) => (
+                  <div key={service} className="flex items-start gap-2.5">
+                    <span
+                      className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs ${index % 2 === 0
+                          ? "bg-[#1fa8e8]/10 text-[#1fa8e8]"
+                          : "bg-[#6dbb45]/10 text-[#6dbb45]"
+                        }`}
+                    >
+                      ✓
+                    </span>
+                    <span className="text-xs font-bold text-slate-700">
+                      {service}
+                    </span>
+                  </div>
+                ))}
               </div>
-              <Link
+             <div className="pl-2">
+               <Link
                 href="/about"
                 className="text-md font-bold text-[#1fa8e8] hover:text-[#0c7dc2] flex items-center gap-1 mt-4"
               >
                 Know More
                 <ChevronRight className="w-4 h-4" />
               </Link>
+             </div>
             </div>
           </div>
 
@@ -326,11 +335,10 @@ export default function Speciality() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
-                    activeTab === tab
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${activeTab === tab
                       ? "bg-[#1fa8e8] text-white shadow-md"
                       : "text-slate-600 hover:text-slate-900 hover:bg-white/50"
-                  }`}
+                    }`}
                 >
                   {tab}
                 </button>

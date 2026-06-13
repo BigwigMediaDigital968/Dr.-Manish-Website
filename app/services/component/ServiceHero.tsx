@@ -111,16 +111,16 @@ export default function ServiceHero() {
             href="/contact"
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-sky-500/20 active:scale-95 transition-all flex items-center justify-center gap-2 group/btn cursor-pointer"
           >
-            Contact Clinic Desk
+            Schedule Assessment
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform" />
           </Link>
 
-          <Link
+          {/* <Link
             href="/contact"
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white text-white hover:text-slate-950 border border-white/25 hover:border-white font-bold text-sm uppercase tracking-wider backdrop-blur-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             Schedule Assessment
-          </Link>
+          </Link> */}
         </div>
       </div>
 
