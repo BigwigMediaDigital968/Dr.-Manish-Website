@@ -78,7 +78,7 @@ export default function Stats() {
       accentText: "text-slate-700",
     },
   ];
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const [popupShown, setPopupShown] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
