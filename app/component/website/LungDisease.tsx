@@ -19,6 +19,10 @@ import {
   ChevronRight,
   ArrowRight,
   Plus,
+  Droplets,
+  Heart,
+  Route,
+  Moon,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -31,142 +35,137 @@ export default function LungDisease() {
   const [selectedDisease, setSelectedDisease] = useState<number | null>(null);
 
   const diseaseScope = [
-    {
-      id: 1,
-      title: "Asthma & Severe Asthma",
-      icon: Wind,
-      shortDesc:
-        "Specialized bronchial hyperactivity checks, spirometry mapping, and custom inhaler routines.",
-      details: [
-        "Spirometry with bronchodilator responsiveness",
-        "FeNO breath testing (Airway inflammation)",
-        "Personalized Asthma Action Plans",
-        "Biologic therapies for refractory severe asthma",
-      ],
-      color: "from-sky-400 to-sky-600",
-      accent: "#1fa8e8",
-    },
-    {
-      id: 2,
-      title: "COPD & Smoking-Related Lung Disease",
-      icon: Flame,
-      shortDesc:
-        "Comprehensive management for chronic bronchitis and emphysema aligned with GOLD guidelines.",
-      details: [
-        "Smoking cessation counseling & therapy",
-        "Pulmonary function volume mapping",
-        "Vaccination schedules (Pneumococcal/Flu)",
-        "Home oxygen & non-invasive ventilation (NIV)",
-      ],
-      color: "from-amber-400 to-orange-500",
-      accent: "#ff9f1c",
-    },
-    {
-      id: 3,
-      title: "Interstitial Lung Disease (ILD)",
-      icon: Layers,
-      shortDesc:
-        "Systematic multi-trigger evaluations for complex scarring and auto-immune pulmonary associations.",
-      details: [
-        "High-Resolution Chest CT (HRCT) staging",
-        "Autoimmune panel correlations",
-        "DLCO (Carbon monoxide diffusion capacity)",
-        "Immunosuppressive & anti-fibrotic monitoring",
-      ],
-      color: "from-indigo-400 to-indigo-600",
-      accent: "#6366f1",
-    },
-    {
-      id: 4,
-      title: "Pulmonary Fibrosis",
-      icon: Activity,
-      shortDesc:
-        "Active progression monitoring and functional tracking to preserve patient quality of life.",
-      details: [
-        "6-Minute Walk Test (6MWT) monitoring",
-        "O2 saturation tracking charts",
-        "Anti-fibrotic therapy optimization",
-        "Palliative lung health programs",
-      ],
-      color: "from-emerald-400 to-emerald-600",
-      accent: "#6dbb45",
-    },
-    {
-      id: 5,
-      title: "Tuberculosis (TB)",
-      icon: ShieldAlert,
-      shortDesc:
-        "Accurate diagnostics and rigorous direct DOTS compliance monitoring for standard and drug-resistant TB.",
-      details: [
-        "GeneXpert (PCR molecular diagnosis)",
-        "Sputum AFB smear and culture",
-        "Drug toxicity and tolerance screenings",
-        "Latent TB screening for family contacts",
-      ],
-      color: "from-rose-400 to-rose-600",
-      accent: "#f43f5e",
-    },
-    {
-      id: 6,
-      title: "Lung Cancer Staging & Screening",
-      icon: HeartPulse,
-      shortDesc:
-        "Rapid-track diagnostic screening programs for chronic smokers incorporating advanced EBUS.",
-      details: [
-        "Low-dose CT (LDCT) screen coordination",
-        "Endobronchial Ultrasound (EBUS-TBNA) biopsy",
-        "Multi-disciplinary staging protocols",
-        "Direct pathways to oncology networks",
-      ],
-      color: "from-purple-400 to-purple-600",
-      accent: "#a855f7",
-    },
-    {
-      id: 7,
-      title: "Pleural Diseases",
-      icon: Compass,
-      shortDesc:
-        "Management of fluid buildup (effusion) and collapsed lungs (pneumothorax) in outpatient rooms.",
-      details: [
-        "Ultrasound-guided diagnostic tapping",
-        "Pigtail catheter & chest tube insertions",
-        "Pleural fluid chemistry evaluations",
-        "Indwelling Pleural Catheter (IPC) setups",
-      ],
-      color: "from-blue-400 to-blue-600",
-      accent: "#0c7dc2",
-    },
-    {
-      id: 8,
-      title: "Pneumonia & Post-COVID Care",
-      icon: Sparkles,
-      shortDesc:
-        "Rehabilitation and recovery pathways for lingering post-viral lung scarring or structural fatigue.",
-      details: [
-        "Custom breathing exercises",
-        "Post-infectious scar tracking",
-        "Symptom mitigation for chronic fatigue",
-        "Nebulization and airway clearance therapy",
-      ],
-      color: "from-[#6dbb45] to-emerald-600",
-      accent: "#6dbb45",
-    },
-    {
-      id: 9,
-      title: "Chronic Cough & Breathlessness",
-      icon: Stethoscope,
-      shortDesc:
-        "A systematic diagnostic algorithm to pinpoint the actual underlying trigger of persistent coughing.",
-      details: [
-        "Cough-Variant Asthma (CVA) screening",
-        "Post-Nasal Drip (UACS) evaluations",
-        "Acid reflux (GERD) lung correlations",
-        "Symptomatic cough suppression strategies",
-      ],
-      color: "from-slate-500 to-slate-700",
-      accent: "#475569",
-    },
-  ];
+  {
+    id: 1,
+    title: "Lung Cancer & Lung Nodule",
+    icon: HeartPulse,
+    shortDesc:
+      "Comprehensive screening, diagnosis, staging, and minimally invasive evaluation of lung nodules and suspected lung cancer.",
+    href: "/services/lung-cancer-and-lung-nodule",
+    color: "from-purple-400 to-purple-600",
+    accent: "#a855f7",
+  },
+  {
+    id: 2,
+    title: "Asthma & Allergy",
+    icon: Wind,
+    shortDesc:
+      "Specialized assessment and long-term management of asthma, allergies, wheezing, and airway inflammation.",
+    href: "/services/asthma-and-allergy",
+    color: "from-sky-400 to-sky-600",
+    accent: "#1fa8e8",
+  },
+  {
+    id: 3,
+    title: "Pleural Effusion & Pleural Disease",
+    icon: Compass,
+    shortDesc:
+      "Advanced diagnosis and treatment of pleural fluid collections, pleural infections, and recurrent effusions.",
+    href: "/services/pleural-effusion-and-pleural-disease",
+    color: "from-blue-400 to-blue-600",
+    accent: "#0c7dc2",
+  },
+  {
+    id: 4,
+    title: "Pulmonary Fibrosis",
+    icon: Activity,
+    shortDesc:
+      "Expert evaluation and monitoring of lung scarring disorders with personalized treatment strategies.",
+    href: "/services/pulmonary-fibrosis",
+    color: "from-emerald-400 to-emerald-600",
+    accent: "#6dbb45",
+  },
+  {
+    id: 5,
+    title: "Hemoptysis (Blood in Sputum)",
+    icon: Droplets,
+    shortDesc:
+      "Prompt evaluation of coughing up blood using advanced imaging and bronchoscopic diagnostic techniques.",
+    href: "/services/hemoptysis",
+    color: "from-rose-400 to-rose-600",
+    accent: "#f43f5e",
+  },
+  {
+    id: 6,
+    title: "Tuberculosis (TB) & Advanced Bronchoscopy",
+    icon: ShieldAlert,
+    shortDesc:
+      "Accurate diagnosis and comprehensive treatment of tuberculosis, including complex and difficult cases.",
+    href: "/services/tuberculosis-and-advanced-bronchoscopy",
+    color: "from-red-400 to-red-600",
+    accent: "#ef4444",
+  },
+  {
+    id: 7,
+    title: "Pneumonia, Severe Chest Infection & Post-COVID Lung Care",
+    icon: Sparkles,
+    shortDesc:
+      "Specialized care for severe respiratory infections and recovery support following COVID-related lung disease.",
+    href: "/services/pneumonia-chest-infection-post-covid-care",
+    color: "from-[#6dbb45] to-emerald-600",
+    accent: "#6dbb45",
+  },
+  {
+    id: 8,
+    title: "Chronic Cough, Difficult Airway Diagnosis & Advanced Bronchoscopy",
+    icon: Stethoscope,
+    shortDesc:
+      "Comprehensive evaluation of persistent cough and unexplained respiratory symptoms using advanced diagnostics.",
+    href: "/services/chronic-cough-airway-diagnosis-bronchoscopy",
+    color: "from-slate-500 to-slate-700",
+    accent: "#475569",
+  },
+  {
+    id: 9,
+    title: "Sarcoidosis, Granulomatous Lung Disease",
+    icon: Layers,
+    shortDesc:
+      "Focused diagnosis and management of sarcoidosis and other granulomatous lung disorders.",
+    href: "/services/sarcoidosis-granulomatous-lung-disease-ebus",
+    color: "from-indigo-400 to-indigo-600",
+    accent: "#6366f1",
+  },
+  {
+    id: 10,
+    title: "Pulmonary Hypertension (PH) & Advanced Breathlessness",
+    icon: Activity,
+    shortDesc:
+      "Specialized assessment of pulmonary hypertension and unexplained breathlessness affecting daily activities.",
+    href: "/services/pulmonary-hypertension-breathlessness",
+    color: "from-cyan-400 to-cyan-600",
+    accent: "#0891b2",
+  },
+  {
+    id: 11,
+    title: "Lung Transplant Evaluation & Advanced End-Stage Lung Disease",
+    icon: Heart,
+    shortDesc:
+      "Comprehensive evaluation, stabilization, and guidance for patients with advanced end-stage lung disease.",
+    href: "/services/lung-transplant-evaluation-end-stage-lung-disease",
+    color: "from-pink-400 to-pink-600",
+    accent: "#ec4899",
+  },
+  {
+    id: 12,
+    title: "Airway Stenosis & Airway Stenting",
+    icon: Route,
+    shortDesc:
+      "Advanced management of narrowed airways using interventional pulmonology and airway stenting procedures.",
+    href: "/services/airway-stenosis-airway-stenting",
+    color: "from-orange-400 to-orange-600",
+    accent: "#f97316",
+  },
+  {
+    id: 13,
+    title: "Sleep Apnea & Sleep Disorders",
+    icon: Moon,
+    shortDesc:
+      "Diagnosis and treatment of sleep-related breathing disorders, snoring, and obstructive sleep apnea.",
+    href: "/services/sleep-apnea-sleep-disorders",
+    color: "from-violet-400 to-violet-600",
+    accent: "#8b5cf6",
+  },
+];
 
   const academicWorkshops = [
     {
@@ -191,7 +190,7 @@ export default function LungDisease() {
       id="comprehensive-lung-care"
       className="relative py-24 px-4 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden text-slate-900 border-t border-slate-100"
     >
-      {}
+      { }
       <style>{`
         @keyframes subtle-float {
           0%, 100% { transform: translateY(0); }
@@ -219,21 +218,18 @@ export default function LungDisease() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
           <div className="lg:col-span-8 space-y-4 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-black uppercase tracking-wider backdrop-blur-sm border border-[#1fa8e8]/25">
-              <Sparkles className="w-3.5 h-3.5 text-[#1fa8e8]" /> Complete Scope
-              Care
+              <Sparkles className="w-3.5 h-3.5 text-[#1fa8e8]" /> Complete Respiratory Care
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-none">
-              Comprehensive Lung Disease <br />
+              Expert Diagnosis & Treatment <br />
               <span className="bg-gradient-to-r from-[#1fa8e8] via-[#0c7dc2] to-[#6dbb45] bg-clip-text text-transparent">
-                Care Under One Roof
+               Under One Roof
               </span>
             </h2>
 
-            <p className="text-slate-500 text-sm sm:text-base font-medium max-w-2xl leading-relaxed mx-auto lg:mx-0">
-              Delhi Lung & Bronchoscopy Center delivers precise clinical
-              profiling, advanced spirometry parameters, and specialized
-              therapeutic courses for critical respiratory anomalies.
+            <p className="text-slate-500 text-sm sm:text-base font-medium max-w-3xl leading-relaxed mx-auto lg:mx-0">
+              We provide comprehensive evaluation, accurate diagnosis, and evidence-based treatment for a wide range of respiratory and chest conditions, including asthma, tuberculosis, lung cancer, pulmonary fibrosis, sleep disorders, and other complex lung diseases.
             </p>
           </div>
 
@@ -248,7 +244,7 @@ export default function LungDisease() {
         {/* ==========================================================
            SECTION 2: COMPREHENSIVE LUNG DISEASE CARD GRID
            ========================================================== */}
-        {}
+        { }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {diseaseScope.map((item) => {
             const Icon = item.icon;
@@ -256,38 +252,34 @@ export default function LungDisease() {
             const isExpanded = selectedDisease === item.id;
 
             return (
-              <div
+              <Link
+                href={`${item.href}`} // Adjust this path to match your service page routing
                 key={item.id}
                 onMouseEnter={() => setHoveredCard(item.id)}
                 onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => setSelectedDisease(isExpanded ? null : item.id)}
-                className={`group bg-white border rounded-[36px] p-6 shadow-sm transition-all duration-300 flex flex-col justify-between cursor-pointer card-shadow-hover relative overflow-hidden ${
-                  isExpanded
-                    ? "border-[#1fa8e8] ring-2 ring-[#1fa8e8]/20"
-                    : isHovered
-                      ? "border-[#1fa8e8]/30 scale-[1.01]"
-                      : "border-slate-100"
-                }`}
+                className={`group bg-white border rounded-[36px] p-6 shadow-sm transition-all duration-300 flex flex-col justify-between cursor-pointer card-shadow-hover relative overflow-hidden block ${isHovered
+                    ? "border-[#1fa8e8]/40 ring-4 ring-[#1fa8e8]/5 scale-[1.01]"
+                    : "border-slate-100"
+                  }`}
               >
-                {/* Visual accent color band on expanded items */}
-                {isExpanded && (
-                  <div
-                    className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${item.color}`}
+                <div
+
+                    className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${item.color} transition-all ease-in-out duration-300 opacity-0 group-hover:opacity-100`}
+
                   />
-                )}
+
 
                 <div className="space-y-4">
-                  {/* Top Row: Circular Icon Frame */}
+                  {/* Top Row: Circular Icon Frame & Tag */}
                   <div className="flex items-center justify-between">
                     <div
-                      className={`w-10 h-10 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md transition-transform duration-300 ${isHovered ? "scale-110" : ""}`}
+                      className={`w-10 h-10 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md transition-transform duration-300 ${isHovered ? "scale-110" : ""
+                        }`}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
 
-                    <span className="text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full bg-slate-100 text-slate-500">
-                      Clinic Path
-                    </span>
+                    
                   </div>
 
                   {/* Disease Title & Subtitle */}
@@ -299,44 +291,22 @@ export default function LungDisease() {
                       {item.shortDesc}
                     </p>
                   </div>
-
-                  {/* Expansion Area displaying diagnostic checklists */}
-                  <div
-                    className={`transition-all duration-300 overflow-hidden ${isExpanded ? "max-h-[280px] pt-4 border-t border-slate-100" : "max-h-0"}`}
-                  >
-                    <h4 className="text-[10px] font-black uppercase text-slate-400 tracking-wider mb-2">
-                      Evaluations & Therapy Scope:
-                    </h4>
-                    <ul className="space-y-2">
-                      {item.details.map((detail, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-xs font-bold text-slate-600"
-                        >
-                          <span className="w-4 h-4 rounded-full bg-emerald-50 text-[#6dbb45] flex items-center justify-center shrink-0 mt-0.5">
-                            <Check className="w-2.5 h-2.5" />
-                          </span>
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
 
-                {/* Footer Micro-triggers */}
+                {/* New Static Footer Link replacing the accordion structure */}
                 <div className="pt-5 mt-6 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-slate-400">
                   <span
-                    className={`transition-colors ${isExpanded || isHovered ? "text-[#0c7dc2]" : ""}`}
+                    className={`transition-colors duration-200 ${isHovered ? "text-[#0c7dc2]" : ""
+                      }`}
                   >
-                    {isExpanded
-                      ? "Collapse Diagnostic Details"
-                      : "View Comprehensive Therapy"}
+                    Explore Service Details
                   </span>
-                  <Plus
-                    className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-45 text-rose-500" : isHovered ? "text-[#0c7dc2] scale-110" : ""}`}
+                  <ArrowRight
+                    className={`w-4 h-4 transition-transform duration-300 ${isHovered ? "text-[#0c7dc2] translate-x-1" : ""
+                      }`}
                   />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -344,7 +314,7 @@ export default function LungDisease() {
         {/* ==========================================================
            SECTION 3: ACADEMIC & TEACHING INVOLVEMENT
            ========================================================== */}
-        {}
+        { }
         <div className="relative bg-[#0c1e36] text-white p-8 md:p-12 lg:p-16 rounded-[40px] shadow-2xl overflow-hidden mt-12">
           {/* Subtle brand ambient color glows and circular grids */}
           <div className="absolute right-0 top-0 w-96 h-96 bg-[#1fa8e8]/10 rounded-full blur-3xl pointer-events-none" />
