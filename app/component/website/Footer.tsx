@@ -29,11 +29,11 @@ const supportLinks = [
 ];
 
 const socials = [
-  { icon: FaFacebook, href: "#", label: "Facebook" },
-  { icon: FaYoutube, href: "#", label: "YouTube" },
-  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-  { icon: FaTwitter, href: "#", label: "Twitter/X" },
-  { icon: FaInstagram, href: "#", label: "Instagram" },
+  // { icon: FaFacebook, href: "#", label: "Facebook" },
+  { icon: FaYoutube, href: "https://youtube.com/@pulmonologyworld1759?si=2Sf6HLOZ-0Tzobzb", label: "YouTube" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/manish-aggarwal-553412207/", label: "LinkedIn" },
+  // { icon: FaTwitter, href: "#", label: "Twitter/X" },
+  // { icon: FaInstagram, href: "#", label: "Instagram" },
 ];
 
 const contactItems = [
