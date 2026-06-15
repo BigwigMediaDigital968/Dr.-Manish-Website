@@ -51,7 +51,7 @@ export default function HomeHero() {
           <p className="max-w-2xl text-lg text-slate-600 leading-relaxed">
             Expert care under <strong>Dr. Manish Aggarwal</strong>, Principle
             Director - Department of Chest Disease & Interventional
-            Pulmonologist, providing advanced diagnosis and treatment for
+            Pulmonologist, Max Hospital, providing advanced diagnosis and treatment for
             asthma, chronic cough, COPD, sleep disorders, ILD, sarcoidosis,
             pleural diseases and lung cancer screening.
           </p>

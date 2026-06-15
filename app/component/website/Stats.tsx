@@ -69,9 +69,9 @@ export default function Stats() {
     },
     {
       id: 6,
-      value: "Premier",
+      value: "Trained",
       suffix: "Alumnus",
-      label: "Indian Premier Institutes",
+      label: (<>At Indian Premium <br /> Institutes</>),
       icon: GraduationCap,
       gradient: "from-slate-800 to-slate-950",
       ringColor: "group-hover:border-slate-500/30",

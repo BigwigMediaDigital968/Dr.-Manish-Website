@@ -29,7 +29,7 @@ export default function AboutStats({
     },
     {
       id: 2,
-      value: "45k+",
+      value: "50k+",
       label: "Recovered Patients",
       desc: "Grateful patients who have achieved lasting relief from chronic sleep and breathing issues.",
       icon: Users,
@@ -131,45 +131,7 @@ export default function AboutStats({
         </div>
 
         {/* --- EXPANDED PATIENT SATISFACTION METRIC ROW --- */}
-        <div className="bg-white/80 backdrop-blur-md border border-slate-100/70 p-8 rounded-[40px] shadow-lg flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#6dbb45]/10 text-[#4d8f2d] text-[10px] font-bold uppercase tracking-wider">
-              <TrendingUp className="w-3.5 h-3.5" /> Recovery Rate
-            </div>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-              Leading the Standard for Pulmonary Recovery
-            </h3>
-            <p className="text-slate-500 text-sm md:text-md leading-relaxed">
-              We focus heavily on outcome metrics. Over 99% of our sleep apnea
-              and respiratory checkups lead to stable treatment cycles within 30
-              days.
-            </p>
-          </div>
-
-          {/* Graphical Progress Bar visualization */}
-          <div className="w-full lg:w-96 space-y-4 bg-slate-50/80 p-6 rounded-3xl border border-slate-100">
-            <div className="flex justify-between items-center text-xs font-bold text-slate-700">
-              <span className="flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5 text-[#1fa8e8] animate-spin" />{" "}
-                Clinical Care Index
-              </span>
-              <span className="text-[#6dbb45]">99.4% Exceptional</span>
-            </div>
-
-            {/* Visual Progress Bar Wrapper */}
-            <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden relative">
-              <div
-                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] rounded-full transition-all duration-1000"
-                style={{ width: "99.4%" }}
-              />
-            </div>
-
-            <div className="flex justify-between items-center text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-              <span>Diagnosis Target</span>
-              <span>Therapy Compliance</span>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

@@ -126,7 +126,7 @@ export default function Patients() {
               </h2>
 
               <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
-                Our clinical model at Delhi Lung & Sleep Centre ensures complete
+                Our clinical model at Delhi Lung & Bronchoscopy Centre ensures complete
                 clinical clarity, deep-rooted empathy, and evidence-driven
                 decisions for long-term health improvements.
               </p>
@@ -256,7 +256,7 @@ export default function Patients() {
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-medium text-justify lg:text-left">
                   We provided critical assistance to{" "}
-                  <span className="text-white font-extrabold underline decoration-emerald-400 decoration-2">
+                  <span className="text-white font-extrabold decoration-emerald-400 decoration-2">
                     more than a thousand patients
                   </span>{" "}
                   requiring urgent lung care, precise oxygen guidance,

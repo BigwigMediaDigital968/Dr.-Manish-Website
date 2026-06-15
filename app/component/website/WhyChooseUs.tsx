@@ -45,11 +45,11 @@ export default function WhyChooseUs() {
               <Sparkles className="w-4 h-4 text-[#1fa8e8]" /> Why Choose Us
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black text-slate-950">
-              Advanced Respiratory & Interventional
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-950">
+              Advanced Respiratory Care &
               <br />
               <span className="bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-                Pulmonology Care in Delhi
+                Interventional Pulmonology in Delhi
               </span>
             </h2>
 
@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
                 <span className="text-slate-900 font-extrabold">
                   Dr. Manish Aggarwal
                 </span>
-                , a Senior Pulmonologist & Interventional Chest Specialist in
+                , Principle Director - Department of Chest Disease & Interventional Pulmonologist in
                 Pitampura, Delhi, dedicated to provide evidence-based, ethical,
                 and patient-focused respiratory care for both common and complex
                 lung diseases.
@@ -92,13 +92,13 @@ export default function WhyChooseUs() {
               </div>
               <div>
                 <span className="text-[9px] uppercase font-bold tracking-wider text-slate-400 block">
-                  Senior Specialist
+                  Principle Director
                 </span>
                 <p className="text-xs font-black text-slate-800 leading-none">
                   Dr. Manish Aggarwal
                 </p>
                 <span className="text-[10px] text-[#6dbb45] font-bold">
-                  FRCP (Glasgow, UK)
+                  Delhi, India
                 </span>
               </div>
             </div>

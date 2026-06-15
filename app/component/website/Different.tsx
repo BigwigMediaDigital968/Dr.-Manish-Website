@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Compass,
   Globe,
@@ -13,13 +13,17 @@ import {
   Check,
   ChevronRight,
   HeartPulse,
+  Users,
+  BookMarked,
+  BookOpen,
+  ChevronLeft,
 } from "lucide-react";
 
 interface DifferentProps {
   onBookClick?: () => void;
 }
 
-export default function Different({ onBookClick = () => {} }: DifferentProps) {
+export default function Different({ onBookClick = () => { } }: DifferentProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const interventionalProcedures = [
@@ -32,13 +36,80 @@ export default function Different({ onBookClick = () => {} }: DifferentProps) {
     "Foreign Body Removal",
     "Indwelling Pleural Catheter (IPC) Procedures",
   ];
+  const experience = [
+    "Locum SPR, Diana Princess of Wales Hospital, Grimsby, UK",
+    "Locum SPR, The Queen Elizabeth Hospital, King's Lynn, Norfolk, UK",
+    "Locum SPR, The Great Western Hospital, Swindon, Wiltshire, UK",
+    "Senior Clinical Fellow, Lister Hospital, East & North Hertfordshire, Stevenage, UK",
+    "Clinical Observer, Department of Respiratory Medicine, Norfolk & Norwich University Hospital, Norwich, UK"
+  ]
+  const memberships = [
+    " International member of American society of critical care (SSCM), USA",
+    "Associate member of European society of intensive care medicine (ESCIM)",
+    "Life member of Indian Medical Association (IMA DNZ)",
+    "Member European Respiratory Society (ERS)",
+    "Member American college of physician (ACP)",
+    "Life member of Indian chest council"
+  ];
+
+  const publications = [
+    `Aggarwal Manish." Recurrent epistaxis in a patient of pulmonary arteria hypertension.” Indian J allergy asthma immunol 2009`,
+    `Aggarwal Manish, GS Ranga, S. Dwivedi, Dharmender Kumar. “Aluminium
+phosphide poisoning in a young adult: A suicidal cardiotoxin simulating myocardial
+ischaemia.” Journal Indian Academy of Clinical Medicine 2004`,
+    `Aggarwal Manish, Menon MPS. Effect of oral fexofenadine on ventilatory parameter
+in patient of bronchial asthma”. Doctoral Dissertation submitted to the University of
+Delhi, 2001`
+  ];
+
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // Function to handle scroll checking to enable/disable navigation buttons
+  const checkScrollPosition = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      // Allow minor decimal discrepancies during zoom or subpixel layouts
+      setCanScrollLeft(scrollLeft > 2);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth -2);
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", checkScrollPosition);
+      // Run once initially
+      checkScrollPosition();
+      // Handle window resize recalculations
+      window.addEventListener("resize", checkScrollPosition);
+    }
+    return () => {
+      if (container) {
+        container.removeEventListener("scroll", checkScrollPosition);
+      }
+      window.removeEventListener("resize", checkScrollPosition);
+    };
+  }, []);
+
+  // Scroll actions
+  const scroll = (direction:any) => {
+    if (scrollContainerRef.current) {
+      const cardWidth = window.innerWidth >= 768 ? 444 : window.innerWidth * 0.9; // Card size + gap
+      const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section
       id="different-care"
       className="relative pt-14 pb-0 px-4 bg-gradient-to-b from-white via-slate-50/50 to-white overflow-hidden text-slate-900 border-t border-slate-100"
     >
-      {}
+      { }
       <style>{`
         .custom-card-scrollbar::-webkit-scrollbar {
           height: 6px;
@@ -72,7 +143,7 @@ export default function Different({ onBookClick = () => {} }: DifferentProps) {
            HEADER BLOCK
            ========================================================== */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="text-center space-y-4 max-w-3xl mx-auto">
+          <div className="text-start space-y-4 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-extrabold uppercase tracking-wider backdrop-blur-sm border border-[#1fa8e8]/20">
               <Sparkles className="w-4 h-4 text-[#1fa8e8]" /> Global Benchmarks
             </div>
@@ -90,18 +161,46 @@ export default function Different({ onBookClick = () => {} }: DifferentProps) {
               credentials.
             </p>
           </div>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => scroll("left")}
+              disabled={!canScrollLeft}
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                canScrollLeft
+                  ? "border-slate-200 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-300 shadow-sm active:scale-95 cursor-pointer"
+                  : "border-slate-100 bg-slate-50 text-slate-300 cursor-not-allowed"
+              }`}
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              disabled={!canScrollRight}
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                canScrollRight
+                  ? "border-slate-200 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-300 shadow-sm active:scale-95 cursor-pointer"
+                  : "border-slate-100 bg-slate-50 text-slate-300 cursor-not-allowed"
+              }`}
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* ==========================================================
            SCROLLABLE CARDS TRACK
            ========================================================== */}
-        {}
-        <div
+        { }
+
+         <div
           ref={scrollContainerRef}
-          className="custom-card-scrollbar flex overflow-x-auto pb-4 pt-2 gap-6 snap-x snap-mandatory scroll-smooth"
+          className="custom-card-scrollbar flex overflow-x-auto pb-6 pt-2 gap-6 snap-x snap-mandatory scroll-smooth"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {/* CARD 1: Advanced Interventional Pulmonology Expertise */}
-          <div className="w-[90vw] md:w-[620px] shrink-0 snap-start bg-white border border-slate-100/80 rounded-[36px] p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-[#1fa8e8]/30 transition-all duration-300 flex flex-col md:flex-row gap-6 justify-between">
+          <div className="w-[90vw] md:w-[420px] shrink-0 snap-start bg-white border border-slate-100/80 rounded-[36px] p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-[#1fa8e8]/30 transition-all duration-300 flex flex-col md:flex-row gap-6 justify-between">
             {/* Column 1: Info & Checklist */}
             <div className="flex-1 space-y-5 flex flex-col justify-between">
               <div className="space-y-3.5">
@@ -140,26 +239,11 @@ export default function Different({ onBookClick = () => {} }: DifferentProps) {
                 ))}
               </div>
             </div>
-
-            {/* Column 2: Graphic Image with curved wrapper */}
-            {}
-            <div className="w-full md:w-56 aspect-[4/3] md:aspect-[3/4] rounded-2xl overflow-hidden relative shrink-0 shadow-sm border border-slate-100">
-              <img
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
-                alt="Bronchoscopy Suite Equipment"
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent pointer-events-none" />
-              <span className="absolute bottom-3 left-3 text-[9px] font-bold text-white bg-slate-950/40 backdrop-blur-sm px-2.5 py-1 rounded-lg uppercase tracking-wider">
-                Precision Equipment
-              </span>
-            </div>
+            {/* Column 2: Graphic Image with curved wrapper placeholder */}
           </div>
 
           {/* CARD 2: International Clinical Exposure */}
-          {}
-          <div className="w-[90vw] md:w-[620px] shrink-0 snap-start bg-white border border-slate-100/80 rounded-[36px] p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-[#6dbb45]/30 transition-all duration-300 flex flex-col md:flex-row gap-6 justify-between">
+          <div className="w-[90vw] md:w-[420px] shrink-0 snap-start bg-white border border-slate-100/80 rounded-[36px] p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-[#6dbb45]/30 transition-all duration-300 flex flex-col md:flex-row gap-6 justify-between">
             {/* Column 1: Info & Descriptive Journey */}
             <div className="flex-1 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
@@ -168,7 +252,7 @@ export default function Different({ onBookClick = () => {} }: DifferentProps) {
                     <Globe className="w-5.5 h-5.5" />
                   </div>
                   <span className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-50 text-[#4d8f2d]">
-                    FRCP Glasgow (UK)
+                    INTERNATIONAL EXPERIENCE
                   </span>
                 </div>
 
@@ -176,47 +260,117 @@ export default function Different({ onBookClick = () => {} }: DifferentProps) {
                   <h3 className="text-lg sm:text-xl font-extrabold text-slate-950 tracking-tight leading-snug">
                     International Clinical Exposure
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-semibold">
-                    Professional respiratory medicine exposure and training
-                    experience associated with clinical practice standards in
-                    England along with the prestigious FRCP (Glasgow), bringing
-                    internationally aligned evidence-based respiratory care to
-                    Indian patients.
+                  <p className="text-xs text-slate-600 leading-relaxed font-medium ">
+                    Clinical experience across leading NHS hospitals in England, including roles as Locum SPR, Senior Clinical Fellow, and Respiratory Medicine Observer, providing extensive exposure to internationally recognized standards of respiratory and critical care practice.
                   </p>
                 </div>
               </div>
 
               {/* Verified Badge Indicators */}
-              <div className="space-y-2.5 pt-2 border-t border-slate-100">
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-700">
-                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-[#4d8f2d] flex items-center justify-center shrink-0">
-                    ✓
-                  </span>
-                  <span>Globally Aligned Medical Guidelines</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-700">
-                  <span className="w-4 h-4 rounded-full bg-emerald-100 text-[#4d8f2d] flex items-center justify-center shrink-0">
-                    ✓
-                  </span>
-                  <span>UK-Trained Senior Chest Specialists</span>
-                </div>
+              <div className="max-h-[170px] overflow-y-auto pr-2 space-y-2 custom-card-scrollbar">
+                {experience.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl border border-slate-100 text-xs font-bold text-slate-700"
+                  >
+                    <span className="w-4 h-4 rounded-full bg-sky-100 text-[#0c7dc2] flex items-center justify-center shrink-0">
+                      <Check className="w-2.5 h-2.5" />
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
+            {/* Column 2: Landscape Graphic image placeholder */}
+          </div>
 
-            {/* Column 2: Landscape Graphic image representing London / Glasgow clinical training */}
-            {}
-            <div className="w-full md:w-56 aspect-[4/3] md:aspect-[3/4] rounded-2xl overflow-hidden relative shrink-0 shadow-sm border border-slate-100">
-              <img
-                src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80"
-                alt="Glasgow Royal Infirmary standard training context"
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent pointer-events-none" />
-              <span className="absolute bottom-3 left-3 text-[9px] font-bold text-white bg-slate-950/40 backdrop-blur-sm px-2.5 py-1 rounded-lg uppercase tracking-wider">
-                FRCP Credentials
-              </span>
+          {/* CARD 3: Professional Memberships */}
+          <div className="w-[90vw] md:w-[420px] shrink-0 snap-start bg-white border border-slate-100/80 rounded-[36px] p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-[#2563eb]/30 transition-all duration-300 flex flex-col md:flex-row gap-6 justify-between">
+            {/* Column 1: Info & Descriptive Journey */}
+            <div className="flex-1 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#2563eb] to-[#4338ca] text-white flex items-center justify-center shadow-md">
+                    <Users className="w-5.5 h-5.5" />
+                  </div>
+                  <span className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-[#4338ca]">
+                    GLOBAL AFFILIATIONS
+                  </span>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-slate-950 tracking-tight leading-snug">
+                    Professional Memberships
+                  </h3>
+                  <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+                    Active affiliations with leading national and international respiratory,
+                    critical care, and physician societies, ensuring continuous engagement
+                    with the latest clinical research, guidelines, and advancements in
+                    pulmonary and critical care medicine.
+                  </p>
+                </div>
+              </div>
+
+              {/* Verified Badge Indicators */}
+              <div className="max-h-[170px] overflow-y-auto pr-2 space-y-2 custom-card-scrollbar">
+                {memberships.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl border border-slate-100 text-xs font-bold text-slate-700"
+                  >
+                    <span className="w-4 h-4 rounded-full bg-sky-100 text-[#0c7dc2] flex items-center justify-center shrink-0">
+                      <Check className="w-2.5 h-2.5" />
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
+            {/* Column 2: Landscape Graphic image placeholder */}
+          </div>
+
+          {/* CARD 4: Research Contributions */}
+          <div className="w-[90vw] md:w-[420px] shrink-0 snap-start bg-white border border-slate-100/80 rounded-[36px] p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-violet-600/30 transition-all duration-300 flex flex-col md:flex-row gap-6 justify-between">
+            {/* Column 1: Info & Descriptive Journey */}
+            <div className="flex-1 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-violet-600 to-fuchsia-600 text-white flex items-center justify-center shadow-md">
+                    <BookOpen className="w-5.5 h-5.5" />
+                  </div>
+                  <span className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-violet-50 text-violet-700">
+                    RESEARCH & PUBLICATIONS
+                  </span>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-slate-950 tracking-tight leading-snug">
+                    Research Contributions
+                  </h3>
+                  <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+                    Published research and academic work spanning respiratory medicine,
+                    pulmonary hypertension, toxicology, and asthma management, reflecting a
+                    commitment to evidence-based medicine and continuous scientific inquiry.
+                  </p>
+                </div>
+              </div>
+
+              {/* Verified Badge Indicators */}
+              <div className="max-h-[170px] overflow-y-auto pr-2 space-y-2 custom-card-scrollbar">
+                {publications.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-2 px-3 py-2 bg-slate-50 rounded-xl border border-slate-100 text-xs font-bold text-slate-700"
+                  >
+                    <span className="w-4 h-4 mt-0.5 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center shrink-0">
+                      <BookMarked className="w-2.5 h-2.5" />
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Column 2: Landscape Graphic image placeholder */}
           </div>
         </div>
 

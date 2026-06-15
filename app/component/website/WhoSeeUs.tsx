@@ -15,6 +15,7 @@ import {
   ChevronRight,
   CheckCircle2,
   AlertTriangle,
+  Clock,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -172,12 +173,13 @@ export default function WhoSeeUs() {
                 <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
                   <Link
                     href="/contact"
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-black text-xs uppercase tracking-wide shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full sm:w-auto px-6 text-center py-3 rounded-xl bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-black text-xs uppercase tracking-wide shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                   >
-                    Book Diagnostic Check
+                    <Clock className="w-3.5 h-3.5" />
+                    Book <br /> Diagnostic Check
                   </Link>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919899554095"
                     className="w-full sm:w-auto px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold text-xs uppercase tracking-wide flex items-center justify-center gap-1.5 transition-all text-center"
                   >
                     <Phone className="w-3.5 h-3.5" /> Call Helpdesk

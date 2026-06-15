@@ -114,7 +114,7 @@ export default function NotFound({
             </span>
             <span className="hidden sm:inline text-slate-300">|</span>
             <a
-              href="tel:+919876543210"
+              href="tel:+919899554095"
               className="flex items-center gap-1.5 hover:text-[#0c7dc2] transition-colors"
             >
               <PhoneCall className="w-4 h-4 text-[#1fa8e8]" /> +91 98995 54095

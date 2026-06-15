@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Award,
 } from "lucide-react";
-import { LiaInstagram, LiaLinkedin } from "react-icons/lia";
+import { LiaInstagram, LiaLinkedin, LiaYoutube } from "react-icons/lia";
 import Popup from "./Popup";
 import Image from "next/image";
 
@@ -109,11 +109,10 @@ export default function About() {
                   <div className="space-y-2">
                     <h5 className="text-sm font-bold text-[#4d8f2d] flex items-center gap-1.5">
                       <Sparkles className="w-4 h-4 animate-bounce" /> Delhi Lung
-                      & Sleep Centre
+                      & Bronchoscopy Centre
                     </h5>
                     <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                      Bringing compassionate, premium-grade respiratory
-                      diagnoses & sleep evaluations directly to your care cycle.
+                      Bringing advanced lung diagnostics and precision bronchoscopy services directly into your care journey for accurate, compassionate respiratory care.
                     </p>
                   </div>
 
@@ -121,38 +120,46 @@ export default function About() {
                     {/* Contacts details */}
                     <div className="flex flex-col space-y-2 text-xs font-bold text-slate-700">
                       <a
-                        href="tel:+919876543210"
+                        href="tel:+919899554095"
                         className="flex items-center gap-2 hover:text-[#0c7dc2] transition-colors"
                       >
                         <Phone className="w-3.5 h-3.5 text-[#1fa8e8]" /> +91
-                        98765 43210
+                        9899554095
                       </a>
                       <a
                         href="mailto:info@delhilungandsleep.com"
                         className="flex items-center gap-2 hover:text-[#0c7dc2] transition-colors"
                       >
                         <Mail className="w-3.5 h-3.5 text-[#1fa8e8]" />{" "}
-                        info@delhilungandsleep.com
+                        Aggarmanish@gmail.com
                       </a>
                     </div>
 
                     {/* Social Channels */}
                     <div className="flex items-center gap-3 pt-2">
                       <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/manish-aggarwal-553412207/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-[#0c7dc2] hover:shadow-md transition-all duration-300"
                       >
-                        <LiaLinkedin className="w-3.5 h-3.5" />
+                        <LiaLinkedin className="w-5 h-5" />
                       </a>
-                      <a
+                      {/* <a
                         href="https://instagram.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-pink-600 hover:shadow-md transition-all duration-300"
                       >
                         <LiaInstagram className="w-3.5 h-3.5" />
+                      </a> */}
+                      <a
+                        href="https://youtube.com/@pulmonologyworld1759?si=2Sf6HLOZ-0Tzobzb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-red-600 hover:shadow-md transition-all duration-300"
+                      >
+                        <LiaYoutube className="w-5 h-5" />
                       </a>
                     </div>
                   </div>
@@ -178,7 +185,7 @@ export default function About() {
                     Dr. M. Aggarwal
                   </h6>
                   <p className="text-[10px] text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
-                    Senior Director
+                    Principle Director
                   </p>
 
                   <button

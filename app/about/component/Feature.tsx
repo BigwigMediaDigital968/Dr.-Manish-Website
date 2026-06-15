@@ -18,7 +18,7 @@ export default function Feature() {
                 Urgent Chest & Airway Distress
               </h3>
               <p className="text-white/80 text-[11px] leading-relaxed">
-                Connect directly with our senior interventional physicians for
+                Connect directly with Manish Aggarwal for
                 child foreign body inhalation or respiratory failure support.
               </p>
             </div>

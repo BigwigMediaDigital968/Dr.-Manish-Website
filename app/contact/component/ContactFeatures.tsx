@@ -30,7 +30,7 @@ export default function ContactFeatures({
       desc: "For general patient inquiries, diagnostic slot checking, or routine follow-up consultations.",
       detail: "+91 98995 54095",
       actionText: "Call Clinical Desk",
-      actionHref: "tel:+919876543210",
+      actionHref: "tel:+919899554095",
       icon: PhoneCall,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },

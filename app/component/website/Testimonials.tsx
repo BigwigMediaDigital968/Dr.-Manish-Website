@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Star, Quote, Heart, Activity } from "lucide-react";
+import { Star, Quote, Heart, Activity, User } from "lucide-react";
 
 interface Testimonial {
   id: number;
@@ -15,46 +15,46 @@ interface Testimonial {
 const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 1,
-    name: "Rajesh Khanna",
-    role: "Asthma Patient",
+    name: "Pooja Rajput",
+    role: "Trusted Patient",
     stars: 5,
-    text: "Years of struggling with chronic asthma and coughing ended within weeks of Dr. Manish Aggarwal's treatment plan. The spirometry diagnostic was thoroughly explained, and the custom inhaler therapy gave me my active life back.",
+    text: "We consulted Dr. Manish Aggarwal at his pitampura clinic for my grandmother's sleep related problems and our experience was excellent. The doctor was very patient,kind,and took time to understand her conditional properly. The evaluation and treatment were explained clearly. With the doctors guidance and treatment , my grandmother is doing much better now and her sleep has improved significantly. Highly recommend for anyone looking for a knowledgeable and compassionate pulmonologist.",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
   },
   {
     id: 2,
-    name: "Sunita Deshmukh",
-    role: "Sleep Apnea Patient",
+    name: "Anjana Kapoor",
+    role: "Trusted Patient",
     stars: 5,
-    text: "The overnight sleep study suite was extremely premium and comfortable. After being diagnosed with severe Obstructive Sleep Apnea, Dr. Aggarwal set up my CPAP therapy. I sleep soundly now and wake up energized!",
+    text: "Dr. Manish Aggarwal is a absolutely one of the best doctors!! Both me and my mother in law have visited her for chest infections and loved the experience of taking treatment by her. He is like godsend to us and very much knowledgeable in his field. He listens health concerns very patiently and responds appropriately... I strongly recommend to anyone having any respiratory issues to consult him.",
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
   },
   {
     id: 3,
-    name: "Vikram Malhotra",
-    role: "Chronic Bronchitis Patient",
+    name: "Naresh Chhabra",
+    role: "Trusted Patient",
     stars: 5,
-    text: "Superb clinical diagnosis. Dr. Manish Aggarwal is highly professional. The EBUS staging diagnostics were exceptionally accurate, and the follow-ups were handled with immense warmth and clinical care.",
+    text: "Dr Manish Aggarwal is the best Chest Specialist I have ever seen. My wife had very serious breathing problems 3-4 yrs back. She was a chronic Asthma Patient.I took treatment for her from several Chest Specialists in Delhi. I even took treatment from Medanta but only temporary relief she could get. I was very disappointed and had lost hope but suddenly God helped me thru someone and directed me to meet Dr Manish. Now she is taking treatment from him. A lot of betterment she is feeling now . Dr Manish has even stopped giving Steroids to her. When patients go to him, he treats them well. We feel personal touch. He treats us as his elder family members.I wish him the very best in his life. God bless him.",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
   },
   {
     id: 4,
-    name: "Priyanjali Sen",
-    role: "Mother of Pediatric Patient",
+    name: "Monica Sharma",
+    role: "Trusted Patient",
     stars: 5,
-    text: "When my child accidentally inhaled a small toy part, the clinic coordinated an urgent foreign body bronchoscopy extraction. Dr. Aggarwal's swift intervention saved my child's life. Truly grateful!",
+    text: "Dr. Manish Aggarwal is an excellent pulmonologist and a genuinely caring doctor. From our personal experience, we found him patient, compassionate, and very reassuring throughout the treatment process. He explains everything clearly and makes his patient feel comfortable and this truly makes a difference. Highly recommend Dr. Manish Aggarwal to anyone looking for a dedicated, skilled pulmonologist with a compassionate heart.",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
   },
   {
     id: 5,
-    name: "Devendra Joshi",
-    role: "ILD (Lung Fibrosis) Patient",
+    name: "Manish Dixit",
+    role: "Trusted Patient",
     stars: 5,
-    text: "Staging and managing interstitial lung disease is incredibly challenging, but the comprehensive therapies and targeted DLCO lung diagnostics here have stabilized my breathing parameters. Excellent team.",
+    text: "Dr. Manish Aggarwal is an exceptionally professional and experienced pulmonologist. He is thorough in his diagnosis, attentive to patient concerns, and explains treatment plans with great clarity and patience. His compassionate approach and clinical expertise create a strong sense of trust and confidence. The overall consultation experience was highly satisfactory, and the treatment provided was effective. Highly recommended for anyone seeking quality respiratory and chest care.",
     avatar:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
   },
@@ -155,12 +155,23 @@ export default function Testimonials() {
                       <Quote className="absolute right-6 top-6 w-12 h-12 text-slate-200/40 pointer-events-none" />
 
                       {/* Header containing Patient Avatar, Stars & Clinical Info */}
-                      <div className="flex items-center gap-4 mb-4">
-                        <img
+                      
+
+                      {/* Diagnostic Recovery story */}
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium line-clamp-4">
+                        "{item.text}"
+                      </p>
+                      <div className="flex items-center gap-4 mb-4 mt-6">
+                        {/* <img
                           src={item.avatar}
                           alt={item.name}
                           className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md"
-                        />
+                        /> */}
+                        {/* <div className="rounded-full p-4 object-cover border-2 border-white">
+                          <User
+                            className="w-8 h-8 rounded-full"
+                          />
+                        </div> */}
                         <div>
                           <h4 className="text-sm font-black text-[#1fa8e8] tracking-wide leading-tight">
                             {item.name}
@@ -180,11 +191,6 @@ export default function Testimonials() {
                           ))}
                         </div>
                       </div>
-
-                      {/* Diagnostic Recovery story */}
-                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-                        "{item.text}"
-                      </p>
                     </div>
                   </div>
                 ))}

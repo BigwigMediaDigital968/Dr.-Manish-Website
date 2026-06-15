@@ -42,7 +42,7 @@ const contactItems = [
     text: "JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034",
   },
   { icon: Phone, text: "+91 98995 54095" },
-  { icon: Mail, text: "hello@delhilungsleep.com" },
+  { icon: Mail, text: "Aggarmanish@gmail.com" },
 ];
 
 /* ── component ────────────────────────────────────────────── */

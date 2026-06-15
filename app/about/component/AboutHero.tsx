@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, Activity } from "lucide-react";
+import Link from "next/link";
 
 interface AboutHeroProps {
   onContactClick?: () => void;
@@ -22,7 +23,7 @@ export default function AboutHero({
           {/* Subtitle Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-wider self-center lg:self-start">
             <Activity className="w-3.5 h-3.5 text-[#6dbb45]" /> India's Trusted
-            Name in Advanced Lung & Respiratory Care
+            Name in Advanced Lung & Bronchoscopy
           </div>
           <h3 className="text-md font-medium uppercase">
             Meet Dr. Manish Aggarwal
@@ -38,8 +39,7 @@ export default function AboutHero({
 
           {/* Subtext Paragraph */}
           <p className="text-white/85 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            Dr. Manish Aggarwal is a renowned pulmonologist and interventional
-            chest physician, recognized for his expertise in bronchoscopy,
+            Dr. Manish Aggarwal, Principle Director - Department of Chest Disease & Interventional Pulmonologist, recognized for his expertise in bronchoscopy,
             asthma, COPD, ILD, sleep medicine, and advanced lung disease
             management. Backed by extensive academic leadership and
             international experience, he is committed to delivering world-class
@@ -48,13 +48,13 @@ export default function AboutHero({
 
           {/* Primary Action Button linking to Contact */}
           <div className="pt-2 flex justify-center lg:justify-start">
-            <button
-              onClick={onContactClick}
+            <Link
+            href="/contact"
               className="group w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-medium text-sm tracking-wide shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               Contact Our Clinic
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -10,7 +10,7 @@ export default function Contact() {
       <Navbar />
       <BookAppointmentContact />
       <Location />
-      <ContactFeatures />
+      {/* <ContactFeatures /> */}
       <Footer />
     </>
   );

@@ -23,7 +23,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
   // Address and coordinate specifics for Google Maps directions
   const mapAddress =
     "Delhi Lung & Bronchoscopy Center, Vikas Marg, East Delhi, Delhi, India";
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
+  const googleMapsUrl = `https://maps.app.goo.gl/QggTaVHkW5qS4ZD8A`;
 
   const amenities = [
     { label: "Metro Connected (2 Min Walk)", icon: Compass },
@@ -34,7 +34,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
   return (
     <section
       id="contact"
-      className="relative min-h-[600px] lg:h-[650px] w-full flex flex-col lg:flex-row items-stretch overflow-hidden bg-slate-50 border-t border-slate-100"
+      className="relative min-h-[600px] lg:h-[650px] mb-10 w-full flex flex-col lg:flex-row items-stretch overflow-hidden bg-slate-50 border-t border-slate-100"
     >
       {/* ==========================================================
          BACKGROUND MAP CONTAINER (Takes full viewport height/width)
@@ -52,7 +52,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
 
         {/* Embedded Iframe of Google Maps - Vikas Marg, East Delhi */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.916174880521!2d77.2831519!3d28.6322631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb5cfc70b80f%3A0xe9688df2cb859298!2sVikas%20Marg%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.269935636379!2d77.1471522!3d28.711477900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d017fab0dd98f%3A0x5b060deeefe577ed!2sDr%20Manish%20Aggarwal%20%E2%80%93%20senior%20chest%20physician%20and%20Interventional%20pulmonologist%20Clinic!5e0!3m2!1sen!2sin!4v1781526122531!5m2!1sen!2sin"
           className="w-full h-full border-0 filter grayscale-[15%] contrast-[105%]"
           allowFullScreen
           loading="lazy"
@@ -93,11 +93,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
             <div className="flex items-start gap-2.5 text-slate-500 text-xs sm:text-sm">
               <MapPin className="w-5 h-5 text-[#1fa8e8] shrink-0 mt-0.5" />
               <p className="leading-relaxed font-semibold">
-                Vikas Marg, East Delhi, <br />
-                <span className="text-slate-400">
-                  Landmark: Near Preet Vihar / Nirman Vihar Metro Pillar, New
-                  Delhi - 110092
-                </span>
+                JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034
               </p>
             </div>
           </div>
@@ -152,7 +148,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
 
             {/* Direct Call Button */}
             <a
-              href="tel:+919876543210"
+              href="tel:+919899554095"
               className="flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl bg-white border border-slate-200 hover:border-[#1fa8e8]/40 hover:bg-slate-50 text-slate-700 font-bold text-xs uppercase tracking-wide active:scale-95 transition-all text-center"
             >
               <Phone className="w-3.5 h-3.5 text-[#6dbb45]" /> Call Clinic

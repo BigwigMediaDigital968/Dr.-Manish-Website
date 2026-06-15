@@ -24,14 +24,14 @@ export default function Home() {
       <Stats />
       <Speciality />
       <About />
-      <FeaturedService />
+      {/* <FeaturedService /> */}
       <WhyChooseUs />
       <Different />
       <CTA />
       <Testimonials />
       <AppointmentProcess />
       <BookAppointment />
-      <ClinicFeatures />
+      {/* <ClinicFeatures /> */}
       <BlogSection />
       <FAQs
         title="Frequently Asked Questions"

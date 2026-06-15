@@ -186,9 +186,9 @@ export default function BookAppointmentContact() {
               {/* Stats */}
               <div className="mt-10 flex flex-wrap gap-6 border-t border-[#e2e8f0] pt-8">
                 {[
-                  { value: "12+", label: "Specialties" },
-                  { value: "10k+", label: "Patients Treated" },
-                  { value: "15 yr", label: "Experience" },
+                  { value: "20+", label: "Specialties" },
+                  { value: "50k+", label: "Patients Treated" },
+                  { value: "25 yr+", label: "Experience" },
                 ].map((s) => (
                   <div key={s.label}>
                     <p
@@ -234,7 +234,7 @@ export default function BookAppointmentContact() {
                   Trusted Pulmonology Care
                 </p>
                 <p className="text-lg font-extrabold text-[#1fa8e8]">
-                  10,000+ Patients
+                  50,000+ Patients
                 </p>
               </div>
             </div>

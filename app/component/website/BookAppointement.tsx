@@ -88,7 +88,7 @@ export default function BookAppointment() {
               style={{ background: "var(--gradient-health)" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-              Delhi Lung &amp; Sleep Centre
+              Delhi Lung & Bronchoscopy Centre
             </span>
 
             <h1
@@ -127,9 +127,9 @@ export default function BookAppointment() {
             {/* Stats row */}
             <div className="mt-10 flex flex-wrap gap-6 border-t border-[#e2e8f0] pt-8">
               {[
-                { value: "12+", label: "Specialties" },
-                { value: "10k+", label: "Patients Treated" },
-                { value: "15 yr", label: "Experience" },
+                { value: "20+", label: "Specialties" },
+                { value: "50k+", label: "Patients Treated" },
+                { value: "25 yr+", label: "Experience" },
               ].map((s) => (
                 <div key={s.label}>
                   <p

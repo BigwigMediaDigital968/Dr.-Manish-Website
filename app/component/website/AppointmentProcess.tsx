@@ -84,7 +84,7 @@ export default function AppointmentProcess({
                     Our Location
                   </h4>
                   <p className="text-[11px] text-slate-500 font-medium mt-1">
-                    Vikas Marg, East Delhi, Landmark: Metro Pillar
+                    JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034
                   </p>
                 </div>
               </div>
@@ -99,10 +99,10 @@ export default function AppointmentProcess({
                     Our Email
                   </h4>
                   <a
-                    href="mailto:info@delhilungandsleep.com"
+                    href="mailto:Aggarmanish@gmail.com"
                     className="text-[11px] text-slate-500 hover:text-[#1fa8e8] font-medium mt-1 block break-all"
                   >
-                    info@delhilungandsleep.com
+                    Aggarmanish@gmail.com
                   </a>
                 </div>
               </div>

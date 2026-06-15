@@ -221,7 +221,7 @@ export default function Speciality() {
 
   return (
     <>
-      <section className="relative py-14 px-4 bg-white overflow-hidden text-slate-900">
+      <section className="relative py-14 pt-7 px-4 bg-white overflow-hidden text-slate-900">
         {/* Decorative Blur Orbs */}
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#1fa8e8]/5 rounded-full blur-[100px] -z-10" />
         <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#6dbb45]/5 rounded-full blur-[120px] -z-10" />
@@ -266,7 +266,7 @@ export default function Speciality() {
                 Delhi Lung & Bronchoscopy Center
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in
+                Dr. Manish Aggarwal, Principle Director - Department of Chest Disease & Interventional Pulmonologist in
                 Pitampura, Delhi, provides comprehensive care for asthma,
                 allergy-related breathing problems, wheezing, chronic cough,
                 chest tightness, and recurrent respiratory symptoms in children
@@ -330,7 +330,7 @@ export default function Speciality() {
             </div>
 
             {/* Filtering Tabs */}
-            <div className="flex flex-wrap items-center justify-center gap-1.5 p-1 bg-slate-100/80 backdrop-blur-md rounded-2xl self-center md:self-end">
+            {/* <div className="flex flex-wrap items-center justify-center gap-1.5 p-1 bg-slate-100/80 backdrop-blur-md rounded-2xl self-center md:self-end">
               {(["All", "Pulmonary"] as const).map((tab) => (
                 <button
                   key={tab}
@@ -343,7 +343,7 @@ export default function Speciality() {
                   {tab}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* --- SPECIALITIES DYNAMIC GRID --- */}
@@ -446,12 +446,12 @@ export default function Speciality() {
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto relative z-10 flex-shrink-0">
               <button
                 onClick={() => setIsBookModalOpen(true)}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-bold text-sm tracking-wide shadow-lg active:scale-95 transition-all cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-bold text-sm tracking-wide  flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all cursor-pointer"
               >
-                Book Appointment Now
+                <Calendar className="w-4 h-4" />Book Appointment Now
               </button>
               <a
-                href="tel:+919876543210"
+                href="tel:+919899554095"
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/25 border border-white/20 text-white font-bold text-sm tracking-wide text-center flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
                 <Phone className="w-4 h-4" /> Call Clinic Desk

@@ -19,6 +19,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import Popup from "@/app/component/website/Popup";
+import Link from "next/link";
 
 export default function AboutManish() {
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
@@ -196,8 +197,7 @@ export default function AboutManish() {
               {/* Editorial Bio Description */}
               <div className="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
                 <p>
-                  Dr. Manish Aggarwal is one of Delhi's leading Pulmonologists
-                  and Interventional Pulmonologists, with over{" "}
+                  Dr. Manish Aggarwal is one of Delhi's leading Chest Disease Specialist & Interventional Pulmonologist, with over{" "}
                   <span className="font-bold text-slate-800">25+ years</span> of
                   experience in respiratory medicine, critical care,
                   bronchoscopy, and advanced lung disease management.
@@ -300,9 +300,10 @@ export default function AboutManish() {
                   Aeromed International Rescue Services
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed max-w-2xl">
-                  Dr. Manish Aggarwal is the proud founder director of{" "}
+                  Dr. Manish Aggarwal is the proud {" "}
                   <span className="font-extrabold text-white">
-                    Aeromed International Rescue Service Pvt Ltd
+                    Principle  Director of Department of Chest Disease & Interventional
+            Pulmonologist, Max Hospital
                   </span>
                   . This leading organization is highly acclaimed for providing
                   secure, rapid, and intensive patient air ambulance
@@ -322,13 +323,13 @@ export default function AboutManish() {
 
               {/* CTA action trigger */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
-                <button
-                  onClick={() => setIsBookModalOpen(true)}
+                <Link
+                  href={"/contact"}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-extrabold text-sm tracking-wide shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                 >
                   Schedule Clinic Assessment
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

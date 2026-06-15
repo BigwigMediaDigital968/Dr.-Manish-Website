@@ -47,11 +47,11 @@ export default function CTA() {
                   onClick={() => setIsBookModalOpen(true)}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-extrabold text-sm tracking-wide shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  Make Appointment <Calendar className="w-4.5 h-4.5" />
+                 <Calendar className="w-4.5 h-4.5" /> Book Appointment 
                 </button>
 
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919899554095"
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm tracking-wide flex items-center justify-center gap-2 transition-all"
                 >
                   <Phone className="w-4 h-4" /> Call Clinic Desk
