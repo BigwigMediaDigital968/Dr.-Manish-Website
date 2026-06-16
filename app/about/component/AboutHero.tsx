@@ -59,7 +59,7 @@ export default function AboutHero({
         </div>
 
         {/* ================= RIGHT PANEL: CLINICIAN PORTRAIT CUTOUT ================= */}
-        <div className="lg:col-span-5 relative flex justify-center lg:justify-end select-none h-full min-h-[350px] lg:min-h-[460px] self-end">
+        <div className="lg:col-span-5 relative hidden md:flex justify-center lg:justify-end select-none h-full min-h-[350px] lg:min-h-[460px] self-end">
           {/* Glowing Aura ring backdrop */}
           <div className="absolute bottom-10 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-4 w-72 h-72 sm:w-96 sm:h-96 bg-white/5 border border-white/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
