@@ -93,7 +93,7 @@ export default function CaseHero() {
               {/* CTAs strictly matching the visual weight of image_cea4d4.jpg */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Link
-                  href="#case-study"
+                  href="#case-studies"
                   className="group w-full sm:w-auto px-8 py-4 rounded-full bg-[#0c7dc2] hover:bg-[#1fa8e8] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-sky-200/50 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   Explore Case Studies
@@ -102,7 +102,7 @@ export default function CaseHero() {
 
                 <button
                   onClick={() => setIsBookModalOpen(true)}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 font-bold text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto cursor-pointer px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 font-bold text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
                 >
                   Schedule Consultation
                 </button>
