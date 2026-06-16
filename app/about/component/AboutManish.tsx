@@ -327,7 +327,7 @@ export default function AboutManish() {
                   href={"/contact"}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-extrabold text-sm tracking-wide shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                 >
-                  Schedule Clinic Assessment
+                 Schedule Assessment
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -356,7 +356,7 @@ export default function AboutManish() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {academicRoles.map((item, idx) => {
                 const Icon = item.icon;
 

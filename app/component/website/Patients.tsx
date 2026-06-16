@@ -134,7 +134,7 @@ export default function Patients() {
 
             {}
             {/* Smaller, grid-aligned cards with optimized visual tokens */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5">
               {ethicalPoints.map((point) => {
                 const Icon = point.icon;
                 const isHovered = hoveredCard === point.id;
@@ -307,11 +307,11 @@ export default function Patients() {
            3. CLINIC GOAL AND BOOKING CALL-TO-ACTION
            ========================================================== */}
           {}
-          <div className="bg-gradient-to-tr from-[#1fa8e8]/5 via-[#6dbb45]/5 to-white border border-slate-100/90 rounded-[40px] p-8 sm:p-12 lg:p-16 shadow-lg shadow-sky-100/10 relative overflow-hidden">
+          <div className="bg-gradient-to-tr from-[#1fa8e8]/5 via-[#6dbb45]/5 to-white border border-slate-100/90 rounded-[40px] p-6 sm:p-8 sm:p-12 lg:p-16 shadow-lg shadow-sky-100/10 relative overflow-hidden">
             {/* Subtle background blur circle */}
             <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-[#1fa8e8]/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10 ">
               {/* Left Grid: Core Goal Narrative (7 Columns) */}
               <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
                 <span className="inline-flex items-center gap-1.5 bg-[#6dbb45]/10 text-[#4d8f2d] px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
