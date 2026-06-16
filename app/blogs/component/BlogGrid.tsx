@@ -370,7 +370,7 @@ export default function BlogGrid({
   ];
 
   return (
-    <div className="w-full bg-white text-slate-900 py-24 selection:bg-[#1fa8e8] selection:text-white">
+    <div className="w-full bg-white text-slate-900 py-5 sm:py-10 selection:bg-[#1fa8e8] selection:text-white">
       {/* Dynamic Keyframes for smooth transitions and mock load delays */}
       <style>{`
         @keyframes fadeInBlog {
