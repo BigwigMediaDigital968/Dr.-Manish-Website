@@ -18,11 +18,11 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Gallery", href: "#" },
+  // { label: "Gallery", href: "#" },
 ];
 
 const supportLinks = [
-  { label: "Blog", href: "/blog" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms and Conditions", href: "/terms" },
