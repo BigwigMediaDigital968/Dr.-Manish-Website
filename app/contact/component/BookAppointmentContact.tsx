@@ -10,7 +10,7 @@ const services = FormServices;
 const slots = [
   { label: "Morning", time: "09:00 AM – 12:00 PM", icon: Sun },
   { label: "Afternoon", time: "12:00 PM – 04:00 PM", icon: Cloud },
-  { label: "Evening", time: "04:00 PM – 07:00 PM", icon: Moon },
+  { label: "Evening", time: "06:30 PM - 08:30 PM", icon: Moon },
 ];
 
 const defaultForm = {

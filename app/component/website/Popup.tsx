@@ -34,7 +34,7 @@ const slots = [
   },
   {
     label: "Evening",
-    time: "04:00 PM – 07:00 PM",
+    time: "06:30 PM - 08:30 PM",
     icon: Moon,
   },
 ];
