@@ -176,7 +176,7 @@ export default function WhoSeeUs() {
                     className="w-full sm:w-auto px-6 text-center py-3 rounded-xl bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-black text-xs uppercase tracking-wide shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Clock className="w-3.5 h-3.5" />
-                    Book <br /> Diagnostic Check
+                    Book Diagnosis
                   </Link>
                   <a
                     href="tel:+919899554095"

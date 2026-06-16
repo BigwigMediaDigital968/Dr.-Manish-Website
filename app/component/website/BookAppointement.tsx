@@ -76,9 +76,9 @@ export default function BookAppointment() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f0f4f8] px-8 lg:px-12">
+    <section className="relative w-full overflow-hidden bg-[#f0f4f8] px-4 sm:px-8 lg:px-12">
       {/* ── Hero ───────────────────────────────────────────── */}
-      <div className="relative mx-auto max-w-7xl pt-14 pb-0 lg:pt-20">
+      <div className="relative mx-auto max-w-7xl px-2 pt-14 pb-0 lg:pt-20">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           {/* Left: Copy */}
           <div className="relative z-10 max-w-xl">
@@ -163,7 +163,7 @@ export default function BookAppointment() {
             </div>
 
             {/* Floating Card 1 */}
-            <div className="absolute top-10 right-0 lg:-right-6 z-20">
+            <div className="absolute top-20 sm:top-10 right-0 lg:-right-6 z-20">
               <div className="bg-white shadow-xl rounded-2xl p-3 backdrop-blur-sm border border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-full bg-[#1fa8e8]/10 flex items-center justify-center">
@@ -180,7 +180,7 @@ export default function BookAppointment() {
             </div>
 
             {/* Floating Card 2 */}
-            <div className="absolute bottom-20 left-0 lg:-left-6 z-20">
+            <div className="absolute bottom-5 sm:bottom-20 left-0 lg:-left-6 z-20">
               <div className="bg-white shadow-xl rounded-2xl p-3 backdrop-blur-sm border border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-full bg-[#6dbb45]/10 flex items-center justify-center">
@@ -203,7 +203,7 @@ export default function BookAppointment() {
 
       <div
         id="book-appointment"
-        className="relative z-20 mx-auto mt-10 max-w-7xl px-4 pb-14 lg:px-8"
+        className="relative z-20 mx-auto mt-10 max-w-7xl p-0 sm:px-4 pb-14 lg:px-8"
       >
         <div className="rounded-3xl bg-white px-6 py-8 shadow-xl shadow-slate-200/80 lg:px-10 lg:py-9">
           <p className="mb-6 text-center text-xl font-bold tracking-tight text-[#0f172a] lg:text-2xl">

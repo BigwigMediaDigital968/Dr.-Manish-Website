@@ -89,7 +89,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-slate-50 overflow-hidden text-slate-900 border-y border-slate-100 py-18 px-8"
+      className="relative w-full bg-slate-50 overflow-hidden text-slate-900 border-y border-slate-100 py-18 sm:px-8"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -125,7 +125,7 @@ export default function Testimonials() {
           </div>
 
           {/* ================= RIGHT SIDE: PATIENT FEEDBACK LIST ================= */}
-          <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-8 bg-white relative">
+          <div className="lg:col-span-6 p-4 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center space-y-8 bg-white relative">
             {/* Section Header */}
             <div className="space-y-3 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider">
@@ -158,7 +158,7 @@ export default function Testimonials() {
                       
 
                       {/* Diagnostic Recovery story */}
-                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium line-clamp-4">
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium line-clamp-5">
                         "{item.text}"
                       </p>
                       <div className="flex items-center gap-4 mb-4 mt-6">

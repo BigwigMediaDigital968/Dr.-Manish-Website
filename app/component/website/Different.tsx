@@ -18,6 +18,7 @@ import {
   BookOpen,
   ChevronLeft,
 } from "lucide-react";
+import Link from "next/link";
 
 interface DifferentProps {
   onBookClick?: () => void;
@@ -52,7 +53,7 @@ export default function Different({ onBookClick = () => { } }: DifferentProps) {
     "Life member of Indian chest council"
   ];
 
-  const publications = [
+  const publicationsold = [
     `Aggarwal Manish." Recurrent epistaxis in a patient of pulmonary arteria hypertension.” Indian J allergy asthma immunol 2009`,
     `Aggarwal Manish, GS Ranga, S. Dwivedi, Dharmender Kumar. “Aluminium
 phosphide poisoning in a young adult: A suicidal cardiotoxin simulating myocardial
@@ -61,6 +62,32 @@ ischaemia.” Journal Indian Academy of Clinical Medicine 2004`,
 in patient of bronchial asthma”. Doctoral Dissertation submitted to the University of
 Delhi, 2001`
   ];
+  const publications = [
+  {
+    title: "Endobronchial Capillary Hemangioma: A Rare Cause of Hemoptysis",
+    link: "https://doi.org/10.4103/lungindia.lungindia_508_19"
+  },
+  {
+    title: "Vocal Cord Biopsy Under Local Anesthesia Using Flexible Bronchoscope — the “Inside-Out” Technique",
+    link: "https://doi.org/10.4103/lungindia.lungindia_373_21"
+  },
+  {
+    title: "Interventional Pulmonology During COVID Times: A Look Back at the Year Gone By",
+    link: "https://doi.org/10.4103/lungindia.lungindia_94_21"
+  },
+  {
+    title: "Bronchoscopic Treatment of Bronchopleural Fistula Due to COVID-19",
+    link: "https://doi.org/10.4103/lungindia.lungindia_79_22"
+  },
+  {
+    title: "Case Series of Y-Shaped Self-Expanding Metallic Stents (Y-SEMS) for Central Airway Obstruction — Experience of Deployment with the ‘Single Guide Wire’ Technique",
+    link: "https://doi.org/10.4103/lungindia.lungindia_482_24"
+  },
+  {
+    title: "Affordable Use of Indwelling Pleural Catheters for Malignant Pleural Effusion",
+    link: "https://doi.org/10.4103/lungindia.lungindia_585_25"
+  }
+];
 
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -358,15 +385,16 @@ Delhi, 2001`
               {/* Verified Badge Indicators */}
               <div className="max-h-[170px] overflow-y-auto pr-2 space-y-2 custom-card-scrollbar">
                 {publications.map((item, idx) => (
-                  <div
+                  <Link
                     key={idx}
-                    className="flex items-start gap-2 px-3 py-2 bg-slate-50 rounded-xl border border-slate-100 text-xs font-bold text-slate-700"
+                    href={item.link}
+                    className="flex items-start gap-2 px-3 py-2 bg-slate-50 rounded-xl border border-slate-100 text-xs font-bold text-slate-700 hover:text-blue-600"
                   >
                     <span className="w-4 h-4 mt-0.5 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center shrink-0">
                       <BookMarked className="w-2.5 h-2.5" />
                     </span>
-                    <span>{item}</span>
-                  </div>
+                    <span>{item.title}</span>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -226,7 +226,7 @@ export default function Speciality() {
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#1fa8e8]/5 rounded-full blur-[100px] -z-10" />
         <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#6dbb45]/5 rounded-full blur-[120px] -z-10" />
 
-        <div className="max-w-7xl px-6 mx-auto space-y-16">
+        <div className="max-w-7xl px-2 sm:px-6 mx-auto space-y-16">
           {/* --- CLINICAL LEADERSHIP PROFILE GRID --- */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-tr from-slate-50 via-slate-100/50 to-white p-8 md:p-12 rounded-[40px] border border-slate-100 shadow-xl shadow-sky-100/10">
             <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">

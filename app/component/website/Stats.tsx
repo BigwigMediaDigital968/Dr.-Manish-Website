@@ -10,6 +10,8 @@ import {
   GraduationCap,
   Sparkles,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import SecondOpinionPopUpForm from "./SecondOpinionPopUpForm";
 
@@ -84,27 +86,38 @@ export default function Stats() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-  const handleScroll = () => {
-    const section = document.getElementById("clinic-vitals");
+    const handleScroll = () => {
+      const section = document.getElementById("clinic-vitals");
 
-    if (!section) return;
+      if (!section) return;
 
-    const rect = section.getBoundingClientRect();
+      const rect = section.getBoundingClientRect();
 
-    // User has completely passed the section
-    if (rect.bottom < 0) {
-      setShowPopup(true);
+      // User has completely passed the section
+      if (rect.bottom < 0) {
+        setShowPopup(true);
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: any) => {
+    if (sliderRef.current) {
+      // Scrolls roughly by the width of one card + gap
+      const scrollAmount = direction === 'left' ? -200 : 200;
+      sliderRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
     }
   };
-
-  window.addEventListener("scroll", handleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-
 
 
   return (
@@ -123,63 +136,89 @@ export default function Stats() {
 
         <div className="max-w-7xl mx-auto space-y-12 relative z-10 px-4">
           {/* Mobile Carousel */}
-          <div className="md:hidden -mx-4 px-4 overflow-x-auto scrollbar-none snap-x snap-mandatory">
-            <div className="flex gap-3 w-max pb-2">
-              {metrics.map((item) => {
-                const IconComponent = item.icon;
+          <div className="md:hidden relative">
+            {/* Navigation Buttons Header */}
 
-                return (
-                  <div
-                    key={item.id}
-                    className={`snap-start shrink-0 w-[calc(50vw-18px)] min-w-[160px]
-          group relative bg-white border border-slate-100
-          p-5 rounded-[24px] shadow-sm hover:shadow-xl
-          hover:shadow-sky-100/30 transition-all duration-300
-          flex flex-col justify-between ${item.ringColor}`}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#1fa8e8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[24px]" />
 
-                    <div className="space-y-4 relative z-10">
-                      <div className="flex items-center justify-between">
-                        <div
-                          className={`w-10 h-10 rounded-xl bg-gradient-to-tr ${item.gradient}
-                text-white flex items-center justify-center shadow-md`}
-                        >
-                          <IconComponent className="w-5 h-5" />
-                        </div>
-                      </div>
+            {/* Slider Container */}
+            <div
+              ref={sliderRef}
+              className="-mx-4 px-4 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth"
+            >
+              <div className="flex gap-3 w-max pb-2">
+                {metrics.map((item) => {
+                  const IconComponent = item.icon;
 
-                      <div>
-                        <div className="flex items-center gap-1">
-                          <span
-                            className={`text-lg font-black bg-gradient-to-r ${item.gradient}
-                  bg-clip-text text-transparent`}
+                  return (
+                    <div
+                      key={item.id}
+                      className={`snap-start shrink-0 w-[calc(50vw-18px)] min-w-[160px]
+                group relative bg-white border border-slate-100
+                p-5 rounded-[24px] shadow-sm hover:shadow-xl
+                hover:shadow-sky-100/30 transition-all duration-300
+                flex flex-col justify-between ${item.ringColor}`}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#1fa8e8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[24px]" />
+
+                      <div className="space-y-4 relative z-10">
+                        <div className="flex items-center justify-between">
+                          <div
+                            className={`w-10 h-10 rounded-xl bg-gradient-to-tr ${item.gradient}
+                      text-white flex items-center justify-center shadow-md`}
                           >
-                            {item.value}
-                          </span>
-
-                          {item.isRating && (
-                            <div className="flex gap-0.5">
-                              {[...Array(5)].map((_, idx) => (
-                                <Star
-                                  key={idx}
-                                  className="w-3 h-3 fill-amber-400 text-amber-400"
-                                />
-                              ))}
-                            </div>
-                          )}
+                            <IconComponent className="w-5 h-5" />
+                          </div>
                         </div>
 
-                        <h3 className="mt-1 text-sm font-bold text-slate-900 leading-tight">
-                          {item.label}
-                        </h3>
-                      </div>
-                    </div>
+                        <div>
+                          <div className="flex items-center gap-1">
+                            <span
+                              className={`text-lg font-black bg-gradient-to-r ${item.gradient}
+                        bg-clip-text text-transparent`}
+                            >
+                              {item.value}
+                            </span>
 
-                    <div className="w-full h-[3px] bg-slate-100 rounded-full mt-5 group-hover:bg-gradient-to-r group-hover:from-[#1fa8e8] group-hover:to-[#6dbb45]" />
-                  </div>
-                );
-              })}
+                            {item.isRating && (
+                              <div className="flex gap-0.5">
+                                {[...Array(5)].map((_, idx) => (
+                                  <Star
+                                    key={idx}
+                                    className="w-3 h-3 fill-amber-400 text-amber-400"
+                                  />
+                                ))}
+                              </div>
+                            )}
+                          </div>
+
+                          <h3 className="mt-1 text-sm font-bold text-slate-900 leading-tight">
+                            {item.label}
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div className="w-full h-[3px] bg-slate-100 rounded-full mt-5 group-hover:bg-gradient-to-r group-hover:from-[#1fa8e8] group-hover:to-[#6dbb45]" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <button
+                onClick={() => scroll('left')}
+                className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-50 shadow-sm"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-50 shadow-sm"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
 

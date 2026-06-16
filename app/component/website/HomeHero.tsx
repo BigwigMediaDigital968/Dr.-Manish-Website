@@ -83,7 +83,7 @@ export default function HomeHero() {
 
             {/* Doctor Image */}
             <div className="relative p-5">
-              <div className="overflow-hidden rounded-[28px] aspect-[4/3] bg-slate-100">
+              <div className="overflow-hidden rounded-[28px] aspect-[4/5] sm:aspect-[4/3] bg-slate-100">
                 <img
                   src="/dr-image.png"
                   alt="Dr. Manish Aggarwal"
@@ -92,11 +92,11 @@ export default function HomeHero() {
               </div>
 
               {/* Experience Badge */}
-              <div className="absolute top-9 left-9 bg-white/95 backdrop-blur-md rounded-2xl px-4 py-2 shadow-lg border border-slate-100">
+              <div className="absolute bottom-9 sm:bottom-auto sm:top-9 left-9 bg-white/95 backdrop-blur-md rounded-2xl px-4 py-2 shadow-lg border border-slate-100">
                 <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">
                   Experience
                 </p>
-                <p className="text-lg font-black bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
+                <p className="text-base sm:text-lg font-black bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
                   25+ Years
                 </p>
               </div>
