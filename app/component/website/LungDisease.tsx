@@ -367,12 +367,12 @@ export default function LungDisease() {
                   key={idx}
                   className="bg-white/5 border border-white/10 hover:border-white/20 p-5 rounded-3xl flex items-start gap-4 transition-all duration-300 group hover:bg-white/10"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 hidden sm:flex items-center justify-center font-bold text-sm shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
                     <BookOpen className="w-5 h-5" />
                   </div>
 
                   <div className="flex-1 space-y-1.5 text-left">
-                    <div className="flex justify-between items-center gap-2">
+                    <div className="sm:flex justify-between items-center gap-2">
                       <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-sky-300 transition-colors duration-200">
                         {workshop.title}
                       </h3>
