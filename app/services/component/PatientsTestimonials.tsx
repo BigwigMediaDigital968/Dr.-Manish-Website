@@ -74,6 +74,7 @@ const TESTIMONIALS: Testimonial[] = [
 
 export default function PatientsTestimonials() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [activeTestemonial, setActiveTestemonial] = useState<number | null>(null);
 
   /* ============================================================================
      2. STREAMING_CHUNK: Implementing scroll check and manual button handlers
@@ -194,6 +195,7 @@ export default function PatientsTestimonials() {
             {TESTIMONIALS.map((patient) => (
               <div
                 key={patient.id}
+                onClick={()=>{setActiveTestemonial(activeTestemonial=== patient.id? null: patient.id)}}
                 className="w-[280px] sm:w-[360px] md:w-[390px] flex-shrink-0 snap-start bg-white border border-slate-100/90 rounded-[28px] p-6 sm:p-8 shadow-[0_12px_35px_-8px_rgba(31,168,232,0.06)] hover:shadow-[0_20px_45px_-12px_rgba(109,187,69,0.1)] transition-all duration-300 flex flex-col justify-between cursor-default transform hover:-translate-y-1 relative group"
               >
                 {/* Visual quote accent background watermarked */}
@@ -236,7 +238,7 @@ export default function PatientsTestimonials() {
                   </div>
 
                   {/* Custom Testimonial Content Block */}
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium text-justify line-clamp-6">
+                  <p className={`text-slate-600 text-xs sm:text-sm leading-relaxed font-medium text-justify  hover:line-clamp-none ${activeTestemonial == patient.id? " ": "line-clamp-6"}`}>
                     "{patient.text}"
                   </p>
                 </div>

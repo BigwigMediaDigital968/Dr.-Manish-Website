@@ -176,9 +176,9 @@ export default function Testimonials() {
                           <h4 className="text-sm font-black text-[#1fa8e8] tracking-wide leading-tight">
                             {item.name}
                           </h4>
-                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mt-0.5">
+                          {/* <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mt-0.5">
                             {item.role}
-                          </span>
+                          </span> */}
                         </div>
 
                         {/* Gold Star Ratings */}

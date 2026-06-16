@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Sparkles, Wind, Moon, Activity } from "lucide-react";
 import Link from "next/link";
+import { useModal } from "@/app/Contexts/ModalContext";
 
 export default function ServiceHero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const {openModal} = useModal();
 
   // 3 high-fidelity clinical diagnostic slides
   const slides = [
@@ -107,13 +109,13 @@ export default function ServiceHero() {
 
         {/* Interactive Action Indicators connected to Contact Page */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Link
-            href="/contact"
+          <button
+          onClick={openModal}
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-sky-500/20 active:scale-95 transition-all flex items-center justify-center gap-2 group/btn cursor-pointer"
           >
             Schedule Assessment
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform" />
-          </Link>
+          </button>
 
           {/* <Link
             href="/contact"

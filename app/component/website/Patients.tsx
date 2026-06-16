@@ -266,32 +266,32 @@ export default function Patients() {
 
                 {/* Stat Pillars */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10">
-                  <div className="space-y-1 bg-white/5 border border-white/10 p-3 rounded-xl">
-                    <span className="text-xl sm:text-2xl font-black text-white">
+                  <div className="space-y-1 bg-white/5 border border-white/10 p-2 sm:p-3 rounded-xl">
+                    <span className="text-lg sm:text-2xl font-black text-white">
                       1,000+
                     </span>
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400 leading-none">
                       Patients Helped
                     </p>
                   </div>
-                  <div className="space-y-1 bg-white/5 border border-white/10 p-3 rounded-xl">
-                    <span className="text-xl sm:text-2xl font-black text-emerald-400">
+                  <div className="space-y-1 bg-white/5 border border-white/10 p-2 sm:p-3 rounded-xl">
+                    <span className="text-lg sm:text-2xl font-black text-emerald-400">
                       Oxygen
                     </span>
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400 leading-none">
                       Counselling & Aid
                     </p>
                   </div>
-                  <div className="space-y-1 bg-white/5 border border-white/10 p-3 rounded-xl">
-                    <span className="text-xl sm:text-2xl font-black text-sky-400">
+                  <div className="space-y-1 bg-white/5 border border-white/10 p-2 sm:p-3 rounded-xl">
+                    <span className="text-lg sm:text-2xl font-black text-sky-400">
                       Recovery
                     </span>
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400 leading-none">
                       Post-COVID Care
                     </p>
                   </div>
-                  <div className="space-y-1 bg-white/5 border border-white/10 p-3 rounded-xl col-span-2 sm:col-span-1">
-                    <span className="text-xl sm:text-2xl font-black text-amber-400">
+                  <div className="space-y-1 bg-white/5 border border-white/10 p-2 sm:p-3 rounded-xl">
+                    <span className="text-lg sm:text-2xl font-black text-amber-400">
                       Govt. Honor
                     </span>
                     <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400 leading-none">

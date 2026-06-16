@@ -1,5 +1,6 @@
 "use client";
 
+import { useModal } from "@/app/Contexts/ModalContext";
 import {
   ArrowRight,
   Activity,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 
 export default function HomeHero() {
+  const {openModal}  = useModal();
   return (
     <section
       id="home"
@@ -58,13 +60,13 @@ export default function HomeHero() {
 
           {/* Core Interactive Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/contact"
-              className="group inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] text-white font-semibold shadow-brand hover:scale-105 transition-all duration-300"
+            <button
+              onClick={openModal}
+              className="group cursor-pointer inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] text-white font-semibold shadow-brand hover:scale-105 transition-all duration-300"
             >
               Book Appointment
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
 
             <a
               href="/services"

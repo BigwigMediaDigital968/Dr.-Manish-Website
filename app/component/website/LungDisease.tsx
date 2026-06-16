@@ -25,6 +25,7 @@ import {
   Moon,
 } from "lucide-react";
 import Link from "next/link";
+import { useModal } from "@/app/Contexts/ModalContext";
 
 interface LungDiseaseProps {
   onBookClick?: () => void;
@@ -33,6 +34,7 @@ interface LungDiseaseProps {
 export default function LungDisease() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [selectedDisease, setSelectedDisease] = useState<number | null>(null);
+  const {openModal} = useModal();
 
   const diseaseScope = [
   {
@@ -351,12 +353,12 @@ export default function LungDisease() {
 
               {/* Action Buttons */}
               <div className="pt-4 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <Link
-                  href="/contact"
+                <button
+                  onClick={openModal}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] hover:opacity-95 text-white font-extrabold text-sm tracking-wide shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   Schedule Diagnostics <ArrowRight className="w-4 h-4" />
-                </Link>
+                </button>
               </div>
             </div>
 

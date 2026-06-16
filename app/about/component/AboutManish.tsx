@@ -20,11 +20,12 @@ import {
 } from "lucide-react";
 import Popup from "@/app/component/website/Popup";
 import Link from "next/link";
+import { useModal } from "@/app/Contexts/ModalContext";
 
 export default function AboutManish() {
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
-
+  const { openModal } = useModal();
   const qualifications = [
     {
       title: "MBBS",
@@ -323,13 +324,13 @@ export default function AboutManish() {
 
               {/* CTA action trigger */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
-                <Link
-                  href={"/contact"}
+                <button
+                onClick={openModal}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-extrabold text-sm tracking-wide shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                 >
                  Schedule Assessment
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </button>
               </div>
             </div>
           </div>
