@@ -3,13 +3,20 @@ import Blog from "@/app/lib/models/Blog";
 import { connectDB } from "@/app/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
-type Params = { params: { slug: string } };
+type Params = {
+  params: Promise<{ slug: string }>;
+};
 
-// GET /api/blogs/[slug]
-export async function GET(_req: NextRequest, { params }: Params) {
+export async function GET(
+  _req: NextRequest,
+  { params }: Params
+) {
   try {
+    const { slug } = await params;
+
     await connectDB();
-    const blog = await Blog.findOne({ slug: params.slug });
+
+    const blog = await Blog.findOne({ slug });
 
     if (!blog) {
       return NextResponse.json(
@@ -32,8 +39,10 @@ export async function GET(_req: NextRequest, { params }: Params) {
 export async function PUT(req: NextRequest, { params }: Params) {
   try {
     await connectDB();
+    const { slug } = await params;
 
-    const existing = await Blog.findOne({ slug: params.slug });
+
+    const existing = await Blog.findOne({ slug: slug });
     if (!existing) {
       return NextResponse.json(
         { success: false, message: "Blog not found" },
@@ -48,19 +57,25 @@ export async function PUT(req: NextRequest, { params }: Params) {
 
     const updates: any = {};
 
-    if (getRaw("title"))           updates.title           = getRaw("title");
-    if (getRaw("slug"))            updates.slug            = getRaw("slug")!.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
-    if (getRaw("excerpt"))         updates.excerpt         = getRaw("excerpt");
-    if (getRaw("content"))         updates.content         = getRaw("content");
-    if (getRaw("author"))          updates.author          = getRaw("author");
-    if (getRaw("category"))        updates.category        = getRaw("category");
-    if (getRaw("status"))          updates.status          = getRaw("status");
-    if (getRaw("featured"))        updates.featured        = getRaw("featured") === "true";
-    if (getRaw("tags"))            updates.tags            = JSON.parse(getRaw("tags") || "[]");
-    if (getRaw("metaTitle"))       updates.metaTitle       = getRaw("metaTitle");
+    if (getRaw("title")) updates.title = getRaw("title");
+    if (getRaw("slug")) updates.slug = getRaw("slug")!.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+    if (getRaw("excerpt")) updates.excerpt = getRaw("excerpt");
+    if (getRaw("content")) updates.content = getRaw("content");
+    if (getRaw("author")) updates.author = getRaw("author");
+    if (getRaw("category")) updates.category = getRaw("category");
+    if (getRaw("status")) updates.status = getRaw("status");
+    if (getRaw("featured")) updates.featured = getRaw("featured") === "true";
+    if (getRaw("tags")) updates.tags = JSON.parse(getRaw("tags") || "[]");
+    if (getRaw("metaTitle")) updates.metaTitle = getRaw("metaTitle");
     if (getRaw("metaDescription")) updates.metaDescription = getRaw("metaDescription");
-    if (getRaw("metaKeywords"))    updates.metaKeywords    = JSON.parse(getRaw("metaKeywords") || "[]");
-    if (getRaw("structuredData"))  updates.structuredData  = getRaw("structuredData");
+    if (getRaw("metaKeywords")) updates.metaKeywords = JSON.parse(getRaw("metaKeywords") || "[]");
+    if (getRaw("structuredData")) updates.structuredData = getRaw("structuredData");
+
+    const faqs = getRaw("faqs");
+    if (faqs) {
+      updates.faqs = JSON.parse(faqs);
+    }
+    console.log(updates);
 
     // Set publishedAt when draft → published
     if (updates.status === "published" && existing.status === "draft") {
@@ -75,7 +90,7 @@ export async function PUT(req: NextRequest, { params }: Params) {
       if (existing.featuredImage?.url) {
         const urlParts = existing.featuredImage.url.split("/");
         const fileName = urlParts[urlParts.length - 1].split(".")[0];
-        await cloudinary.uploader.destroy(`blogs/covers/${fileName}`).catch(() => {});
+        await cloudinary.uploader.destroy(`blogs/covers/${fileName}`).catch(() => { });
       }
 
       // Upload new cover
@@ -85,9 +100,9 @@ export async function PUT(req: NextRequest, { params }: Params) {
     }
 
     const updated = await Blog.findOneAndUpdate(
-      { slug: params.slug },
+      { slug: slug },
       { $set: updates },
-      { new: true, runValidators: true }
+      { returnDocument: 'after', runValidators: true }
     );
 
     return NextResponse.json({ success: true, data: updated });
@@ -109,8 +124,8 @@ export async function PUT(req: NextRequest, { params }: Params) {
 export async function DELETE(_req: NextRequest, { params }: Params) {
   try {
     await connectDB();
-
-    const blog = await Blog.findOne({ slug: params.slug });
+    const { slug } = await params;
+    const blog = await Blog.findOne({ slug: slug });
     if (!blog) {
       return NextResponse.json(
         { success: false, message: "Blog not found" },
@@ -124,10 +139,10 @@ export async function DELETE(_req: NextRequest, { params }: Params) {
       const urlParts = blog.featuredImage.url.split("/");
       const fileName = urlParts[urlParts.length - 1].split(".")[0];
       const public_id = `blogs/${fileName}`;
-      await cloudinary.uploader.destroy(public_id).catch(() => {});
+      await cloudinary.uploader.destroy(public_id).catch(() => { });
     }
 
-    await Blog.findOneAndDelete({ slug: params.slug });
+    await Blog.findOneAndDelete({ slug: slug });
 
     return NextResponse.json({
       success: true,

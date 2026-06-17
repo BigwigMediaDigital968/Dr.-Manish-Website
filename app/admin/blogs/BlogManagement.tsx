@@ -90,6 +90,7 @@ export default function BlogManagement() {
 
       const res = await fetch(`/api/blogs?${params.toString()}`);
       const data = await res.json();
+      console.log("blog")
       if (data.success) {
         setBlogs(data.data);
         setPagination(data.pagination);
@@ -278,7 +279,7 @@ export default function BlogManagement() {
         </div>
         <Link
         //   onClick={openCreate}
-        href={"/add"}
+        href={"blogs/add"}
           className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium text-white"
           style={{
             background: "linear-gradient(90deg, #1fa8e8, #6dbb45)",
@@ -344,18 +345,19 @@ export default function BlogManagement() {
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-1.5">
                         {/* Edit */}
-                        <button
-                          onClick={() => openEdit(blog)}
+                        <Link
+                        href={`blogs/${blog.slug}/edit`}
+                          // onClick={() => openEdit(blog)}
                           title="Edit"
                           className="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition-colors"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536M9 13l6.586-6.586a2 2 0 012.828 2.828L11.828 15.828a2 2 0 01-1.414.586H9v-2a2 2 0 01.586-1.414z" /></svg>
-                        </button>
+                        </Link>
                         {/* Toggle publish */}
                         <button
                           onClick={() => toggleStatus(blog)}
                           title={blog.status === "draft" ? "Publish" : "Unpublish"}
-                          className="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-green-50 hover:text-green-700 hover:border-green-200 transition-colors"
+                          className="w-8 h-8 flex items-center cursor-pointer justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-green-50 hover:text-green-700 hover:border-green-200 transition-colors"
                         >
                           {blog.status === "draft" ? (
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
@@ -367,7 +369,7 @@ export default function BlogManagement() {
                         <button
                           onClick={() => openDelete(blog)}
                           title="Delete"
-                          className="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 transition-colors"
+                          className="w-8 h-8 flex items-center cursor-pointer justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 transition-colors"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                         </button>
@@ -388,7 +390,7 @@ export default function BlogManagement() {
               <button
                 onClick={() => setCurrentPage((p) => p - 1)}
                 disabled={currentPage === 1}
-                className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg disabled:opacity-40 hover:bg-slate-50"
+                className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg disabled:opacity-40 hover:bg-slate-50 cursor-pointer"
               >
                 ←
               </button>
@@ -396,7 +398,7 @@ export default function BlogManagement() {
                 <button
                   key={i}
                   onClick={() => setCurrentPage(i + 1)}
-                  className={`px-3 py-1.5 text-xs border rounded-lg ${
+                  className={`px-3 py-1.5 text-xs border rounded-lg cursor-pointer ${
                     currentPage === i + 1
                       ? "text-white border-[#1fa8e8]"
                       : "border-slate-200 hover:bg-slate-50"
@@ -409,7 +411,7 @@ export default function BlogManagement() {
               <button
                 onClick={() => setCurrentPage((p) => p + 1)}
                 disabled={currentPage === pagination.pages}
-                className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg disabled:opacity-40 hover:bg-slate-50"
+                className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg disabled:opacity-40 hover:bg-slate-50 cursor-pointer"
               >
                 →
               </button>
@@ -429,7 +431,7 @@ export default function BlogManagement() {
               <h3 className="text-base font-medium text-slate-800">
                 {editingBlog ? "Edit blog" : "New blog"}
               </h3>
-              <button onClick={closeModal} className="text-slate-400 hover:text-slate-600">
+              <button onClick={closeModal} className="text-slate-400 hover:text-slate-600 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
             </div>
@@ -591,14 +593,14 @@ export default function BlogManagement() {
             <div className="flex justify-end gap-3 px-6 py-4 border-t border-slate-100">
               <button
                 onClick={closeModal}
-                className="px-4 py-2 rounded-xl text-sm border border-slate-200 text-slate-600 hover:bg-slate-50"
+                className="px-4 py-2 rounded-xl text-sm border border-slate-200 text-slate-600 hover:bg-slate-50 cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={saveBlog}
                 disabled={saving}
-                className="px-5 py-2 rounded-xl text-sm font-medium text-white disabled:opacity-60"
+                className="px-5 py-2 rounded-xl text-sm font-medium text-white disabled:opacity-60 cursor-pointer"
                 style={{ background: "linear-gradient(90deg,#1fa8e8,#6dbb45)" }}
               >
                 {saving ? "Saving…" : editingBlog ? "Save changes" : "Create blog"}
@@ -625,14 +627,14 @@ export default function BlogManagement() {
             <div className="flex gap-3 justify-center">
               <button
                 onClick={closeModal}
-                className="px-4 py-2 rounded-xl text-sm border border-slate-200 text-slate-600 hover:bg-slate-50"
+                className="px-4 py-2 rounded-xl text-sm border border-slate-200 text-slate-600 hover:bg-slate-50 cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={confirmDelete}
                 disabled={deleting}
-                className="px-5 py-2 rounded-xl text-sm font-medium text-white bg-red-500 hover:bg-red-600 disabled:opacity-60"
+                className="px-5 py-2 rounded-xl text-sm font-medium text-white bg-red-500 hover:bg-red-600 disabled:opacity-60 cursor-pointer"
               >
                 {deleting ? "Deleting…" : "Delete"}
               </button>

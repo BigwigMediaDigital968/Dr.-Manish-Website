@@ -1,5 +1,11 @@
 import BlogFormPage from "@/app/admin/components/BlogFormPage";
 
-export default function Page({ params }: { params: { slug: string } }) {
-  return <BlogFormPage slug={params.slug} />;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  return <BlogFormPage slug={slug} />;
 }

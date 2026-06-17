@@ -8,6 +8,7 @@ export interface IBlog extends Document {
     url: string;
     alt: string;
   };
+  faqs: IFaq[];
   author: string;
   category: string;
   tags: string[];
@@ -23,6 +24,28 @@ export interface IBlog extends Document {
   createdAt: Date;
   updatedAt: Date;
 }
+
+interface IFaq {
+  question: string;
+  answer: string;
+}
+
+const faqSchema = new Schema<IFaq>(
+  {
+    question: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    answer: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+  },
+  { _id: false }
+);
+
 const BlogSchema = new Schema<IBlog>(
   {
     // Content
@@ -74,6 +97,10 @@ const BlogSchema = new Schema<IBlog>(
         trim: true,
       },
     ],
+    faqs: {
+      type: [faqSchema],
+      default: [],
+    },
     // Publishing
     status: {
       type: String,
@@ -108,6 +135,7 @@ const BlogSchema = new Schema<IBlog>(
       type: String,
       default: "",
     },
+    
   },
   {
     timestamps: true,

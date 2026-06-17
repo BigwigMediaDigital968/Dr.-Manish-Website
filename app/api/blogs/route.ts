@@ -4,6 +4,50 @@ import { connectDB } from "@/app/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
 
+// GET /api/blogs — Fetch all blogs (admin: all, public: published only)
+
+export async function GET(req: NextRequest) {
+  try {
+    await connectDB();
+
+    const { searchParams } = new URL(req.url);
+    const status    = searchParams.get("status");     // "draft" | "published"
+    const category  = searchParams.get("category");
+    const featured  = searchParams.get("featured");
+    const page      = parseInt(searchParams.get("page") || "1");
+    const limit     = parseInt(searchParams.get("limit") || "10");
+    const search    = searchParams.get("search");
+
+    const query: any = {};
+    if (status)   query.status   = status;
+    if (category) query.category = category;
+    if (featured) query.featured = featured === "true";
+    if (search)   query.$text    = { $search: search };
+
+    const skip = (page - 1) * limit;
+
+    const [blogs, total] = await Promise.all([
+      Blog.find(query)
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .select("-content"), // exclude heavy content in list view
+      Blog.countDocuments(query),
+    ]);
+
+    return NextResponse.json({
+      success: true,
+      data: blogs,
+      pagination: { page, limit, total, pages: Math.ceil(total / limit) },
+    });
+  } catch (error) {
+    return NextResponse.json(
+      { success: false, message: "Server error" },
+      { status: 500 }
+    );
+  }
+}
+
 
 // POST /api/blogs — accepts multipart/form-data
 export async function POST(req: NextRequest) {
@@ -21,6 +65,9 @@ export async function POST(req: NextRequest) {
     const category      = formData.get("category") as string;
     const status        = (formData.get("status") as string) || "draft";
     const featured      = formData.get("featured") === "true";
+    const faqs = JSON.parse(
+  (formData.get("faqs") as string) || "[]"
+);
     const tags          = JSON.parse((formData.get("tags") as string) || "[]");
     const metaTitle     = formData.get("metaTitle") as string;
     const metaDesc      = formData.get("metaDescription") as string;
@@ -59,6 +106,7 @@ export async function POST(req: NextRequest) {
       category,
       status,
       featured,
+      faqs,
       tags,
       featuredImage,
       metaTitle,
