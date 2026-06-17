@@ -585,7 +585,7 @@ function Toolbar({
 // ─── Editor Styles ────────────────────────────────────────────────────────────
 // We inject a <style> tag because Tailwind's preflight / prose resets strip
 // heading sizes. These selectors target only the .rte-content area.
-const editorStyles = `
+export const editorStyles = `
 .rte-content:focus { outline: none; }
 .rte-content {
   min-height: 400px;

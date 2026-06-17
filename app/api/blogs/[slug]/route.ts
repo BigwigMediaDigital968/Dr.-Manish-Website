@@ -8,15 +8,14 @@ type Params = {
 };
 
 export async function GET(
-  _req: NextRequest,
-  { params }: Params
+  req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
     const { slug } = await params;
-
     await connectDB();
 
-    const blog = await Blog.findOne({ slug });
+    const blog = await Blog.findOne({ slug: slug });
 
     if (!blog) {
       return NextResponse.json(

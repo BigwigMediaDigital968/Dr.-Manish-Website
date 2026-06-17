@@ -16,6 +16,8 @@ import {
   Filter,
 } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { formatDate } from "@/app/lib/Helpers/Date";
+import Link from "next/link";
 
 /* ============================================================================
    1. STREAMING_CHUNK: Defining Type Interfaces for Blogs & API responses
@@ -200,8 +202,18 @@ export async function fetchBlogsAPI(
   // Simulate network latency (500ms delay)
   await new Promise((resolve) => setTimeout(resolve, 550));
 
-  let filtered = [...MOCK_BLOGS_DATABASE];
+  // const searchParams =  {
 
+  // }
+  // const response = await fetch(
+  //   `/api/blogs?${searchParams.toString()}`,
+  //   {
+  //     method: "GET",
+  //     cache: "no-store",
+  //   }
+  // );
+
+  let filtered = [...MOCK_BLOGS_DATABASE];
   // Apply Category Filters
   if (category !== "All") {
     filtered = filtered.filter(
@@ -232,6 +244,52 @@ export async function fetchBlogsAPI(
   };
 }
 
+export async function fetchBlogsAPI2(
+  page: number = 1,
+  limit: number = 6,
+  category: string = "All",
+  searchQuery: string = "",
+  featured?: boolean
+): Promise<APIResponse> {
+  const searchParams = new URLSearchParams();
+
+  searchParams.set("page", page.toString());
+  searchParams.set("limit", limit.toString());
+
+  if (category && category !== "All") {
+    searchParams.set("category", category);
+  }
+
+  if (searchQuery.trim()) {
+    searchParams.set("search", searchQuery.trim());
+  }
+
+  if (featured !== undefined) {
+    searchParams.set("featured", featured.toString());
+  }
+
+  const response = await fetch(
+    `/api/blogs?${searchParams.toString()}`,
+    {
+      method: "GET",
+      cache: "no-store",
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch blogs");
+  }
+
+  const result = await response.json();
+
+  return {
+    posts: result.data,
+    totalCount: result.pagination.total,
+    totalPages: result.pagination.pages,
+    currentPage: result.pagination.page,
+  };
+}
+
 /* ============================================================================
    4. STREAMING_CHUNK: Main Blog Grid Component with Infinite Scroll & Pagination
    ============================================================================ */
@@ -254,7 +312,7 @@ export default function BlogGrid({
   const [debouncedQuery, setDebouncedQuery] = useState<string>("");
 
   // Grid Data States
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [posts, setPosts] = useState<BlogPost[] | any[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -272,6 +330,7 @@ export default function BlogGrid({
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
+  console.log(posts)
   // Reset parameters when filters, query, or mode switches
   useEffect(() => {
     setPosts([]);
@@ -480,7 +539,7 @@ export default function BlogGrid({
                   {/* Top: Metadata & Post Title Block (Capitalized thin header) */}
                   <div className="space-y-1.5 text-left">
                     <span className="text-[10px] md:text-xs font-medium text-slate-400 tracking-widest uppercase block font-mono">
-                      {post.date}
+                      {formatDate(post.updatedAt)}
                     </span>
                     <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug line-clamp-2 uppercase">
                       {post.title}
@@ -490,8 +549,8 @@ export default function BlogGrid({
                   {/* Mid: Bound Image Frame */}
                   <div className="relative h-64 overflow-hidden bg-slate-100 border border-slate-100">
                     <img
-                      src={post.image}
-                      alt={post.title}
+                      src={post?.featuredImage?.url || post.image}
+                      alt={post?.featuredImage?.alt}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                       loading="lazy"
                     />
@@ -504,13 +563,14 @@ export default function BlogGrid({
 
                   {/* Action Link: Bordered Box Centered Button (Strict mapping of image_a8743a.jpg) */}
                   <div className="pt-2">
-                    <button
-                      onClick={() => onPostSelect?.(post)}
+                    <Link
+                    href={`/blogs/${post?.slug}`}
+                      // onClick={() => onPostSelect?.(post)}
                       className="w-full py-3.5 border border-slate-200 hover:border-slate-400 hover:bg-slate-50/50 text-xs font-extrabold text-slate-600 hover:text-slate-900 tracking-widest uppercase text-center transition-all focus:outline-none flex items-center justify-center gap-1.5 cursor-pointer"
                     >
                       Read More{" "}
                       <ArrowRight className="w-3.5 h-3.5 text-[#1fa8e8]" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
