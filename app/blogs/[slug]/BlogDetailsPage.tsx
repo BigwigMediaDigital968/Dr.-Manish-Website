@@ -549,7 +549,7 @@ export default function BlogDetailsPage({ post }: { post: IBlogPost }) {
 
                     <aside className="lg:col-span-4 space-y-8 lg:sticky lg:top-24">
 
-                        {false && toc.length > 0 && (
+                        {/* {toc.length > 0 && (
                           <div className="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
                               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-[#e2e8f0]">
                                   Table of Contents
@@ -588,7 +588,7 @@ export default function BlogDetailsPage({ post }: { post: IBlogPost }) {
                                   )}
                               </nav>
                           </div>
-                        )}
+                        )} */}
 
                         <div
                             className="relative rounded-3xl overflow-hidden p-6 text-white shadow-xl"
