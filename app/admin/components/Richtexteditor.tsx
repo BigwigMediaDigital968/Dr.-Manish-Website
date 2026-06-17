@@ -1027,7 +1027,9 @@ export const RichTextEditor = forwardRef<RichTextEditorHandle, RichTextEditorPro
             </div>
           ) : (
             <>
-              <EditorContent editor={editor} />
+              <div className="max-h-[600px] overflow-y-scroll">
+                <EditorContent editor={editor} />
+              </div>
 
               {/* Word / char count */}
               <div className="flex items-center justify-end gap-4 px-5 py-2 border-t border-slate-100 bg-slate-50 rounded-b-2xl">
