@@ -613,7 +613,7 @@ function CardFront({
       >
         <div className="space-y-4">
           <span className="text-[10px] uppercase tracking-[0.25em] text-[#6dbb45] font-bold">
-            Clinical Case Study · DLSC-{study.id * 10}
+            Clinical Case Study
           </span>
 
           <h3 className="text-xl sm:text-2xl font-black text-white leading-tight group-hover:text-[#1fa8e8] transition-colors">
@@ -689,7 +689,7 @@ function CardBack({
         <div className="flex items-start justify-between gap-4">
           <div>
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#6dbb45] font-bold">
-              Full Case Detail · DLSC-{study.id * 10}
+              Full Case Detail
             </span>
             <h3 className="mt-1 text-lg sm:text-xl font-black text-white leading-tight">
               {study.title}
@@ -1092,7 +1092,7 @@ export function CaseStudyContainer({ study, onFlip }: CaseStudyContainerProps) {
         <div className="flex items-start justify-between gap-4 border-b border-white/5 pb-6">
           <div>
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#6dbb45] font-bold">
-              {study.badge || "Full Case Detail"} · DLSC-{study.id * 10}
+              {study.badge || "Full Case Detail"}
             </span>
             <h3 className="mt-1 text-xl sm:text-2xl font-black text-white leading-tight">
               {study.title}
@@ -1332,7 +1332,6 @@ export function CaseStudyContainer({ study, onFlip }: CaseStudyContainerProps) {
                 Verified File ID:
               </span>
               <span className="text-[11px] font-black text-white">
-                DLSC-{study.id * 10}
               </span>
             </div>
             <p className="text-[9px] text-slate-500 italic">
