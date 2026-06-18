@@ -52,7 +52,7 @@ export default function Navbar() {
         <div
           className={`mx-auto max-w-7xl transition-all duration-500 ease-in-out ${
             scrolled
-              ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-sky-100/40 rounded-full py-2 px-5 md:px-7 border border-white/50 scale-[0.99]"
+              ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-sky-100/40 rounded-[32px] sm:rounded-full py-2 px-5 md:px-7 border border-white/50 scale-[0.99]"
               : "bg-white/70 backdrop-blur-md shadow-sm rounded-[32px] py-3.5 px-6 md:px-8 border border-white/30"
           }`}
         >
