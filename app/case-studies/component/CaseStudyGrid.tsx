@@ -120,7 +120,6 @@ const caseStudies2: CaseStudyItem[] = [
     seoKeywords: [],
     image: "/case-study-1.png",
     color: "from-[#1fa8e8]/20 to-[#6dbb45]/10",
-    backCard: <CaseStudyContainer />,
   },
   {
     id: 2,
