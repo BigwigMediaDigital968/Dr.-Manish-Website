@@ -45,7 +45,7 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     {
       name: "Symptoms",
-      href: "/symptoms",
+      href: "/#",
       hasDropdown: true,
       dropdownItems: [
         { name: "Chronic Cough", href: "/symptoms/chronic-cough" },
@@ -56,7 +56,7 @@ export default function Navbar() {
     },
     {
       name: "Conditions",
-      href: "/conditions",
+      href: "/#",
       hasDropdown: false,
       isMegaMenu: false, // Flag to easily identify mega menus
       megaCategories: [
@@ -97,7 +97,7 @@ export default function Navbar() {
     },
     {
       name: "Procedures",
-      href: "/procedures",
+      href: "/#",
       hasDropdown: false,
       dropdownItems: [
         { name: "Bronchoscopy", href: "/procedures/bronchoscopy" },
@@ -107,7 +107,7 @@ export default function Navbar() {
     },
     {
       name: "Sleep",
-      href: "/sleep",
+      href: "/#",
       hasDropdown: false,
     },
     { name: "Contact", href: "/contact" },
