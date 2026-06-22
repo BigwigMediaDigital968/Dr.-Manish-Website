@@ -333,7 +333,7 @@ export default function Navbar() {
                           : "max-h-0 opacity-0 pointer-events-none"
                         }`}
                     >
-                      <div className="pl-4 pr-2 flex flex-col gap-4 max-h-[340px] overflow-y-auto scrollbar-none">
+                      <div className="pl-4 pr-2 flex flex-col gap-2 max-h-[340px] overflow-y-auto scrollbar-none">
                         {isMegaMenu ? (
                           /* RENDER CATEGORIZED MEGA MENU FOR MOBILE */
                           link.megaCategories?.map((category) => (
@@ -372,7 +372,7 @@ export default function Navbar() {
                                 setIsOpen(false);
                                 setMobileDropdown(null);
                               }}
-                              className="px-4 py-3 rounded-xl text-left bg-slate-50/50 text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors"
+                              className="px-4 py-1 text-left text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors"
                             >
                               {item.name}
                             </a>
