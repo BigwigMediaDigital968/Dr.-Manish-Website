@@ -5,6 +5,7 @@ import { Menu, X, Calendar, ChevronRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Popup from "./Popup";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 /* ==========================================
    2. MAIN HEADER NAVBAR COMPONENT (Exported)
@@ -146,7 +147,7 @@ export default function Navbar() {
               </div>
             </a>
             {/* Desktop Nav Items */}
-            <nav className="hidden md:flex items-center gap-1.5 lg:gap-2">
+            <nav className="hidden md:flex items-center gap-1.5 lg:gap-1">
               {navLinks.map((link) => {
                 // If the link has submenus grouped by categories (e.g., Services in your image)
                 // we use a full-width Mega Menu. Otherwise, we fallback to a standard clean layout.
@@ -160,10 +161,10 @@ export default function Navbar() {
                     onMouseLeave={() => setOpenDropdown(null)}
                     className={isMegaMenu ? "" : "relative"}
                   >
-                    <a
+                    <Link
                       href={link.href}
                       onClick={() => setActiveSection(link.name)}
-                      className={`relative flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${isActiveLink(link.href)
+                      className={`relative flex items-center gap-1.5 px-2 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${isActiveLink(link.href)
                         ? "text-[#1fa8e8]"
                         : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
                         }`}
@@ -176,7 +177,7 @@ export default function Navbar() {
                       {isActiveLink(link.href) && (
                         <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] rounded-full" />
                       )}
-                    </a>
+                    </Link>
 
                     {/* ==========================================
                         MEGA MENU PANEL (Full Width matching image)
