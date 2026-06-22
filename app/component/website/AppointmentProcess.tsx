@@ -8,6 +8,7 @@ import {
   ArrowRight,
   Sparkles,
   PhoneCall,
+  Phone,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -16,7 +17,7 @@ interface AppointmentProcessProps {
 }
 
 export default function AppointmentProcess({
-  onBookClick = () => {},
+  onBookClick = () => { },
 }: AppointmentProcessProps) {
   const steps = [
     {
@@ -73,39 +74,60 @@ export default function AppointmentProcess({
             </div>
 
             {/* Quick Contacts Panel aligned exactly with image_9cb3d8.jpg */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-4 border-y border-slate-100">
+            <div className="grid grid-cols-1 gap-6 py-4 border-y border-slate-100">
               {/* Location Badge */}
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2">
-                <div className="w-10 h-10 rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] flex items-center justify-center">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-black text-slate-900 uppercase tracking-wide">
-                    Our Location
-                  </h4>
-                  <p className="text-[11px] text-slate-500 font-medium mt-1">
-                    JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034
-                  </p>
-                </div>
-              </div>
+              <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] flex items-center justify-center">
+                    <MapPin className="w-5 h-5" />
+                  </div>
 
-              {/* Email Badge */}
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2">
-                <div className="w-10 h-10 rounded-full bg-[#6dbb45]/10 text-[#6dbb45] flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Our Location
+                    </h4>
+                    <p className="text-[11px] text-slate-500 font-medium mt-1">
+                      JU-12A, Block G&JU, Ranikhet, <br /> Pitampura, Delhi, 110034
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xs font-black text-slate-900 uppercase tracking-wide">
-                    Our Email
-                  </h4>
-                  <a
-                    href="mailto:Aggarmanish@gmail.com"
-                    className="text-[11px] text-slate-500 hover:text-[#1fa8e8] font-medium mt-1 block break-all"
-                  >
-                    Aggarmanish@gmail.com
-                  </a>
+
+                {/* Email */}
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-[#6dbb45]/10 text-[#6dbb45] flex items-center justify-center">
+                    <Mail className="w-5 h-5" />
+                  </div>
+
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Our Email
+                    </h4>
+                    <a
+                      href="mailto:Aggarmanish@gmail.com"
+                      className="text-[11px] text-slate-500 hover:text-[#1fa8e8] font-medium mt-1 block"
+                    >
+                      Aggarmanish@gmail.com
+                    </a>
+                  </div>
                 </div>
-              </div>
+
+                {/* Phone / Third Item */}
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-[#6dbb45]/10 text-[#6dbb45] flex items-center justify-center">
+                    <Phone className="w-5 h-5" />
+                  </div>
+
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Call Us
+                    </h4>
+                    <a
+                      href="tel:+919899554095"
+                      className="text-[11px] text-slate-500 hover:text-[#1fa8e8] font-medium mt-1 block"
+                    >
+                      +91 9899554095
+                    </a>
+                  </div>
+                </div>
             </div>
 
             {/* Sub-text and Main CTA Button */}
