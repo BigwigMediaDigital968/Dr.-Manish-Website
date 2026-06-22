@@ -48,10 +48,10 @@ export default function Navbar() {
       href: "/#",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Chronic Cough", href: "/symptoms/chronic-cough" },
-        { name: "Shortness of Breath", href: "/symptoms/shortness-of-breath" },
-        { name: "Wheezing", href: "/symptoms/wheezing" },
-        { name: "Chest Pain", href: "/symptoms/chest-pain" },
+        { name: "Chronic Cough", href: "/#" },
+        { name: "Shortness of Breath", href: "/#" },
+        { name: "Wheezing", href: "/#" },
+        { name: "Chest Pain", href: "/#" },
       ],
     },
     {
