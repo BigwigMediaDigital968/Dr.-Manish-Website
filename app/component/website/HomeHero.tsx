@@ -12,9 +12,10 @@ import {
   Clock,
   UserCheck,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function HomeHero() {
-  const {openModal}  = useModal();
+  const { openModal } = useModal();
   return (
     <section
       id="home"
@@ -120,55 +121,19 @@ export default function HomeHero() {
                 <br />
                 Interventional Pulmonology
               </p>
-              {/* 
-              <p className="mt-4 text-sm text-slate-600 leading-7">
-                Providing advanced diagnosis and treatment for
-                <span className="font-semibold text-slate-800">
-                  {" "}
-                  Asthma, COPD, Chronic Cough, ILD, Sleep Disorders,
-                  Bronchoscopy, Pleural Diseases,
-                </span>{" "}
-                and
-                <span className="font-semibold text-slate-800">
-                  {" "}
-                  Lung Cancer Screening.
-                </span>
-              </p> */}
-
-              {/* Bottom Badges */}
-              {/* <div className="mt-6 flex flex-wrap justify-center gap-2">
-                {[
-                  "Gold Medalist",
-                  "Bronchoscopy Expert",
-                  "Sleep Specialist",
-                  "NABL Certified",
-                ].map((badge) => (
-                  <span
-                    key={badge}
-                    className="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-50 border border-slate-200 text-slate-700"
-                  >
-                    {badge}
-                  </span>
-                ))}
-              </div> */}
+              <div className="mt-4 text-center">
+                <a
+                  href="/about"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-slate-800 hover:text-[#1fa8e8] transition-all duration-300 group"
+                >
+                  Know More
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
+              </div>
             </div>
+
+
           </div>
-
-          {/* Floating Patient Satisfaction Card */}
-          {/* <div className="absolute -bottom-5 -right-3 sm:-right-0 bg-white rounded-2xl shadow-xl border border-slate-100 p-4 flex items-center gap-3 animate-bounce duration-[6000ms]">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] text-white flex items-center justify-center">
-              <TrendingUp className="w-5 h-5" />
-            </div>
-
-            <div>
-              <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">
-                Patient Trust
-              </span>
-              <p className="text-sm font-extrabold text-slate-800">
-                99.4% Satisfaction
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
