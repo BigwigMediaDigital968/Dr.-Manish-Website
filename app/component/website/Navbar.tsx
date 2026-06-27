@@ -513,7 +513,7 @@ export default function Navbar() {
                                 setIsOpen(false);
                                 setMobileDropdown(null);
                               }}
-                              className="px-4 py-1 text-left text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors"
+                              className="px-4 py-1 text-left text-xs font-medium text-slate-700 active:text-[#1fa8e8] transition-colors"
                             >
                               {item.name}
                             </a>
