@@ -139,7 +139,7 @@ export default function Navbar() {
       name: "Procedures",
       href: "/#",
       hasDropdown: true,
-      isMegaMenu:true,
+      isMegaMenu: true,
       dropdownItems: [
         { name: "Bronchoscopy", href: "#" },
         { name: "EBUS (Endobronchial Ultrasound)", href: "#" },
@@ -461,31 +461,46 @@ export default function Navbar() {
                     >
                       <div className="pl-4 pr-2 flex flex-col gap-2 max-h-[340px] overflow-y-auto scrollbar-none">
                         {isMegaMenu ? (
-                          /* RENDER CATEGORIZED MEGA MENU FOR MOBILE */
+                          /* RENDER CATEGORIZED MEGA MENU FOR MOBILE WITH NATIVE ACCORDIONS */
                           link.megaCategories?.map((category) => (
-                            <div key={category.title} className="flex flex-col gap-1">
-                              {/* Category Header Label */}
-                              <div className="px-3 pt-1 pb-0.5 border-l-2 border-[#1fa8e8]/40 ml-1">
+                            <details
+                              key={category.title}
+                              className="group flex flex-col gap-1 dynamic-accordion"
+                            >
+                              {/* Accordion Header (Toggles display on click natively) */}
+                              <summary className="flex items-center justify-between list-none cursor-pointer outline-none select-none px-3 pt-1 pb-1.5 border-l-2 border-[#1fa8e8]/40 ml-1">
                                 <span className="text-xs font-bold tracking-wider text-slate-400 uppercase">
                                   {category.title}
                                 </span>
-                              </div>
-                              {/* Category Nested Items */}
-                              {category.items?.map((item) => (
-                                <a
-                                  key={item.name}
-                                  href={item.href}
-                                  onClick={() => {
-                                    setActiveSection(link.name);
-                                    setIsOpen(false);
-                                    setMobileDropdown(null);
-                                  }}
-                                  className="px-4 py-2.5 rounded-xl text-left bg-slate-50/50 text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors"
+                                {/* Optional: Animated Indicator Arrow */}
+                                <svg
+                                  className="w-4 h-4 text-slate-400 transition-transform duration-200 group-open:rotate-180"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
                                 >
-                                  {item.name}
-                                </a>
-                              ))}
-                            </div>
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </summary>
+
+                              {/* Category Nested Items */}
+                              <div className="flex flex-col gap-1 mt-1">
+                                {category.items?.map((item) => (
+                                  <a
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={() => {
+                                      setActiveSection(link.name);
+                                      setIsOpen(false);
+                                      setMobileDropdown(null);
+                                    }}
+                                    className="px-4 py-2.5 rounded-xl text-left bg-slate-50/50 text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors block"
+                                  >
+                                    {item.name}
+                                  </a>
+                                ))}
+                              </div>
+                            </details>
                           ))
                         ) : (
                           /* STANDARD SINGLE LIST FALLBACK */
