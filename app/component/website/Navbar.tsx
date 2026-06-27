@@ -43,75 +43,198 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     {
       name: "Symptoms",
       href: "/#",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Chronic Cough", href: "/#" },
-        { name: "Shortness of Breath", href: "/#" },
-        { name: "Wheezing", href: "/#" },
-        { name: "Chest Pain", href: "/#" },
+        { name: "Cough", href: "#" },
+        { name: "Sputum", href: "#" },
+        { name: "Breathlessness (Shortness of Breath)", href: "#" },
+        { name: "Wheeze", href: "#" },
+        { name: "Blood in Spit (Hemoptysis)", href: "#" },
+        { name: "Chest Pain", href: "#" },
       ],
     },
     {
-      name: "Conditions",
+      name: "Diseases",
       href: "/#",
-      hasDropdown: false,
-      isMegaMenu: false, // Flag to easily identify mega menus
+      hasDropdown: true,
+      isMegaMenu: true, // Flag to easily identify mega menus
       megaCategories: [
         {
-          title: "ALLERGY TESTING",
+          title: "OBSTRUCTIVE LUNG DISEASE",
           items: [
-            { name: "Allergy Test", href: "/conditions/allergy-test" },
-            { name: "IgE levels", href: "/conditions/ige-levels" },
-            { name: "Absolute Eosinophil Count", href: "/conditions/absolute-eosinophil" },
-            { name: "FeNo", href: "/conditions/feno" },
+            { name: "COPD", href: "#" },
+            { name: "Asthma (Allergic Bronchitis)", href: "#" },
+            { name: "Allergic Bronchopulmonary Aspergillosis (ABPA)", href: "#" },
+            { name: "Uncontrolled Asthma vs Severe Asthma", href: "#" },
           ],
         },
         {
-          title: "SPUTUM TEST",
+          title: "CHEST INFECTIONS",
           items: [
-            { name: "Sputum AFB Stain", href: "/conditions/sputum-afb" },
-            { name: "AFB Culture", href: "/conditions/afb-culture" },
-            { name: "Genexpert", href: "/conditions/genexpert" },
-            { name: "Gram Stain and Culture", href: "/conditions/gram-stain" },
+            { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "#" },
+            { name: "Bacterial Pneumonia", href: "#" },
+            { name: "Tubercular Pneumonia (TB)", href: "#" },
+            { name: "Fungal Pneumonia", href: "#" },
+            { name: "Bronchiectasis", href: "#" },
           ],
         },
         {
-          title: "OTHER DIAGNOSTICS",
+          title: "RESTRICTIVE LUNG DISEASE",
           items: [
-            { name: "Routine Blood Check", href: "/conditions/blood-check" },
-            { name: "Chest X-Ray", href: "/conditions/xray" },
-            { name: "CT Thorax", href: "/conditions/ct-thorax" },
+            { name: "Interstitial Lung Disease (ILD) / Lung Fibrosis", href: "#" },
           ],
         },
         {
-          title: "SPECIALIZED CHECKS",
+          title: "LUNG MASS/LUNG CANCER",
           items: [
-            { name: "Skin Prick Test", href: "/conditions/skin-prick" },
-            { name: "Immunotherapy Evaluation", href: "/conditions/immunotherapy" },
+            { name: "Non-Small Cell Lung Carcinoma", href: "#" },
+            { name: "Small Cell Lung Carcinoma (SCLC)", href: "#" },
+            { name: "Bronchial Carcinoid Tumor", href: "#" },
           ],
+        },
+        {
+          title: "DISEASES OF PLEURA",
+          items: [
+            { name: "Pleural Effusion/Pleurisy (fluid outside Lungs)", href: "#" },
+            { name: "Pneumothorax (Lung Rupture)", href: "#" },
+          ],
+        },
+        {
+          title: "DISORDERS OF PULMONARY CIRCULATION",
+          items: [
+            { name: "Pulmonary Embolism", href: "#" },
+            { name: "Pulmonary Artery Hypertension", href: "#" },
+          ],
+        },
+        {
+          title: "DISORDERS OF GAS EXCHANGE",
+          items: [
+            { name: "Pulmonary Edema (Fluid Inside Lungs)", href: "#" },
+            { name: "ARDS (Acute Respiratory Distress Syndrome)", href: "#" },
+            { name: "Aspiration Pneumonia", href: "#" },
+          ],
+        },
+        {
+          title: "RESPIRATORY FAILURE",
+          items: [
+            { name: "Type 1 Respiratory Failure", href: "#" },
+            { name: "Type 2 Respiratory Failure (Hypercapnic / CO₂ Narcosis)", href: "#" },
+          ],
+        },
+        {
+          title: "DISEASES OF MEDIASTINUM, CHEST WALL AND DIAPHRAGM",
+          items: [],
+        },
+        {
+          title: "TOBACCO ADDICTION",
+          items: [],
         },
       ],
     },
     {
       name: "Procedures",
       href: "/#",
-      hasDropdown: false,
+      hasDropdown: true,
+      isMegaMenu:true,
       dropdownItems: [
-        { name: "Bronchoscopy", href: "/procedures/bronchoscopy" },
-        { name: "Pulmonary Function Test", href: "/procedures/pft" },
-        { name: "Airway Stenosis Treatment", href: "/procedures/airway-stenosis" },
+        { name: "Bronchoscopy", href: "#" },
+        { name: "EBUS (Endobronchial Ultrasound)", href: "#" },
+        { name: "Medical Thoracoscopy", href: "#" },
+        { name: "Pleural Procedures", href: "#" },
+        { name: "Pulmonary Function Test (PFT)", href: "#" },
+        { name: "Sleep Study (Polysomnography)", href: "#" },
+        { name: "CPAP/BiPAP Titration", href: "#" },
+        { name: "Allergy Testing", href: "#" },
+      ],
+      megaCategories: [
+        {
+          title: "AIRWAY PROCEDURES",
+          items: [
+            { name: "Bronchoscopy", href: "#" },
+            { name: "EBUS (Endobronchial Ultrasound)", href: "#" },
+            { name: "Transbronchial Lung Biopsy", href: "#" },
+            { name: "BAL (Bronchoalveolar Lavage)", href: "#" },
+          ],
+        },
+        {
+          title: "PLEURAL PROCEDURES",
+          items: [
+            { name: "Pleural Aspiration", href: "#" },
+            { name: "Intercostal Drainage (ICD)", href: "#" },
+            { name: "Medical Thoracoscopy", href: "#" },
+            { name: "Pleural Biopsy", href: "#" },
+          ],
+        },
+        {
+          title: "LUNG FUNCTION TESTS",
+          items: [
+            { name: "Spirometry", href: "#" },
+            { name: "Pulmonary Function Test (PFT)", href: "#" },
+            { name: "FeNO", href: "#" },
+            { name: "6 Minute Walk Test", href: "#" },
+          ],
+        },
+        {
+          title: "SLEEP PROCEDURES",
+          items: [
+            { name: "Sleep Study (Polysomnography)", href: "#" },
+            { name: "Home Sleep Test", href: "#" },
+            { name: "CPAP/BiPAP Titration", href: "#" },
+          ],
+        },
       ],
     },
     {
       name: "Sleep",
       href: "/#",
-      hasDropdown: false,
+      hasDropdown: true,
+      isMegaMenu: true,
+      megaCategories: [
+        {
+          title: "SLEEP SYMPTOMS",
+          items: [
+            { name: "Insomnia (Unable to Sleep)", href: "#" },
+            { name: "Hypersomnia (Excessive Sleep)", href: "#" },
+            { name: "Parasomnia", href: "#" },
+          ],
+        },
+        {
+          title: "SLEEP DISORDERS",
+          items: [
+            { name: "Insomnia Disorders", href: "#" },
+            { name: "Central Disorders of Hypersomnolence", href: "#" },
+            { name: "Circadian Rhythm Sleep-Wake Disorders", href: "#" },
+            { name: "Parasomnias", href: "#" },
+            { name: "Sleep-Related Movement Disorders", href: "#" },
+            { name: "Sleep-Related Breathing Disorders", href: "#" },
+          ],
+        },
+        {
+          title: "SLEEP INVESTIGATIONS",
+          items: [
+            { name: "Level 1 Sleep Study (Polysomnography)", href: "#" },
+            { name: "Level 2 and Level 3 Sleep Test (Home Sleep Apnoea Test) Certified by Sleep Specialist Doctor", href: "#" },
+            { name: "MSLT/MWT", href: "#" },
+            { name: "Actigraphy", href: "#" },
+            { name: "Sleep Diary", href: "#" },
+          ],
+        },
+        {
+          title: "SLEEP TREATMENT",
+          items: [
+            { name: "Cognitive Behavioral Sleep therapy – Insomnia", href: "#" },
+            { name: "PAP therapy : CPAP/Bipap/Mask interfaces", href: "#" },
+            { name: "Sleep Apnoea Surgery", href: "#" },
+            { name: "Dental Appliances", href: "#" },
+          ],
+        },
+      ],
     },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -152,14 +275,14 @@ export default function Navbar() {
                 // If the link has submenus grouped by categories (e.g., Services in your image)
                 // we use a full-width Mega Menu. Otherwise, we fallback to a standard clean layout.
                 const isMegaMenu = link.isMegaMenu;
-                const hasManyItems = link.dropdownItems && link.dropdownItems.length > 5;
+                const hasManyItems = link.dropdownItems && link.dropdownItems.length > 8;
 
                 return link.hasDropdown ? (
                   <div
                     key={link.name}
                     onMouseEnter={() => setOpenDropdown(link.name)}
                     onMouseLeave={() => setOpenDropdown(null)}
-                    className={isMegaMenu ? "" : "relative"}
+                    className={`${isMegaMenu ? "" : "relative"} z-20`}
                   >
                     <Link
                       href={link.href}
@@ -177,6 +300,8 @@ export default function Navbar() {
                       {isActiveLink(link.href) && (
                         <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] rounded-full" />
                       )}
+                      <span className="block w-full h-10 top-full absolute bg-transparent">
+                      </span>
                     </Link>
 
                     {/* ==========================================
@@ -184,17 +309,17 @@ export default function Navbar() {
                         ========================================== */}
                     {isMegaMenu ? (
                       <div
-                        className={`absolute left-0 right-0 top-full w-full bg-gradient-to-r from-[#0c7dc2] to-[#4d8f2d] text-white transition-all duration-200 ease-out border-t border-white/10 ${openDropdown === link.name
-                          ? "opacity-100 translate-y-0 pointer-events-auto visibility-visible shadow-2xl"
-                          : "opacity-0 -translate-y-2 pointer-events-none visibility-hidden"
+                        className={`absolute left-0 right-0 top-full w-full bg-white text-slate-800 transition-all duration-200 ease-out border-t border-slate-200 ${openDropdown === link.name
+                          ? "opacity-100 translate-y-0 pointer-events-auto visible shadow-2xl"
+                          : "opacity-0 -translate-y-2 pointer-events-none invisible"
                           }`}
                       >
                         <div className="mx-auto max-w-7xl px-8 py-10 grid grid-cols-4 gap-8">
                           {link.megaCategories?.map((category) => (
                             <div key={category.title} className="flex flex-col gap-3">
                               {/* Dynamic Header Column Indicator Line */}
-                              <div className="flex items-center gap-2 border-l-2 border-white/60 pl-3">
-                                <span className="text-sm font-bold tracking-wider uppercase text-white/90">
+                              <div className="flex items-center gap-2 border-l-2 border-emerald-600 pl-3">
+                                <span className="text-sm font-bold tracking-wider uppercase text-slate-900">
                                   {category.title}
                                 </span>
                               </div>
@@ -205,7 +330,7 @@ export default function Navbar() {
                                   <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-sm text-white/80 hover:text-white transition-colors"
+                                    className="text-xs font-medium text-slate-600 hover:text-[#1fa8e8] transition-colors "
                                   >
                                     {item.name}
                                   </a>
@@ -218,22 +343,22 @@ export default function Navbar() {
                     ) : (
                       /* Standard Dropdown Card Fallback */
                       <div
-                        className={`absolute top-full left-1/2 -translate-x-1/2 transition-all duration-200 ease-out ${openDropdown === link.name
+                        className={`absolute top-full translate-y-3 ${scrolled ? "py-2" : "py-4"} -z-50 left-1/2 -translate-x-1/2 transition-all duration-200 ease-out ${openDropdown === link.name
                           ? "opacity-100 translate-y-0 pointer-events-auto scale-100"
                           : "opacity-0 -translate-y-2 pointer-events-none scale-95"
                           }`}
                       >
                         <div
-                          className={`bg-white rounded-2xl from-[#0c7dc2] to-[#4d8f2d] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-slate-100 p-2.5 ${hasManyItems ? "w-[480px] grid grid-cols-2 gap-1" : "w-[240px] flex flex-col gap-0.5"
+                          className={`bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-slate-100 p-2.5 ${hasManyItems ? "w-[480px] grid grid-cols-2 gap-1" : "w-[280px] flex flex-col gap-0.5"
                             }`}
                         >
                           {link.dropdownItems?.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="group flex flex-col justify-center px-3.5 py-2.5 rounded-xl text-left transition-all duration-200 hover:bg-[#1fa8e8]/5"
+                              className="group flex flex-col justify-center px-3.5 py-2 rounded-xl text-left transition-all duration-200"
                             >
-                              <span className="text-sm font-semibold text-gray-600 group-hover:text-[#1fa8e8] transition-colors duration-150">
+                              <span className="text-sm font-medium text-gray-600 group-hover:text-[#1fa8e8] transition-colors duration-150">
                                 {item.name}
                               </span>
                             </a>
@@ -300,8 +425,8 @@ export default function Navbar() {
           {/* Mobile Overlay Menu */}
           <div
             className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen
-                ? "max-h-[85vh] overflow-y-auto opacity-100 mt-4"
-                : "max-h-0 opacity-0 pointer-events-none"
+              ? "max-h-[85vh] overflow-y-auto opacity-100 mt-4"
+              : "max-h-0 opacity-0 pointer-events-none"
               }`}
           >
             <div className="pt-3 pb-6 border-t border-slate-100 flex flex-col gap-1">
@@ -316,8 +441,8 @@ export default function Navbar() {
                         setMobileDropdown(isDropdownOpen ? null : link.name)
                       }
                       className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-all duration-200 cursor-pointer ${activeSection === link.name
-                          ? "bg-[#1fa8e8]/5 text-[#1fa8e8]"
-                          : "text-slate-600 active:bg-slate-50"
+                        ? "bg-[#1fa8e8]/5 text-[#1fa8e8]"
+                        : "text-slate-600 active:bg-slate-50"
                         }`}
                     >
                       {link.name}
@@ -330,8 +455,8 @@ export default function Navbar() {
                     {/* Subitems Menu Container with Fixed Height & Scroll */}
                     <div
                       className={`overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen
-                          ? "max-h-[350px] opacity-100 mt-1 mb-2"
-                          : "max-h-0 opacity-0 pointer-events-none"
+                        ? "max-h-[350px] opacity-100 mt-1 mb-2"
+                        : "max-h-0 opacity-0 pointer-events-none"
                         }`}
                     >
                       <div className="pl-4 pr-2 flex flex-col gap-2 max-h-[340px] overflow-y-auto scrollbar-none">
@@ -391,15 +516,11 @@ export default function Navbar() {
                       setIsOpen(false);
                     }}
                     className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-all duration-200 ${activeSection === link.name
-                        ? "bg-gradient-to-r from-[#1fa8e8]/10 to-[#6dbb45]/10 text-[#1fa8e8]"
-                        : "text-slate-600 active:bg-slate-50"
+                      ? "bg-gradient-to-r from-[#1fa8e8]/10 to-[#6dbb45]/10 text-[#1fa8e8]"
+                      : "text-slate-600 active:bg-slate-50"
                       }`}
                   >
                     {link.name}
-                    <ChevronRight
-                      className={`w-4 h-4 transition-transform duration-300 ${activeSection === link.name ? "rotate-90 text-[#1fa8e8]" : "text-slate-400"
-                        }`}
-                    />
                   </a>
                 );
               })}
