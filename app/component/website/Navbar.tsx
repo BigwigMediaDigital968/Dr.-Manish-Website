@@ -55,6 +55,8 @@ export default function Navbar() {
         { name: "Wheeze", href: "#" },
         { name: "Blood in Spit (Hemoptysis)", href: "#" },
         { name: "Chest Pain", href: "#" },
+        { name: "Unintentional Weight Loss", href: "#" },
+        { name: "Fever for Long Duration", href: "#" }
       ],
     },
     {
@@ -94,13 +96,16 @@ export default function Navbar() {
             { name: "Non-Small Cell Lung Carcinoma", href: "#" },
             { name: "Small Cell Lung Carcinoma (SCLC)", href: "#" },
             { name: "Bronchial Carcinoid Tumor", href: "#" },
+            { name: "Lung Nodule Evaluation / Workup", href: "#" }
           ],
         },
         {
-          title: "DISEASES OF PLEURA",
+          title: "DISEASES OF PLEURAL",
           items: [
             { name: "Pleural Effusion/Pleurisy (fluid outside Lungs)", href: "#" },
             { name: "Pneumothorax (Lung Rupture)", href: "#" },
+            { name: "Pleural Tumor", href: "#" },
+            { name: "Pleural Thickening", href: "#" },
           ],
         },
         {
