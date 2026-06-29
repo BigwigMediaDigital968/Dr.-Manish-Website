@@ -56,8 +56,7 @@ export default function Navbar() {
         { name: "Blood in Spit (Hemoptysis)", href: "#" },
         { name: "Chest Pain", href: "#" },
         { name: "Unintentional Weight Loss", href: "#" },
-        { name: "Fever for Long Duration", href: "#" }
-      ],
+        { name: "Fever of Prolonged Duration", href: "#" }],
     },
     {
       name: "Diseases",
