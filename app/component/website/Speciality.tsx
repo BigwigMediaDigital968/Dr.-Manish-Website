@@ -233,7 +233,7 @@ export default function Speciality() {
               <div className="relative w-36 h-36 rounded-full bg-gradient-to-tr from-[#1fa8e8] to-[#6dbb45] p-1 shadow-lg">
                 <div className="w-full h-full rounded-full bg-sky-50 flex items-center justify-center text-[#1fa8e8]">
                   <Image
-                    src="/dr-image.png"
+                    src="/dr-image.jpeg"
                     alt="Dr. Manish Aggarwal"
                     width={120}
                     height={120}
@@ -266,11 +266,11 @@ export default function Speciality() {
                 Delhi Lung & Bronchoscopy Center
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                Dr. Manish Aggarwal, Principle Director - Department of Chest Disease & Interventional Pulmonologist in
-                Pitampura, Delhi, provides comprehensive care for asthma,
-                allergy-related breathing problems, wheezing, chronic cough,
-                chest tightness, and recurrent respiratory symptoms in children
-                and adults.
+                Dr. Manish Aggarwal, Principle Director - Department of Chest
+                Disease & Interventional Pulmonologist in Pitampura, Delhi,
+                provides comprehensive care for asthma, allergy-related
+                breathing problems, wheezing, chronic cough, chest tightness,
+                and recurrent respiratory symptoms in children and adults.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {[
@@ -284,10 +284,11 @@ export default function Speciality() {
                 ].map((service, index) => (
                   <div key={service} className="flex items-start gap-2.5">
                     <span
-                      className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs ${index % 2 === 0
+                      className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs ${
+                        index % 2 === 0
                           ? "bg-[#1fa8e8]/10 text-[#1fa8e8]"
                           : "bg-[#6dbb45]/10 text-[#6dbb45]"
-                        }`}
+                      }`}
                     >
                       ✓
                     </span>
@@ -297,15 +298,15 @@ export default function Speciality() {
                   </div>
                 ))}
               </div>
-             <div className="pl-2">
-               <Link
-                href="/about"
-                className="text-md font-bold text-[#1fa8e8] hover:text-[#0c7dc2] flex items-center gap-1 mt-4"
-              >
-                Know More
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-             </div>
+              <div className="pl-2">
+                <Link
+                  href="/about"
+                  className="text-md font-bold text-[#1fa8e8] hover:text-[#0c7dc2] flex items-center gap-1 mt-4"
+                >
+                  Know More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -448,7 +449,8 @@ export default function Speciality() {
                 onClick={() => setIsBookModalOpen(true)}
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-bold text-sm tracking-wide  flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all cursor-pointer"
               >
-                <Calendar className="w-4 h-4" />Book Appointment Now
+                <Calendar className="w-4 h-4" />
+                Book Appointment Now
               </button>
               <a
                 href="tel:+919899554095"

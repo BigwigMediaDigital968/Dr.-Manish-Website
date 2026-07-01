@@ -112,7 +112,9 @@ export default function About() {
                       & Bronchoscopy Centre
                     </h5>
                     <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                      Bringing advanced lung diagnostics and precision bronchoscopy services directly into your care journey for accurate, compassionate respiratory care.
+                      Bringing advanced lung diagnostics and precision
+                      bronchoscopy services directly into your care journey for
+                      accurate, compassionate respiratory care.
                     </p>
                   </div>
 
@@ -171,7 +173,7 @@ export default function About() {
                     <div className="w-full h-full rounded-full bg-sky-50 flex items-center justify-center text-[#1fa8e8]">
                       {/* Doctor Avatar representation */}
                       <Image
-                        src="/dr-image.png"
+                        src="/dr-image.jpeg"
                         alt="Dr. Manish Aggarwal"
                         width={80}
                         height={80}

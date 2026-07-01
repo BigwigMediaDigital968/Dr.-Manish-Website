@@ -39,9 +39,10 @@ export default function AboutHero({
 
           {/* Subtext Paragraph */}
           <p className="text-white/85 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            Dr. Manish Aggarwal, Principle Director - Department of Chest Disease & Interventional Pulmonologist, recognized for his expertise in bronchoscopy,
-            asthma, COPD, ILD, sleep medicine, and advanced lung disease
-            management. Backed by extensive academic leadership and
+            Dr. Manish Aggarwal, Principle Director - Department of Chest
+            Disease & Interventional Pulmonologist, recognized for his expertise
+            in bronchoscopy, asthma, COPD, ILD, sleep medicine, and advanced
+            lung disease management. Backed by extensive academic leadership and
             international experience, he is committed to delivering world-class
             respiratory care with precision, transparency, and compassion.
           </p>
@@ -49,7 +50,7 @@ export default function AboutHero({
           {/* Primary Action Button linking to Contact */}
           <div className="pt-2 flex justify-center lg:justify-start">
             <Link
-            href="/contact"
+              href="/contact"
               className="group w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-[#6dbb45] hover:text-white font-medium text-sm tracking-wide shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               Contact Our Clinic
@@ -65,7 +66,7 @@ export default function AboutHero({
 
           {/* Clinician Cutout Frame pointing inwards exactly resembling image_598ec4.jpg */}
           <img
-            src="/dr-image.png"
+            src="/dr-image.jpeg"
             alt="Male Chest Physician Delhi"
             className="relative object-cover object-top h-[320px] lg:h-[550px] w-auto rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] shrink-0 z-10"
             loading="lazy"

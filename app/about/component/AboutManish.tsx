@@ -129,7 +129,7 @@ export default function AboutManish() {
               <div className="relative w-full max-w-[420px] aspect-[4/5] bg-slate-100 rounded-[40px] overflow-hidden border-4 border-white shadow-2xl group mx-auto">
                 {!imgError ? (
                   <img
-                    src="/dr-image.png"
+                    src="/dr-image.jpeg"
                     alt="Dr. Manish Aggarwal"
                     onError={() => setImgError(true)}
                     className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -198,7 +198,8 @@ export default function AboutManish() {
               {/* Editorial Bio Description */}
               <div className="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
                 <p>
-                  Dr. Manish Aggarwal is one of Delhi's leading Chest Disease Specialist & Interventional Pulmonologist, with over{" "}
+                  Dr. Manish Aggarwal is one of Delhi's leading Chest Disease
+                  Specialist & Interventional Pulmonologist, with over{" "}
                   <span className="font-bold text-slate-800">25+ years</span> of
                   experience in respiratory medicine, critical care,
                   bronchoscopy, and advanced lung disease management.
@@ -301,10 +302,10 @@ export default function AboutManish() {
                   Aeromed International Rescue Services
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed max-w-2xl">
-                  Dr. Manish Aggarwal is the proud {" "}
+                  Dr. Manish Aggarwal is the proud{" "}
                   <span className="font-extrabold text-white">
-                    Principle  Director of Department of Chest Disease & Interventional
-            Pulmonologist, Max Hospital
+                    Principle Director of Department of Chest Disease &
+                    Interventional Pulmonologist, Max Hospital
                   </span>
                   . This leading organization is highly acclaimed for providing
                   secure, rapid, and intensive patient air ambulance
@@ -325,10 +326,10 @@ export default function AboutManish() {
               {/* CTA action trigger */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
                 <button
-                onClick={openModal}
+                  onClick={openModal}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-extrabold text-sm tracking-wide shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                 >
-                 Schedule Assessment
+                  Schedule Assessment
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

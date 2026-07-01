@@ -54,9 +54,9 @@ export default function HomeHero() {
           <p className="max-w-2xl text-lg text-slate-600 leading-relaxed">
             Expert care under <strong>Dr. Manish Aggarwal</strong>, Principle
             Director - Department of Chest Disease & Interventional
-            Pulmonologist, Max Hospital, providing advanced diagnosis and treatment for
-            asthma, chronic cough, COPD, sleep disorders, ILD, sarcoidosis,
-            pleural diseases and lung cancer screening.
+            Pulmonologist, Max Hospital, providing advanced diagnosis and
+            treatment for asthma, chronic cough, COPD, sleep disorders, ILD,
+            sarcoidosis, pleural diseases and lung cancer screening.
           </p>
 
           {/* Core Interactive Action Buttons */}
@@ -88,9 +88,9 @@ export default function HomeHero() {
             <div className="relative p-5">
               <div className="overflow-hidden rounded-[28px] aspect-[4/5] sm:aspect-[4/3] bg-slate-100">
                 <img
-                  src="/dr-image.png"
+                  src="/dr-image.jpeg"
                   alt="Dr. Manish Aggarwal"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -131,8 +131,6 @@ export default function HomeHero() {
                 </a>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
