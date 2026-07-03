@@ -24,7 +24,7 @@ export default function CaseHero() {
   const clinicStats = [
     {
       id: 1,
-      value: "25+",
+      value: "24+",
       label: "Years Experience",
       icon: AwardIcon,
       color: "text-[#1fa8e8]",

@@ -188,7 +188,7 @@ export default function BookAppointmentContact() {
                 {[
                   { value: "20+", label: "Specialties" },
                   { value: "50k+", label: "Patients Treated" },
-                  { value: "25 yr+", label: "Experience" },
+                  { value: "24 yr+", label: "Experience" },
                 ].map((s) => (
                   <div key={s.label}>
                     <p

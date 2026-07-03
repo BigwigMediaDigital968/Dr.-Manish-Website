@@ -17,7 +17,6 @@ import {
   AlertTriangle,
   Clock,
 } from "lucide-react";
-import Link from "next/link";
 import { useModal } from "@/app/Contexts/ModalContext";
 
 export default function WhoSeeUs() {
@@ -29,56 +28,62 @@ export default function WhoSeeUs() {
     {
       id: 1,
       title: "Persistent Cough",
-      short: "Productive or dry cough > 3-4 weeks",
+      short: "Productive or dry cough lasting more than 3 to 4 weeks",
       desc: "A lingering cough that has failed to resolve after standard courses of antibiotics or primary medication. Requires detailed spirometry or airway inspection.",
       icon: Activity,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
       badge: "High Priority",
+      action: "Specialized Spirometry & OPD Consultation",
     },
     {
       id: 2,
       title: "Unexplained Breathlessness",
       short: "Shortness of breath during basic tasks",
-      desc: "Gradual or sudden onset of breathlessness during routine daily physical tasks, such as climbing a single flight of stairs or walking short distances.",
+      desc: "Difficulty breathing during routine activities like walking, climbing stairs, or light household work, without any obvious cause. May indicate an underlying airway or lung capacity issue.",
       icon: Wind,
       color: "from-[#6dbb45] to-[#4d8f2d]",
       badge: "Warning Indicator",
+      action: "Pulmonary Function Test (PFT) & OPD Consultation"
     },
     {
       id: 3,
       title: "Abnormal Chest X-ray / CT",
       short: "Unexplained shadows, spots, or nodules",
-      desc: "Recent lung imaging showing unexplained spots, masses, or 'shadows' that require definitive interventional staging, biopsy, or EBUS tracking.",
+      desc: "Incidental findings on imaging that need further clinical correlation to rule out infection, scarring, or a growth. Timely evaluation prevents delayed diagnosis.",
       icon: Layers,
       color: "from-[#0c7dc2] to-[#1289cf]",
       badge: "Requires Staging",
+      action: "CT-Guided Review & Specialist Staging Consultation"
     },
     {
       id: 4,
       title: "Suspected or Resistant TB",
       short: "Non-responsive tuberculosis symptoms",
-      desc: "Complex, challenging cases of suspected TB or instances where standard first-line Tuberculosis treatment regimens are not yielding results.",
+      desc: "Persistent fever, cough, or weight loss despite ongoing TB medication, or symptoms that resemble TB but haven't been confirmed. Needs a focused diagnostic review.",
       icon: ShieldAlert,
       color: "from-[#6dbb45] to-[#0c7dc2]",
-      badge: "Specialist Review",
+      badge: "TB Specialist Doctor Delhi Review",
+      action: "Bronchoscopy-Guided Sampling & TB Panel Review"
     },
     {
       id: 5,
       title: "Long-Term Smoking History",
       short: "Ages 40+ with over 10 years of smoking",
-      desc: "Chronic smokers showing a sudden or gradual shift in their chronic breathing patterns, cough frequency, or stamina. Essential for early cancer screenings.",
+      desc: "Extended smoking exposure gradually narrows the airways and reduces lung capacity, often without noticeable symptoms in the early stages. Regular screening catches damage before it becomes irreversible.",
       icon: Timer,
       color: "from-slate-800 to-slate-950",
-      badge: "Screening Advised",
+      badge: "COPD Specialist in Delhi Screening Advised",
+      action: "Spirometry & Low-Dose CT Lung Screening"
     },
     {
       id: 6,
       title: "Severe Snoring & Fatigue",
       short: "Snoring paired with gasping for air",
-      desc: "Loud, disruptive snoring accompanied by gasping or choking episodes at night, resulting in daytime sleepiness and indicating Obstructive Sleep Apnea.",
+      desc: "Loud snoring, breathing pauses, or gasping during sleep followed by daytime tiredness or poor concentration. A common sign of obstructive sleep apnea that affects heart and lung health over time.",
       icon: Moon,
       color: "from-amber-500 to-orange-600",
       badge: "Sleep Lab Check",
+      action: "Home Sleep Study & Sleep Medicine Consultation"
     },
   ];
 
@@ -96,21 +101,19 @@ export default function WhoSeeUs() {
 
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         {/* --- HEADER BLOCK --- */}
-        <div className="text-center space-y-4 max-w-4xl mx-auto px-4">
+        <div className="text-center space-y-4 max-w-5xl mx-auto px-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-[#1fa8e8]/25">
             <AlertTriangle className="w-3.5 h-3.5 animate-pulse text-[#0c7dc2]" />{" "}
             Who should see us?
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 leading-tight">
-            When to Seek Expert Evaluation
+            When to Consult the Best Pulmonologist in Delhi
           </h2>
 
           <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-relaxed">
-            Navigating respiratory symptoms can be alarming. If you, a family
-            member, or a patient under your care is experiencing any of the
-            following indicators, an immediate specialized consultation is
-            highly recommended.
+            Navigating respiratory symptoms can be alarming. If you, a family member, or a patient under your care is experiencing any of the following indicators, an immediate consultation with a respiratory specialist in Delhi is highly recommended. Dr. Manish Aggarwal, a trusted chest specialist in Delhi, ensures early and accurate diagnosis for every patient.
+
           </p>
         </div>
 
@@ -129,8 +132,7 @@ export default function WhoSeeUs() {
 
               {/* Dynamic Overlay Tags */}
               <div className="absolute top-5 left-5 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-sm text-[10px] font-black text-[#0c7dc2] uppercase tracking-wider shadow-md flex items-center gap-1.5 z-10">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#6dbb45]" /> Same-Day
-                PFT Assays Available
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#6dbb45]" /> Lung Diagnostic CT Imaging Scan.<br /> Same-Day PFT Assays Available.
               </div>
 
               {/* Bottom Info Floating Card */}
@@ -139,8 +141,7 @@ export default function WhoSeeUs() {
                   Clinical Advice
                 </span>
                 <p className="text-xs font-bold text-slate-800 leading-snug">
-                  Early intervention prevents irreversible parenchymal damage &
-                  airway remodeling.
+                   Early intervention prevents irreversible parenchymal damage and airway remodeling.
                 </p>
               </div>
 
@@ -198,7 +199,7 @@ export default function WhoSeeUs() {
                 Clinical Check
               </span>
               <h3 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight mt-1">
-                Evaluate Your Respiratory Status
+                Evaluate Your Respiratory Status with a Lung Specialist
               </h3>
             </div>
 
@@ -268,8 +269,7 @@ export default function WhoSeeUs() {
                       <div className="flex items-center gap-2 mt-4 text-[10px] font-black uppercase tracking-wider text-[#6dbb45]">
                         <CheckCircle2 className="w-3.5 h-3.5" />
                         <span>
-                          Recommended action: Specialized Spirometry & OPD
-                          Consultation
+                          Recommended action: {item.action}
                         </span>
                       </div>
                     </div>
@@ -279,7 +279,7 @@ export default function WhoSeeUs() {
             </div>
 
             <p className="text-center text-[11px] text-slate-400 font-bold uppercase tracking-widest animate-pulse pt-2">
-              Click symptoms above to view detailed clinical recommendations
+              Click symptoms above to view detailed clinical recommendations from the best pulmonologist in Delhi.
             </p>
           </div>
         </div>

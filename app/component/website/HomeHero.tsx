@@ -1,18 +1,7 @@
 "use client";
 
 import { useModal } from "@/app/Contexts/ModalContext";
-import {
-  ArrowRight,
-  Activity,
-  Moon,
-  Wind,
-  Sparkles,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  UserCheck,
-} from "lucide-react";
-import Link from "next/link";
+import {ArrowRight, Activity, ShieldCheck} from "lucide-react";
 
 export default function HomeHero() {
   const { openModal } = useModal();
@@ -50,13 +39,12 @@ export default function HomeHero() {
             </span>
           </h1>
 
+          <p>Best Pulmonologist in Delhi Dr. Manish Aggarwal</p>
+
           {/* Hero Paragraph Description */}
-          <p className="max-w-2xl text-lg text-slate-600 leading-relaxed">
-            Expert care under <strong>Dr. Manish Aggarwal</strong>, Principle
-            Director - Department of Chest Disease & Interventional
-            Pulmonologist, Max Hospital, providing advanced diagnosis and
-            treatment for asthma, chronic cough, COPD, sleep disorders, ILD,
-            sarcoidosis, pleural diseases and lung cancer screening.
+          <p className="max-w-2xl text-md text-slate-600 leading-relaxed">
+            Looking for the best pulmonologist in Delhi? <strong>Dr. Manish Aggarwal,</strong> Principal Director, Department of Chest Disease and Interventional Pulmonology, Max Hospital, is a trusted Lung and Chest Specialist in Delhi with over 24+ years of experience. He provides advanced diagnosis and treatment for Asthma, Chronic Cough, COPD, Sleep Disorders, Interstitial Lung Disease (ILD), Sarcoidosis, Pleural Diseases, and Lung Cancer Screening. He is a leading Delhi lung doctor who blends a patient-first approach with modern technology.
+
           </p>
 
           {/* Core Interactive Action Buttons */}
@@ -100,7 +88,7 @@ export default function HomeHero() {
                   Experience
                 </p>
                 <p className="text-base sm:text-lg font-black bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-                  25+ Years
+                  24+ Years
                 </p>
               </div>
             </div>
@@ -109,15 +97,15 @@ export default function HomeHero() {
             <div className="px-6 pb-6 text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] text-xs font-bold uppercase tracking-wider mb-4">
                 <ShieldCheck className="w-4 h-4" />
-                Trusted Pulmonologist
+                Best Pulmonologist in Delhi
               </div>
 
-              <h3 className="text-xl font-black text-slate-900 tracking-tight">
+              <h2 className="text-xl font-black text-slate-900 tracking-tight">
                 Dr. Manish Aggarwal
-              </h3>
+              </h2>
 
               <p className="mt-2 text-[#1fa8e8] font-bold text-xs uppercase tracking-wider">
-                Principle Director • Chest Disease &
+                Principal Director, Chest Disease & 
                 <br />
                 Interventional Pulmonology
               </p>

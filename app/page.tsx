@@ -16,6 +16,26 @@ import WhyChooseUs from "./component/website/WhyChooseUs";
 import Different from "./component/website/Different";
 import Stats from "./component/website/Stats";
 
+// SEO Metadata Configuration
+export const metadata = {
+  title: "Pulmonologist & Lung Specialist in Delhi | Dr. Manish Aggarwal",
+  description: "Dr. Manish Aggarwal, best pulmonologist in Delhi with 24+ years experience. Expert care for asthma, COPD, TB, bronchoscopy & sleep disorders.",
+  keywords: [
+    "best pulmonologist in Delhi",
+    "lung specialist Delhi",
+    "chest specialist in Delhi",
+    "pulmonologist Pitampura",
+    "chronic cough specialist Delhi",
+    "COPD specialist Delhi",
+    "asthma specialist Delhi",
+    "bronchoscopy Delhi",
+    "TB specialist doctor Delhi",
+    "sleep apnea doctor Delhi",
+    "EBUS Delhi",
+    "Dr. Manish Aggarwal pulmonologist"
+  ],
+};
+
 export default function Home() {
   return (
     <>
@@ -34,7 +54,7 @@ export default function Home() {
       {/* <ClinicFeatures /> */}
       <BlogSection />
       <FAQs
-        title="Frequently Asked Questions"
+        title="Frequently Asked Questions About the Best Pulmonologist in Delhi"
         description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Center"
         faqs={homeFaqs}
       />

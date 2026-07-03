@@ -8,7 +8,6 @@ import {
   Star,
   MessageSquare,
   GraduationCap,
-  Sparkles,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
@@ -20,7 +19,7 @@ export default function Stats() {
   const metrics = [
     {
       id: 1,
-      value: "25+",
+      value: "24+",
       suffix: "Years",
       label: "Clinical Experience",
       icon: Award,
@@ -73,7 +72,7 @@ export default function Stats() {
       id: 6,
       value: "Trained",
       suffix: "Alumnus",
-      label: (<>At Indian Premium <br /> Institutes</>),
+      label: (<>At Indian Premium Institutes</>),
       icon: GraduationCap,
       gradient: "from-slate-800 to-slate-950",
       ringColor: "group-hover:border-slate-500/30",
@@ -81,7 +80,6 @@ export default function Stats() {
     },
   ];
   const [showPopup, setShowPopup] = useState(false);
-  const [popupShown, setPopupShown] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -137,8 +135,6 @@ export default function Stats() {
         <div className="max-w-7xl mx-auto space-y-12 relative z-10 px-4">
           {/* Mobile Carousel */}
           <div className="md:hidden relative">
-            {/* Navigation Buttons Header */}
-
 
             {/* Slider Container */}
             <div
@@ -154,7 +150,7 @@ export default function Stats() {
                       key={item.id}
                       className={`snap-start shrink-0 w-[calc(50vw-18px)] min-w-[160px]
                 group relative bg-white border border-slate-100
-                p-5 rounded-[24px] shadow-sm hover:shadow-xl
+                p-5 rounded-[14px] shadow-sm hover:shadow-xl
                 hover:shadow-sky-100/30 transition-all duration-300
                 flex flex-col justify-between ${item.ringColor}`}
                     >
@@ -191,9 +187,9 @@ export default function Stats() {
                             )}
                           </div>
 
-                          <h3 className="mt-1 text-sm font-bold text-slate-900 leading-tight">
+                          <span className="mt-1 text-sm text-slate-900 leading-tight">
                             {item.label}
-                          </h3>
+                          </span>
                         </div>
                       </div>
 
@@ -204,17 +200,17 @@ export default function Stats() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 mb-3">
+            <div className="flex items-center justify-center gap-2 my-3">
               <button
                 onClick={() => scroll('left')}
-                className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-50 shadow-sm"
+                className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-50 shadow-sm cursor-pointer"
                 aria-label="Scroll left"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => scroll('right')}
-                className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-50 shadow-sm"
+                className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-50 shadow-sm cursor-pointer"
                 aria-label="Scroll right"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -281,8 +277,7 @@ export default function Stats() {
           <div className="bg-gradient-to-r from-[#1fa8e8]/5 to-[#6dbb45]/5 rounded-3xl p-6 border border-[#1fa8e8]/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="space-y-1">
               <h4 className="text-xs sm:text-sm font-black text-slate-800 flex items-center justify-center sm:justify-start gap-1.5 uppercase tracking-wide">
-                <CheckCircle2 className="w-4 h-4 text-[#6dbb45]" /> Evidence-Based
-                Respiratory Care
+                <CheckCircle2 className="w-4 h-4 text-[#6dbb45]" />Evidence-Based Respiratory Care from a Pulmonary Specialist Doctor in Delhi
               </h4>
               <p className="text-xs text-slate-500 font-semibold leading-normal">
                 Our clinical statistics are verified by local audits and academic

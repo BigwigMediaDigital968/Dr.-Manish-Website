@@ -47,7 +47,7 @@ export default function AboutManish() {
 
   const highlights = [
     {
-      title: "25+ Years Experience",
+      title: "24+ Years Experience",
       desc: "Dedicated expertise in Pulmonology, Bronchoscopy and Critical Respiratory Care.",
       icon: Calendar,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
@@ -164,7 +164,7 @@ export default function AboutManish() {
                     Experience Status
                   </span>
                   <span className="font-bold text-emerald-600 flex items-center gap-1">
-                    25+ Years ✓
+                    24+ Years ✓
                   </span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
@@ -200,7 +200,7 @@ export default function AboutManish() {
                 <p>
                   Dr. Manish Aggarwal is one of Delhi's leading Chest Disease
                   Specialist & Interventional Pulmonologist, with over{" "}
-                  <span className="font-bold text-slate-800">25+ years</span> of
+                  <span className="font-bold text-slate-800">24+ years</span> of
                   experience in respiratory medicine, critical care,
                   bronchoscopy, and advanced lung disease management.
                   <br />

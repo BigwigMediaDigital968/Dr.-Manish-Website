@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Award,
 } from "lucide-react";
-import { LiaInstagram, LiaLinkedin, LiaYoutube } from "react-icons/lia";
+import { LiaLinkedin, LiaYoutube } from "react-icons/lia";
 import Popup from "./Popup";
 import Image from "next/image";
 
@@ -72,6 +72,10 @@ export default function About() {
                     <Sparkles className="w-3.5 h-3.5 text-[#1fa8e8]" />{" "}
                     #DrManishAggarwal
                   </span>
+                  <span className="px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-slate-600 hover:border-[#1fa8e8]/40 hover:text-[#0c7dc2] transition-all duration-300 text-xs font-bold tracking-wide shadow-sm hover:shadow-md cursor-default flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-[#1fa8e8]" />{" "}
+                    #BestPulmonologistInDelhi
+                  </span>
                 </div>
               </div>
             </div>
@@ -86,10 +90,7 @@ export default function About() {
 
                 {/* Core Journey Narrative */}
                 <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
-                  At Delhi Lung & Bronchoscopy Center, we started with a clear
-                  clinical mission: to make advanced pulmonology, bronchoscopy
-                  interventions, and state-of-the-art sleep studies highly
-                  accessible, accurate, and deeply compassionate.
+                  At Delhi Lung & Bronchoscopy Center, we started with a clear clinical mission: to make advanced pulmonology, bronchoscopy interventions, and state-of-the-art sleep studies highly accessible, accurate, and deeply compassionate. This is why so many patients call Dr. Manish Aggarwal the best pulmonologist in Delhi.
                 </p>
                 <p className="text-slate-500 text-sm md:text-base leading-relaxed">
                   What makes our clinic unique is the comprehensive clinical

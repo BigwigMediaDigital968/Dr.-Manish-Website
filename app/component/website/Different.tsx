@@ -1,19 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Compass,
-  Globe,
-  CheckCircle2,
-  Sparkles,
-  ArrowLeftRight,
-  Award,
-  ShieldCheck,
-  FlameKindling,
-  Check,
-  ChevronRight,
-  HeartPulse,
-  Users,
+  Globe,Sparkles,
+  ArrowLeftRight,Check,
+  ChevronRight,Users,
   BookMarked,
   BookOpen,
   ChevronLeft,
@@ -53,15 +45,7 @@ export default function Different({ onBookClick = () => { } }: DifferentProps) {
     "Life member of Indian chest council"
   ];
 
-  const publicationsold = [
-    `Aggarwal Manish." Recurrent epistaxis in a patient of pulmonary arteria hypertension.” Indian J allergy asthma immunol 2009`,
-    `Aggarwal Manish, GS Ranga, S. Dwivedi, Dharmender Kumar. “Aluminium
-phosphide poisoning in a young adult: A suicidal cardiotoxin simulating myocardial
-ischaemia.” Journal Indian Academy of Clinical Medicine 2004`,
-    `Aggarwal Manish, Menon MPS. Effect of oral fexofenadine on ventilatory parameter
-in patient of bronchial asthma”. Doctoral Dissertation submitted to the University of
-Delhi, 2001`
-  ];
+
   const publications = [
   {
     title: "Endobronchial Capillary Hemangioma: A Rare Cause of Hemoptysis",
@@ -245,8 +229,7 @@ Delhi, 2001`
                     Advanced Interventional Pulmonology Expertise
                   </h3>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                    Specialized, minimally invasive diagnostic and therapeutic
-                    airway procedures performed in premium interventional rooms.
+                    Specialized, minimally invasive diagnostic and therapeutic airway procedures performed in premium interventional rooms by a leading lung doctor in Delhi.
                   </p>
                 </div>
               </div>
@@ -330,10 +313,7 @@ Delhi, 2001`
                     Professional Memberships
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-semibold">
-                    Active affiliations with leading national and international respiratory,
-                    critical care, and physician societies, ensuring continuous engagement
-                    with the latest clinical research, guidelines, and advancements in
-                    pulmonary and critical care medicine.
+                    Active affiliations with leading national and international respiratory, critical care, and physician societies, ensuring continuous engagement with the latest clinical research, guidelines, and advancements in pulmonary and critical care medicine.
                   </p>
                 </div>
               </div>
@@ -375,9 +355,7 @@ Delhi, 2001`
                     Research Contributions
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-semibold">
-                    Published research and academic work spanning respiratory medicine,
-                    pulmonary hypertension, toxicology, and asthma management, reflecting a
-                    commitment to evidence-based medicine and continuous scientific inquiry.
+                    Published research and academic work spanning respiratory medicine, pulmonary hypertension, toxicology, and asthma management, reflecting a commitment to evidence-based medicine and continuous scientific inquiry.
                   </p>
                 </div>
               </div>

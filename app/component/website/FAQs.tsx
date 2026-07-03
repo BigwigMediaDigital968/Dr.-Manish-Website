@@ -31,7 +31,7 @@ export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
 
       <div className="max-w-5xl mx-auto space-y-12">
         {/* --- HEADER BLOCK --- */}
-        <div className="text-center space-y-4 max-w-2xl mx-auto">
+        <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" /> Find your Query here
           </div>

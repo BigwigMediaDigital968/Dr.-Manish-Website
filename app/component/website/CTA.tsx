@@ -27,10 +27,10 @@ export default function CTA() {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
+              <h2 className="text-xl sm:text-2xl font-black tracking-tight leading-tight">
                 Having A Breathing Problem? <br />
                 <span className="text-emerald-100 drop-shadow-sm">
-                  Try Our Therapy Today
+                   Consult the Best Pulmonologist in Delhi Today
                 </span>
               </h2>
 

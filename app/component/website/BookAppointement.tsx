@@ -107,7 +107,7 @@ export default function BookAppointment() {
 
             <p className="mt-5 text-base leading-relaxed text-[#64748b] lg:text-lg">
               Breathe better, sleep well. Our pulmonology specialists deliver
-              world-class diagnostics and personalised treatment — right here in
+              world-class diagnostics and personalised treatment, right here in
               Delhi.
             </p>
 
@@ -129,7 +129,7 @@ export default function BookAppointment() {
               {[
                 { value: "20+", label: "Specialties" },
                 { value: "50k+", label: "Patients Treated" },
-                { value: "25 yr+", label: "Experience" },
+                { value: "24 yr+", label: "Experience" },
               ].map((s) => (
                 <div key={s.label}>
                   <p

@@ -13,7 +13,6 @@ import {
   ChevronRight,
   Calendar,
   Phone,
-  FileSpreadsheet,
   Heart,
   Sparkles,
   Layers,
@@ -53,7 +52,7 @@ export default function Speciality() {
     {
       id: "asthma-diagnosis",
       title: "Asthma Diagnosis & Treatment",
-      desc: "Comprehensive asthma evaluation with advanced diagnostics, personalized medication plans, and long-term respiratory care.",
+      desc: "Comprehensive asthma evaluation with advanced diagnostics, personalized medication plans, and long-term respiratory care from an asthma specialist Delhi families trust.",
       category: "Pulmonary",
       icon: Wind,
       color: "#1fa8e8",
@@ -71,7 +70,7 @@ export default function Speciality() {
     {
       id: "chronic-cough",
       title: "Chronic Cough Evaluation",
-      desc: "Detailed investigation and management of persistent cough through comprehensive pulmonary diagnostics.",
+      desc: "Detailed investigation and management of persistent cough through comprehensive pulmonary diagnostics, backed by a chronic cough specialist in Delhi.",
       category: "Pulmonary",
       icon: Compass,
       color: "#1fa8e8",
@@ -89,7 +88,7 @@ export default function Speciality() {
     {
       id: "spirometry",
       title: "Spirometry Testing",
-      desc: "Quick and precise spirometry evaluations for asthma, COPD, and other chronic respiratory conditions.",
+      desc: "Quick and precise spirometry evaluations for asthma, COPD, and other chronic respiratory conditions, performed by a COPD specialist in Delhi.",
       category: "Pulmonary",
       icon: Award,
       color: "#1fa8e8",
@@ -116,7 +115,7 @@ export default function Speciality() {
     {
       id: "nebulization",
       title: "Nebulization Guidance",
-      desc: "Expert recommendations and supervised nebulization therapy for acute and chronic respiratory issues.",
+      desc: "Expert recommendations and supervised nebulization therapy for acute and chronic respiratory issues, including bronchitis treatment for Delhi patients.",
       category: "Pulmonary",
       icon: Moon,
       color: "#6dbb45",
@@ -125,7 +124,7 @@ export default function Speciality() {
     {
       id: "pollution-related",
       title: "Pollution-Related Breathing Problems",
-      desc: "Preventive and therapeutic care for respiratory issues triggered by air pollution and environmental exposure.",
+      desc: "Preventive and therapeutic care for respiratory issues triggered by air pollution, a common reason patients search for the best respiratory doctor in Delhi.",
       category: "Pulmonary",
       icon: Cloud,
       color: "#4d8f2d",
@@ -263,14 +262,11 @@ export default function Speciality() {
 
             <div className="lg:col-span-8 space-y-6">
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                Delhi Lung & Bronchoscopy Center
+               Delhi Lung & Bronchoscopy Center: Home of the Best Pulmonologist in Delhi
               </h2>
-              <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                Dr. Manish Aggarwal, Principle Director - Department of Chest
-                Disease & Interventional Pulmonologist in Pitampura, Delhi,
-                provides comprehensive care for asthma, allergy-related
-                breathing problems, wheezing, chronic cough, chest tightness,
-                and recurrent respiratory symptoms in children and adults.
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, with over 24+ years of experience. As an experienced lung specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology hospital in Delhi offers the same level of expertise in a more personal setting.
+
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {[
@@ -317,16 +313,15 @@ export default function Speciality() {
             id="services"
             className="flex flex-col space-y-6 md:space-y-0 md:flex-row md:items-end md:justify-between border-b border-slate-100 pb-8"
           >
-            <div className="space-y-3 max-w-xl text-center md:text-left">
+            <div className="space-y-3 max-w-2xl text-center md:text-left">
               <h2 className="text-xs font-extrabold tracking-widest text-[#1fa8e8] uppercase">
                 Clinical Services
               </h2>
               <h3 className="text-3xl md:text-4xl font-extrabold text-slate-950 tracking-tight leading-none">
-                Specialized Lung & Chest Care
+                Specialized Lung & Chest Care by Delhi's Leading Lung Doctor
               </h3>
               <p className="text-slate-500 text-sm">
-                Filter through our diverse range of chest diagnostics, sleep
-                evaluations, and interventional procedures.
+                Filter through our diverse range of chest diagnostics, sleep evaluations, and interventional procedures offered by our lung specialist and chest specialist in Delhi team.
               </p>
             </div>
 
@@ -434,13 +429,11 @@ export default function Speciality() {
                 <Calendar className="w-3.5 h-3.5 animate-pulse" /> Same-Day
                 Appointments Available
               </div>
-              <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-none">
-                Breathe Easy Again
+              <h3 className="text-xl md:text-2xl font-bold tracking-tight leading-none">
+                Breathe Easy Again with the Best Pulmonologist in Delhi
               </h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Book a direct specialty evaluation with Dr. Manish Aggarwal at
-                Delhi Lung & Bronchoscopy Center. Get customized solutions for
-                coughing issues, sleep disturbances, or respiratory ailments.
+                Book a direct specialty evaluation with Dr. Manish Aggarwal, the best pulmonologist in Delhi, at Delhi Lung & Bronchoscopy Center. Get customized solutions for coughing issues, sleep disturbances, or respiratory ailments from a private pulmonologist clinic in Delhi.
               </p>
             </div>
 

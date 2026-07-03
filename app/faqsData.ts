@@ -5,6 +5,11 @@ export interface FAQItem {
 
 export const homeFaqs: FAQItem[] = [
   {
+    question: "Who is the best pulmonologist in Delhi?",
+    answer:
+      "Dr. Manish Aggarwal, Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is widely regarded as the best pulmonologist in Delhi, with over 24 years of experience as a lung specialist and chest specialist in Delhi.",
+  },
+  {
     question: "Do you perform bronchoscopy?",
     answer:
       "Yes, bronchoscopy is routinely performed for evaluation of lung infections, chronic cough, bleeding in sputum, lung collapse, suspected TB, and lung nodules. I also perform advanced procedures like EBUS whenever indicated. The procedure is explained in detail to patients and attendants beforehand so they remain comfortable and informed.",
@@ -12,47 +17,52 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Can chronic cough be evaluated here?",
     answer:
-      "Absolutely. Chronic cough can occur due to asthma, allergy, sinus issues, acid reflux, smoking-related disease, TB, or other lung conditions. A detailed evaluation is done to identify the exact cause rather than just suppressing symptoms temporarily.",
+      "Yes, a cough lasting more than 3 to 4 weeks is thoroughly assessed by our chronic cough specialist in Delhi using clinical examination, imaging, and pulmonary function testing to identify the exact underlying cause.",
   },
   {
     question: "Do you treat asthma in elderly patients?",
     answer:
-      "Yes, elderly asthma patients often require a slightly different and more individualized approach because many may also have heart disease, allergies, COPD, or difficulty using inhalers properly. Treatment is tailored according to the patient’s age, lifestyle, and associated illnesses.",
+      "Yes, our asthma specialist Delhi team customizes treatment plans based on age, existing health conditions, and lifestyle, ensuring safe and effective management for elderly patients.",
   },
   {
     question: "Is sleep apnea testing available?",
     answer:
-      "Yes, evaluation for sleep apnea is available for patients who snore excessively, feel sleepy during daytime, have obesity, uncontrolled BP, or poor sleep quality. Sleep study guidance and further management options are discussed depending on the severity.",
+      "Yes, home sleep study devices are available along with detailed clinical evaluation for snoring, gasping during sleep, and daytime fatigue.",
   },
   {
     question: "When is EBUS required?",
     answer:
-      "EBUS is usually advised when there are enlarged lymph nodes in the chest, suspected TB, sarcoidosis, lung cancer, or unexplained chest findings on CT scan. It helps obtain samples safely from inside the chest without major surgery.",
+      "EBUS is generally recommended when lung nodules, enlarged lymph nodes, or suspected cancer staging require a minimally invasive and highly accurate diagnostic approach from our lung specialist.",
   },
   {
     question: "Can smokers be screened for lung disease?",
     answer:
-      "Yes, smokers and ex-smokers should undergo timely lung evaluation, especially if they have cough, breathlessness, recurrent infections, or weight loss. Early detection of COPD, lung fibrosis, or lung cancer can significantly improve outcomes.",
+      "Yes, individuals above the age of 40 with more than 10 years of smoking history are strongly advised to undergo regular lung screening with our lung disease specialist in Delhi.",
   },
   {
     question: "Do you see ILD patients?",
     answer:
-      "Yes, ILD (Interstitial Lung Disease) patients are evaluated in detail with clinical assessment, HRCT interpretation, lung function testing, and bronchoscopy procedures whenever needed. Since ILD can have many causes, careful diagnosis is extremely important before treatment is started.",
+      "Yes, ILD, sarcoidosis, and other complex airway disease conditions are diagnosed and managed by our chest specialist in Delhi with a structured, evidence-based treatment approach.",
   },
   {
     question: "Can TB diagnosis be done through bronchoscopy?",
     answer:
-      "Yes, bronchoscopy can help diagnose TB in patients where sputum tests are negative or when the disease is located deeper inside the lungs. BAL and biopsy procedures may help improve diagnostic accuracy in selected patients.",
+      "Yes, bronchoscopy is often used by our TB specialist doctor in cases of suspected or drug-resistant TB where standard diagnostic tests have not provided a clear answer.",
   },
   {
     question: "What tests are done for breathlessness?",
     answer:
-      "Breathlessness may require tests like chest X-ray, spirometry/PFT, oxygen assessment, CT scan, allergy evaluation, sleep study, bronchoscopy, or cardiac evaluation depending on symptoms and clinical findings. The investigations are planned stepwise according to the patient’s condition.",
+      "Common evaluations include spirometry, PFT, chest X-ray or CT scan, and DLCO testing depending on what the initial assessment by the best pulmonologist in Delhi suggests.",
   },
   {
     question: "Do you manage oxygen therapy patients?",
     answer:
-      "Yes, patients requiring home oxygen, oxygen assessment, COPD care, ILD support, or post-hospital respiratory rehabilitation are regularly managed. Proper oxygen use, monitoring, and safety precautions are also explained carefully to patients and families.",
+      "Yes, patients requiring long-term or home oxygen therapy are supported with proper assessment, titration, and ongoing monitoring.",
+  },
+   {
+    question: "Is this an affordable pulmonologist consultation option in Delhi?",
+    answer:
+      "Yes, the clinic offers transparent, affordable pulmonologist consultation packages so patients can access expert respiratory and chest infection treatment in Delhi without financial stress.",
   },
 ];
 

@@ -1,23 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import {
   Sparkles,
-  Compass,
-  Globe,
-  HeartHandshake,
-  BookOpen,
-  Activity,
-  Award,
-  CheckCircle2,
-  ShieldCheck,
-  ArrowRight,
-  TrendingUp,
-  Calendar,
-  Layers,
-  Check,
   Stethoscope,
-  ChevronRight,
 } from "lucide-react";
 
 interface WhyChooseUsProps {
@@ -46,10 +31,10 @@ export default function WhyChooseUs() {
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-black text-slate-950">
-              Advanced Respiratory Care &
+              Why Dr. Manish Aggarwal is the Best 
               <br />
               <span className="bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-                Interventional Pulmonology in Delhi
+                Pulmonologist in Delhi
               </span>
             </h2>
 
@@ -58,16 +43,10 @@ export default function WhyChooseUs() {
                 <span className="text-slate-900 font-extrabold">
                   Dr. Manish Aggarwal
                 </span>
-                , Principle Director - Department of Chest Disease & Interventional Pulmonologist in
-                Pitampura, Delhi, dedicated to provide evidence-based, ethical,
-                and patient-focused respiratory care for both common and complex
-                lung diseases.
+                , Principal Director, Department of Chest Disease and Interventional Pulmonology, practicing in Pitampura and Max Hospital, Delhi, is dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both common and complex lung diseases.
               </p>
               <p className="text-slate-500 font-normal">
-                With extensive clinical experience in respiratory medicine,
-                advanced bronchoscopy, pleural procedures, and interventional
-                pulmonology, the clinic combines modern diagnostic expertise
-                with compassionate long-term patient care.
+                As an experienced pulmonologist in Delhi and a senior chest physician Delhi patients rely on, his clinic combines modern diagnostic expertise with compassionate long-term patient care.
               </p>
             </div>
           </div>
@@ -92,7 +71,7 @@ export default function WhyChooseUs() {
               </div>
               <div>
                 <span className="text-[9px] uppercase font-bold tracking-wider text-slate-400 block">
-                  Principle Director
+                  Advanced Pulmonary Diagnostic Equipment
                 </span>
                 <p className="text-xs font-black text-slate-800 leading-none">
                   Dr. Manish Aggarwal
