@@ -50,8 +50,8 @@ export default function Navbar() {
       hasDropdown: true,
       dropdownItems: [
         { name: "Cough", href: "/reason-for-cough" },
-        { name: "Sputum", href: "#" },
-        { name: "Breathlessness (Shortness of Breath)", href: "#" },
+        { name: "Sputum", href: "/causes-of-sputum" },
+        { name: "Breathlessness (Shortness of Breath)", href: "/reason-for-breathlessness" },
         { name: "Wheeze", href: "#" },
         { name: "Blood in Spit (Hemoptysis)", href: "#" },
         { name: "Chest Pain", href: "#" },

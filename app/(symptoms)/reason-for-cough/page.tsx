@@ -2,19 +2,46 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
+const title = "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal";
+const description =
+  "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.";
+
 export const metadata = {
-    title: "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal",
-    description:
-        "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.",
-    keywords: [
-        "reason for cough",
-        "cough symptoms",
-        "cause of coughing",
-        "pulmonologist Delhi",
+  title,
+  description,
+  keywords: [
+    "reason for cough",
+    "cough symptoms",
+    "cause of coughing",
+    "pulmonologist Delhi",
+  ],
+  alternates: {
+    canonical: `${BASE_URL}/reason-for-cough`,
+  },
+
+  openGraph: {
+    title,
+    description,
+    url: `${BASE_URL}/reason-for-cough`,
+    siteName: "Dr. Manish Aggarwal",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: `${BASE_URL}/og/reason-for-cough.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Reason for Cough - Dr. Manish Aggarwal",
+      },
     ],
-    alternates: {
-        canonical: `${BASE_URL}/reason-for-cough`,
-    },
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [`${BASE_URL}/og/reason-for-cough.jpg`],
+  },
 };
 
 const schema = {
