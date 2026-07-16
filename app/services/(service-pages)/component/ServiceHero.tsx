@@ -10,6 +10,7 @@ interface ServiceHeroProps {
     description?: string;
     backgroundImage?: string;
     enableBreadcrumbs?: boolean;
+    ctaText?: string;
 }
 
 export default function ServiceHero({
@@ -17,6 +18,7 @@ export default function ServiceHero({
     description,
     backgroundImage,
     enableBreadcrumbs = true,
+ctaText="Schedule Consultation"
 }: ServiceHeroProps) {
     const pathname = usePathname();
 
@@ -119,7 +121,7 @@ export default function ServiceHero({
                             style={{ background: "var(--gradient-health)" }}
                         >
 
-                            Schedule Consultation
+                            {ctaText}
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-all" />
                         </a>
                     </div>

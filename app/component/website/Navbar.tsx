@@ -49,7 +49,7 @@ export default function Navbar() {
       href: "/#",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Cough", href: "#" },
+        { name: "Cough", href: "/reason-for-cough" },
         { name: "Sputum", href: "#" },
         { name: "Breathlessness (Shortness of Breath)", href: "#" },
         { name: "Wheeze", href: "#" },
