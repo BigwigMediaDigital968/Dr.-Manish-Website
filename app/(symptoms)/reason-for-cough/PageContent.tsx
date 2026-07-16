@@ -50,6 +50,7 @@ export default function PageContent() {
             <ServiceHero title="Worried About Your Cough? Find Out the Real Reason for Cough With Dr. Manish Aggarwal
 " description="A cough is your body's way of telling you something. Dr. Manish Aggarwal, a trusted pulmonologist, helps patients understand cough symptoms, find the exact cause of coughing, and get the right treatment, not just a temporary fix."
                 ctaText="Book an Appointment"
+                backgroundImage="https://images.pexels.com/photos/11899610/pexels-photo-11899610.jpeg"
             />
             <div className="max-w-7xl mx-auto px-4">
 
@@ -76,7 +77,7 @@ export default function PageContent() {
 
                         <div className="w-full lg:w-[45%] shrink-0">
                             <img
-                                src="https://images.pexels.com/photos/11899610/pexels-photo-11899610.jpeg"
+                                src="https://images.unsplash.com/photo-1626697556342-2310dbc55428?q=80&w=1170&auto=format&fit=crop"
                                 alt="COPD lung disease care"
                                 className="w-full h-[350px] sm:h-[400px] object-cover rounded-3xl shadow-lg"
                             />
