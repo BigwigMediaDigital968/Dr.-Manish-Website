@@ -84,6 +84,7 @@ export default function BreathlessnessPage() {
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
                                 Answering these questions helps your doctor narrow down the exact reason for breathlessness in your case.
                             </p>
+                            
                         </div>
 
                         <div className="w-full lg:w-[45%] shrink-0">
