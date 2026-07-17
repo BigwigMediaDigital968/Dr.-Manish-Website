@@ -52,7 +52,7 @@ export default function Navbar() {
         { name: "Cough", href: "/reason-for-cough" },
         { name: "Sputum", href: "/causes-of-sputum" },
         { name: "Breathlessness (Shortness of Breath)", href: "/reason-for-breathlessness" },
-        { name: "Wheeze", href: "#" },
+        { name: "Wheeze", href: "/causes-of-wheezing" },
         { name: "Blood in Spit (Hemoptysis)", href: "#" },
         { name: "Chest Pain", href: "#" },
         { name: "Unintentional Weight Loss", href: "#" },

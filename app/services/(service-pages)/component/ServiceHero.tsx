@@ -7,7 +7,7 @@ import { ArrowBigRight, ArrowRight, Calendar, ChevronRight, Home } from "lucide-
 
 interface ServiceHeroProps {
     title: string;
-    description?: string;
+    description?: string | React.ReactNode;
     backgroundImage?: string;
     enableBreadcrumbs?: boolean;
     ctaText?: string;
