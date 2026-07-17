@@ -64,7 +64,7 @@ export default function PageContent() {
                 description={<>
                     Hearing a high-pitched whistle when you breathe in or out? You're not alone, and it's not something to ignore. Wheezing happens when your airways narrow, swell, or get blocked, making it hard for air to flow smoothly. Knowing the cause is the first step to breathing easier again. <br /> Dr. Manish Aggarwal, a practicing pulmonologist, breaks down the common causes of wheezing in plain, easy-to-understand language.</>}
                 ctaText="Book an Appointment"
-                backgroundImage="https://images.pexels.com/photos/11899610/pexels-photo-11899610.jpeg"
+                backgroundImage="/services/causes-of-wheezing.png"
             />
 
             <div className="max-w-7xl mx-auto px-4">
