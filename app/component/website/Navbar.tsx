@@ -54,8 +54,8 @@ export default function Navbar() {
         { name: "Breathlessness (Shortness of Breath)", href: "/reason-for-breathlessness" },
         { name: "Wheeze", href: "/causes-of-wheezing" },
         { name: "Blood in Spit (Hemoptysis)", href: "/reason-for-blood-in-spit" },
-        { name: "Chest Pain", href: "#" },
-        { name: "Unintentional Weight Loss", href: "#" },
+        { name: "Chest Pain", href: "/reason-for-chest-pain" },
+        { name: "Unintentional Weight Loss", href: "/reason-for-unintentional-weight-loss" },
         { name: "Fever of Prolonged Duration", href: "#" }],
     },
     {

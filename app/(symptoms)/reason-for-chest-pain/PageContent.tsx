@@ -5,306 +5,218 @@ import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 
 const faqs = [
     {
-        question: "What is the main reason for breathlessness?",
-        answer: "There is no single reason for breathlessness. The most common causes include asthma, COPD, chest infections, heart problems, anemia, anxiety, and low fitness levels. A doctor needs to examine you to find the exact cause in your case."
+        question: "What is the most common reason for chest pain?",
+        answer: "The most common causes of chest pain include muscle strain, acid reflux, and anxiety. However, pain in chest can also be caused by lung or heart conditions, so it is always best to get it checked by a doctor."
     },
     {
-        question: "What are the most common shortness of breath causes in young, otherwise healthy people?",
-        answer: "In younger people, common shortness of breath causes include asthma, allergies, low fitness, anxiety, and mild anemia. These are usually manageable once identified correctly."
+        question: "Is pain in chest always related to the heart?",
+        answer: "No. Pain in chest can come from muscles, the stomach, the lungs, or even stress. Only a doctor can confirm the exact reason for chest pain after proper examination."
     },
     {
-        question: "Is shortness of breath always a sign of a serious lung disease?",
-        answer: "No. While some shortness of breath causes are serious, many are linked to temporary issues like infections, anxiety, or low fitness that improve with the right treatment."
+        question: "Can stress cause chest pain?",
+        answer: "Yes, stress and anxiety are common causes of chest pain. They can cause tightness or a sharp pain in chest due to fast or shallow breathing."
     },
     {
-        question: "What is the main cause of sputum?",
-        answer: "Sputum, the mucus coughed up from the lungs, is mainly caused by irritation or infection in the airways. Common reasons include chest infections, bronchitis, asthma, COPD, smoking, and allergies. The body produces extra mucus to trap and clear germs, dust, and other irritants from the lungs."
+        question: "Does chest pain always mean a heart problem?",
+        answer: "Not always. Pain in chest is often linked to the heart, but muscle strain, acid reflux, anxiety, and lung conditions can cause a similar feeling. A proper checkup helps find out which one applies to you."
     },
     {
-        question: "Is it normal to produce sputum?",
-        answer: "Producing a small amount of clear or white mucus occasionally is normal, since your lungs naturally clear dust and irritants this way. However, it is not normal if the sputum is thick, yellow, green, blood-tinged, or if it lasts for more than two to three weeks. In these cases, it is best to get it checked by a pulmonologist."
+        question: "Can chest pain go away on its own?",
+        answer: "Mild chest pain caused by muscle strain or gas may clear up on its own within a short time. But if it keeps coming back or lasts longer than a few minutes, it usually points to an underlying reason for chest pain that needs attention."
     },
     {
-        question: "When should I see a pulmonologist for breathlessness?",
-        answer: "You should book an appointment if breathlessness lasts more than a few days, keeps coming back, gets worse with mild activity, or is paired with cough, chest pain, or swelling in your legs."
+        question: "What is the cause of chest pain?",
+        answer: "The cause of chest pain can be muscle strain, acid reflux, anxiety, a lung infection, or a heart-related issue. Since so many different causes of chest pain can feel similar, a proper examination is the only way to know for sure what is behind your pain in chest."
     },
     {
-        question: "Can anxiety really cause physical breathlessness?",
-        answer: "Yes. Anxiety can cause real, physical breathlessness through rapid, shallow breathing, even though the lungs themselves are healthy. A doctor can help rule out other causes and guide you toward the right support."
+        question: "How to relieve chest pain immediately?",
+        answer: "If the pain in chest is mild and you are sure it is not heart-related, sitting upright, taking slow deep breaths, and resting in a calm position can help ease the discomfort. Avoiding heavy meals and lying down right after eating can also help if the reason for chest pain is acid reflux or gas. However, if the pain is severe, spreading, or comes with breathlessness, sweating, or dizziness, do not try to manage it at home. Seek emergency medical care immediately, since this could be a sign of a serious reason for chest pain."
+    },
+    {
+        question: "How do I know if chest pain is serious?",
+        answer: "Chest pain is more likely to be serious if it is sudden and intense, spreads to the arm, jaw, neck, or back, or comes along with sweating, breathlessness, dizziness, or nausea. Pain that occurs with physical activity and eases with rest can also be a warning sign. If you notice any of these along with your chest pain, treat it as an emergency and seek medical help right away rather than waiting."
+    },
+    {
+        question: "What are the big 5 causes of chest pain?",
+        answer: "While the exact reason for chest pain varies from person to person, five of the most common causes of chest pain are muscle strain, acid reflux or gas, anxiety and stress, lung-related infections, and heart-related issues. Since these can feel similar, a proper diagnosis from a doctor is the only reliable way to know which one applies to you."
     }
 ];
 
-export default function BreathlessnessPage() {
+export default function ChestPainPage() {
     return (
         <>
-            <ServiceHero
-                title="What Is the Reason for Breathlessness? A Simple Guide by Dr. Manish Aggarwal"
-                description="Feeling like you cannot catch your breath, even after light activity, can be scary. You are not alone. Breathlessness, also called shortness of breath, is one of the most common reasons people visit a lung specialist. The good news is that most causes can be found and treated once you know what to look for. Here, Dr. Manish Aggarwal explains, in simple everyday language, the reason for breathlessness, what it means when it happens suddenly or slowly, and when you should see a doctor."
-                ctaText="Book a Consultation"
-                backgroundImage="/services/reason-for-breathlessness-hero.png"
+            <ServiceHero 
+                title="Reason for Chest Pain: Understanding the Causes of Chest Pain and What They Mean" 
+                description="Felt a sudden tightness or pain in your chest and started worrying? You're not alone, and it's not something to ignore. Chest pain can come from your heart, lungs, muscles, stomach, or even stress, and the reason for chest pain is different for every person. Knowing the cause is the first step toward feeling better and worrying less. Dr. Manish Aggarwal, a practicing pulmonologist, breaks down the common causes of chest pain in plain, easy-to-understand language."
+                ctaText="Book an Appointment"
+                backgroundImage="https://images.unsplash.com/photo-1654588836262-fb473e1a34ee?q=80&w=1202&auto=format&fit=crop"
             />
-
+            
             <div className="max-w-7xl mx-auto px-4">
-
-                {/* WHAT DOES BREATHLESSNESS ACTUALLY MEAN */}
+                
+                {/* WHAT DOES PAIN IN CHEST ACTUALLY MEAN */}
                 <div className="pt-10">
                     <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-                        Symptom Identification
+                        Symptom Overview
                     </span>
 
                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mt-2">
                         <div className="flex-1">
                             <h2 className="text-2xl sm:text-3xl font-bold text-[#0f172a] mb-6 leading-relaxed">
-                                What Does Breathlessness Actually Mean?
+                                What Does Pain in Chest Actually Mean?
                             </h2>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
-                                Breathlessness is the feeling that you cannot get enough air into your lungs. Some people describe it as tightness in the chest. Others feel like they are breathing through a straw. Doctors call this symptom dyspnea, but you do not need to remember that word. All you need to know is that your body is telling you something is not working the way it should.
+                                Chest pain is not a disease on its own. It is a symptom, which means it is a sign that something else is happening inside your body. Some people feel a sharp pain, some feel heaviness, and some feel a burning sensation. 
                             </p>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
-                                Understanding the reason for breathlessness starts with noticing a few simple things:
+                                The type of pain in chest you feel can give doctors an early clue, but the reason for chest pain can only be confirmed after a proper checkup.
                             </p>
-
-                            <div className="mt-4 space-y-2">
-                                <div className="flex items-start gap-2 text-sm sm:text-base text-[#475569]">
-                                    <span className="text-[#1fa8e8] font-bold">•</span>
-                                    <span>Did it start suddenly, or has it built up slowly over weeks or months?</span>
-                                </div>
-                                <div className="flex items-start gap-2 text-sm sm:text-base text-[#475569]">
-                                    <span className="text-[#1fa8e8] font-bold">•</span>
-                                    <span>Does it happen only when you exert yourself, or even while resting?</span>
-                                </div>
-                                <div className="flex items-start gap-2 text-sm sm:text-base text-[#475569]">
-                                    <span className="text-[#1fa8e8] font-bold">•</span>
-                                    <span>Is it linked to other symptoms like coughing, chest pain, or swelling in your legs?</span>
-                                </div>
-                            </div>
-
-                            <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
-                                Answering these questions helps your doctor narrow down the exact reason for breathlessness in your case.
-                            </p>
-                            
                         </div>
 
                         <div className="w-full lg:w-[45%] shrink-0">
                             <img
-                                src="/services/reason-for-breathlessness.png"
-                                alt="Understanding Breathlessness Causes"
+                                src="https://images.unsplash.com/photo-1778918006813-c2febf4daed9?q=80&w=2125&auto=format&fit=crop"
+                                alt="Understanding Chest Pain Reasons"
                                 className="w-full h-[300px] sm:h-[350px] object-cover rounded-3xl shadow-lg"
                             />
                         </div>
                     </div>
                 </div>
 
-                {/* COMMON REASONS FOR BREATHLESSNESS */}
+                {/* COMMON CAUSES OF CHEST PAIN */}
                 <section className="pt-12">
                     <div className="max-w-7xl mx-auto">
                         <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-                            Clinical Breakdown
+                            Differential Diagnosis
                         </span>
 
                         <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#0f172a]">
-                            Common Reasons for Breathlessness
+                            Common Causes of Chest Pain: What Could Be Behind Your Symptoms
                         </h2>
 
                         <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#64748b]">
-                            There is no single reason for breathlessness. It can come from your lungs, your heart, your blood, or even your emotions. Below are the most common causes Dr. Manish Aggarwal sees in his clinic.
+                            There is not just one reason for chest pain. The causes of chest pain can range from mild, temporary issues to conditions that need urgent medical care. Below are the most common causes of chest pain that Dr. Manish Aggarwal sees in his clinic every day.
                         </p>
 
                         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {[
-                                {
-                                    title: "Asthma (Allergic Bronchitis)",
-                                    description: (
-                                        <>
-                                            Asthma causes the airways in your lungs to narrow and swell.
-                                            This is one of the most frequent reasons for breathlessness in
-                                            young people, especially during exercise, cold weather, or
-                                            exposure to dust and smoke.
-                                        </>
-                                    ),
-                                    href: "#",
-                                },
-                                {
-                                    title: "COPD (Chronic Obstructive Pulmonary Disease)",
-                                    description: (
-                                        <>
-                                            COPD is common in long-term smokers and people exposed to heavy
-                                            air pollution for years. It slowly damages the lungs, making
-                                            breathing harder over time. This is one of the most serious
-                                            shortness of breath causes in adults over 40.
-                                        </>
-                                    ),
-                                    href: "#",
-                                },
-                                {
-                                    title: "Bacterial Pneumonia",
-                                    description: (
-                                        <>
-                                            An infection in the lungs fills the air sacs with fluid, which
-                                            limits how much oxygen reaches your blood. This is a very common
-                                            shortness of breath reason, especially when paired with fever
-                                            and cough.
-                                        </>
-                                    ),
-                                    href: "#",
-                                },
-                                {
-                                    title: "Pulmonary Artery Hypertension",
-                                    description: (
-                                        <>
-                                            Not every breathing problem starts in the lungs' airways. When
-                                            pressure in the lungs' blood vessels rises, or when the heart
-                                            struggles to pump efficiently, fluid can build up around the
-                                            lungs. Ankle swelling along with breathlessness is a warning
-                                            sign worth mentioning to your doctor.
-                                        </>
-                                    ),
-                                    href: "#",
-                                },
-                                {
-                                    title: "Interstitial Lung Disease (ILD) / Lung Fibrosis",
-                                    description: (
-                                        <>
-                                            In this condition, lung tissue becomes scarred and stiff over
-                                            time. It is a less common but serious reason for breathlessness
-                                            that needs specialist care.
-                                        </>
-                                    ),
-                                    href: "#",
-                                },
-                                {
-                                    title: "Uncontrolled Asthma vs Severe Asthma",
-                                    description: (
-                                        <>
-                                            One of the often-missed shortness of breath causes is confusing
-                                            these two. Uncontrolled asthma happens due to poor inhaler
-                                            technique, missed doses, or ongoing triggers, and usually
-                                            improves once these are fixed. Severe asthma causes
-                                            breathlessness even with correct treatment and needs specialist
-                                            evaluation to manage properly.
-                                        </>
-                                    ),
-                                    href: "#",
-                                },
-                            ].map((condition) => (
-                                <div
-                                    key={condition.title}
-                                    className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-lg"
-                                >
-                                    <div>
-                                        <h3 className="text-lg sm:text-xl font-semibold text-[#0f172a]">
-                                            {condition.title}
-                                        </h3>
-
-                                        <div className="mt-4 text-sm leading-relaxed text-[#64748b]">
-                                            {condition.description}
-                                        </div>
-                                    </div>
-
-                                    <div className="mt-6">
-                                        <a
-                                            href={condition.href}
-                                            className="text-sm font-semibold text-[#1fa8e8] hover:underline"
-                                        >
-                                            Read more
-                                        </a>
-                                    </div>
+                            
+                            {/* Pleural Effusion / Pleurisy */}
+                            <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-lg">
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-semibold text-[#0f172a]">
+                                        Pleural Effusion/Pleurisy (Fluid Outside Lungs)
+                                    </h3>
+                                    <p className="mt-4 text-sm leading-relaxed text-[#64748b]">
+                                        Since Dr. Manish Aggarwal is a pulmonologist, lung-related causes of chest pain are important to understand. Conditions like Bacterial Pneumonia, Bronchiectasis, or pleurisy (swelling around the lungs) are serious reasons for chest pain, and the pain usually gets worse when you breathe in deeply or cough.
+                                    </p>
                                 </div>
-                            ))}
+                                <div className="mt-6">
+                                    <button className="text-sm font-semibold text-[#1fa8e8] hover:underline">Read more</button>
+                                </div>
+                            </div>
+
+                            {/* Pulmonary Embolism */}
+                            <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-lg">
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-semibold text-[#0f172a]">
+                                        Pulmonary Embolism
+                                    </h3>
+                                    <p className="mt-4 text-sm leading-relaxed text-[#64748b]">
+                                        This is one of the more serious lung-related reasons for chest pain and needs immediate attention. If the pain in chest is sudden and sharp, worsens with breathing, and comes along with breathlessness, a fast heartbeat, or coughing up blood, it needs emergency care right away.
+                                    </p>
+                                </div>
+                                <div className="mt-6">
+                                    <button className="text-sm font-semibold text-[#1fa8e8] hover:underline">Read more</button>
+                                </div>
+                            </div>
+
+                            {/* Costochondritis */}
+                            <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-lg">
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-semibold text-[#0f172a]">
+                                        Costochondritis
+                                    </h3>
+                                    <p className="mt-4 text-sm leading-relaxed text-[#64748b]">
+                                        This is swelling of the cartilage that connects your ribs to your breastbone. It is a common but often overlooked reason for chest pain, and the pain in chest usually increases when you press on the area.
+                                    </p>
+                                </div>
+                                {/* <div className="mt-6">
+                                    <button className="text-sm font-semibold text-[#1fa8e8] hover:underline">Read more</button>
+                                </div> */}
+                            </div>
+
+                            {/* Asthma */}
+                            <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-lg">
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-semibold text-[#0f172a]">
+                                        Asthma (Allergic Bronchitis)
+                                    </h3>
+                                    <p className="mt-4 text-sm leading-relaxed text-[#64748b]">
+                                        Sometimes, pain in chest comes along with wheezing, a whistling sound while breathing. This combination is a common cause of chest pain linked to lung conditions like asthma, bronchitis, or allergies, and it should be evaluated by a pulmonologist rather than ignored.
+                                    </p>
+                                </div>
+                                <div className="mt-6">
+                                    <button className="text-sm font-semibold text-[#1fa8e8] hover:underline">Read more</button>
+                                </div>
+                            </div>
+
+                            {/* Pneumothorax */}
+                            <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-[#1fa8e8]/40 hover:shadow-lg">
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-semibold text-[#0f172a]">
+                                        Pneumothorax (Lung Rupture)
+                                    </h3>
+                                    <p className="mt-4 text-sm leading-relaxed text-[#64748b]">
+                                        A sudden, sharp chest pain that comes with breathlessness can sometimes point to air leaking into the space around the lung. This reason for chest pain needs urgent medical evaluation, especially if the pain started suddenly without any injury.
+                                    </p>
+                                </div>
+                                <div className="mt-6">
+                                    <button className="text-sm font-semibold text-[#1fa8e8] hover:underline">Read more</button>
+                                </div>
+                            </div>
+
                         </div>
 
-                        {/* CALLBACK SECTION */}
+                        {/* DIAGNOSIS CTA */}
                         <div className="mt-12 flex flex-col items-center text-center max-w-2xl mx-auto rounded-3xl bg-slate-50 border border-slate-200 p-6 sm:p-8">
-                            <h4 className="text-lg sm:text-xl font-bold text-[#0f172a]">
-                                Not Sure Which of These Applies to You?
+                            <h4 className="text-base sm:text-lg font-bold text-[#0f172a]">
+                                Not Sure Which Cause Applies to You? Get a Proper Diagnosis
                             </h4>
                             <p className="mt-2 text-sm text-[#64748b] leading-relaxed">
-                                Every case is different. Fill out the short form below, and Dr. Manish Aggarwal's team will call you back to help figure out the exact reason for breathlessness in your situation.
+                                Pain in chest lasting more than a few minutes, chest pain that comes back often, chest pain along with wheezing or breathlessness, or a family history of heart or lung conditions. Book a slot with Dr. Manish Aggarwal for a same-day evaluation to pinpoint the exact reason for chest pain behind your symptoms.
                             </p>
                             <div className="mt-6">
-                                <BookAppointmentButton cta="Request a Callback" />
+                                <BookAppointmentButton cta="Book an Appointment" />
                             </div>
                         </div>
 
                     </div>
                 </section>
 
-                {/* COMPARISON TABLE SECTION */}
-                <section className="pt-16">
-                    <div className="max-w-7xl mx-auto">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-                            Differential Matrix
-                        </span>
-
-                        <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#0f172a]">
-                            Shortness of Breath Causes: Lungs vs Heart vs Other Factors
-                        </h2>
-
-                        <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#64748b]">
-                            Patients often ask Dr. Manish Aggarwal how to tell whether their breathlessness is coming from the lungs or the heart. While only a proper checkup can confirm this, here is a simple way to think about it.
-                        </p>
-
-                        <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
-                            <table className="w-full text-left border-collapse bg-white text-sm sm:text-base">
-                                <thead>
-                                    <tr className="bg-slate-50 border-b border-slate-200">
-                                        <th className="p-4 font-bold text-[#0f172a]">Signs pointing to lungs</th>
-                                        <th className="p-4 font-bold text-[#0f172a]">Signs pointing to heart</th>
-                                        <th className="p-4 font-bold text-[#0f172a]">Signs pointing to other causes</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-slate-100 text-[#475569]">
-                                    <tr>
-                                        <td className="p-4">Wheezing sound while breathing</td>
-                                        <td className="p-4">Swelling in ankles or feet</td>
-                                        <td className="p-4">Rapid breathing with tingling hands (anxiety)</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-4">Long history of cough</td>
-                                        <td className="p-4">Breathlessness while lying flat</td>
-                                        <td className="p-4">Pale skin and tiredness (anemia)</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-4">History of smoking or dust exposure</td>
-                                        <td className="p-4">Chest pain or pressure</td>
-                                        <td className="p-4">Breathlessness only during heavy exertion (low fitness)</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <blockquote className="mt-6 border-l-4 border-[#1fa8e8] bg-slate-50 p-4 rounded-r-xl">
-                            <p className="text-xs sm:text-sm text-[#475569] italic">
-                                This table is only a general guide. Many shortness of breath causes overlap, which is why a proper examination by a pulmonologist is important rather than guessing at home.
-                            </p>
-                        </blockquote>
-                    </div>
-                </section>
-
-                {/* RED FLAGS / EMERGENCY ROOM */}
+                {/* IS CHEST PAIN SERIOUS */}
                 <section className="pt-16">
                     <div className="max-w-7xl mx-auto">
                         <span className="text-xs font-bold uppercase tracking-wider text-red-500">
-                            Critical Warnings
+                            Risk Assessment
                         </span>
 
                         <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#0f172a]">
-                            When Breathlessness Is a Medical Emergency
+                            Is Chest Pain Serious? When Should You Worry?
                         </h2>
 
                         <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#64748b]">
-                            Most causes of breathlessness are manageable, but a few situations need immediate medical attention. Please go to the nearest emergency room or call emergency services if breathlessness comes with:
+                            Pain in chest is not always serious, but it should never be ignored completely. A mild, short-lived reason for chest pain, like a pulled muscle, may not need urgent care. However, chest pain can become serious when it is:
                         </p>
 
                         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {[
-                                "Blue or grey lips and fingertips",
-                                "Severe chest pain or pressure",
-                                "Sudden breathlessness after a long flight, surgery, or period of immobility",
-                                "Fainting or severe confusion",
-                                "Breathlessness so severe you cannot speak in full sentences"
+                                "Sudden and severe; spreading to the arm, neck, jaw, or back",
+                                "Happening along with sweating, dizziness, or nausea",
+                                "Accompanied by shortness of breath or wheezing",
+                                "Occurring after an injury",
+                                "Along with a high fever"
                             ].map((item, index) => (
                                 <div key={index} className="flex items-start gap-3 rounded-xl bg-red-50/40 border border-red-100 p-4">
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600 font-bold text-xs mt-0.5">
@@ -318,62 +230,46 @@ export default function BreathlessnessPage() {
                         </div>
 
                         <p className="mt-4 text-xs sm:text-sm font-semibold text-red-600">
-                            Do not wait to search for the reason for breathlessness online in these situations. Seek emergency care first.
+                            If you notice any of these signs, please treat it as a medical emergency and seek immediate help rather than waiting to search for answers online.
                         </p>
                     </div>
                 </section>
 
-                {/* HOW DR. MANISH FINDS THE EXACT REASON */}
+                {/* WHEN SHOULD YOU SEE A PULMONOLOGIST */}
                 <section className="pt-16">
                     <div className="max-w-7xl mx-auto">
                         <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-                            Our Methodology
+                            Specialist Care
                         </span>
 
                         <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#0f172a]">
-                            How Dr. Manish Aggarwal Finds the Exact Reason for Breathlessness
+                            When Should You See a Pulmonologist?
                         </h2>
 
                         <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#64748b]">
-                            Dr. Manish Aggarwal is a leading pulmonologist with over 24 years of clinical experience in diagnosing and treating breathing-related conditions, including asthma, COPD, chest infections, and chronic cough. Every patient is different, so he follows a systematic, evidence-based approach to identify the exact cause of breathlessness before recommending a personalized treatment plan. While this information is intended for general educational purposes, it should not be considered a substitute for a personal consultation, diagnosis, or treatment by a qualified medical professional. The evaluation typically includes:
+                            If your chest pain keeps coming back, lasts for more than a few minutes at a time, or comes along with wheezing or breathlessness, it is time to speak with a specialist instead of guessing the reason for chest pain on your own. Dr. Manish Aggarwal uses proper lung and breathing evaluations, a detailed health history, and years of clinical experience to find the exact cause of chest pain behind your symptoms and create a treatment plan suited to you.
                         </p>
 
-                        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                            {[
-                                { title: "Detailed History", desc: "Understanding when it started, what makes it worse, and your medical background." },
-                                { title: "Physical Examination", desc: "Listening to your lungs and heart with a stethoscope." },
-                                { title: "Pulmonary Function Test (Spirometry)", desc: "A simple breathing test to measure lung capacity." },
-                                { title: "Chest X-ray or CT Scan", desc: "To look for infections, scarring, or structural issues." },
-                                { title: "Blood Tests", desc: "To check for anemia, infection, or inflammation." },
-                                { title: "Oxygen Level Check", desc: "A painless clip-on device that measures oxygen in your blood." }
-                            ].map((item, index) => (
-                                <div key={index} className="flex flex-col gap-2 rounded-xl bg-slate-50 border border-slate-200 p-5">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1fa8e8]/10 text-[#1fa8e8] font-bold text-sm">
-                                        {index + 1}
-                                    </div>
-                                    <h4 className="text-base font-semibold text-[#0f172a]">{item.title}</h4>
-                                    <p className="text-sm text-[#64748b] leading-relaxed">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            ))}
+                        <div className="mt-6 flex justify-center">
+                            <BookAppointmentButton cta="Consult Dr. Manish Aggarwal Today" />
                         </div>
+                    </div>
+                </section>
 
-                        <p className="mt-6 text-sm text-[#475569] font-medium text-center">
-                            This process ensures the actual reason for breathlessness is treated, rather than just managing the symptom temporarily.
+                {/* ABOUT THE DOCTOR */}
+                <section className="pt-16">
+                    <div className="max-w-7xl mx-auto">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
+                            Meet the Specialist
+                        </span>
+
+                        <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#0f172a]">
+                            About Dr. Manish Aggarwal, Your Trusted Pulmonologist
+                        </h2>
+
+                        <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#64748b]">
+                            Dr. Manish Aggarwal is a practicing pulmonologist who has spent years diagnosing and treating patients with chest, lung, and breathing-related conditions, including chest pain linked to asthma, bronchitis, and COPD. His approach focuses on identifying the actual reason for chest pain in each patient rather than offering generic treatment, using proper diagnostic tools combined with years of clinical experience. Patients trust Dr. Aggarwal for clear explanations, honest guidance, and treatment plans built around their specific condition and lifestyle.
                         </p>
-
-                        <div className="mt-8 flex flex-col items-center text-center max-w-2xl mx-auto rounded-3xl bg-slate-50 border border-slate-200 p-6 sm:p-8">
-                            <h4 className="text-lg sm:text-xl font-bold text-[#0f172a]">
-                                Still Wondering What's Causing Your Breathlessness?
-                            </h4>
-                            <p className="mt-2 text-sm text-[#64748b] leading-relaxed">
-                                Don't ignore persistent shortness of breath or try to guess the cause on your own. Fill out the short form below, and Dr. Manish Aggarwal's team will contact you to understand your symptoms and help you schedule the right evaluation.
-                            </p>
-                            <div className="mt-6">
-                                <BookAppointmentButton cta="Book a Consultation" />
-                            </div>
-                        </div>
                     </div>
                 </section>
 
@@ -386,14 +282,14 @@ export default function BreathlessnessPage() {
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
                             <div className="flex-1">
                                 <h2 className="text-xl sm:text-2xl font-bold mb-3">
-                                    Still Searching for the Reason for Breathlessness You're Experiencing?
+                                    Stop Guessing. Start Feeling Better.
                                 </h2>
                                 <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-                                    Guessing online can only take you so far. Dr. Manish Aggarwal has years of experience helping patients find the exact reason for their shortness of breath symptoms and treating it at the root, not just managing it.
+                                    You do not have to keep guessing the reason for chest pain on your own. With the right diagnosis and expert care from Dr. Manish Aggarwal, you can understand exactly what is causing your symptoms and start feeling comfortable again.
                                 </p>
                             </div>
                             <div className="shrink-0">
-                                <BookAppointmentButton cta="Book Your Appointment Now"/>
+                                <BookAppointmentButton cta="Book Your Consultation Now" />
                             </div>
                         </div>
                     </div>
