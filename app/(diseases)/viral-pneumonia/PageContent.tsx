@@ -49,15 +49,15 @@ export default function ViralPneumoniaPage() {
     return (
         <>
             {/* HERO SECTION */}
-            <ServiceHero 
-                title="Fever Won't Break? It Could Be Viral Pneumonia" 
+            <ServiceHero
+                title="Fever Won't Break? It Could Be Viral Pneumonia"
                 description="Do you have a fever that won't break, a cough that keeps getting worse, and a feeling that you cannot catch your breath? This could be viral pneumonia, a lung infection caused by viruses such as the flu, influenza, H1N1, or COVID-19. With timely treatment, most people recover fully, though some cases need closer medical attention."
                 ctaText="Book an Appointment"
                 backgroundImage="https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg"
             />
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 {/* WHAT IS VIRAL PNEUMONIA */}
                 <section className="pt-12 sm:pt-16">
                     <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -81,7 +81,7 @@ export default function ViralPneumoniaPage() {
 
                         <div className="w-full lg:w-[45%] shrink-0">
                             <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1170&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1587314212532-3afd86d69736?q=80&w=1170&auto=format&fit=crop"
                                 alt="Pulmonary Inflammation and Alveolar Diagnostics"
                                 className="w-full h-[280px] sm:h-[320px] object-cover rounded-3xl shadow-md"
                             />
@@ -91,7 +91,7 @@ export default function ViralPneumoniaPage() {
 
                 {/* SYMPTOMS & PATHOLOGY */}
                 <div className="flex flex-col lg:flex-row gap-12 pt-16 sm:pt-20">
-                    
+
                     {/* SYMPTOMS OF VIRAL PNEUMONIA */}
                     <div className="flex-1">
                         <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -106,21 +106,26 @@ export default function ViralPneumoniaPage() {
                             Symptoms can range from mild to severe and often start off looking like the flu or a common cold. Common signs include:
                         </p>
 
-                        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <ul className="mt-6 grid grid-cols-1 gap-4">
                             {[
-                                { title: "Persistent Fever", desc: "A continuous high temperature that doesn't break easily with standard antipyretics." },
-                                { title: "Worsening Cough", desc: "A persistent, escalating cough that grows increasingly deep and painful." },
-                                { title: "Shortness of Breath", desc: "Laboured or highly rapid breathing patterns during rest or minimal exertion." },
-                                { title: "Chest Pain", desc: "Sharp, localized physical chest discomfort aggravated when breathing deeply or coughing." },
-                                { title: "Systemic Chills", desc: "Pervasive bodily shaking chills paired with deep, aching muscle fatigue." },
-                                { title: "Cyanosis Risk", desc: "Bluish tinting on lips or fingertips in critical cases, indicating dangerously low oxygen." }
+                                "Fever that doesn't break easily",
+                                "Persistent, worsening cough",
+                                "Shortness of breath or rapid breathing",
+                                "Chest pain, especially when breathing deeply or coughing",
+                                "Chills and muscle aches",
+                                "Fatigue and general weakness",
+                                "Bluish lips or fingertips in severe cases, a sign of low oxygen levels"
                             ].map((symptom, idx) => (
-                                <div key={idx} className="rounded-2xl border border-slate-200 bg-white p-4">
-                                    <h3 className="text-sm sm:text-base font-semibold text-[#0f172a]">{symptom.title}</h3>
-                                    <p className="mt-1 text-xs text-[#64748b] leading-relaxed">{symptom.desc}</p>
-                                </div>
+                                <li key={idx} className="flex gap-4 items-start">
+                                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] text-xs font-bold mt-0.5">
+                                        {idx + 1}
+                                    </span>
+                                    <div>
+                                        <h3 className="text-sm font-bold text-[#0f172a]">{symptom}</h3>
+                                    </div>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
                     </div>
 
                     {/* CAUSES OF VIRAL PNEUMONIA */}
@@ -139,11 +144,11 @@ export default function ViralPneumoniaPage() {
 
                         <ul className="mt-6 space-y-4">
                             {[
-                                { name: "Influenza (Flu) Virus", text: "One of the primary seasonal drivers behind adult acute lung infections." },
-                                { name: "H1N1 Virus Strain", text: "An aggressive influenza subtype known for triggering severe respiratory compromise." },
-                                { name: "COVID-19 Virus", text: "Can spark profound, multi-lobar lung parenchymal inflammation ranging from mild to critical." },
-                                { name: "RSV (Respiratory Syncytial Virus)", text: "Presents particularly hazardous risks to infant groups and vulnerable geriatric populations." },
-                                { name: "Parainfluenza Virus", text: "A distinct respiratory pathogen group causing serious complications in immuno-compromised individuals." }
+                                { name: "Influenza (Flu) Virus", text: "One of the most common causes, especially during flu season" },
+                                { name: "H1N1 Virus Strain", text: "A strain of influenza known for causing more severe respiratory illness." },
+                                { name: "COVID-19 Virus", text: "Can cause pneumonia ranging from mild to severe." },
+                                { name: "RSV (Respiratory Syncytial Virus)", text: "Particularly common in young children and older adults." },
+                                { name: "Parainfluenza Virus", text: "Another respiratory virus that can lead to pneumonia, especially in vulnerable groups." }
                             ].map((cause, i) => (
                                 <li key={i} className="flex gap-4 items-start">
                                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] text-xs font-bold mt-0.5">
@@ -170,20 +175,18 @@ export default function ViralPneumoniaPage() {
                     </h2>
 
                     <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#64748b]">
-                        The first step is identifying which virus is causing the infection and how much of the lung is affected. This helps rule out bacterial pneumonia and other lung conditions before treatment begins. Dr. Manish Aggarwal utilizes the following diagnostic modalities:
-                    </p>
+                        The first step is identifying which virus is causing the infection and how much of the lung is affected. This helps rule out bacterial pneumonia and other lung conditions before treatment begins. Dr. Manish Aggarwal uses the following tests:                    </p>
 
-                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="mt-4 gap-6 pl-4 sm:pl-6">
                         {[
-                            { name: "Chest X-Ray / CT Scan", use: "Maps structural visual shadows and patterns of interstitial fluid accumulation across lobes." },
-                            { name: "Pulse Oximetry", use: "Continuous non-invasive evaluation tracking blood oxygenation percentages." },
-                            { name: "ABG Analysis", use: "Arterial Blood Gas profiling to accurately record systemic gas partial pressures." },
-                            { name: "Targeted Pathogen Panels", use: "Advanced molecular or swab screening assays isolating specific strains (Flu, H1N1, COVID-19)." }
+                            "Chest X-ray or CT scan",
+                            "Blood oxygen level check (pulse oximetry)",
+                            "Arterial Blood Gas (ABG) Analysis",
+                            "Specific tests for flu, H1N1, or COVID-19 based on symptoms and exposure history"
                         ].map((test, index) => (
-                            <div key={index} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                            <div key={index} className=" pt-6">
                                 <div className="text-xs font-bold text-[#1fa8e8] mb-1">Method 0{index + 1}</div>
-                                <h3 className="text-sm sm:text-base font-bold text-[#0f172a]">{test.name}</h3>
-                                <p className="mt-2 text-xs text-[#64748b] leading-relaxed">{test.use}</p>
+                                <h3 className="text-sm sm:text-base font-bold text-[#0f172a]">{test}</h3>
                             </div>
                         ))}
                     </div>
@@ -237,13 +240,13 @@ export default function ViralPneumoniaPage() {
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
                                 Dr. Manish Aggarwal is a pulmonologist with years of experience diagnosing and treating lung and breathing-related conditions, including viral pneumonia caused by flu, H1N1, and COVID-19. He completed his MBBS and MD in Tuberculosis and Chest Diseases from Delhi University, followed by NHS clinical experience in the United Kingdom and the prestigious FRCP (Glasgow) from the Royal College of Physicians.
                             </p>
-                            
+
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
                                 He is known for explaining conditions in simple, easy-to-understand language and building treatment plans around each patient's specific symptoms and risk factors, rather than offering a one-size-fits-all approach.
                             </p>
                         </div>
 
-                        <div className="w-full lg:w-[40%] shrink-0 order-1 lg:order-2 flex justify-center">
+                        {/* <div className="w-full lg:w-[40%] shrink-0 order-1 lg:order-2 flex justify-center">
                             <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-slate-100 shadow-md">
                                 <img
                                     src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1000&auto=format&fit=crop"
@@ -251,7 +254,7 @@ export default function ViralPneumoniaPage() {
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
 
@@ -271,7 +274,7 @@ export default function ViralPneumoniaPage() {
                                 </p>
                             </div>
                             <div className="shrink-0">
-                                <WhatsappButton cta="Book an Appointment Today" />
+                                <BookAppointmentButton cta="Book an Appointment Today" />
                             </div>
                         </div>
                     </div>

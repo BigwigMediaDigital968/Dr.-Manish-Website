@@ -2,6 +2,7 @@ import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointme
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
+import Link from "next/link";
 
 // Metadata configuration exported for Next.js SEO optimization
 export const metadata = {
@@ -41,15 +42,15 @@ export default function AsthmaComparisonPage() {
     return (
         <>
             {/* HERO SECTION */}
-            <ServiceHero 
-                title="Uncontrolled Asthma vs Severe Asthma: What's Really Going On?" 
+            <ServiceHero
+                title="Uncontrolled Asthma vs Severe Asthma: What's Really Going On?"
                 description="Are your asthma symptoms not improving even with regular medication? You may be dealing with uncontrolled asthma or severe asthma, two terms that are often confused but mean very different things. Understanding which one you have is the first step towards the right treatment."
                 ctaText="Book an Appointment"
                 backgroundImage="https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg"
             />
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 {/* CLINICAL OVERVIEWS */}
                 <section className="pt-12 sm:pt-16">
                     <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -124,7 +125,7 @@ export default function AsthmaComparisonPage() {
 
                 {/* SYMPTOMS & PATHOLOGY COLUMNS */}
                 <div className="flex flex-col lg:flex-row gap-12 pt-16 sm:pt-20">
-                    
+
                     {/* SYMPTOMS TO WATCH FOR */}
                     <div className="flex-1">
                         <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -203,14 +204,20 @@ export default function AsthmaComparisonPage() {
 
                     <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
                         {[
-                            { name: "Spirometry", use: "Measures lung capacities and structural airway obstruction speeds." },
-                            { name: "PFT (Pulmonary Function Test)", desc: "Comprehensive evaluation of global pulmonary volumes and diffusion." },
-                            { name: "FeNO Testing", use: "Measures exhaled nitric oxide to gauge allergic eosinophilic inflammation." },
-                            { name: "6 Minute Walk Test", use: "Evaluates operational oxygen saturation and functional exercise tolerance." }
+                            { name: "Spirometry", href: "#" },
+                            { name: "PFT (Pulmonary Function Test)", href: "#" },
+                            { name: "FeNO Testing", href: "#" },
+                            { name: "6 Minute Walk Test", href: "#" },
                         ].map((test, idx) => (
-                            <div key={idx} className="rounded-2xl border border-slate-200 bg-white p-5 text-center flex flex-col justify-center">
-                                <p className="text-sm sm:text-base font-medium text-[#0f172a]">{test.name}</p>
-                            </div>
+                            <Link
+                                key={idx}
+                                href={test.href}
+                                className="group rounded-2xl border border-slate-200 bg-white p-5 text-center flex flex-col justify-center transition-all duration-300 hover:border-blue-600 hover:shadow-lg hover:-translate-y-1"
+                            >
+                                <p className="text-sm sm:text-base font-medium text-[#0f172a] group-hover:text-blue-600">
+                                    {test.name}
+                                </p>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -239,7 +246,7 @@ export default function AsthmaComparisonPage() {
                         <h3 className="text-base sm:text-lg font-bold text-[#0f172a]">
                             Not Sure Which One You Have?
                         </h3>
-                        <p className="mt-2 text-sm text-[#64748b] leading-relaxed max-w-xl">
+                        <p className="mt-2 text-sm sm:text-base text-[#64748b] leading-relaxed max-w-xl">
                             Uncontrolled Asthma vs Severe Asthma need very different approaches. Get an accurate evaluation from Dr. Manish Aggarwal.
                         </p>
                         <div className="mt-6">
@@ -263,7 +270,7 @@ export default function AsthmaComparisonPage() {
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
                                 Dr. Manish Aggarwal is a pulmonologist with years of experience diagnosing and treating asthma, including complex and severe cases. He completed his MBBS and MD in Tuberculosis and Chest Diseases from Delhi University, followed by NHS clinical experience in the United Kingdom and the prestigious FRCP (Glasgow) from the Royal College of Physicians.
                             </p>
-                            
+
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
                                 He is known for explaining conditions in simple, easy-to-understand language and building treatment plans around each patient's specific triggers, test results, and response to medication, rather than offering a one-size-fits-all approach.
                             </p>

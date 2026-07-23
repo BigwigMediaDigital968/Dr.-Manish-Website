@@ -2,6 +2,7 @@ import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointme
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
+import Link from "next/link";
 
 // Metadata configuration exported for Next.js SEO optimization
 export const metadata = {
@@ -179,16 +180,26 @@ export default function COPDPage() {
 
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                         {[
-                            { name: "Spirometry", use: "Measures the volume and speed of exhaled air." },
-                            { name: "Pulmonary Function Test (PFT)", desc: "Comprehensive assessment of total lung metrics." },
-                            { name: "DLCO", desc: "Evaluates gas diffusion capacity across lung tissue." },
-                            { name: "ABG Analysis", desc: "Measures oxygen and carbon dioxide levels in arterial blood." },
-                            { name: "6 Minute Walk Test", desc: "Assesses functional exercise tolerance and stamina." }
+                            { name: "Spirometry", link: "#" },
+                            { name: "Pulmonary Function Test (PFT)", link: "#" },
+                            { name: "DLCO", },
+                            { name: "ABG Analysis", },
+                            { name: "6 Minute Walk Test", link: "#" }
                         ].map((test, index) => (
-                            <div key={index} className="rounded-xl border border-slate-200 bg-white p-4 text-center">
-                                <div className="text-xs font-bold text-[#1fa8e8] uppercase mb-1">Test {index + 1}</div>
-                                <h3 className="text-sm sm:text-base font-bold text-[#0f172a]">{test.name}</h3>
-                            </div>
+
+                            test.link ? (
+                                <Link href={test.link} key={index} className="rounded-xl border hover:border-[#1fa8e8] border-slate-200 bg-white p-4 text-center">
+                                    <div className="text-xs font-bold text-[#1fa8e8] uppercase mb-1">Test {index + 1}</div>
+                                    <h3 className="text-sm sm:text-base font-bold text-[#0f172a] hover:text-[#1fa8e8]">{test.name}</h3>
+                                </Link>
+                            ) : (
+                                <>
+                                    <div key={index} className="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                        <div className="text-xs font-bold text-[#1fa8e8] uppercase mb-1">Test {index + 1}</div>
+                                        <h3 className="text-sm sm:text-base font-bold text-[#0f172a]">{test.name}</h3>
+                                    </div>
+                                </>
+                            )
                         ))}
                     </div>
                 </section>

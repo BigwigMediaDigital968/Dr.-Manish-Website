@@ -2,6 +2,7 @@ import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointme
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
+import Link from "next/link";
 
 // Metadata configuration exported for Next.js SEO optimization
 export const metadata = {
@@ -182,18 +183,40 @@ export default function ABPAPage() {
 
                     <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                         {[
-                            { name: "IgE Blood Test", desc: "Quantifies specialized antibody volumes." },
-                            { name: "Skin Prick Test", desc: "Checks for hypersensitivity to Aspergillus." },
-                            { name: "X-Ray / CT Scan", desc: "Visualizes deep structural mucus plugs or shadows." },
-                            { name: "Spirometry", desc: "Evaluates standard expiratory force metrics." },
-                            { name: "PFT Suite", desc: "Comprehensive structural volumes assessment." },
-                            { name: "FeNO", desc: "Measures underlying active eosinophilic inflammation." }
-                        ].map((test, index) => (
-                            <div key={index} className="rounded-xl border border-slate-200 bg-white p-4 text-center flex flex-col justify-center">
-                                <div className="text-[10px] font-bold text-[#1fa8e8] uppercase mb-1">Step {index + 1}</div>
-                                <h3 className="text-xs sm:text-sm font-bold text-[#0f172a]">{test.name}</h3>
-                            </div>
-                        ))}
+                            { name: "Blood test for IgE antibody levels" },
+                            { name: "Skin prick test for Aspergillus" },
+                            { name: "Chest X-ray or CT scan" },
+                            { name: "Spirometry", link: "#" },
+                            { name: "Pulmonary Function Test (PFT)", link: "#" },
+                            { name: "FeNO", link: "#" },
+                        ].map((test, index) =>
+                            test.link ? (
+                                <Link
+                                    key={index}
+                                    href={test.link}
+                                    className="rounded-xl border border-slate-200 bg-white p-4 text-center hover:border-[#1fa8e8] group"
+                                >
+                                    <div className="text-xs font-bold text-[#1fa8e8] uppercase mb-1">
+                                        Test {index + 1}
+                                    </div>
+                                    <h3 className="text-sm sm:text-base font-bold text-[#0f172a] group-hover:text-[#1fa8e8]">
+                                        {test.name}
+                                    </h3>
+                                </Link>
+                            ) : (
+                                <div
+                                    key={index}
+                                    className="rounded-xl border border-slate-200 bg-white p-4 text-center"
+                                >
+                                    <div className="text-xs font-bold text-[#1fa8e8] uppercase mb-1">
+                                        Test {index + 1}
+                                    </div>
+                                    <h3 className="text-sm sm:text-base font-bold text-[#0f172a]">
+                                        {test.name}
+                                    </h3>
+                                </div>
+                            )
+                        )}
                     </div>
                 </section>
 
@@ -217,9 +240,9 @@ export default function ABPAPage() {
                     </div>
 
                     {/* CTA - INLINE CARD */}
-                <div className="mt-6 flex justify-center">
-                            <BookAppointmentButton cta="Schedule Your Appointment" />
-                        </div>
+                    <div className="mt-6 flex justify-center">
+                        <BookAppointmentButton cta="Schedule Your Appointment" />
+                    </div>
                 </section>
 
                 {/* ABOUT THE DOCTOR */}
