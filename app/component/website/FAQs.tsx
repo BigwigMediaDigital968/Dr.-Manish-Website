@@ -13,7 +13,7 @@ interface FAQsProps {
   faqs?: FAQItem[];
 }
 
-export default function FAQs({ title, description, faqs = [] }: FAQsProps) {
+export default function FAQs({ title = "Frequently Asked Questions", description, faqs = [] }: FAQsProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {

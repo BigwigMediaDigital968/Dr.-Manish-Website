@@ -67,16 +67,16 @@ export default function Navbar() {
         {
           title: "OBSTRUCTIVE LUNG DISEASE",
           items: [
-            { name: "COPD", href: "#" },
-            { name: "Asthma (Allergic Bronchitis)", href: "#" },
-            { name: "Allergic Bronchopulmonary Aspergillosis (ABPA)", href: "#" },
-            { name: "Uncontrolled Asthma vs Severe Asthma", href: "#" },
+            { name: "COPD", href: "/copd" },
+            { name: "Asthma (Allergic Bronchitis)", href: "/allergic-bronchitis" },
+            { name: "Allergic Bronchopulmonary Aspergillosis (ABPA)", href: "/allergic-bronchopulmonary-aspergillosis" },
+            { name: "Uncontrolled Asthma vs Severe Asthma", href: "#" },///uncontrolled-asthma-vs-severe-asthma
           ],
         },
         {
           title: "CHEST INFECTIONS",
           items: [
-            { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "#" },
+            { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "#" },///viral-pneumonia
             { name: "Bacterial Pneumonia", href: "#" },
             { name: "Tubercular Pneumonia (TB)", href: "#" },
             { name: "Fungal Pneumonia", href: "#" },
