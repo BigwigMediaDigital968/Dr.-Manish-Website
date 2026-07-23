@@ -4,12 +4,6 @@ import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 import Link from "next/link";
 
-// Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "Is Your Asthma Uncontrolled or Severe? Dr. Manish Aggarwal",
-    description: "Inhaler not working? Learn the difference between uncontrolled and severe asthma, and get an accurate diagnosis from Dr. Manish Aggarwal in Delhi.",
-    keywords: ["Uncontrolled Asthma vs Severe Asthma", "uncontrolled asthma", "severe asthma", "difference between uncontrolled and severe asthma", "asthma specialist Delhi", "severe asthma treatment Delhi", "asthma pulmonologist"]
-};
 
 const faqs = [
     {

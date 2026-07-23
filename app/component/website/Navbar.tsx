@@ -76,17 +76,17 @@ export default function Navbar() {
         {
           title: "CHEST INFECTIONS",
           items: [
-            { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "#" },///viral-pneumonia
-            { name: "Bacterial Pneumonia", href: "#" },//bacterial-pneumonia
+            { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "/viral-pneumonia" },///viral-pneumonia
+            { name: "Bacterial Pneumonia", href: "/bacterial-pneumonia" },//bacterial-pneumonia
             { name: "Tubercular Pneumonia (TB)", href: "#" },
-            { name: "Fungal Pneumonia", href: "#" },
-            { name: "Bronchiectasis", href: "#" },
+            { name: "Fungal Pneumonia", href: "#" },//fungal-pneumonia
+            { name: "Bronchiectasis", href: "#" },//bronchiectasis
           ],
         },
         {
           title: "RESTRICTIVE LUNG DISEASE",
           items: [
-            { name: "Interstitial Lung Disease (ILD) / Lung Fibrosis", href: "#" },
+            { name: "Interstitial Lung Disease (ILD) / Lung Fibrosis", href: "#" },//interstitial-lung-disease
           ],
         },
         {

@@ -4,12 +4,6 @@ import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 import Link from "next/link";
 
-// Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "Know about Allergic Bronchitis: Guide by Dr. Manish Aggarwal",
-    description: "Persistent cough, wheezing, or chest tightness? Learn about allergic bronchitis symptoms, causes & treatment from Dr. Manish Aggarwal, specialist in Delhi.",
-    keywords: ["allergic bronchitis", "asthma", "Asthma or Allergic Bronchitis", "allergic bronchitis treatment", "allergic bronchitis treatment Delhi", "allergic bronchitis specialist", "asthma treatment Delhi", "bronchitis doctor Delhi", "pulmonologist for bronchitis", "allergic cough treatment"]
-};
 
 const faqs = [
     {

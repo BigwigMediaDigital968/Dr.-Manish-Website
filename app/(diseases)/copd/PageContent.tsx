@@ -5,11 +5,6 @@ import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 import Link from "next/link";
 
 // Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "COPD: Symptoms, Treatment & Specialist Care in Delhi",
-    description: "Learn about COPD symptoms, causes & treatment options. Consult Dr. Manish Aggarwal, a trusted COPD specialist in Delhi, for expert diagnosis and care.",
-    keywords: ["copd", "copd treatment", "copd treatment Delhi", "copd specialist", "copd Specialist in Delhi", "pulmonologist for copd", "Chronic Obstructive Pulmonary Disease treatment"]
-};
 
 const faqs = [
     {

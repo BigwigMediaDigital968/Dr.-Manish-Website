@@ -3,12 +3,6 @@ import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 
-// Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "Bacterial Pneumonia: Symptoms & Care – Dr. Manish Aggarwal",
-    description: "High fever, chills or thick mucus? Learn about bacterial pneumonia symptoms & causes, and get expert care from Dr. Manish Aggarwal in Delhi.",
-    keywords: ["Bacterial Pneumonia", "Bacterial Pneumonia Specialist", "Bacterial Pneumonia Specialist in Delhi", "bacterial pneumonia treatment", "bacterial pneumonia treatment Delhi", "pulmonologist for pneumonia Delhi", "pneumonia doctor Delhi"]
-};
 
 const faqs = [
     {
@@ -45,7 +39,7 @@ export default function BacterialPneumoniaPage() {
                 title="Coughing Up Discoloured Mucus? It Could Be Bacterial Pneumonia"
                 description="Do you have a high fever, chills, and a cough that brings up thick, discoloured mucus? This could be bacterial pneumonia, a lung infection that tends to come on suddenly and hit harder than a regular cold or flu. With timely treatment from an experienced Bacterial Pneumonia Specialist, most people recover fully within a few weeks."
                 ctaText="Book an Appointment"
-                backgroundImage="https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg"
+                backgroundImage="https://images.unsplash.com/photo-1602052577122-f73b9710adba?q=80&w=1170&auto=format&fit=crop"
             />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +67,7 @@ export default function BacterialPneumoniaPage() {
 
                         <div className="w-full lg:w-[45%] shrink-0">
                             <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1170&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=1332&auto=format&fit=crop"
                                 alt="Pulmonary Radiography and Bacterial Infiltration Diagnostics"
                                 className="w-full h-[280px] sm:h-[320px] object-cover rounded-3xl shadow-md"
                             />

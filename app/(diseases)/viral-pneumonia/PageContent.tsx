@@ -3,12 +3,6 @@ import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 
-// Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "What Is Viral Pneumonia? Guide by Dr. Manish Aggarwal",
-    description: "Persistent fever, cough or breathlessness? Learn about viral pneumonia (flu, H1N1, COVID-19) and get expert treatment from Dr. Manish Aggarwal in Delhi.",
-    keywords: ["viral pneumonia", "viral pneumonia treatment", "viral pneumonia treatment Delhi", "flu pneumonia treatment", "influenza pneumonia", "H1N1 pneumonia specialist", "COVID-19 pneumonia doctor", "pulmonologist for pneumonia Delhi"]
-};
 
 const faqs = [
     {

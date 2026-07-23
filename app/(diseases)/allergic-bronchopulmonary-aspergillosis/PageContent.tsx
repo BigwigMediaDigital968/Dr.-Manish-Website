@@ -4,13 +4,6 @@ import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 import Link from "next/link";
 
-// Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "Allergic Bronchopulmonary Aspergillosis Specialist in Delhi",
-    description: "Persistent cough or asthma not responding to treatment? Learn about ABPA (Allergic Bronchopulmonary Aspergillosis) & get expert care from Dr. Manish Aggarwal.",
-    keywords: ["Allergic Bronchopulmonary Aspergillosis", "Allergic Bronchopulmonary Aspergillosis Specialist", "Allergic Bronchopulmonary Aspergillosis Specialist in Delhi", "ABPA treatment Delhi", "ABPA specialist", "aspergillosis doctor Delhi", "pulmonologist for ABPA", "ABPA lung treatment"]
-};
-
 const faqs = [
     {
         question: "What medication is used for allergic bronchopulmonary aspergillosis?",
