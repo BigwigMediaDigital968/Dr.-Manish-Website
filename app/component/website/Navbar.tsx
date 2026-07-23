@@ -70,14 +70,14 @@ export default function Navbar() {
             { name: "COPD", href: "/copd" },
             { name: "Asthma (Allergic Bronchitis)", href: "/allergic-bronchitis" },
             { name: "Allergic Bronchopulmonary Aspergillosis (ABPA)", href: "/allergic-bronchopulmonary-aspergillosis" },
-            { name: "Uncontrolled Asthma vs Severe Asthma", href: "#" },///uncontrolled-asthma-vs-severe-asthma
+            { name: "Uncontrolled Asthma vs Severe Asthma", href: "/uncontrolled-asthma-vs-severe-asthma" },///uncontrolled-asthma-vs-severe-asthma
           ],
         },
         {
           title: "CHEST INFECTIONS",
           items: [
             { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "#" },///viral-pneumonia
-            { name: "Bacterial Pneumonia", href: "#" },
+            { name: "Bacterial Pneumonia", href: "#" },//bacterial-pneumonia
             { name: "Tubercular Pneumonia (TB)", href: "#" },
             { name: "Fungal Pneumonia", href: "#" },
             { name: "Bronchiectasis", href: "#" },
