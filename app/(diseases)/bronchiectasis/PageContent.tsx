@@ -283,7 +283,7 @@ export default function BronchiectasisPage() {
                 <FAQs faqs={faqs} />
 
                 {/* BOTTOM CONVERSION BAR */}
-                <section className="py-16 sm:py-20">
+                <section className="py-10 sm:py-16">
                     <div className="relative overflow-hidden rounded-3xl bg-[#0f172a] p-8 sm:p-12 shadow-xl text-white">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
                             <div className="flex-1">

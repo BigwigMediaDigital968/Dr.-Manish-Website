@@ -79,8 +79,8 @@ export default function Navbar() {
             { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "/viral-pneumonia" },///viral-pneumonia
             { name: "Bacterial Pneumonia", href: "/bacterial-pneumonia" },//bacterial-pneumonia
             { name: "Tubercular Pneumonia (TB)", href: "#" },
-            { name: "Fungal Pneumonia", href: "#" },//fungal-pneumonia
-            { name: "Bronchiectasis", href: "#" },//bronchiectasis
+            { name: "Fungal Pneumonia", href: "/fungal-pneumonia" },//fungal-pneumonia
+            { name: "Bronchiectasis", href: "/bronchiectasis" },//bronchiectasis
           ],
         },
         {
@@ -92,9 +92,9 @@ export default function Navbar() {
         {
           title: "LUNG MASS/LUNG CANCER",
           items: [
-            { name: "Non-Small Cell Lung Carcinoma", href: "#" },
-            { name: "Small Cell Lung Carcinoma (SCLC)", href: "#" },
-            { name: "Bronchial Carcinoid Tumor", href: "#" },
+            { name: "Non-Small Cell Lung Carcinoma", href: "#" },//non-small-cell-lung-carcinoma
+            { name: "Small Cell Lung Carcinoma (SCLC)", href: "#" },//small-cell-lung-carcinoma
+            { name: "Bronchial Carcinoid Tumor", href: "#" },//bronchial-carcinoid-tumor
             { name: "Lung Nodule Evaluation / Workup", href: "#" }
           ],
         },
