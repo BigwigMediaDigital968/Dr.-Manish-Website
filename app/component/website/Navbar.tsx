@@ -86,24 +86,24 @@ export default function Navbar() {
         {
           title: "RESTRICTIVE LUNG DISEASE",
           items: [
-            { name: "Interstitial Lung Disease (ILD) / Lung Fibrosis", href: "#" },//interstitial-lung-disease
+            { name: "Interstitial Lung Disease (ILD) / Lung Fibrosis", href: "/interstitial-lung-disease" },//interstitial-lung-disease
           ],
         },
         {
           title: "LUNG MASS/LUNG CANCER",
           items: [
-            { name: "Non-Small Cell Lung Carcinoma", href: "#" },//non-small-cell-lung-carcinoma
-            { name: "Small Cell Lung Carcinoma (SCLC)", href: "#" },//small-cell-lung-carcinoma
+            { name: "Non-Small Cell Lung Carcinoma", href: "/non-small-cell-lung-carcinoma" },//non-small-cell-lung-carcinoma
+            { name: "Small Cell Lung Carcinoma (SCLC)", href: "/small-cell-lung-carcinoma" },//small-cell-lung-carcinoma
             { name: "Bronchial Carcinoid Tumor", href: "#" },//bronchial-carcinoid-tumor
-            { name: "Lung Nodule Evaluation / Workup", href: "#" }
+            { name: "Lung Nodule Evaluation / Workup", href: "#" }//lung-nodule-evaluation
           ],
         },
         {
           title: "DISEASES OF PLEURAL",
           items: [
-            { name: "Pleural Effusion/Pleurisy (fluid outside Lungs)", href: "#" },
-            { name: "Pneumothorax (Lung Rupture)", href: "#" },
-            { name: "Pleural Tumor", href: "#" },
+            { name: "Pleural Effusion/Pleurisy (fluid outside Lungs)", href: "#" },//pleural-effusion
+            { name: "Pneumothorax (Lung Rupture)", href: "#" }, //pneumothorax
+            { name: "Pleural Tumor", href: "#" },//pleural-tumor
             { name: "Pleural Thickening", href: "#" },
           ],
         },

@@ -4,12 +4,6 @@ import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 import Link from "next/link";
 
-// Metadata configuration exported for Next.js SEO optimization
-export const metadata = {
-    title: "Lung Nodule Evaluation & Management – Dr. Manish Aggarwal",
-    description: "Spot found on your lung scan? Learn about lung nodule causes, diagnostic tests, and get an expert evaluation from Dr. Manish Aggarwal in Delhi.",
-    keywords: ["Lung Nodule", "Lung Nodule Evaluation", "Lung Nodule Evaluation Specialist", "lung nodule specialist Delhi", "lung nodule monitoring Delhi", "pulmonologist for lung nodules", "chest CT scan doctor Delhi"]
-};
 
 const faqs = [
     {
@@ -46,7 +40,7 @@ export default function LungNodulePage() {
                 title="Most Lung Nodules Aren't Cancer. Here's How to Know for Sure."
                 description="Was a spot found on your lung during a scan for something else? This is called a lung nodule, and while the discovery can feel worrying, most lung nodules turn out to be harmless. A proper Lung Nodule Evaluation by an experienced specialist is the best way to understand what it is and whether any further action is needed."
                 ctaText="Book an Appointment"
-                backgroundImage="https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg"
+                backgroundImage="https://images.pexels.com/photos/7579823/pexels-photo-7579823.jpeg"
             />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +68,7 @@ export default function LungNodulePage() {
 
                         <div className="w-full lg:w-[45%] shrink-0">
                             <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1170&auto=format&fit=crop"
+                                src="https://images.pexels.com/photos/8395815/pexels-photo-8395815.jpeg"
                                 alt="Pulmonary Imaging and Structural Lung Nodule Diagnostics"
                                 className="w-full h-[280px] sm:h-[320px] object-cover rounded-3xl shadow-md"
                             />
@@ -238,7 +232,7 @@ export default function LungNodulePage() {
                         <h4 className="text-base sm:text-lg font-bold text-[#0f172a]">
                             Get Your Lung Nodule Evaluated
                         </h4>
-                        <p className="mt-2 text-sm text-[#64748b] max-w-xl">
+                        <p className="mt-2 text-base text-[#64748b] max-w-xl">
                             Don't let an unexplained finding on your scan sit unanswered. Get a clear evaluation from Dr. Manish Aggarwal, your trusted Lung Nodule Evaluation Specialist in Delhi.
                         </p>
                         <div className="mt-6">
@@ -286,7 +280,7 @@ export default function LungNodulePage() {
                                 </p>
                             </div>
                             <div className="shrink-0">
-                                <WhatsappButton cta="Book an Appointment Today" />
+                                <BookAppointmentButton cta="Book an Appointment Today" />
                             </div>
                         </div>
                     </div>
