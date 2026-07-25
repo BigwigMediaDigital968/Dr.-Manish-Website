@@ -103,14 +103,14 @@ export default function Navbar() {
           items: [
             { name: "Pleural Effusion/Pleurisy (fluid outside Lungs)", href: "/pleural-effusion" },//pleural-effusion
             { name: "Pneumothorax (Lung Rupture)", href: "/pneumothorax" }, //pneumothorax
-            { name: "Pleural Tumor", href: "#" },//pleural-tumor
-            { name: "Pleural Thickening", href: "#" },///pleural-thickening
+            { name: "Pleural Tumor", href: "/pleural-tumor" },//pleural-tumor
+            { name: "Pleural Thickening", href: "/pleural-thickening" },///pleural-thickening
           ],
         },
         {
           title: "DISORDERS OF PULMONARY CIRCULATION",
           items: [
-            { name: "Pulmonary Embolism", href: "#" },///pulmonary-embolism
+            { name: "Pulmonary Embolism", href: "/pulmonary-embolism" },///pulmonary-embolism
             { name: "Pulmonary Artery Hypertension", href: "#" },//pulmonary-artery-hypertension
           ],
         },
