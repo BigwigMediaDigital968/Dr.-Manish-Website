@@ -51,12 +51,25 @@ export default function Navbar() {
       dropdownItems: [
         { name: "Cough", href: "/reason-for-cough" },
         { name: "Sputum", href: "/causes-of-sputum" },
-        { name: "Breathlessness (Shortness of Breath)", href: "/reason-for-breathlessness" },
+        {
+          name: "Breathlessness (Shortness of Breath)",
+          href: "/reason-for-breathlessness",
+        },
         { name: "Wheeze", href: "/causes-of-wheezing" },
-        { name: "Blood in Spit (Hemoptysis)", href: "/reason-for-blood-in-spit" },
+        {
+          name: "Blood in Spit (Hemoptysis)",
+          href: "/reason-for-blood-in-spit",
+        },
         { name: "Chest Pain", href: "/reason-for-chest-pain" },
-        { name: "Unintentional Weight Loss", href: "/reason-for-unintentional-weight-loss" },
-        { name: "Fever of Prolonged Duration", href: "/reasons-for-prolonged-fever" }],
+        {
+          name: "Unintentional Weight Loss",
+          href: "/reason-for-unintentional-weight-loss",
+        },
+        {
+          name: "Fever of Prolonged Duration",
+          href: "/reasons-for-prolonged-fever",
+        },
+      ],
     },
     {
       name: "Diseases",
@@ -68,74 +81,129 @@ export default function Navbar() {
           title: "OBSTRUCTIVE LUNG DISEASE",
           items: [
             { name: "COPD", href: "/copd" },
-            { name: "Asthma (Allergic Bronchitis)", href: "/allergic-bronchitis" },
-            { name: "Allergic Bronchopulmonary Aspergillosis (ABPA)", href: "/allergic-bronchopulmonary-aspergillosis" },
-            { name: "Uncontrolled Asthma vs Severe Asthma", href: "/uncontrolled-asthma-vs-severe-asthma" },///uncontrolled-asthma-vs-severe-asthma
+            {
+              name: "Asthma (Allergic Bronchitis)",
+              href: "/allergic-bronchitis",
+            },
+            {
+              name: "Allergic Bronchopulmonary Aspergillosis (ABPA)",
+              href: "/allergic-bronchopulmonary-aspergillosis",
+            },
+            {
+              name: "Uncontrolled Asthma vs Severe Asthma",
+              href: "/uncontrolled-asthma-vs-severe-asthma",
+            }, ///uncontrolled-asthma-vs-severe-asthma
           ],
         },
         {
           title: "CHEST INFECTIONS",
           items: [
-            { name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)", href: "/viral-pneumonia" },///viral-pneumonia
-            { name: "Bacterial Pneumonia", href: "/bacterial-pneumonia" },//bacterial-pneumonia
+            {
+              name: "Viral Pneumonia (Flu, Influenza, H1N1, COVID-19)",
+              href: "/viral-pneumonia",
+            }, ///viral-pneumonia
+            { name: "Bacterial Pneumonia", href: "/bacterial-pneumonia" }, //bacterial-pneumonia
             { name: "Tubercular Pneumonia (TB)", href: "#" },
-            { name: "Fungal Pneumonia", href: "/fungal-pneumonia" },//fungal-pneumonia
-            { name: "Bronchiectasis", href: "/bronchiectasis" },//bronchiectasis
+            { name: "Fungal Pneumonia", href: "/fungal-pneumonia" }, //fungal-pneumonia
+            { name: "Bronchiectasis", href: "/bronchiectasis" }, //bronchiectasis
           ],
         },
         {
           title: "RESTRICTIVE LUNG DISEASE",
           items: [
-            { name: "Interstitial Lung Disease (ILD) / Lung Fibrosis", href: "/interstitial-lung-disease" },//interstitial-lung-disease
+            {
+              name: "Interstitial Lung Disease (ILD) / Lung Fibrosis",
+              href: "/interstitial-lung-disease",
+            }, //interstitial-lung-disease
           ],
         },
         {
           title: "LUNG MASS/LUNG CANCER",
           items: [
-            { name: "Non-Small Cell Lung Carcinoma", href: "/non-small-cell-lung-carcinoma" },//non-small-cell-lung-carcinoma
-            { name: "Small Cell Lung Carcinoma (SCLC)", href: "/small-cell-lung-carcinoma" },//small-cell-lung-carcinoma
-            { name: "Bronchial Carcinoid Tumor", href: "/bronchial-carcinoid-tumor" },//bronchial-carcinoid-tumor
-            { name: "Lung Nodule Evaluation / Workup", href: "/lung-nodule-evaluation" }//lung-nodule-evaluation
+            {
+              name: "Non-Small Cell Lung Carcinoma",
+              href: "/non-small-cell-lung-carcinoma",
+            }, //non-small-cell-lung-carcinoma
+            {
+              name: "Small Cell Lung Carcinoma (SCLC)",
+              href: "/small-cell-lung-carcinoma",
+            }, //small-cell-lung-carcinoma
+            {
+              name: "Bronchial Carcinoid Tumor",
+              href: "/bronchial-carcinoid-tumor",
+            }, //bronchial-carcinoid-tumor
+            {
+              name: "Lung Nodule Evaluation / Workup",
+              href: "/lung-nodule-evaluation",
+            }, //lung-nodule-evaluation
           ],
         },
         {
           title: "DISEASES OF PLEURAL",
           items: [
-            { name: "Pleural Effusion/Pleurisy (fluid outside Lungs)", href: "/pleural-effusion" },//pleural-effusion
+            {
+              name: "Pleural Effusion/Pleurisy (fluid outside Lungs)",
+              href: "/pleural-effusion",
+            }, //pleural-effusion
             { name: "Pneumothorax (Lung Rupture)", href: "/pneumothorax" }, //pneumothorax
-            { name: "Pleural Tumor", href: "/pleural-tumor" },//pleural-tumor
-            { name: "Pleural Thickening", href: "/pleural-thickening" },///pleural-thickening
+            { name: "Pleural Tumor", href: "/pleural-tumor" }, //pleural-tumor
+            { name: "Pleural Thickening", href: "/pleural-thickening" }, ///pleural-thickening
           ],
         },
         {
           title: "DISORDERS OF PULMONARY CIRCULATION",
           items: [
-            { name: "Pulmonary Embolism", href: "/pulmonary-embolism" },///pulmonary-embolism
-            { name: "Pulmonary Artery Hypertension", href: "#" },//pulmonary-artery-hypertension
+            { name: "Pulmonary Embolism", href: "/pulmonary-embolism" },
+            {
+              name: "Pulmonary Artery Hypertension",
+              href: "/pulmonary-artery-hypertension",
+            },
           ],
         },
         {
           title: "DISORDERS OF GAS EXCHANGE",
           items: [
-            { name: "Pulmonary Edema (Fluid Inside Lungs)", href: "#" },
-            { name: "ARDS (Acute Respiratory Distress Syndrome)", href: "#" },
-            { name: "Aspiration Pneumonia", href: "#" },
+            {
+              name: "Pulmonary Edema (Fluid Inside Lungs)",
+              href: "/pulmonary-edema",
+            },
+            {
+              name: "ARDS (Acute Respiratory Distress Syndrome)",
+              href: "/acute-respiratory-distress-syndrome",
+            },
+            { name: "Aspiration Pneumonia", href: "/aspiration-pneumonia" },
           ],
         },
         {
           title: "RESPIRATORY FAILURE",
           items: [
-            { name: "Type 1 Respiratory Failure", href: "#" },
-            { name: "Type 2 Respiratory Failure (Hypercapnic / CO₂ Narcosis)", href: "#" },
+            {
+              name: "Type 1 Respiratory Failure",
+              href: "/type-1-respiratory-failure",
+            },
+            {
+              name: "Type 2 Respiratory Failure (Hypercapnic / CO₂ Narcosis)",
+              href: "/type-2-respiratory-failure",
+            },
           ],
         },
         {
           title: "DISEASES OF MEDIASTINUM, CHEST WALL AND DIAPHRAGM",
-          items: [],
+          items: [
+            {
+              name: "Diseases of Mediastinum",
+              href: "/diseases-of-mediastinum",
+            },
+          ],
         },
         {
           title: "TOBACCO ADDICTION",
-          items: [],
+          items: [
+            {
+              name: "Tobacco Addiction",
+              href: "/tobacco-addiction",
+            },
+          ],
         },
       ],
     },
@@ -221,7 +289,10 @@ export default function Navbar() {
           title: "SLEEP INVESTIGATIONS",
           items: [
             { name: "Level 1 Sleep Study (Polysomnography)", href: "#" },
-            { name: "Level 2 and Level 3 Sleep Test (Home Sleep Apnoea Test) Certified by Sleep Specialist Doctor", href: "#" },
+            {
+              name: "Level 2 and Level 3 Sleep Test (Home Sleep Apnoea Test) Certified by Sleep Specialist Doctor",
+              href: "#",
+            },
             { name: "MSLT/MWT", href: "#" },
             { name: "Actigraphy", href: "#" },
             { name: "Sleep Diary", href: "#" },
@@ -230,7 +301,10 @@ export default function Navbar() {
         {
           title: "SLEEP TREATMENT",
           items: [
-            { name: "Cognitive Behavioral Sleep therapy – Insomnia", href: "#" },
+            {
+              name: "Cognitive Behavioral Sleep therapy – Insomnia",
+              href: "#",
+            },
             { name: "PAP therapy : CPAP/Bipap/Mask interfaces", href: "#" },
             { name: "Sleep Apnoea Surgery", href: "#" },
             { name: "Dental Appliances", href: "#" },
@@ -244,16 +318,16 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${scrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-sky-100/40 border-b border-white/50"
-          : "bg-white/70 backdrop-blur-md shadow-sm border-b border-white/30"
-          }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+          scrolled
+            ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-sky-100/40 border-b border-white/50"
+            : "bg-white/70 backdrop-blur-md shadow-sm border-b border-white/30"
+        }`}
       >
         <div
-          className={`mx-auto max-w-7xl transition-all duration-500 ease-in-out ${scrolled
-            ? "py-2 px-5 md:px-7"
-            : "py-3.5 px-6 md:px-8"
-            }`}
+          className={`mx-auto max-w-7xl transition-all duration-500 ease-in-out ${
+            scrolled ? "py-2 px-5 md:px-7" : "py-3.5 px-6 md:px-8"
+          }`}
         >
           <div className="flex items-center justify-between">
             {/* Logo Section */}
@@ -279,7 +353,8 @@ export default function Navbar() {
                 // If the link has submenus grouped by categories (e.g., Services in your image)
                 // we use a full-width Mega Menu. Otherwise, we fallback to a standard clean layout.
                 const isMegaMenu = link.isMegaMenu;
-                const hasManyItems = link.dropdownItems && link.dropdownItems.length > 8;
+                const hasManyItems =
+                  link.dropdownItems && link.dropdownItems.length > 8;
 
                 return link.hasDropdown ? (
                   <div
@@ -291,21 +366,24 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setActiveSection(link.name)}
-                      className={`relative flex items-center gap-1.5 px-2 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${isActiveLink(link.href)
-                        ? "text-[#1fa8e8]"
-                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
-                        }`}
+                      className={`relative flex items-center gap-1.5 px-2 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
+                        isActiveLink(link.href)
+                          ? "text-[#1fa8e8]"
+                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
+                      }`}
                     >
                       {link.name}
                       <ChevronDown
-                        className={`w-3.5 h-3.5 transition-transform duration-300 ease-in-out ${openDropdown === link.name ? "rotate-180 text-[#1fa8e8]" : "text-slate-400"
-                          }`}
+                        className={`w-3.5 h-3.5 transition-transform duration-300 ease-in-out ${
+                          openDropdown === link.name
+                            ? "rotate-180 text-[#1fa8e8]"
+                            : "text-slate-400"
+                        }`}
                       />
                       {isActiveLink(link.href) && (
                         <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] rounded-full" />
                       )}
-                      <span className="block w-full h-10 top-full absolute bg-transparent">
-                      </span>
+                      <span className="block w-full h-10 top-full absolute bg-transparent"></span>
                     </Link>
 
                     {/* ==========================================
@@ -313,14 +391,18 @@ export default function Navbar() {
                         ========================================== */}
                     {isMegaMenu ? (
                       <div
-                        className={`absolute left-0 right-0 top-full w-full bg-white text-slate-800 transition-all duration-200 ease-out border-t border-slate-200 ${openDropdown === link.name
-                          ? "opacity-100 translate-y-0 pointer-events-auto visible shadow-2xl"
-                          : "opacity-0 -translate-y-2 pointer-events-none invisible"
-                          }`}
+                        className={`absolute left-0 right-0 top-full w-full bg-white text-slate-800 transition-all duration-200 ease-out border-t border-slate-200 ${
+                          openDropdown === link.name
+                            ? "opacity-100 translate-y-0 pointer-events-auto visible shadow-2xl"
+                            : "opacity-0 -translate-y-2 pointer-events-none invisible"
+                        }`}
                       >
                         <div className="mx-auto max-w-7xl px-8 py-10 grid grid-cols-4 gap-8">
                           {link.megaCategories?.map((category) => (
-                            <div key={category.title} className="flex flex-col gap-3">
+                            <div
+                              key={category.title}
+                              className="flex flex-col gap-3"
+                            >
                               {/* Dynamic Header Column Indicator Line */}
                               <div className="flex items-center gap-2 border-l-2 border-emerald-600 pl-3">
                                 <span className="text-sm font-bold tracking-wider uppercase text-slate-900">
@@ -347,14 +429,18 @@ export default function Navbar() {
                     ) : (
                       /* Standard Dropdown Card Fallback */
                       <div
-                        className={`absolute top-full translate-y-3 ${scrolled ? "py-2" : "py-4"} -z-50 left-1/2 -translate-x-1/2 transition-all duration-200 ease-out ${openDropdown === link.name
-                          ? "opacity-100 translate-y-0 pointer-events-auto scale-100"
-                          : "opacity-0 -translate-y-2 pointer-events-none scale-95"
-                          }`}
+                        className={`absolute top-full translate-y-3 ${scrolled ? "py-2" : "py-4"} -z-50 left-1/2 -translate-x-1/2 transition-all duration-200 ease-out ${
+                          openDropdown === link.name
+                            ? "opacity-100 translate-y-0 pointer-events-auto scale-100"
+                            : "opacity-0 -translate-y-2 pointer-events-none scale-95"
+                        }`}
                       >
                         <div
-                          className={`bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-slate-100 p-2.5 ${hasManyItems ? "w-[480px] grid grid-cols-2 gap-1" : "w-[280px] flex flex-col gap-0.5"
-                            }`}
+                          className={`bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-slate-100 p-2.5 ${
+                            hasManyItems
+                              ? "w-[480px] grid grid-cols-2 gap-1"
+                              : "w-[280px] flex flex-col gap-0.5"
+                          }`}
                         >
                           {link.dropdownItems?.map((item) => (
                             <a
@@ -376,10 +462,11 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setActiveSection(link.name)}
-                    className={`relative px-4 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${isActiveLink(link.href)
-                      ? "text-[#1fa8e8]"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
-                      }`}
+                    className={`relative px-4 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
+                      isActiveLink(link.href)
+                        ? "text-[#1fa8e8]"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
+                    }`}
                   >
                     {link.name}
                     {isActiveLink(link.href) && (
@@ -428,10 +515,11 @@ export default function Navbar() {
           {/* Mobile Overlay Menu */}
           {/* Mobile Overlay Menu */}
           <div
-            className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen
-              ? "max-h-[85vh] overflow-y-auto opacity-100 mt-4"
-              : "max-h-0 opacity-0 pointer-events-none"
-              }`}
+            className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+              isOpen
+                ? "max-h-[85vh] overflow-y-auto opacity-100 mt-4"
+                : "max-h-0 opacity-0 pointer-events-none"
+            }`}
           >
             <div className="pt-3 pb-6 border-t border-slate-100 flex flex-col gap-1">
               {navLinks.map((link) => {
@@ -444,85 +532,93 @@ export default function Navbar() {
                       onClick={() =>
                         setMobileDropdown(isDropdownOpen ? null : link.name)
                       }
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-all duration-200 cursor-pointer ${activeSection === link.name
-                        ? "bg-[#1fa8e8]/5 text-[#1fa8e8]"
-                        : "text-slate-600 active:bg-slate-50"
-                        }`}
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-all duration-200 cursor-pointer ${
+                        activeSection === link.name
+                          ? "bg-[#1fa8e8]/5 text-[#1fa8e8]"
+                          : "text-slate-600 active:bg-slate-50"
+                      }`}
                     >
                       {link.name}
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? "rotate-180 text-[#1fa8e8]" : "text-slate-400"
-                          }`}
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          isDropdownOpen
+                            ? "rotate-180 text-[#1fa8e8]"
+                            : "text-slate-400"
+                        }`}
                       />
                     </button>
 
                     {/* Subitems Menu Container with Fixed Height & Scroll */}
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen
-                        ? "max-h-[350px] opacity-100 mt-1 mb-2"
-                        : "max-h-0 opacity-0 pointer-events-none"
-                        }`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        isDropdownOpen
+                          ? "max-h-[350px] opacity-100 mt-1 mb-2"
+                          : "max-h-0 opacity-0 pointer-events-none"
+                      }`}
                     >
                       <div className="pl-4 pr-2 flex flex-col gap-2 max-h-[340px] overflow-y-auto scrollbar-none">
-                        {isMegaMenu ? (
-                          /* RENDER CATEGORIZED MEGA MENU FOR MOBILE WITH NATIVE ACCORDIONS */
-                          link.megaCategories?.map((category) => (
-                            <details
-                              key={category.title}
-                              className="group flex flex-col gap-1 dynamic-accordion"
-                            >
-                              {/* Accordion Header (Toggles display on click natively) */}
-                              <summary className="flex items-center justify-between list-none cursor-pointer outline-none select-none px-3 pt-1 pb-1.5 border-l-2 border-[#1fa8e8]/40 ml-1">
-                                <span className="text-xs font-bold tracking-wider text-slate-400 uppercase">
-                                  {category.title}
-                                </span>
-                                {/* Optional: Animated Indicator Arrow */}
-                                <svg
-                                  className="w-4 h-4 text-slate-400 transition-transform duration-200 group-open:rotate-180"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                >
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                              </summary>
-
-                              {/* Category Nested Items */}
-                              <div className="flex flex-col gap-1 mt-1">
-                                {category.items?.map((item) => (
-                                  <a
-                                    key={item.name}
-                                    href={item.href}
-                                    onClick={() => {
-                                      setActiveSection(link.name);
-                                      setIsOpen(false);
-                                      setMobileDropdown(null);
-                                    }}
-                                    className="px-4 py-2.5 rounded-xl text-left bg-slate-50/50 text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors block"
+                        {isMegaMenu
+                          ? /* RENDER CATEGORIZED MEGA MENU FOR MOBILE WITH NATIVE ACCORDIONS */
+                            link.megaCategories?.map((category) => (
+                              <details
+                                key={category.title}
+                                className="group flex flex-col gap-1 dynamic-accordion"
+                              >
+                                {/* Accordion Header (Toggles display on click natively) */}
+                                <summary className="flex items-center justify-between list-none cursor-pointer outline-none select-none px-3 pt-1 pb-1.5 border-l-2 border-[#1fa8e8]/40 ml-1">
+                                  <span className="text-xs font-bold tracking-wider text-slate-400 uppercase">
+                                    {category.title}
+                                  </span>
+                                  {/* Optional: Animated Indicator Arrow */}
+                                  <svg
+                                    className="w-4 h-4 text-slate-400 transition-transform duration-200 group-open:rotate-180"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
                                   >
-                                    {item.name}
-                                  </a>
-                                ))}
-                              </div>
-                            </details>
-                          ))
-                        ) : (
-                          /* STANDARD SINGLE LIST FALLBACK */
-                          link.dropdownItems?.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              onClick={() => {
-                                setActiveSection(link.name);
-                                setIsOpen(false);
-                                setMobileDropdown(null);
-                              }}
-                              className="px-4 py-1 text-left text-xs font-medium text-slate-700 active:text-[#1fa8e8] transition-colors"
-                            >
-                              {item.name}
-                            </a>
-                          ))
-                        )}
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </summary>
+
+                                {/* Category Nested Items */}
+                                <div className="flex flex-col gap-1 mt-1">
+                                  {category.items?.map((item) => (
+                                    <a
+                                      key={item.name}
+                                      href={item.href}
+                                      onClick={() => {
+                                        setActiveSection(link.name);
+                                        setIsOpen(false);
+                                        setMobileDropdown(null);
+                                      }}
+                                      className="px-4 py-2.5 rounded-xl text-left bg-slate-50/50 text-sm font-medium text-slate-700 active:bg-[#1fa8e8]/10 active:text-[#1fa8e8] transition-colors block"
+                                    >
+                                      {item.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              </details>
+                            ))
+                          : /* STANDARD SINGLE LIST FALLBACK */
+                            link.dropdownItems?.map((item) => (
+                              <a
+                                key={item.name}
+                                href={item.href}
+                                onClick={() => {
+                                  setActiveSection(link.name);
+                                  setIsOpen(false);
+                                  setMobileDropdown(null);
+                                }}
+                                className="px-4 py-1 text-left text-xs font-medium text-slate-700 active:text-[#1fa8e8] transition-colors"
+                              >
+                                {item.name}
+                              </a>
+                            ))}
                       </div>
                     </div>
                   </div>
@@ -534,10 +630,11 @@ export default function Navbar() {
                       setActiveSection(link.name);
                       setIsOpen(false);
                     }}
-                    className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-all duration-200 ${activeSection === link.name
-                      ? "bg-gradient-to-r from-[#1fa8e8]/10 to-[#6dbb45]/10 text-[#1fa8e8]"
-                      : "text-slate-600 active:bg-slate-50"
-                      }`}
+                    className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-all duration-200 ${
+                      activeSection === link.name
+                        ? "bg-gradient-to-r from-[#1fa8e8]/10 to-[#6dbb45]/10 text-[#1fa8e8]"
+                        : "text-slate-600 active:bg-slate-50"
+                    }`}
                   >
                     {link.name}
                   </a>

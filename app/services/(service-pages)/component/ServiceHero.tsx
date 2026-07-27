@@ -66,7 +66,7 @@ ctaText="Schedule Consultation"
 
             {/* ─── MAIN FOREGROUND CONTAINER ──────────────────────────────── */}
             <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pt-20">
-                <div className="max-w-6xl">
+                <div className="max-w-4xl">
 
                     {/* Automatic Breadcrumb Architecture */}
                     {enableBreadcrumbs && (
