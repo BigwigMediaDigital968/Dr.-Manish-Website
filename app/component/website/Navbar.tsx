@@ -266,22 +266,31 @@ export default function Navbar() {
       hasDropdown: true,
       isMegaMenu: true,
       megaCategories: [
-        {
-          title: "SLEEP SYMPTOMS",
-          items: [
-            { name: "Insomnia (Unable to Sleep)", href: "#" },
-            { name: "Hypersomnia (Excessive Sleep)", href: "#" },
-            { name: "Parasomnia", href: "#" },
-          ],
-        },
+        // {
+        //   title: "SLEEP SYMPTOMS",
+        //   items: [
+        //     { name: "Insomnia (Unable to Sleep)", href: "#" },
+        //     { name: "Hypersomnia (Excessive Sleep)", href: "#" },
+        //     { name: "Parasomnia", href: "#" },
+        //   ],
+        // },
         {
           title: "SLEEP DISORDERS",
           items: [
-            { name: "Insomnia Disorders", href: "#" },
-            { name: "Central Disorders of Hypersomnolence", href: "#" },
-            { name: "Circadian Rhythm Sleep-Wake Disorders", href: "#" },
-            { name: "Parasomnias", href: "#" },
-            { name: "Sleep-Related Movement Disorders", href: "#" },
+            { name: "Insomnia Disorders", href: "/insomnia-treatment" },
+            {
+              name: "Central Disorders of Hypersomnolence",
+              href: "/hypersomnia-treatment",
+            },
+            {
+              name: "Circadian Rhythm Sleep-Wake Disorders",
+              href: "/circadian-rhythm-sleep-disorder-treatment",
+            },
+            { name: "Parasomnia", href: "/parasomnia-treatment" },
+            {
+              name: "Sleep-Related Movement Disorders",
+              href: "/sleep-related-movement-disorders",
+            },
             { name: "Sleep-Related Breathing Disorders", href: "#" },
           ],
         },
