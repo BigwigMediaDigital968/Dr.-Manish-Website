@@ -7,9 +7,6 @@ import Popup from "./Popup";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-/* ==========================================
-   2. MAIN HEADER NAVBAR COMPONENT (Exported)
-   ========================================== */
 export default function Navbar() {
   const pathname = usePathname();
 
@@ -226,17 +223,26 @@ export default function Navbar() {
         {
           title: "AIRWAY PROCEDURES",
           items: [
-            { name: "Bronchoscopy", href: "#" },
-            { name: "EBUS (Endobronchial Ultrasound)", href: "#" },
-            { name: "Transbronchial Lung Biopsy", href: "#" },
-            { name: "BAL (Bronchoalveolar Lavage)", href: "#" },
+            { name: "Bronchoscopy", href: "/procedures/bronchoscopy-in-delhi" },
+            {
+              name: "EBUS (Endobronchial Ultrasound)",
+              href: "/procedures/ebus-endobronchial-ultrasound-in-delhi",
+            },
+            {
+              name: "Transbronchial Lung Biopsy",
+              href: "/procedures/transbronchial-lung-biopsy-in-delhi",
+            },
+            {
+              name: "BAL (Bronchoalveolar Lavage)",
+              href: "/procedures/bronchoalveolar-lavage-bal-in-delhi",
+            },
           ],
         },
         {
           title: "PLEURAL PROCEDURES",
           items: [
-            { name: "Pleural Aspiration", href: "#" },
-            { name: "Intercostal Drainage (ICD)", href: "#" },
+            { name: "Pleural Aspiration", href: "/procedures/pleural-aspiration-in-delhi" },
+            { name: "Intercostal Drainage (ICD)", href: "/procedures/intercostal-drainage-icd-in-delhi" },
             { name: "Medical Thoracoscopy", href: "#" },
             { name: "Pleural Biopsy", href: "#" },
           ],
@@ -250,14 +256,14 @@ export default function Navbar() {
             { name: "6 Minute Walk Test", href: "#" },
           ],
         },
-        {
-          title: "SLEEP PROCEDURES",
-          items: [
-            { name: "Sleep Study (Polysomnography)", href: "#" },
-            { name: "Home Sleep Test", href: "#" },
-            { name: "CPAP/BiPAP Titration", href: "#" },
-          ],
-        },
+        // {
+        //   title: "SLEEP PROCEDURES",
+        //   items: [
+        //     { name: "Sleep Study (Polysomnography)", href: "#" },
+        //     { name: "Home Sleep Test", href: "#" },
+        //     { name: "CPAP/BiPAP Titration", href: "#" },
+        //   ],
+        // },
       ],
     },
     {
@@ -279,19 +285,27 @@ export default function Navbar() {
           items: [
             { name: "Insomnia Disorders", href: "/insomnia-treatment" },
             {
-              name: "Central Disorders of Hypersomnolence",
+              name: "Hypersomnia Disorders",
               href: "/hypersomnia-treatment",
+            },
+            { name: "Parasomnia Disorders", href: "/parasomnia-treatment" },
+
+            {
+              name: "Central Disorders of Hypersomnolence",
+              href: "/central-disorders-of-hypersomnolence",
             },
             {
               name: "Circadian Rhythm Sleep-Wake Disorders",
               href: "/circadian-rhythm-sleep-disorder-treatment",
             },
-            { name: "Parasomnia", href: "/parasomnia-treatment" },
             {
               name: "Sleep-Related Movement Disorders",
               href: "/sleep-related-movement-disorders",
             },
-            { name: "Sleep-Related Breathing Disorders", href: "#" },
+            {
+              name: "Sleep-Related Breathing Disorders",
+              href: "/sleep-related-breathing-disorders",
+            },
           ],
         },
         {
@@ -300,11 +314,11 @@ export default function Navbar() {
             { name: "Level 1 Sleep Study (Polysomnography)", href: "#" },
             {
               name: "Level 2 and Level 3 Sleep Test (Home Sleep Apnoea Test) Certified by Sleep Specialist Doctor",
-              href: "#",
+              href: "/level-2-level-3-home-sleep-apnoea-test",
             },
-            { name: "MSLT/MWT", href: "#" },
-            { name: "Actigraphy", href: "#" },
-            { name: "Sleep Diary", href: "#" },
+            { name: "MSLT/MWT", href: "/mslt-mwt-sleep-test" },
+            { name: "Actigraphy", href: "/actigraphy" },
+            { name: "Sleep Diary", href: "/sleep-diary" },
           ],
         },
         {
@@ -312,11 +326,17 @@ export default function Navbar() {
           items: [
             {
               name: "Cognitive Behavioral Sleep therapy – Insomnia",
-              href: "#",
+              href: "/cognitive-behavioral-therapy-insomnia",
             },
-            { name: "PAP therapy : CPAP/Bipap/Mask interfaces", href: "#" },
-            { name: "Sleep Apnoea Surgery", href: "#" },
-            { name: "Dental Appliances", href: "#" },
+            {
+              name: "PAP therapy : CPAP/Bipap/Mask interfaces",
+              href: "/pap-therapy-cpap-bipap",
+            },
+            { name: "Sleep Apnoea Surgery", href: "/sleep-apnoea-surgery" },
+            {
+              name: "Dental Appliances",
+              href: "/dental-appliances-for-sleep-apnoea",
+            },
           ],
         },
       ],
