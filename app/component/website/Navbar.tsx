@@ -243,8 +243,8 @@ export default function Navbar() {
           items: [
             { name: "Pleural Aspiration", href: "/procedures/pleural-aspiration-in-delhi" },
             { name: "Intercostal Drainage (ICD)", href: "/procedures/intercostal-drainage-icd-in-delhi" },
-            { name: "Medical Thoracoscopy", href: "#" },
-            { name: "Pleural Biopsy", href: "#" },
+            { name: "Medical Thoracoscopy", href: "/procedures/medical-thoracoscopy-in-delhi" },
+            { name: "Pleural Biopsy", href: "/procedures/pleural-biopsy-in-delhi" },
           ],
         },
         {
