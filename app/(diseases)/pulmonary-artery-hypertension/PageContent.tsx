@@ -68,7 +68,7 @@ export default function PulmonaryArteryHypertensionPage() {
 
                         <div className="w-full lg:w-[45%] shrink-0">
                             <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1170&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1725870953863-4ad4db0acfc2?q=80&w=2070&auto=format&fit=crop"
                                 alt="Advanced Pulmonary Vascular Evaluation and Diagnostic Assessment"
                                 className="w-full h-[280px] sm:h-[320px] object-cover rounded-3xl shadow-md"
                             />

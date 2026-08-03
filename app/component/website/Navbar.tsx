@@ -250,10 +250,10 @@ export default function Navbar() {
         {
           title: "LUNG FUNCTION TESTS",
           items: [
-            { name: "Spirometry", href: "#" },
-            { name: "Pulmonary Function Test (PFT)", href: "#" },
-            { name: "FeNO", href: "#" },
-            { name: "6 Minute Walk Test", href: "#" },
+            { name: "Spirometry", href: "/procedures/spirometry-test-in-delhi" },
+            { name: "Pulmonary Function Test (PFT)", href: "/procedures/pulmonary-function-test-pft-in-delhi" },
+            { name: "FeNO", href: "/procedures/feno-test-in-delhi" },
+            { name: "6 Minute Walk Test", href: "/procedures/6-minute-walk-test-in-delhi" },
           ],
         },
         // {
