@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import WhatsappFloat from "./component/website/WhatsappFloat";
 import { ModalProvider } from "./Contexts/ModalContext";
@@ -36,11 +37,23 @@ export default function RootLayout({
       className={`${plusJakarta.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ModalProvider>
-          {children}
-        </ModalProvider>
+        <ModalProvider>{children}</ModalProvider>
         <WhatsappFloat />
 
+        {/* Google Analytics Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X5ZSZ2MEY3"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-X5ZSZ2MEY3');
+          `}
+        </Script>
       </body>
     </html>
   );
