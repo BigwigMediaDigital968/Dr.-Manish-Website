@@ -100,7 +100,7 @@ export default function Navbar() {
               href: "/viral-pneumonia",
             }, ///viral-pneumonia
             { name: "Bacterial Pneumonia", href: "/bacterial-pneumonia" }, //bacterial-pneumonia
-            { name: "Tubercular Pneumonia (TB)", href: "#" },
+            { name: "Tubercular Pneumonia (TB)", href: "/tubercular-pneumonia" },
             { name: "Fungal Pneumonia", href: "/fungal-pneumonia" }, //fungal-pneumonia
             { name: "Bronchiectasis", href: "/bronchiectasis" }, //bronchiectasis
           ],
