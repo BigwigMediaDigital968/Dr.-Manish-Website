@@ -1,13 +1,15 @@
+import type { Metadata } from "next";
 import SleepRelatedMovementDisordersPage from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/sleep-related-movement-disorders";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title = "Sleep Movement Disorder Treatment in Delhi | Dr. Manish";
-
 const description =
   "Restless legs, kicking, or teeth grinding at night? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses sleep-related movement disorders. Book a consultation.";
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   keywords: [
@@ -25,20 +27,21 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: `${BASE_URL}/sleep-related-movement-disorders`,
+    canonical: FULL_URL,
   },
   openGraph: {
-    title,
-    description,
-    url: `${BASE_URL}/sleep-related-movement-disorders`,
-    siteName: "Delhi Lung & Bronchoscopy Center",
     type: "website",
     locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    title,
+    description,
     images: [
       {
-        url: `${BASE_URL}/images/sleep-movement-disorders-og.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        height: 75,
+        alt: "Sleep Movement Disorder Treatment by Dr. Manish Aggarwal",
       },
     ],
   },
@@ -47,7 +50,7 @@ export const metadata = {
     title,
     description:
       "Pulmonologist & sleep specialist Dr. Manish Aggarwal explains Restless Legs Syndrome, Periodic Limb Movement Disorder, and other sleep-related movement disorders.",
-    images: [`${BASE_URL}/images/sleep-movement-disorders-og.jpg`],
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -56,12 +59,15 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/sleep-related-movement-disorders#webpage`,
-      url: `${BASE_URL}/sleep-related-movement-disorders`,
+      "@id": `${FULL_URL}#webpage`,
       name: "Sleep-Related Movement Disorders: Why You Move at Night, and What It Really Means",
+      url: FULL_URL,
       description:
         "Comprehensive guide to Sleep-Related Movement Disorders — including Restless Legs Syndrome, Periodic Limb Movement Disorder, sleep bruxism, and related conditions — covering symptoms, causes, diagnosis, and treatment, by Dr. Manish Aggarwal, Pulmonologist and Sleep Specialist.",
       inLanguage: "en-IN",
+      isPartOf: {
+        "@id": `${BASE_URL}/#website`,
+      },
       medicalAudience: {
         "@type": "MedicalAudience",
         audienceType: "Patient",
@@ -114,48 +120,74 @@ const schema = {
       },
       lastReviewed: "2026-07-30",
       reviewedBy: {
-        "@type": "Person",
-        name: "Dr. Manish Aggarwal",
-        jobTitle: "Pulmonologist & Sleep Specialist",
+        "@id": `${BASE_URL}/#physician`,
       },
       author: {
-        "@type": "Physician",
-        name: "Dr. Manish Aggarwal",
+        "@id": `${BASE_URL}/#physician`,
       },
       publisher: {
-        "@type": "MedicalOrganization",
-        name: "Delhi Lung & Bronchoscopy Center",
+        "@id": `${BASE_URL}/#clinic`,
+      },
+      mainEntity: {
+        "@id": `${FULL_URL}#faq`,
+      },
+      breadcrumb: {
+        "@id": `${FULL_URL}#breadcrumb`,
       },
     },
     {
       "@type": "Physician",
-      "@id": `${BASE_URL}/about-us#physician`,
+      "@id": `${BASE_URL}/#physician`,
       name: "Dr. Manish Aggarwal",
-      medicalSpecialty: ["Pulmonology", "Sleep Medicine"],
+      honorificPrefix: "Dr.",
+      jobTitle:
+        "Principal Director, Department of Chest Disease & Interventional Pulmonology",
+      medicalSpecialty: [
+        "https://schema.org/Pulmonology",
+        "https://schema.org/SleepMedicine",
+      ],
       url: `${BASE_URL}/about-us`,
-      worksFor: {
-        "@type": "MedicalOrganization",
-        name: "Delhi Lung & Bronchoscopy Center",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "J1-12A, Pitampura",
-          addressLocality: "Delhi",
-          postalCode: "110034",
-          addressCountry: "IN",
+      worksFor: [
+        {
+          "@type": "Hospital",
+          name: "Max Hospital",
         },
-        telephone: "+91-99895-54095",
-        email: "Aggarwal54095@gmail.com",
+        {
+          "@id": `${BASE_URL}/#clinic`,
+        },
+      ],
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": `${BASE_URL}/#clinic`,
+      name: "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
+      medicalSpecialty: "https://schema.org/Pulmonology",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "JU-12A, Block G&JU, Ranikhet",
+        addressLocality: "Pitampura, Delhi",
+        postalCode: "110034",
+        addressCountry: "IN",
+      },
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "350",
       },
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/sleep-related-movement-disorders#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: BASE_URL,
+          item: `${BASE_URL}/`,
         },
         {
           "@type": "ListItem",
@@ -167,13 +199,13 @@ const schema = {
           "@type": "ListItem",
           position: 3,
           name: "Sleep-Related Movement Disorders",
-          item: `${BASE_URL}/sleep-related-movement-disorders`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/sleep-related-movement-disorders#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -236,7 +268,7 @@ const schema = {
   ],
 };
 
-export default function Page() {
+export default function SleepRelatedMovementDisordersPageRoute() {
   return (
     <>
       <script
@@ -245,7 +277,9 @@ export default function Page() {
           __html: JSON.stringify(schema),
         }}
       />
-      <SleepRelatedMovementDisordersPage />
+      <main>
+        <SleepRelatedMovementDisordersPage />
+      </main>
     </>
   );
 }

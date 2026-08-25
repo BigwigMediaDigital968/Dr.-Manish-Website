@@ -1,258 +1,250 @@
 import type { Metadata } from "next";
 import PapTherapySleepApneaPage from "./PageContent";
 
-const siteUrl = process.env.SITE_URL;
-const pageUrl = `${siteUrl}/pap-therapy-cpap-bipap`;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/pap-therapy-cpap-bipap";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
+
+const title = "PAP Therapy (CPAP/BiPAP) in Delhi | Dr. Manish Aggarwal";
+const description =
+  "Advanced PAP therapy (CPAP/BiPAP) and mask interface solutions in Delhi by Dr. Manish Aggarwal for effective sleep apnoea management.";
 
 export const metadata: Metadata = {
-  title: "CBT-I for Insomnia Treatment | Dr. Manish Aggarwal",
-  description:
-    "Tired of relying on sleeping pills? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, offers CBT-I, the first-line treatment for insomnia. Book a consultation.",
-
+  title,
+  description,
   keywords: [
-    "CBT-I",
-    "cognitive behavioral therapy for insomnia",
-    "chronic insomnia treatment",
-    "stimulus control therapy",
-    "sleep restriction therapy",
-    "insomnia without medication",
+    "PAP therapy",
+    "CPAP therapy",
+    "BiPAP therapy",
+    "sleep apnea treatment Delhi",
+    "CPAP titration",
+    "sleep disorder treatment",
     "sleep specialist Delhi",
     "Dr. Manish Aggarwal",
   ],
-
-  authors: [
-    {
-      name: "Dr. Manish Aggarwal",
-    },
-  ],
-
+  authors: [{ name: "Dr. Manish Aggarwal" }],
   robots: {
     index: true,
     follow: true,
   },
-
   alternates: {
-    canonical: pageUrl,
+    canonical: FULL_URL,
   },
-
   openGraph: {
     type: "website",
-    siteName: "Delhi Lung & Bronchoscopy Center",
-    title: "CBT-I for Insomnia Treatment | Dr. Manish Aggarwal",
-    description:
-      "Tired of relying on sleeping pills? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, offers CBT-I, the first-line treatment for insomnia. Book a consultation.",
-    url: pageUrl,
     locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    title,
+    description,
     images: [
       {
-        url: `${siteUrl}/images/cbt-i-og.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "CBT-I for Insomnia Treatment - Dr. Manish Aggarwal",
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        height: 75,
+        alt: "PAP Therapy (CPAP/BiPAP) - Dr. Manish Aggarwal",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "CBT-I for Insomnia Treatment | Dr. Manish Aggarwal",
-    description:
-      "Dr. Manish Aggarwal explains Cognitive Behavioral Therapy for Insomnia — how it works, its components, and how it compares to sleeping pills.",
-    images: [`${siteUrl}/images/cbt-i-og.jpg`],
+    title,
+    description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
-const medicalWebPageSchema = {
+const schema = {
   "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  name: "Cognitive Behavioral Therapy for Insomnia (CBT-I): A Way to Fix Sleep Without Relying on Pills",
-  url: pageUrl,
-  description:
-    "A guide to Cognitive Behavioral Therapy for Insomnia (CBT-I) — how it works, its components, benefits, and how it compares to sleeping pills, by Dr. Manish Aggarwal, Pulmonologist and Sleep Specialist.",
-  medicalAudience: {
-    "@type": "MedicalAudience",
-    audienceType: "Patient",
-  },
-  about: {
-    "@type": "MedicalTherapy",
-    name: "Cognitive Behavioral Therapy for Insomnia",
-    alternateName: "CBT-I",
-    usedToTreat: {
-      "@type": "MedicalCondition",
-      name: "Chronic Insomnia",
-    },
-    subjectOf: [
-      {
-        "@type": "MedicalTherapy",
-        name: "Sleep Education",
-      },
-      {
-        "@type": "MedicalTherapy",
-        name: "Sleep Hygiene",
-      },
-      {
-        "@type": "MedicalTherapy",
-        name: "Stimulus Control Therapy",
-      },
-      {
-        "@type": "MedicalTherapy",
-        name: "Sleep Restriction Therapy",
-      },
-      {
-        "@type": "MedicalTherapy",
-        name: "Cognitive Restructuring",
-      },
-      {
-        "@type": "MedicalTherapy",
-        name: "Relaxation Techniques",
-      },
-    ],
-  },
-  lastReviewed: "2026-07-30",
-  reviewedBy: {
-    "@type": "Person",
-    name: "Dr. Manish Aggarwal",
-    jobTitle: "Pulmonologist & Sleep Specialist",
-  },
-  publisher: {
-    "@type": "MedicalOrganization",
-    name: "Delhi Lung & Bronchoscopy Center",
-  },
-};
-
-const physicianSchema = {
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  name: "Dr. Manish Aggarwal",
-  medicalSpecialty: ["Pulmonology", "Sleep Medicine"],
-  url: `${siteUrl}/about-us`,
-  worksFor: {
-    "@type": "MedicalOrganization",
-    name: "Delhi Lung & Bronchoscopy Center",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "J1-12A, Pitampura",
-      addressLocality: "Delhi",
-      postalCode: "110034",
-      addressCountry: "IN",
-    },
-    telephone: "+91-99895-54095",
-    email: "Aggarwal54095@gmail.com",
-  },
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: `${siteUrl}/`,
+      "@type": "MedicalWebPage",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: "Positive Airway Pressure (PAP) Therapy: CPAP & BiPAP for Sleep Apnea",
+      description:
+        "Comprehensive guide to PAP therapy (CPAP/BiPAP) for sleep apnea management, titrations, and mask fitting by Dr. Manish Aggarwal, Pulmonologist & Sleep Specialist.",
+      inLanguage: "en-IN",
+      isPartOf: {
+        "@id": `${BASE_URL}/#website`,
+      },
+      medicalAudience: {
+        "@type": "MedicalAudience",
+        audienceType: "Patient",
+      },
+      mainContentOfPage: {
+        "@type": "WebPageElement",
+        about: [
+          {
+            "@id": `${FULL_URL}#pap-therapy`,
+          },
+        ],
+      },
+      lastReviewed: "2026-07-30",
+      reviewedBy: {
+        "@id": `${BASE_URL}/#physician`,
+      },
+      author: {
+        "@id": `${BASE_URL}/#physician`,
+      },
+      publisher: {
+        "@id": `${BASE_URL}/#clinic`,
+      },
+      mainEntity: {
+        "@id": `${FULL_URL}#faq`,
+      },
+      breadcrumb: {
+        "@id": `${FULL_URL}#breadcrumb`,
+      },
     },
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Sleep",
-      item: `${siteUrl}/sleep`,
+      "@type": "MedicalTherapy",
+      "@id": `${FULL_URL}#pap-therapy`,
+      name: "Positive Airway Pressure Therapy",
+      alternateName: ["PAP Therapy", "CPAP Therapy", "BiPAP Therapy"],
+      usedToTreat: [
+        {
+          "@type": "MedicalCondition",
+          name: "Obstructive Sleep Apnea",
+        },
+        {
+          "@type": "MedicalCondition",
+          name: "Central Sleep Apnea",
+        },
+        {
+          "@type": "MedicalCondition",
+          name: "Obesity Hypoventilation Syndrome",
+        },
+      ],
+      howPerformed:
+        "Delivers pressurized ambient air via a fitted mask interface during sleep to keep the upper airway open and eliminate apneic events.",
     },
     {
-      "@type": "ListItem",
-      position: 3,
-      name: "CBT-I",
-      item: pageUrl,
+      "@type": "Physician",
+      "@id": `${BASE_URL}/#physician`,
+      name: "Dr. Manish Aggarwal",
+      honorificPrefix: "Dr.",
+      jobTitle:
+        "Principal Director, Department of Chest Disease & Interventional Pulmonology",
+      medicalSpecialty: [
+        "https://schema.org/Pulmonology",
+        "https://schema.org/SleepMedicine",
+      ],
+      url: `${BASE_URL}/about-us`,
+      worksFor: [
+        {
+          "@type": "Hospital",
+          name: "Max Hospital",
+        },
+        {
+          "@id": `${BASE_URL}/#clinic`,
+        },
+      ],
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": `${BASE_URL}/#clinic`,
+      name: "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
+      medicalSpecialty: "https://schema.org/Pulmonology",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "JU-12A, Block G&JU, Ranikhet",
+        addressLocality: "Pitampura, Delhi",
+        postalCode: "110034",
+        addressCountry: "IN",
+      },
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "350",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${FULL_URL}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${BASE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Sleep",
+          item: `${BASE_URL}/sleep`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "PAP Therapy (CPAP/BiPAP)",
+          item: FULL_URL,
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${FULL_URL}#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is the difference between CPAP and BiPAP?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "CPAP (Continuous Positive Airway Pressure) delivers air at a constant pressure level during both inhalation and exhalation. BiPAP (Bilevel Positive Airway Pressure) provides two distinct pressure levels: a higher pressure during inhalation and a lower pressure during exhalation, making it easier for some patients to exhale.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I know what pressure setting I need?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The correct pressure setting is determined through a sleep titration study or using an Auto-CPAP (APAP) device supervised by your sleep specialist to ensure complete resolution of airway blockages.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What should I do if my CPAP mask leaks air or feels uncomfortable?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Mask comfort is critical for effective therapy. If you experience leaks or pressure marks, your mask straps may need adjusting, or a different size or mask style (nasal pillows, nasal mask, or full-face mask) may be required.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does it take to get used to PAP therapy?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most patients adjust within a few days to a couple of weeks of consistent nightly use. Practicing wearing the mask during relaxing daytime activities can speed up the adaptation process.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can PAP therapy cure my sleep apnea?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "PAP therapy acts as an effective treatment that keeps the airway open while in use, successfully controlling symptoms and removing health risks. It does not permanently cure sleep apnea, so continuous long-term nightly use is recommended.",
+          },
+        },
+      ],
     },
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is Cognitive Behavioral Therapy for Insomnia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CBT-I is a structured, evidence-based therapy that addresses the habits and thought patterns that contribute to ongoing insomnia. It includes components such as sleep education, stimulus control, sleep restriction, cognitive restructuring, and relaxation techniques.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is CBT-I better than sleeping pills?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CBT-I and sleeping pills work differently. CBT-I addresses underlying behaviours and thoughts for potentially longer-lasting improvement, while sleeping pills offer more immediate, short-term relief. Many sleep specialists consider CBT-I a preferred first-line approach for chronic insomnia, but the right option depends on individual circumstances and should be discussed with your doctor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does CBT-I take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CBT-I is usually delivered over several sessions across a few weeks, allowing time for new sleep habits to develop. The exact duration varies depending on individual response and the components used.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can CBT-I help chronic insomnia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CBT-I is commonly used and recommended for chronic insomnia, as it addresses the ongoing habits and thought patterns that often keep long-term insomnia going. Results vary between individuals.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who should consider CBT-I?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CBT-I may be suitable for adults with chronic insomnia, frequent nighttime awakenings, early morning waking, or those looking to reduce dependence on sleeping pills. A detailed sleep evaluation helps determine if it is the right option.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does CBT-I have side effects?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "CBT-I does not involve medication, so it does not carry the side effects associated with sleep medicines. Some components, such as sleep restriction therapy, may cause temporary tiredness in the initial weeks as your sleep pattern adjusts, but this is generally short-lived and monitored by your sleep specialist.",
-      },
-    },
-  ],
-};
-
-export default function CbtITreatmentPage() {
+export default function PapTherapyPage() {
   return (
     <>
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(medicalWebPageSchema),
+          __html: JSON.stringify(schema),
         }}
       />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(physicianSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-
       <PapTherapySleepApneaPage />
     </>
   );

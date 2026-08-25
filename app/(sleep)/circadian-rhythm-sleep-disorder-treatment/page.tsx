@@ -1,14 +1,15 @@
+import type { Metadata } from "next";
 import CircadianRhythmSleepDisorderPage from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/circadian-rhythm-sleep-disorder-treatment";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title =
-  "Circadian Rhythm Sleep Disorder Treatment | Dr. Manish";
-
+const title = "Circadian Rhythm Sleep Disorder Treatment | Dr. Manish";
 const description =
   "Wide awake at night, exhausted by day? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses and treats circadian rhythm sleep-wake disorders. Book a consultation.";
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   keywords: [
@@ -26,30 +27,30 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment`,
+    canonical: FULL_URL,
   },
   openGraph: {
     type: "website",
-    siteName: "Delhi Lung & Bronchoscopy Center",
+    locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
     title,
     description,
-    url: `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment`,
     images: [
       {
-        url: `${BASE_URL}/images/circadian-rhythm-og.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Circadian Rhythm Sleep Disorder Treatment",
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        height: 75,
+        alt: "Circadian Rhythm Sleep Disorder Treatment by Dr. Manish Aggarwal",
       },
     ],
-    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
     title,
     description:
       "Pulmonologist & sleep specialist Dr. Manish Aggarwal explains delayed sleep phase, shift work disorder, jet lag, and other circadian rhythm sleep-wake disorders.",
-    images: [`${BASE_URL}/images/circadian-rhythm-og.jpg`],
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -58,12 +59,15 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment#webpage`,
-      url: `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment`,
+      "@id": `${FULL_URL}#webpage`,
       name: "Circadian Rhythm Sleep-Wake Disorders: Why Your Body Clock Runs on Its Own Schedule",
+      url: FULL_URL,
       description:
         "Comprehensive guide to Circadian Rhythm Sleep-Wake Disorders — including delayed sleep phase, advanced sleep phase, shift work disorder, and jet lag disorder — covering symptoms, causes, diagnosis, and treatment, by Dr. Manish Aggarwal, Pulmonologist and Sleep Specialist.",
       inLanguage: "en-IN",
+      isPartOf: {
+        "@id": `${BASE_URL}/#website`,
+      },
       medicalAudience: {
         "@type": "MedicalAudience",
         audienceType: "Patient",
@@ -139,48 +143,74 @@ const schema = {
       },
       lastReviewed: "2026-07-30",
       reviewedBy: {
-        "@type": "Person",
-        name: "Dr. Manish Aggarwal",
-        jobTitle: "Pulmonologist & Sleep Specialist",
+        "@id": `${BASE_URL}/#physician`,
       },
       author: {
-        "@type": "Physician",
-        name: "Dr. Manish Aggarwal",
+        "@id": `${BASE_URL}/#physician`,
       },
       publisher: {
-        "@type": "MedicalOrganization",
-        name: "Delhi Lung & Bronchoscopy Center",
+        "@id": `${BASE_URL}/#clinic`,
+      },
+      mainEntity: {
+        "@id": `${FULL_URL}#faq`,
+      },
+      breadcrumb: {
+        "@id": `${FULL_URL}#breadcrumb`,
       },
     },
     {
       "@type": "Physician",
-      "@id": `${BASE_URL}/about-us#physician`,
+      "@id": `${BASE_URL}/#physician`,
       name: "Dr. Manish Aggarwal",
-      medicalSpecialty: ["Pulmonology", "Sleep Medicine"],
+      honorificPrefix: "Dr.",
+      jobTitle:
+        "Principal Director, Department of Chest Disease & Interventional Pulmonology",
+      medicalSpecialty: [
+        "https://schema.org/Pulmonology",
+        "https://schema.org/SleepMedicine",
+      ],
       url: `${BASE_URL}/about-us`,
-      worksFor: {
-        "@type": "MedicalOrganization",
-        name: "Delhi Lung & Bronchoscopy Center",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "J1-12A, Pitampura",
-          addressLocality: "Delhi",
-          postalCode: "110034",
-          addressCountry: "IN",
+      worksFor: [
+        {
+          "@type": "Hospital",
+          name: "Max Hospital",
         },
-        telephone: "+91-99895-54095",
-        email: "Aggarwal54095@gmail.com",
+        {
+          "@id": `${BASE_URL}/#clinic`,
+        },
+      ],
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": `${BASE_URL}/#clinic`,
+      name: "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
+      medicalSpecialty: "https://schema.org/Pulmonology",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "JU-12A, Block G&JU, Ranikhet",
+        addressLocality: "Pitampura, Delhi",
+        postalCode: "110034",
+        addressCountry: "IN",
+      },
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "350",
       },
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: BASE_URL,
+          item: `${BASE_URL}/`,
         },
         {
           "@type": "ListItem",
@@ -192,13 +222,13 @@ const schema = {
           "@type": "ListItem",
           position: 3,
           name: "Circadian Rhythm Sleep-Wake Disorders",
-          item: `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/circadian-rhythm-sleep-disorder-treatment#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -261,7 +291,7 @@ const schema = {
   ],
 };
 
-export default function Page() {
+export default function CircadianRhythmSleepDisorderPageRoute() {
   return (
     <>
       <script
@@ -270,7 +300,9 @@ export default function Page() {
           __html: JSON.stringify(schema),
         }}
       />
-      <CircadianRhythmSleepDisorderPage />
+      <main>
+        <CircadianRhythmSleepDisorderPage />
+      </main>
     </>
   );
 }

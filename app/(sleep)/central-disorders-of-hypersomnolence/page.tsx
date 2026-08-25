@@ -1,14 +1,15 @@
+import type { Metadata } from "next";
 import CentralDisordersOfHypersomnolencePage from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/central-disorders-of-hypersomnolence";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title =
-  "Excessive Daytime Sleepiness: Causes & Treatment | Dr. Manish";
-
+const title = "Excessive Daytime Sleepiness: Causes & Treatment | Dr. Manish";
 const description =
   "Sleepy all day despite a full night's sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses narcolepsy and hypersomnolence disorders. Book a consultation.";
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   keywords: [
@@ -26,29 +27,29 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: `${BASE_URL}/central-disorders-of-hypersomnolence`,
+    canonical: FULL_URL,
   },
   openGraph: {
-    title: "Central Hypersomnolence Treatment | Dr. Manish Aggarwal",
+    type: "website",
+    locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    title,
     description,
-    url: `${BASE_URL}/central-disorders-of-hypersomnolence`,
-    siteName: "Delhi Lung & Bronchoscopy Center",
     images: [
       {
-        url: `${BASE_URL}/images/central-hypersomnolence-og.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        height: 75,
+        alt: "Central Hypersomnolence Treatment by Dr. Manish Aggarwal",
       },
     ],
-    locale: "en_IN",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Central Hypersomnolence Treatment | Dr. Manish Aggarwal",
-    description:
-      "Sleepy all day despite a full night's sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses narcolepsy and hypersomnolence disorders. Book a consultation.",
-    images: [`${BASE_URL}/images/central-hypersomnolence-og.jpg`],
+    title,
+    description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -57,12 +58,15 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/central-disorders-of-hypersomnolence#webpage`,
-      url: `${BASE_URL}/central-disorders-of-hypersomnolence`,
+      "@id": `${FULL_URL}#webpage`,
       name: "Central Disorders of Hypersomnolence: Why the Sleepiness Never Really Lifts",
+      url: FULL_URL,
       description:
         "Comprehensive guide to Central Disorders of Hypersomnolence — including narcolepsy, idiopathic hypersomnia, and Kleine-Levin syndrome — covering symptoms, causes, diagnosis, and treatment, by Dr. Manish Aggarwal, Pulmonologist and Sleep Specialist.",
       inLanguage: "en-IN",
+      isPartOf: {
+        "@id": `${BASE_URL}/#website`,
+      },
       medicalAudience: {
         "@type": "MedicalAudience",
         audienceType: "Patient",
@@ -138,48 +142,74 @@ const schema = {
       },
       lastReviewed: "2026-07-30",
       reviewedBy: {
-        "@type": "Person",
-        name: "Dr. Manish Aggarwal",
-        jobTitle: "Pulmonologist & Sleep Specialist",
+        "@id": `${BASE_URL}/#physician`,
       },
       author: {
-        "@type": "Physician",
-        name: "Dr. Manish Aggarwal",
+        "@id": `${BASE_URL}/#physician`,
       },
       publisher: {
-        "@type": "MedicalOrganization",
-        name: "Delhi Lung & Bronchoscopy Center",
+        "@id": `${BASE_URL}/#clinic`,
+      },
+      mainEntity: {
+        "@id": `${FULL_URL}#faq`,
+      },
+      breadcrumb: {
+        "@id": `${FULL_URL}#breadcrumb`,
       },
     },
     {
       "@type": "Physician",
-      "@id": `${BASE_URL}/about-us#physician`,
+      "@id": `${BASE_URL}/#physician`,
       name: "Dr. Manish Aggarwal",
-      medicalSpecialty: ["Pulmonology", "Sleep Medicine"],
+      honorificPrefix: "Dr.",
+      jobTitle:
+        "Principal Director, Department of Chest Disease & Interventional Pulmonology",
+      medicalSpecialty: [
+        "https://schema.org/Pulmonology",
+        "https://schema.org/SleepMedicine",
+      ],
       url: `${BASE_URL}/about-us`,
-      worksFor: {
-        "@type": "MedicalOrganization",
-        name: "Delhi Lung & Bronchoscopy Center",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "J1-12A, Pitampura",
-          addressLocality: "Delhi",
-          postalCode: "110034",
-          addressCountry: "IN",
+      worksFor: [
+        {
+          "@type": "Hospital",
+          name: "Max Hospital",
         },
-        telephone: "+91-99895-54095",
-        email: "Aggarwal54095@gmail.com",
+        {
+          "@id": `${BASE_URL}/#clinic`,
+        },
+      ],
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": `${BASE_URL}/#clinic`,
+      name: "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
+      medicalSpecialty: "https://schema.org/Pulmonology",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "JU-12A, Block G&JU, Ranikhet",
+        addressLocality: "Pitampura, Delhi",
+        postalCode: "110034",
+        addressCountry: "IN",
+      },
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "350",
       },
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/central-disorders-of-hypersomnolence#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: BASE_URL,
+          item: `${BASE_URL}/`,
         },
         {
           "@type": "ListItem",
@@ -191,13 +221,13 @@ const schema = {
           "@type": "ListItem",
           position: 3,
           name: "Central Disorders of Hypersomnolence",
-          item: `${BASE_URL}/central-disorders-of-hypersomnolence`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/central-disorders-of-hypersomnolence#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -260,7 +290,7 @@ const schema = {
   ],
 };
 
-export default function Page() {
+export default function CentralDisordersOfHypersomnolencePageRoute() {
   return (
     <>
       <script
@@ -269,7 +299,9 @@ export default function Page() {
           __html: JSON.stringify(schema),
         }}
       />
-      <CentralDisordersOfHypersomnolencePage />
+      <main>
+        <CentralDisordersOfHypersomnolencePage />
+      </main>
     </>
   );
 }
