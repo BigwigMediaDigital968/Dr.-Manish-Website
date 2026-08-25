@@ -16,10 +16,13 @@ import WhyChooseUs from "./component/website/WhyChooseUs";
 import Different from "./component/website/Different";
 import Stats from "./component/website/Stats";
 
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+
 // SEO Metadata Configuration
 export const metadata = {
   title: "Pulmonologist & Lung Specialist in Delhi | Dr. Manish Aggarwal",
-  description: "Dr. Manish Aggarwal, best pulmonologist in Delhi with 24+ years experience. Expert care for asthma, COPD, TB, bronchoscopy & sleep disorders.",
+  description:
+    "Dr. Manish Aggarwal, best pulmonologist in Delhi with 24+ years experience. Expert care for asthma, COPD, TB, bronchoscopy & sleep disorders.",
   keywords: [
     "best pulmonologist in Delhi",
     "lung specialist Delhi",
@@ -32,8 +35,27 @@ export const metadata = {
     "TB specialist doctor Delhi",
     "sleep apnea doctor Delhi",
     "EBUS Delhi",
-    "Dr. Manish Aggarwal pulmonologist"
+    "Dr. Manish Aggarwal pulmonologist",
   ],
+  alternates: {
+    canonical: `${BASE_URL}/`,
+  },
+  openGraph: {
+    title: "Pulmonologist & Lung Specialist in Delhi | Dr. Manish Aggarwal",
+    description:
+      "Dr. Manish Aggarwal, best pulmonologist in Delhi with 24+ years experience. Expert care for asthma, COPD, TB, bronchoscopy & sleep disorders.",
+    url: `${BASE_URL}/`,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo-new.png",
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
+  },
 };
 
 export default function Home() {
