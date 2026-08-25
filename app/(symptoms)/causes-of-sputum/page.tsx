@@ -1,35 +1,50 @@
 import PageContent from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/reason-for-cough";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
+// SEO Metadata Configuration
 export const metadata = {
-  title: "Causes of Sputum in Throat | Consult Dr. Manish Aggarwal",
+  title: "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal",
   description:
-    "Dealing with sputum in throat? Understand the causes of sputum and get expert advice from pulmonologist Dr. Manish Aggarwal. Book your consultation now.",
+    "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.",
   keywords: [
+    "reason for cough",
+    "causes of coughing",
+    "persistent cough treatment",
     "causes of sputum",
     "sputum in throat",
-    "sputum causes",
     "cough with sputum",
     "pulmonologist near me",
     "book pulmonologist appointment",
-    "sputum consultation",
+    "cough consultation Delhi",
   ],
   alternates: {
-    canonical: `${BASE_URL}/causes-of-sputum`,
+    canonical: FULL_URL,
   },
   openGraph: {
-    title: "Causes of Sputum in Throat | Consult Dr. Manish Aggarwal",
+    title: "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal",
     description:
-      "Dealing with sputum in throat? Understand the causes of sputum and get expert advice from pulmonologist Dr. Manish Aggarwal. Book your consultation now.",
-    url: `${BASE_URL}/causes-of-sputum`,
+      "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/logo-new.png",
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Causes of Sputum in Throat | Consult Dr. Manish Aggarwal",
+    title: "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal",
     description:
-      "Dealing with sputum in throat? Understand the causes of sputum and get expert advice from pulmonologist Dr. Manish Aggarwal. Book your consultation now.",
+      "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.",
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -38,15 +53,15 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/causes-of-sputum#webpage`,
-      url: `${BASE_URL}/causes-of-sputum`,
-      name: "Causes of Sputum in Throat | Consult Dr. Manish Aggarwal",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal",
       description:
-        "Dealing with sputum in throat? Understand the causes of sputum and get expert advice from pulmonologist Dr. Manish Aggarwal. Book your consultation now.",
+        "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.",
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalCondition",
-        name: "Sputum Production",
+        name: "Cough and Sputum Production",
       },
       medicalAudience: {
         "@type": "MedicalAudience",
@@ -63,7 +78,7 @@ const schema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/causes-of-sputum#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -74,45 +89,45 @@ const schema = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Causes of Sputum",
-          item: `${BASE_URL}/causes-of-sputum`,
+          name: "Reason for Cough",
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/causes-of-sputum#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is the main cause of sputum?",
+          name: "What is the main cause of a persistent cough?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The main cause of sputum is usually a respiratory infection, such as a cold, flu, bronchitis, or sinusitis. These conditions irritate the airways and cause the body to produce extra mucus, which comes up as sputum when you cough. Other causes of sputum include asthma, smoking, allergies, and acid reflux.",
+            text: "The main causes of a persistent cough include respiratory infections, asthma, chronic bronchitis, COPD, post-nasal drip, allergies, and acid reflux (GERD). A pulmonologist can perform diagnostic tests to identify the precise underlying trigger.",
           },
         },
         {
           "@type": "Question",
-          name: "Is it normal to produce sputum?",
+          name: "Is it normal to produce sputum when coughing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, producing a small amount of sputum from time to time is normal, especially during a mild cold or seasonal allergies. Your airways naturally produce mucus to trap dust and germs. However, if sputum in throat continues for more than two to three weeks, contains blood, or comes with fever and breathing difficulty, it is best to consult a pulmonologist.",
+            text: "Producing a small amount of sputum during a cold or mild respiratory infection is normal as your airways clear out trapped particles. However, coughing up sputum for more than 2 to 3 weeks, or coughing up discolored or blood-tinged sputum, requires evaluation by a chest specialist.",
           },
         },
         {
           "@type": "Question",
-          name: "When should I see a pulmonologist for sputum?",
+          name: "When should I see a pulmonologist for a cough?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "You should see a pulmonologist if your cough with sputum lasts longer than three weeks, if the sputum is discolored, blood-tinged, or foul-smelling, or if you experience chest pain, fever, or shortness of breath along with it.",
+            text: "You should see a pulmonologist if your cough lasts longer than three weeks, produces discolored or bloody sputum, or is accompanied by symptoms such as chest pain, fever, unintended weight loss, or shortness of breath.",
           },
         },
         {
           "@type": "Question",
-          name: "Can sputum in throat be treated without medicine?",
+          name: "Can a persistent cough be treated without medicine?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Mild sputum caused by a cold or allergies often improves with rest, warm fluids, and steam inhalation. However, if the cause of sputum is an infection or a chronic lung condition, medical treatment is usually needed for full recovery.",
+            text: "Mild acute coughs caused by simple viral infections may resolve with fluids, rest, and steam inhalation. However, chronic coughs triggered by asthma, infections, or underlying lung conditions require targeted medical diagnosis and treatment for complete recovery.",
           },
         },
       ],
@@ -120,16 +135,16 @@ const schema = {
   ],
 };
 
-export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+export default function Page() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

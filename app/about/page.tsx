@@ -10,6 +10,34 @@ import AboutStats from "./component/AboutStats";
 import Awards from "./component/Awards";
 import Feature from "./component/Feature";
 
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+
+// SEO Metadata Configuration
+export const metadata = {
+  title: "About Dr. Manish Aggarwal | Pulmonologist in Delhi",
+  description:
+    "24+ years' experience, FRCP (Glasgow), NHS UK trained. Expert in bronchoscopy, asthma, COPD, ILD & sleep medicine in Delhi.",
+  alternates: {
+    canonical: `${BASE_URL}/about`,
+  },
+  openGraph: {
+    title: "About Dr. Manish Aggarwal | Pulmonologist in Delhi",
+    description:
+      "24+ years' experience, FRCP (Glasgow), NHS UK trained. Expert in bronchoscopy, asthma, COPD, ILD & sleep medicine in Delhi.",
+    url: `${BASE_URL}/about`,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
+  },
+};
+
 export default function About() {
   return (
     <>
