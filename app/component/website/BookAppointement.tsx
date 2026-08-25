@@ -91,8 +91,8 @@ export default function BookAppointment() {
               Delhi Lung & Bronchoscopy Centre
             </span>
 
-            <h1
-              className="text-[2.6rem] font-extrabold leading-[1.08] tracking-tight text-[#0f172a] lg:text-[3.4rem]"
+            <h2
+              className="text-[2.2rem] font-extrabold leading-[1.08] tracking-tight text-[#0f172a] lg:text-5xl"
               style={{ letterSpacing: "-0.04em" }}
             >
               Specialist Care
@@ -103,7 +103,7 @@ export default function BookAppointment() {
               >
                 At Your Service
               </span>
-            </h1>
+            </h2>
 
             <p className="mt-5 text-base leading-relaxed text-[#64748b] lg:text-lg">
               Breathe better, sleep well. Our pulmonology specialists deliver

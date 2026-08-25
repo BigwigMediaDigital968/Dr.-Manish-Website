@@ -1,10 +1,10 @@
 import PageContent from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/reasons-for-prolonged-fever";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title =
-  "Prolonged Fever Not Going Away? Consult Dr. Manish Aggarwal";
-
+const title = "Prolonged Fever Not Going Away? Consult Dr. Manish Aggarwal";
 const description =
   "Fever lasting over a week? Know the causes for prolonged fever and consult Dr. Manish Aggarwal, pulmonologist. Book today.";
 
@@ -22,18 +22,28 @@ export const metadata = {
     "chest infection fever doctor",
   ],
   alternates: {
-    canonical: `${BASE_URL}/reasons-for-prolonged-fever`,
+    canonical: FULL_URL,
   },
   openGraph: {
     title,
     description,
-    url: `${BASE_URL}/reasons-for-prolonged-fever`,
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -42,11 +52,10 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/reasons-for-prolonged-fever#webpage`,
-      url: `${BASE_URL}/reasons-for-prolonged-fever`,
-      name: "Prolonged Fever Not Going Away? Consult Dr. Manish Aggarwal",
-      description:
-        "Fever lasting over a week? Know the causes for prolonged fever and consult Dr. Manish Aggarwal, pulmonologist. Book today.",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalSignOrSymptom",
@@ -67,7 +76,7 @@ const schema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/reasons-for-prolonged-fever#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -79,13 +88,13 @@ const schema = {
           "@type": "ListItem",
           position: 2,
           name: "Reasons for Prolonged Fever",
-          item: `${BASE_URL}/reasons-for-prolonged-fever`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/reasons-for-prolonged-fever#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -149,15 +158,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

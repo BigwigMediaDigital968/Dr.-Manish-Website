@@ -1,10 +1,10 @@
 import PageContent from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/causes-of-wheezing";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title =
-  "Causes of Wheezing? Consult Dr. Manish Aggarwal | Book Now";
-
+const title = "Causes of Wheezing? Consult Dr. Manish Aggarwal | Book Now";
 const description =
   "Struggling with wheezing? Get expert diagnosis from Dr. Manish Aggarwal, pulmonologist. Same-day spirometry available. Book your consultation today.";
 
@@ -22,18 +22,28 @@ export const metadata = {
     "Dr. Manish Aggarwal pulmonologist",
   ],
   alternates: {
-    canonical: `${BASE_URL}/causes-of-wheezing`,
+    canonical: FULL_URL,
   },
   openGraph: {
     title,
     description,
-    url: `${BASE_URL}/causes-of-wheezing`,
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/logo-new.png",
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: "/logo-new.png",
   },
 };
 
@@ -42,11 +52,10 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/causes-of-wheezing#webpage`,
-      url: `${BASE_URL}/causes-of-wheezing`,
-      name: "Causes of Wheezing? Consult Dr. Manish Aggarwal | Book Now",
-      description:
-        "Struggling with wheezing? Get expert diagnosis from Dr. Manish Aggarwal, pulmonologist. Same-day spirometry available. Book your consultation today.",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalCondition",
@@ -67,7 +76,7 @@ const schema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/causes-of-wheezing#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -79,13 +88,13 @@ const schema = {
           "@type": "ListItem",
           position: 2,
           name: "Causes of Wheezing",
-          item: `${BASE_URL}/causes-of-wheezing`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/causes-of-wheezing#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -173,15 +182,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

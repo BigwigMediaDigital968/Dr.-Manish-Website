@@ -1,54 +1,60 @@
 import type { Metadata } from "next";
 import PageContent from "./PageContent";
 
-const siteUrl = process.env.SITE_URL;
-const pageUrl = `${siteUrl}/procedures/pulmonary-function-test-pft-in-delhi`;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/procedures/pulmonary-function-test-pft-in-delhi";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
+
+const title = "Pulmonary Function Test (PFT) in Delhi | Dr. Aggarwal";
+const description =
+  "Complete pulmonary function test (PFT) in Delhi by Dr. Manish Aggarwal — spirometry, lung volumes & DLCO. Same-day results. Book your PFT today.";
 
 export const metadata: Metadata = {
-  title: "Pulmonary Function Test (PFT) in Delhi | Dr. Aggarwal",
-  description:
-    "Complete pulmonary function test (PFT) in Delhi by Dr. Manish Aggarwal — spirometry, lung volumes & DLCO. Same-day results. Book your PFT today.",
-
+  title,
+  description,
+  keywords: [
+    "pulmonary function test",
+    "PFT test Delhi",
+    "PFT in Delhi",
+    "lung function test Delhi",
+    "spirometry test Delhi",
+    "DLCO test Delhi",
+    "lung volume test",
+    "interventional pulmonologist Delhi",
+    "Dr. Manish Aggarwal",
+  ],
   authors: [
     {
       name: "Dr. Manish Aggarwal",
     },
   ],
-
+  alternates: {
+    canonical: FULL_URL,
+  },
   robots: {
     index: true,
     follow: true,
   },
-
-  alternates: {
-    canonical:
-      "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi",
-  },
-
   openGraph: {
     type: "website",
-    siteName: "Dr. Manish's Sleep & Pulmonology Clinic",
-    title: "Pulmonary Function Test (PFT) in Delhi | Dr. Aggarwal",
-    description:
-      "Complete pulmonary function test (PFT) in Delhi by Dr. Manish Aggarwal — spirometry, lung volumes & DLCO. Same-day results. Book your PFT today.",
-    url: "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi",
     locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    title,
+    description,
     images: [
       {
-        url: `${siteUrl}/images/pulmonary-function-test-pft-og.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Pulmonary Function Test (PFT) in Delhi - Dr. Manish Aggarwal",
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Pulmonary Function Test (PFT) in Delhi | Dr. Aggarwal",
-    description:
-      "Complete pulmonary function test (PFT) in Delhi by Dr. Manish Aggarwal — spirometry, lung volumes & DLCO. Same-day results. Book your PFT today.",
-    images: [`${siteUrl}/images/pulmonary-function-test-pft-og.jpg`],
+    title,
+    description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -57,37 +63,36 @@ const structuredData = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: "Pulmonary Function Test (PFT) in Delhi | Dr. Aggarwal",
-      description:
-        "Complete pulmonary function test (PFT) in Delhi by Dr. Manish Aggarwal — spirometry, lung volumes & DLCO. Same-day results. Book your PFT today.",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
       inLanguage: "en-IN",
       isPartOf: {
-        "@id": `${siteUrl}/#website`,
+        "@id": `${BASE_URL}/#website`,
       },
       about: {
-        "@id": `${pageUrl}#medicaltest`,
+        "@id": `${FULL_URL}#medicaltest`,
       },
       reviewedBy: {
-        "@id": `${siteUrl}/#physician`,
+        "@id": `${BASE_URL}/#physician`,
       },
       mainEntity: {
-        "@id": `${pageUrl}#faq`,
+        "@id": `${FULL_URL}#faq`,
       },
       breadcrumb: {
-        "@id": `${pageUrl}#breadcrumb`,
+        "@id": `${FULL_URL}#breadcrumb`,
       },
     },
     {
       "@type": "MedicalTest",
-      "@id": `${pageUrl}#medicaltest`,
+      "@id": `${FULL_URL}#medicaltest`,
       name: "Pulmonary Function Test (PFT) in Delhi",
       description:
         "A pulmonary function test (PFT) combines spirometry, lung volume measurement, and diffusion capacity (DLCO) testing to give a complete picture of airflow, lung capacity, and gas exchange efficiency.",
       bodyLocation: "Lungs",
       performer: {
-        "@id": `${siteUrl}/#physician`,
+        "@id": `${BASE_URL}/#physician`,
       },
       preparation: [
         "Avoid heavy meals and vigorous exercise for at least an hour before",
@@ -103,31 +108,31 @@ const structuredData = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${pageUrl}#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: `${siteUrl}`,
+          item: `${BASE_URL}/`,
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Procedures",
-          item: `${siteUrl}/procedures`,
+          item: `${BASE_URL}/procedures`,
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Pulmonary Function Test (PFT) in Delhi",
-          item: pageUrl,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${pageUrl}#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -173,10 +178,11 @@ const structuredData = {
     },
     {
       "@type": "Physician",
-      "@id": `${siteUrl}/#physician`,
+      "@id": `${BASE_URL}/#physician`,
       name: "Dr. Manish Aggarwal",
       honorificPrefix: "Dr.",
-      jobTitle: "Principal Director, Department of Chest Disease & Interventional Pulmonology",
+      jobTitle:
+        "Principal Director, Department of Chest Disease & Interventional Pulmonology",
       medicalSpecialty: "https://schema.org/Pulmonology",
       hasCredential: [
         {
@@ -198,7 +204,7 @@ const structuredData = {
           name: "Max Hospital",
         },
         {
-          "@id": `${siteUrl}/#clinic`,
+          "@id": `${BASE_URL}/#clinic`,
         },
       ],
       memberOf: [
@@ -228,7 +234,7 @@ const structuredData = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": `${siteUrl}/#clinic`,
+      "@id": `${BASE_URL}/#clinic`,
       name: "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
       medicalSpecialty: "https://schema.org/Pulmonology",
       address: {
@@ -249,7 +255,7 @@ const structuredData = {
   ],
 };
 
-export default function page() {
+export default function PulmonaryFunctionTestPageRoute() {
   return (
     <>
       <script
@@ -258,8 +264,9 @@ export default function page() {
           __html: JSON.stringify(structuredData),
         }}
       />
-
-      <PageContent />
+      <main>
+        <PageContent />
+      </main>
     </>
   );
 }

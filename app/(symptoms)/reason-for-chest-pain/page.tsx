@@ -1,10 +1,10 @@
 import PageContent from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/reason-for-chest-pain";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title =
-  "Reason for Chest Pain? Consult Dr. Manish Aggarwal | Book Now";
-
+const title = "Reason for Chest Pain? Consult Dr. Manish Aggarwal | Book Now";
 const description =
   "Struggling with pain in chest? Get expert diagnosis from Dr. Manish Aggarwal, pulmonologist. Same-day evaluation available. Book your consultation today.";
 
@@ -22,30 +22,40 @@ export const metadata = {
     "Dr. Manish Aggarwal pulmonologist",
   ],
   alternates: {
-    canonical: `${BASE_URL}/reason-for-chest-pain`,
+    canonical: FULL_URL,
   },
   openGraph: {
     title,
     description,
-    url: `${BASE_URL}/reason-for-chest-pain`,
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/reason-for-chest-pain#webpage`,
-      url: `${BASE_URL}/reason-for-chest-pain`,
-      name: "Reason for Chest Pain? Consult Dr. Manish Aggarwal | Book Now",
-      description:
-        "Struggling with pain in chest? Get expert diagnosis from Dr. Manish Aggarwal, pulmonologist. Same-day evaluation available. Book your consultation today.",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalCondition",
@@ -66,7 +76,7 @@ const schema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/reason-for-chest-pain#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -78,13 +88,13 @@ const schema = {
           "@type": "ListItem",
           position: 2,
           name: "Reason for Chest Pain",
-          item: `${BASE_URL}/reason-for-chest-pain`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/reason-for-chest-pain#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -164,15 +174,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

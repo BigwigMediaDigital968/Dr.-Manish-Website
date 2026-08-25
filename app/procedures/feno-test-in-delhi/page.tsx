@@ -1,54 +1,60 @@
 import type { Metadata } from "next";
 import PageContent from "./PageContent";
 
-const siteUrl = process.env.SITE_URL;
-const pageUrl = `${siteUrl}/procedures/feno-test-in-delhi`;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/procedures/feno-test-in-delhi";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
+
+const title = "FeNO Test in Delhi | Airway Inflammation - Dr. Aggarwal";
+const description =
+  "FeNO (exhaled nitric oxide) testing in Delhi by Dr. Manish Aggarwal to detect airway inflammation & guide asthma treatment. Book your FeNO test today.";
 
 export const metadata: Metadata = {
-  title: "FeNO Test in Delhi | Airway Inflammation - Dr. Aggarwal",
-  description:
-    "FeNO (exhaled nitric oxide) testing in Delhi by Dr. Manish Aggarwal to detect airway inflammation & guide asthma treatment. Book your FeNO test today.",
-
+  title,
+  description,
+  keywords: [
+    "FeNO test Delhi",
+    "fractional exhaled nitric oxide test",
+    "airway inflammation test",
+    "asthma diagnosis Delhi",
+    "asthma treatment Delhi",
+    "pulmonologist Pitampura",
+    "interventional pulmonology Delhi",
+    "Dr. Manish Aggarwal",
+  ],
   authors: [
     {
       name: "Dr. Manish Aggarwal",
     },
   ],
-
+  alternates: {
+    canonical: FULL_URL,
+  },
   robots: {
     index: true,
     follow: true,
   },
-
-  alternates: {
-    canonical:
-      "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi",
-  },
-
   openGraph: {
     type: "website",
-    siteName: "Dr. Manish's Sleep & Pulmonology Clinic",
-    title: "FeNO Test in Delhi | Airway Inflammation - Dr. Aggarwal",
-    description:
-      "FeNO (exhaled nitric oxide) testing in Delhi by Dr. Manish Aggarwal to detect airway inflammation & guide asthma treatment. Book your FeNO test today.",
-    url: "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi",
     locale: "en_IN",
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    title,
+    description,
     images: [
       {
-        url: `${siteUrl}/images/feno-test-og.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        height: 75,
         alt: "FeNO Test in Delhi - Dr. Manish Aggarwal",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "FeNO Test in Delhi | Airway Inflammation - Dr. Aggarwal",
-    description:
-      "FeNO (exhaled nitric oxide) testing in Delhi by Dr. Manish Aggarwal to detect airway inflammation & guide asthma treatment. Book your FeNO test today.",
-    images: [`${siteUrl}/images/feno-test-og.jpg`],
+    title,
+    description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -57,195 +63,198 @@ const structuredData = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#webpage",
-      "url": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi",
-      "name": "FeNO Test in Delhi | Airway Inflammation - Dr. Aggarwal",
-      "description": "FeNO (exhaled nitric oxide) testing in Delhi by Dr. Manish Aggarwal to detect airway inflammation & guide asthma treatment. Book your FeNO test today.",
-      "inLanguage": "en-IN",
-      "isPartOf": {
-        "@id": "https://www.drmanishaggarwal.com/#website"
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
+      inLanguage: "en-IN",
+      isPartOf: {
+        "@id": `${BASE_URL}/#website`,
       },
-      "about": {
-        "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#medicaltest"
+      about: {
+        "@id": `${FULL_URL}#medicaltest`,
       },
-      "reviewedBy": {
-        "@id": "https://www.drmanishaggarwal.com/#physician"
+      reviewedBy: {
+        "@id": `${BASE_URL}/#physician`,
       },
-      "mainEntity": {
-        "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#faq"
+      mainEntity: {
+        "@id": `${FULL_URL}#faq`,
       },
-      "breadcrumb": {
-        "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#breadcrumb"
-      }
+      breadcrumb: {
+        "@id": `${FULL_URL}#breadcrumb`,
+      },
     },
     {
       "@type": "MedicalTest",
-      "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#medicaltest",
-      "name": "FeNO Testing in Delhi",
-      "description": "The FeNO test measures fractional exhaled nitric oxide, a gas that rises with airway inflammation, helping confirm allergic asthma, guide inhaled steroid decisions, and monitor treatment response.",
-      "bodyLocation": "Airways",
-      "performer": {
-        "@id": "https://www.drmanishaggarwal.com/#physician"
+      "@id": `${FULL_URL}#medicaltest`,
+      name: "FeNO Testing in Delhi",
+      description:
+        "The FeNO test measures fractional exhaled nitric oxide, a gas that rises with airway inflammation, helping confirm allergic asthma, guide inhaled steroid decisions, and monitor treatment response.",
+      bodyLocation: "Airways",
+      performer: {
+        "@id": `${BASE_URL}/#physician`,
       },
-      "preparation": [
+      preparation: [
         "Avoid eating, drinking, or smoking for at least an hour before",
         "Avoid vigorous exercise immediately before the test",
-        "Disclose current inhaled steroid use to the clinic"
+        "Disclose current inhaled steroid use to the clinic",
       ],
-      "howPerformed": "The patient exhales slowly and steadily into a handheld FeNO device through a disposable mouthpiece at a controlled pace; the device displays a result within a minute, taking 5-10 minutes total.",
-      "followup": "No recovery time is needed; results are available instantly and reviewed by Dr. Aggarwal the same day alongside other findings.",
-      "alternateName": "Fractional Exhaled Nitric Oxide Test"
+      howPerformed:
+        "The patient exhales slowly and steadily into a handheld FeNO device through a disposable mouthpiece at a controlled pace; the device displays a result within a minute, taking 5-10 minutes total.",
+      followup:
+        "No recovery time is needed; results are available instantly and reviewed by Dr. Aggarwal the same day alongside other findings.",
+      alternateName: "Fractional Exhaled Nitric Oxide Test",
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#breadcrumb",
-      "itemListElement": [
+      "@id": `${FULL_URL}#breadcrumb`,
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.drmanishaggarwal.com"
+          position: 1,
+          name: "Home",
+          item: `${BASE_URL}/`,
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Procedures",
-          "item": "https://www.drmanishaggarwal.com/procedures"
+          position: 2,
+          name: "Procedures",
+          item: `${BASE_URL}/procedures`,
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "name": "FeNO Testing in Delhi",
-          "item": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi"
-        }
-      ]
+          position: 3,
+          name: "FeNO Testing in Delhi",
+          item: FULL_URL,
+        },
+      ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.drmanishaggarwal.com/procedures/feno-test-in-delhi#faq",
-      "mainEntity": [
+      "@id": `${FULL_URL}#faq`,
+      mainEntity: [
         {
           "@type": "Question",
-          "name": "Is the FeNO test painful?",
-          "acceptedAnswer": {
+          name: "Is the FeNO test painful?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "No. It simply involves breathing out slowly into a small handheld device. There is no needle, no sedation, and no discomfort involved."
-          }
+            text: "No. It simply involves breathing out slowly into a small handheld device. There is no needle, no sedation, and no discomfort involved.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How is FeNO different from spirometry?",
-          "acceptedAnswer": {
+          name: "How is FeNO different from spirometry?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Spirometry measures airflow through your airways, while FeNO measures the level of airway inflammation directly. The two tests give different, complementary information about your lung health."
-          }
+            text: "Spirometry measures airflow through your airways, while FeNO measures the level of airway inflammation directly. The two tests give different, complementary information about your lung health.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can FeNO testing confirm I have asthma?",
-          "acceptedAnswer": {
+          name: "Can FeNO testing confirm I have asthma?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "FeNO testing supports an asthma diagnosis when used alongside your symptoms, history, and other tests such as spirometry. It is a strong piece of the puzzle rather than a standalone diagnostic test."
-          }
+            text: "FeNO testing supports an asthma diagnosis when used alongside your symptoms, history, and other tests such as spirometry. It is a strong piece of the puzzle rather than a standalone diagnostic test.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Will this test tell me if my inhaler is working?",
-          "acceptedAnswer": {
+          name: "Will this test tell me if my inhaler is working?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Yes, in many cases. A falling FeNO level over time on treatment often suggests that inflammation is being well controlled, while a persistently high level may suggest treatment needs to be adjusted."
-          }
+            text: "Yes, in many cases. A falling FeNO level over time on treatment often suggests that inflammation is being well controlled, while a persistently high level may suggest treatment needs to be adjusted.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is this test suitable for children?",
-          "acceptedAnswer": {
+          name: "Is this test suitable for children?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Yes, FeNO testing is generally well tolerated by children old enough to follow simple breathing instructions, and it is commonly used to help diagnose and monitor asthma in younger patients as well."
-          }
-        }
-      ]
+            text: "Yes, FeNO testing is generally well tolerated by children old enough to follow simple breathing instructions, and it is commonly used to help diagnose and monitor asthma in younger patients as well.",
+          },
+        },
+      ],
     },
     {
       "@type": "Physician",
-      "@id": "https://www.drmanishaggarwal.com/#physician",
-      "name": "Dr. Manish Aggarwal",
-      "honorificPrefix": "Dr.",
-      "jobTitle": "Principal Director, Department of Chest Disease & Interventional Pulmonology",
-      "medicalSpecialty": "https://schema.org/Pulmonology",
-      "hasCredential": [
+      "@id": `${BASE_URL}/#physician`,
+      name: "Dr. Manish Aggarwal",
+      honorificPrefix: "Dr.",
+      jobTitle:
+        "Principal Director, Department of Chest Disease & Interventional Pulmonology",
+      medicalSpecialty: "https://schema.org/Pulmonology",
+      hasCredential: [
         {
           "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "MBBS"
+          credentialCategory: "MBBS",
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "MD (Tuberculosis & Chest Diseases)"
+          credentialCategory: "MD (Tuberculosis & Chest Diseases)",
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "FRCP (Glasgow)"
-        }
+          credentialCategory: "FRCP (Glasgow)",
+        },
       ],
-      "worksFor": [
+      worksFor: [
         {
           "@type": "Hospital",
-          "name": "Max Hospital"
+          name: "Max Hospital",
         },
         {
-          "@id": "https://www.drmanishaggarwal.com/#clinic"
-        }
+          "@id": `${BASE_URL}/#clinic`,
+        },
       ],
-      "memberOf": [
+      memberOf: [
         {
           "@type": "Organization",
-          "name": "European Respiratory Society (ERS)"
+          name: "European Respiratory Society (ERS)",
         },
         {
           "@type": "Organization",
-          "name": "American College of Physicians (ACP)"
+          name: "American College of Physicians (ACP)",
         },
         {
           "@type": "Organization",
-          "name": "Society of Critical Care Medicine (SCCM, USA)"
+          name: "Society of Critical Care Medicine (SCCM, USA)",
         },
         {
           "@type": "Organization",
-          "name": "European Society of Intensive Care Medicine (ESICM)"
+          name: "European Society of Intensive Care Medicine (ESICM)",
         },
         {
           "@type": "Organization",
-          "name": "Indian Chest Society"
-        }
+          name: "Indian Chest Society",
+        },
       ],
-      "telephone": "+91-9899554095",
-      "email": "mailto:Aggarmanish@gmail.com"
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://www.drmanishaggarwal.com/#clinic",
-      "name": "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
-      "medicalSpecialty": "https://schema.org/Pulmonology",
-      "address": {
+      "@id": `${BASE_URL}/#clinic`,
+      name: "Dr. Manish Aggarwal - Chest & Interventional Pulmonology Clinic",
+      medicalSpecialty: "https://schema.org/Pulmonology",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "JU-12A, Block G&JU, Ranikhet",
-        "addressLocality": "Pitampura, Delhi",
-        "postalCode": "110034",
-        "addressCountry": "IN"
+        streetAddress: "JU-12A, Block G&JU, Ranikhet",
+        addressLocality: "Pitampura, Delhi",
+        postalCode: "110034",
+        addressCountry: "IN",
       },
-      "telephone": "+91-9899554095",
-      "email": "mailto:Aggarmanish@gmail.com",
-      "aggregateRating": {
+      telephone: "+91-9899554095",
+      email: "mailto:Aggarmanish@gmail.com",
+      aggregateRating: {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "350"
-      }
-    }
-  ]
+        ratingValue: "4.9",
+        reviewCount: "350",
+      },
+    },
+  ],
 };
 
-
-export default function page() {
+export default function FeNOTestPageRoute() {
   return (
     <>
       <script
@@ -254,8 +263,9 @@ export default function page() {
           __html: JSON.stringify(structuredData),
         }}
       />
-
-      <PageContent />
+      <main>
+        <PageContent />
+      </main>
     </>
   );
 }

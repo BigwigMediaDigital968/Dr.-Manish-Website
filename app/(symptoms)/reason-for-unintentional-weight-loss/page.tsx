@@ -1,10 +1,11 @@
 import PageContent from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/reason-for-unintentional-weight-loss";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title =
   "Reason for Unintentional Weight Loss? Consult with Dr. Manish Aggarwal";
-
 const description =
   "Losing weight without trying? Discover the Reason for Unintentional Weight Loss behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.";
 
@@ -20,18 +21,28 @@ export const metadata = {
     "Dr. Manish Aggarwal appointment",
   ],
   alternates: {
-    canonical: `${BASE_URL}/reason-for-unintentional-weight-loss`,
+    canonical: FULL_URL,
   },
   openGraph: {
     title,
     description,
-    url: `${BASE_URL}/reason-for-unintentional-weight-loss`,
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: [`${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`],
   },
 };
 
@@ -40,11 +51,10 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/reason-for-unintentional-weight-loss#webpage`,
-      url: `${BASE_URL}/reason-for-unintentional-weight-loss`,
-      name: "Reason for Unintentional Weight Loss? Consult with Dr. Manish Aggarwal",
-      description:
-        "Losing weight without trying? Discover the Reason for Unintentional Weight Loss behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalSignOrSymptom",
@@ -65,7 +75,7 @@ const schema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/reason-for-unintentional-weight-loss#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -77,13 +87,13 @@ const schema = {
           "@type": "ListItem",
           position: 2,
           name: "Reason for Unintentional Weight Loss",
-          item: `${BASE_URL}/reason-for-unintentional-weight-loss`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/reason-for-unintentional-weight-loss#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -147,15 +157,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

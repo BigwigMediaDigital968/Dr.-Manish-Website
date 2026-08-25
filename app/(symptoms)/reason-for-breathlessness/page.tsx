@@ -1,10 +1,10 @@
 import PageContent from "./PageContent";
 
-const BASE_URL = process.env.SITE_URL;
+const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
+const PAGE_PATH = "/reason-for-breathlessness";
+const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title =
-  "Reason for Breathlessness? Consult with Dr. Manish Aggarwal";
-
+const title = "Reason for Breathlessness? Consult with Dr. Manish Aggarwal";
 const description =
   "Worried about breathlessness? Discover the Reason for Breathlessness behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.";
 
@@ -20,18 +20,28 @@ export const metadata = {
     "Dr. Manish Aggarwal appointment",
   ],
   alternates: {
-    canonical: `${BASE_URL}/reason-for-breathlessness`,
+    canonical: FULL_URL,
   },
   openGraph: {
     title,
     description,
-    url: `${BASE_URL}/reason-for-breathlessness`,
+    url: FULL_URL,
+    siteName: "Dr. Manish Aggarwal",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: '/logo-new.png',
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: "/logo-new.png",
   },
 };
 
@@ -40,11 +50,10 @@ const schema = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": `${BASE_URL}/reason-for-breathlessness#webpage`,
-      url: `${BASE_URL}/reason-for-breathlessness`,
-      name: "Reason for Breathlessness? Consult with Dr. Manish Aggarwal",
-      description:
-        "Worried about breathlessness? Discover the Reason for Breathlessness behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.",
+      "@id": `${FULL_URL}#webpage`,
+      url: FULL_URL,
+      name: title,
+      description: description,
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalCondition",
@@ -65,7 +74,7 @@ const schema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/reason-for-breathlessness#breadcrumb`,
+      "@id": `${FULL_URL}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -77,13 +86,13 @@ const schema = {
           "@type": "ListItem",
           position: 2,
           name: "Reason for Breathlessness",
-          item: `${BASE_URL}/reason-for-breathlessness`,
+          item: FULL_URL,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/reason-for-breathlessness#faq`,
+      "@id": `${FULL_URL}#faq`,
       mainEntity: [
         {
           "@type": "Question",
@@ -147,15 +156,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }
