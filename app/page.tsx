@@ -38,13 +38,13 @@ export const metadata = {
     "Dr. Manish Aggarwal pulmonologist",
   ],
   alternates: {
-    canonical: `${BASE_URL}/`,
+    canonical: `${BASE_URL}`,
   },
   openGraph: {
     title: "Pulmonologist & Lung Specialist in Delhi | Dr. Manish Aggarwal",
     description:
       "Dr. Manish Aggarwal, best pulmonologist in Delhi with 24+ years experience. Expert care for asthma, COPD, TB, bronchoscopy & sleep disorders.",
-    url: `${BASE_URL}/`,
+    url: `${BASE_URL}`,
     siteName: "Dr. Manish Aggarwal",
     locale: "en_IN",
     type: "website",
