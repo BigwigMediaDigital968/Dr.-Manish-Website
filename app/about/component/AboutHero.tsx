@@ -39,7 +39,7 @@ export default function AboutHero({
 
           {/* Subtext Paragraph */}
           <p className="text-white/85 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            Dr. Manish Aggarwal, Principle Director - Department of Chest
+            Dr. Manish Aggarwal, Principal Director - Department of Chest
             Disease & Interventional Pulmonologist, recognized for his expertise
             in bronchoscopy, asthma, COPD, ILD, sleep medicine, and advanced
             lung disease management. Backed by extensive academic leadership and
