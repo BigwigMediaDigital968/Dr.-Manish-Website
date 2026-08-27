@@ -216,7 +216,7 @@ export default function Footer() {
                     </h3>
 
                     <p className="mt-1 text-xs bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-                      Principle Director <br /> Chest Disease & Interventional
+                      Principal Director <br /> Chest Disease & Interventional
                       Pulmonology
                     </p>
 
