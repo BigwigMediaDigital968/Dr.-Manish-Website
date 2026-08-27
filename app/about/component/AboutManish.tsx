@@ -190,7 +190,7 @@ export default function AboutManish() {
                   About Dr. Manish Aggarwal
                 </h2>
                 <p className="text-base sm:text-lg font-medium text-[#6dbb45] leading-snug">
-                  Principle Director • Chest Disease & Interventional
+                  Principal Director • Chest Disease & Interventional
                   Pulmonology
                 </p>
               </div>
@@ -304,7 +304,7 @@ export default function AboutManish() {
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed max-w-2xl">
                   Dr. Manish Aggarwal is the proud{" "}
                   <span className="font-extrabold text-white">
-                    Principle Director of Department of Chest Disease &
+                    Principal Director of Department of Chest Disease &
                     Interventional Pulmonologist, Max Hospital
                   </span>
                   . This leading organization is highly acclaimed for providing
