@@ -245,8 +245,8 @@ export default function Speciality() {
               </div>
               <div>
                 <div className="inline-flex items-center gap-1.5 bg-[#1fa8e8]/10 text-[#0c7dc2] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-                  <Sparkles className="w-3.5 h-3.5 animate-spin" /> Senior
-                  Consultant
+                  <Sparkles className="w-3.5 h-3.5 animate-spin" /> Principal
+                  Director
                 </div>
 
                 <h3 className="text-2xl font-extrabold text-slate-950">
