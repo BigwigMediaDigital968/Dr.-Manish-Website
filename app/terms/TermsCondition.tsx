@@ -226,7 +226,7 @@ export default function TermsCondition({
             </h3>
             <p>
               We prioritize medical efficiency. Patients may book appointments
-              online or directly through our clinical desk at Vikas Marg. To
+              online or directly through our clinical desk at Pitampura. To
               ensure optimal patient rotation and minimum delay, we enforce the
               following rules:
             </p>
@@ -445,15 +445,15 @@ export default function TermsCondition({
                 </div>
                 <div className="space-y-1.5 text-xs text-slate-600 font-semibold">
                   <p className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-slate-400" /> Vikas
-                    Marg, East Delhi, Landmark: Metro Pillar
+                    <MapPin className="w-3.5 h-3.5 text-slate-400" /> 
+                       Pitampura, Delhi.
                   </p>
                   <p className="flex items-center gap-2">
                     <Mail className="w-3.5 h-3.5 text-slate-400" />{" "}
                     aggarmanish@gmail.com</p>
                   <p className="flex items-center gap-2">
                     <PhoneCall className="w-3.5 h-3.5 text-slate-400" /> +91
-                    98995 54095 (Compliance Ext.)
+                    98995 54095
                   </p>
                 </div>
               </div>
@@ -465,7 +465,7 @@ export default function TermsCondition({
                   </h4>
                   <p className="text-[11px] text-slate-400 leading-normal mt-1">
                     All formal legal notifications or medical council filings
-                    must be delivered physically to our Vikas Marg, Delhi
+                    must be delivered physically to our Pitampura, Delhi
                     headquarter with official timestamps.
                   </p>
                 </div>
