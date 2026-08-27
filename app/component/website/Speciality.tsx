@@ -254,7 +254,7 @@ export default function Speciality() {
                 </h3>
 
                 <p className="text-sm font-bold text-[#6dbb45] mt-1">
-                  Principle Director - Department of Chest Disease &
+                  Principal Director - Department of Chest Disease &
                   Interventional Pulmonologist{" "}
                 </p>
               </div>
