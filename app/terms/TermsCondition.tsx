@@ -450,11 +450,10 @@ export default function TermsCondition({
                   </p>
                   <p className="flex items-center gap-2">
                     <Mail className="w-3.5 h-3.5 text-slate-400" />{" "}
-                    administration@delhilungandsleep.com
-                  </p>
+                    aggarmanish@gmail.com</p>
                   <p className="flex items-center gap-2">
                     <PhoneCall className="w-3.5 h-3.5 text-slate-400" /> +91
-                    98765 43210 (Compliance Ext.)
+                    98995 54095 (Compliance Ext.)
                   </p>
                 </div>
               </div>
