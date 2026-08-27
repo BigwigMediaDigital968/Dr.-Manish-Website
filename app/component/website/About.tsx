@@ -188,7 +188,7 @@ export default function About() {
                     Dr. M. Aggarwal
                   </h6>
                   <p className="text-[10px] text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
-                    Principle Director
+                    Principal Director
                   </p>
 
                   <button
