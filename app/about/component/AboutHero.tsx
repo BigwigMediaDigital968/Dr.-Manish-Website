@@ -23,7 +23,7 @@ export default function AboutHero({
           {/* Subtitle Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-wider self-center lg:self-start">
             <Activity className="w-3.5 h-3.5 text-[#6dbb45]" /> India's Trusted
-            Name in Advanced Lung & Bronchoscopy
+            Name in Advanced Chest & Sleep Disorder Treatment
           </div>
           <h3 className="text-md font-medium uppercase">
             Meet Dr. Manish Aggarwal
@@ -31,16 +31,16 @@ export default function AboutHero({
 
           {/* Large Headliner */}
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.12]">
-            Leading Interventional Pulmonologist <br />
+            Leading Pulmonologist <br />
             <span className="text-emerald-100">
-              & Chest Specialist in Delhi.
+              & Sleep Disorder Specialist in Delhi.
             </span>
           </h1>
 
           {/* Subtext Paragraph */}
           <p className="text-white/85 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             Dr. Manish Aggarwal, Principal Director - Department of Chest
-            Disease & Interventional Pulmonologist, recognized for his expertise
+            Disease & Interventional Pulmonologist at Max Hospital recognized for his expertise
             in bronchoscopy, asthma, COPD, ILD, sleep medicine, and advanced
             lung disease management. Backed by extensive academic leadership and
             international experience, he is committed to delivering world-class
