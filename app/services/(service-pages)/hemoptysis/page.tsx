@@ -170,7 +170,7 @@ export default function page() {
             <section className="bg-white py-16 sm:py-12 border-t border-[#e2e8f0] mt-16">
                 <div className="max-w-7xl mx-auto px-4">
 
-                    {/* ─── BLOCK A: INTERNATIONAL EVIDENCE-BASED PRINCIPLES ─── */}
+                    {/* ─── BLOCK A: INTERNATIONAL EVIDENCE-BASED PrincipalS ─── */}
                     { }
                     <div className="mb-16">
                         <div className="">
@@ -187,7 +187,7 @@ export default function page() {
                                         Global Healthcare Standard
                                     </span>
                                     <p className="text-sm sm:text-base leading-relaxed text-[#64748b] mt-6 max-w-3xl">
-                                        Following evidence-based respiratory care principles and internationally accepted practices
+                                        Following evidence-based respiratory care Principals and internationally accepted practices
                                         including NICE-guided evaluation pathways, the clinic focuses on identifying the underlying
                                         cause through clinical examination, chest imaging, bronchoscopy, and targeted investigations.
                                     </p>

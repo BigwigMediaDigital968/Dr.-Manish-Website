@@ -206,7 +206,7 @@ export default function PrivacyPolicy() {
             </p>
             <p>
               Administrative access is limited to verified personnel. We enforce
-              the Principle of Least Privilege: only clinical staff directly
+              the Principal of Least Privilege: only clinical staff directly
               participating in your treatment (such as Dr. Manish Aggarwal,
               assisting pulmonologists, or sleep lab technicians) have access
               authorization. Physical files kept on clinic premises are stored

@@ -31,7 +31,7 @@ const faqs = [
     },
     {
         question: "Can children get ABPA?",
-        answer: "Yes, though it is more commonly seen in children and adults who have underlying asthma or cystic fibrosis. Symptoms and treatment principles are similar, but dosing and monitoring are adjusted for children."
+        answer: "Yes, though it is more commonly seen in children and adults who have underlying asthma or cystic fibrosis. Symptoms and treatment Principals are similar, but dosing and monitoring are adjusted for children."
     },
     {
         question: "What happens if ABPA is left untreated?",
