@@ -8,10 +8,9 @@ import {
   HeartHandshake,
   Sparkles,
   ShieldCheck,
-  LiaFacebook,
   Award,
 } from "lucide-react";
-import { LiaLinkedin, LiaYoutube } from "react-icons/lia";
+import { LiaFacebook, LiaInstagram, LiaLinkedin, LiaYoutube } from "react-icons/lia";
 import Popup from "./Popup";
 import Image from "next/image";
 
