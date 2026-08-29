@@ -187,7 +187,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
                 Request a Second Opinion
               </h3>
               <p className="text-xs text-sky-100/80 mt-0.5 font-medium">
-                Delhi Lung &amp; Sleep Centre • Dr. Manish Aggarwal
+                Delhi Lung &amp; Bronchoscopy Centre • Dr. Manish Aggarwal
               </p>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
                 Case Records Received
               </h3>
               <p className="text-sm text-slate-500 mt-2 leading-relaxed max-w-xs mx-auto">
-                Your medical files have been securely transmitted. Dr. Manish Aggarwal's clinical team will review your timeline and contact you to schedule your expert review session.
+                Your medical files have been securely transmitted. Dr. Manish Aggarwal's clinical team will review and contact you to schedule your appintment.
               </p>
             </div>
           </div>
