@@ -285,14 +285,13 @@ export default function AboutManish() {
           {/* ==========================================================
            AEROMED CASE CARD: AIR AMBULANCE GLOBAL TRANSPORT RESCUE
            ========================================================== */}
-          {/*
         <div className="relative bg-gradient-to-r from-[#0c7dc2] via-[#1fa8e8] to-[#6dbb45] text-white p-8 md:p-12 rounded-[40px] shadow-2xl overflow-hidden">
-            {/* Subtle background globes & plane waves }
+            {/* Subtle background globes & plane waves */}
             <div className="absolute right-0 top-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute left-1/4 bottom-0 w-60 h-60 bg-emerald-300/10 rounded-full blur-2xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-              {/* Copy details }
+              {/* Copy details*/ }
               <div className="lg:col-span-8 space-y-4 text-center lg:text-left">
                 <div className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
                   <Globe className="w-3.5 h-3.5 animate-spin duration-[10000ms]" />{" "}
