@@ -48,7 +48,7 @@ export default function AboutManish() {
   const highlights = [
     {
       title: "24+ Years Experience",
-      desc: "Dedicated expertise in Pulmonology, Bronchoscopy and Critical Respiratory Care.",
+      desc: "Dedicated expertise in Pulmonology & Sleep Disorder",
       icon: Calendar,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },
@@ -69,7 +69,7 @@ export default function AboutManish() {
   const academicRoles = [
     {
       title: "NBEMS Faculty",
-      description: "Faculty, NBEMS Accredited DTCD Program (2023–2027)",
+      description: "Faculty, NBEMS Accredited DTCD Program",
       icon: GraduationCap,
     },
     {
@@ -142,7 +142,7 @@ export default function AboutManish() {
                       Dr. Manish Aggarwal
                     </span>
                     <span className="text-xs font-bold text-[#6dbb45] mt-1 uppercase tracking-widest">
-                      Senior Chest Physician
+                      Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital,
                     </span>
                   </div>
                 )}
@@ -183,7 +183,7 @@ export default function AboutManish() {
               {/* Header / Subtitle */}
               <div className="space-y-4 text-center lg:text-left">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1fa8e8]/10 text-[#0c7dc2] text-xs font-bold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Clinic
+                  <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Principal
                   Director
                 </div>
                 <h2 className="text-3xl sm:text-4.5xl font-black text-slate-950 tracking-tight leading-tight">
@@ -191,7 +191,7 @@ export default function AboutManish() {
                 </h2>
                 <p className="text-base sm:text-lg font-medium text-[#6dbb45] leading-snug">
                   Principal Director • Chest Disease & Interventional
-                  Pulmonology
+                  Pulmonology at Max Hospital
                 </p>
               </div>
 
@@ -199,17 +199,16 @@ export default function AboutManish() {
               <div className="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
                 <p>
                   Dr. Manish Aggarwal is one of Delhi's leading Chest Disease
-                  Specialist & Interventional Pulmonologist, with over{" "}
+                  Pulmonologist and Sleep disorder specialist, with over{" "}
                   <span className="font-bold text-slate-800">24+ years</span> of
-                  experience in respiratory medicine, critical care,
-                  bronchoscopy, and advanced lung disease management.
+                  experience in respiratory medicine and sleep disorder disease management.
                   <br />
                   <br /> After completing his MBBS and MD (Tuberculosis & Chest
                   Diseases) from{" "}
                   <span className="font-bold text-slate-800">
                     Delhi University
                   </span>
-                  , he gained valuable NHS (United Kingdom) experience and was
+                  . He gained valuable NHS (United Kingdom) experience and was
                   later awarded the prestigious FRCP (Glasgow). Throughout his
                   career, he has specialized in the diagnosis and treatment of
                   asthma, chronic cough, COPD, ILD (Interstitial Lung Disease),
@@ -220,7 +219,7 @@ export default function AboutManish() {
                   <span className="text-[#0c7dc2]">
                     He is widely recognized for combining evidence-based
                     medicine with compassionate patient care, helping thousands
-                    of patients suffering from complex respiratory illnesses.
+                    of patients suffering from complex respiratory and sleep disorder illnesses.
                   </span>
                   .
                 </p>
@@ -286,13 +285,14 @@ export default function AboutManish() {
           {/* ==========================================================
            AEROMED CASE CARD: AIR AMBULANCE GLOBAL TRANSPORT RESCUE
            ========================================================== */}
-          <div className="relative bg-gradient-to-r from-[#0c7dc2] via-[#1fa8e8] to-[#6dbb45] text-white p-8 md:p-12 rounded-[40px] shadow-2xl overflow-hidden">
-            {/* Subtle background globes & plane waves */}
+          {/*
+        <div className="relative bg-gradient-to-r from-[#0c7dc2] via-[#1fa8e8] to-[#6dbb45] text-white p-8 md:p-12 rounded-[40px] shadow-2xl overflow-hidden">
+            {/* Subtle background globes & plane waves }
             <div className="absolute right-0 top-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute left-1/4 bottom-0 w-60 h-60 bg-emerald-300/10 rounded-full blur-2xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-              {/* Copy details */}
+              {/* Copy details }
               <div className="lg:col-span-8 space-y-4 text-center lg:text-left">
                 <div className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
                   <Globe className="w-3.5 h-3.5 animate-spin duration-[10000ms]" />{" "}
@@ -322,6 +322,7 @@ export default function AboutManish() {
                   </span>
                 </div>
               </div>
+              */}
 
               {/* CTA action trigger */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
