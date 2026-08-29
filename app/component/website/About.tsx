@@ -8,6 +8,7 @@ import {
   HeartHandshake,
   Sparkles,
   ShieldCheck,
+  LiaFacebook,
   Award,
 } from "lucide-react";
 import { LiaLinkedin, LiaYoutube } from "react-icons/lia";
@@ -90,11 +91,11 @@ export default function About() {
 
                 {/* Core Journey Narrative */}
                 <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
-                  At Delhi Lung & Bronchoscopy Center, we started with a clear clinical mission: to make advanced pulmonology, bronchoscopy interventions, and state-of-the-art sleep studies highly accessible, accurate, and deeply compassionate. This is why so many patients call Dr. Manish Aggarwal the best pulmonologist in Delhi.
+                  At Delhi Lung & Bronchoscopy Centre, we started with a clear clinical mission: to make advanced pulmonology, bronchoscopy interventions, and sleep studies highly accessible, accurate, and deeply compassionate. This is why so many patients call Dr. Manish Aggarwal the best pulmonologist in Delhi.
                 </p>
                 <p className="text-slate-500 text-sm md:text-base leading-relaxed">
                   What makes our clinic unique is the comprehensive clinical
-                  precision and individual care Dr. Manish Aggarwal brings to
+                  precision and individual care by Dr. Manish Aggarwal that brings
                   patients suffering from Asthma, COPD, Interstitial Lung
                   Disease (ILD), and complex Sleep Apnea. Whether addressing
                   urgent pediatric airway foreign bodies or utilizing advanced
@@ -113,9 +114,8 @@ export default function About() {
                       & Bronchoscopy Centre
                     </h5>
                     <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                      Bringing advanced lung diagnostics and precision
-                      bronchoscopy services directly into your care journey for
-                      accurate, compassionate respiratory care.
+                      Bringing advanced lung & sleep apnea diagnostics and treatment directly into your care journey with
+                      accurate and compassionate respiratory care.
                     </p>
                   </div>
 
@@ -127,7 +127,7 @@ export default function About() {
                         className="flex items-center gap-2 hover:text-[#0c7dc2] transition-colors"
                       >
                         <Phone className="w-3.5 h-3.5 text-[#1fa8e8]" /> +91
-                        9899554095
+                        +91-98995 54095
                       </a>
                       <a
                         href="mailto:info@delhilungandsleep.com"
@@ -141,23 +141,31 @@ export default function About() {
                     {/* Social Channels */}
                     <div className="flex items-center gap-3 pt-2">
                       <a
-                        href="https://www.linkedin.com/in/manish-aggarwal-553412207/"
+                        href="https://www.linkedin.com/in/dr-manish-aggarwal/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-[#0c7dc2] hover:shadow-md transition-all duration-300"
                       >
                         <LiaLinkedin className="w-5 h-5" />
                       </a>
-                      {/* <a
-                        href="https://instagram.com"
+                      <a
+                        href="https://www.instagram.com/dr_manish_aggarwal/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-pink-600 hover:shadow-md transition-all duration-300"
                       >
                         <LiaInstagram className="w-3.5 h-3.5" />
-                      </a> */}
+                      </a>
+                       <a
+                        href="https://www.facebook.com/profile.php?id=61591562684744"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-pink-600 hover:shadow-md transition-all duration-300"
+                      >
+                        <LiaFacebook className="w-3.5 h-3.5" />
+                      </a>
                       <a
-                        href="https://youtube.com/@pulmonologyworld1759?si=2Sf6HLOZ-0Tzobzb"
+                        href="https://youtube.com/@drmanishaggarwal?si=qFd6m6ekMf3sXBo-"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1.5 rounded-lg bg-white shadow-sm border border-slate-100 text-slate-500 hover:text-red-600 hover:shadow-md transition-all duration-300"
@@ -188,7 +196,7 @@ export default function About() {
                     Dr. M. Aggarwal
                   </h6>
                   <p className="text-[10px] text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
-                    Principal Director
+                    Principal Director, Department of Chest Disease and Interventional Pulmonology, Max Hospital
                   </p>
 
                   <button
