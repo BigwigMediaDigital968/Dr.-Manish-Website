@@ -244,10 +244,10 @@ export default function Speciality() {
 
             <div className="lg:col-span-8 space-y-6">
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
-               Delhi Lung & Bronchoscopy Center: Home of the Best Pulmonologist in Delhi
+               Delhi Lung & Bronchoscopy Centre: Home of the Best Pulmonologist in Delhi
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, with over 24+ years of experience. As an experienced lung specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinic in Pitampura, Delhi offers the same level of expertise in a more personal setting.
+                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, Delhi with over 24+ years of experience. As an experienced lung & sleep disorder specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and sleep apnea symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinic in Pitampura, Delhi offers the same level of expertise in a more personal setting.
 
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -300,10 +300,10 @@ export default function Speciality() {
                 Clinical Services
               </h2>
               <h3 className="text-3xl md:text-4xl font-extrabold text-slate-950 tracking-tight leading-none">
-                Specialized Lung & Chest Care by Delhi's Leading Lung Doctor
+                Specialized Chest & Sleep Disorder Care by Delhi's Leading Pulmonologist
               </h3>
               <p className="text-slate-500 text-sm">
-                Filter through our diverse range of chest diagnostics, sleep evaluations, and interventional procedures offered by our lung specialist and chest specialist in Delhi team.
+                Filter through our diverse range of chest diagnostics, sleep evaluations, and interventional procedures.
               </p>
             </div>
 
@@ -408,14 +408,14 @@ export default function Speciality() {
 
             <div className="space-y-4 max-w-xl text-center md:text-left relative z-10">
               <div className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                <Calendar className="w-3.5 h-3.5 animate-pulse" /> Same-Day
+                <Calendar className="w-3.5 h-3.5 animate-pulse" /> Same Day
                 Appointments Available
               </div>
               <h3 className="text-xl md:text-2xl font-bold tracking-tight leading-none">
                 Breathe Easy Again with the Best Pulmonologist in Delhi
               </h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Book a direct specialty evaluation with Dr. Manish Aggarwal, the best pulmonologist in Delhi, at Delhi Lung & Bronchoscopy Center. Get customized solutions for coughing issues, sleep disturbances, or respiratory ailments from a private pulmonologist clinic in Delhi.
+                Book an appointment with Dr. Manish Aggarwal, the best pulmonologist in Delhi, at Delhi Lung & Bronchoscopy Centre. 
               </p>
             </div>
 
