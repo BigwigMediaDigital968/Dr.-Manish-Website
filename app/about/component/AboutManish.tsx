@@ -322,7 +322,7 @@ export default function AboutManish() {
                 </div>
               </div> 
               
-      
+      */}
               {/* CTA action trigger */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
                 <button
