@@ -35,7 +35,7 @@ export default function HomeHero() {
             Delhi Lung
             <br />
             <span className="bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-              & Bronchoscopy Center
+              & Bronchoscopy Centre
             </span>
           </h1>
 
@@ -108,6 +108,7 @@ export default function HomeHero() {
                 Principal Director, Chest Disease & 
                 <br />
                 Interventional Pulmonology
+                <br /> Max Hospital
               </p>
               <div className="mt-4 text-center">
                 <a
