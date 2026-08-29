@@ -167,9 +167,7 @@ export default function Different({ onBookClick = () => { } }: DifferentProps) {
             </h2>
 
             <p className="text-slate-500 text-sm sm:text-base font-medium leading-relaxed">
-              Explore how we merge state-of-the-art interventional pulmonology
-              equipment with internationally aligned, UK-verified clinical
-              credentials.
+              Explore how we combine interventional pulmonology and sleep medicine with internationally aligned, UK-verified clinical credentials.
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -355,7 +353,7 @@ export default function Different({ onBookClick = () => { } }: DifferentProps) {
                     Research Contributions
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-semibold">
-                    Published research and academic work spanning respiratory medicine, pulmonary hypertension, toxicology, and asthma management, reflecting a commitment to evidence-based medicine and continuous scientific inquiry.
+                    Published researches and academic work spanning respiratory medicine, pulmonary hypertension, toxicology and asthma management, reflecting a commitment to evidence-based medicine and continuous scientific inquiry.
                   </p>
                 </div>
               </div>
