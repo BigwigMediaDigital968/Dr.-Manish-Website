@@ -281,48 +281,6 @@ export default function AboutManish() {
               </div>
             </div>
           </div>
-          
-          {/* ==========================================================
-           AEROMED CASE CARD: AIR AMBULANCE GLOBAL TRANSPORT RESCUE
-           ========================================================== */}
-          {/* <div className="relative bg-gradient-to-r from-[#0c7dc2] via-[#1fa8e8] to-[#6dbb45] text-white p-8 md:p-12 rounded-[40px] shadow-2xl overflow-hidden"> */}
-            {/* Subtle background globes & plane waves */}
-          {/* <div className="absolute right-0 top-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute left-1/4 bottom-0 w-60 h-60 bg-emerald-300/10 rounded-full blur-2xl pointer-events-none" />
-
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-              {/* Copy details*/ }
-          {/* <div className="lg:col-span-8 space-y-4 text-center lg:text-left">
-                <div className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                  <Globe className="w-3.5 h-3.5 animate-spin duration-[10000ms]" />{" "}
-                  Global Air Medical Transport
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
-                  Aeromed International Rescue Services
-                </h3>
-                <p className="text-white/85 text-xs sm:text-sm leading-relaxed max-w-2xl">
-                  Dr. Manish Aggarwal is the proud{" "}
-                  <span className="font-extrabold text-white">
-                    Principal Director of Department of Chest Disease &
-                    Interventional Pulmonologist, Max Hospital
-                  </span>
-                  . This leading organization is highly acclaimed for providing
-                  secure, rapid, and intensive patient air ambulance
-                  transportation across major global medical corridors.
-                </p>
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                  <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-100">
-                    <Plane className="w-4 h-4" /> Global Evacuation Corridor
-                  </span>
-                  <span className="hidden sm:inline text-white/30">|</span>
-                  <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-100">
-                    <CheckCircle2 className="w-4 h-4" /> Advanced Air Critical
-                    Care
-                  </span>
-                </div>
-              </div> 
-              
-      */}
               {/* CTA action trigger */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
                 <button
