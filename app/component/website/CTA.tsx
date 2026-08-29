@@ -37,7 +37,7 @@ export default function CTA() {
               <p className="text-white/90 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Don't compromise on shortness of breath, chronic cough or
                 interrupted sleeping patterns. Get diagnosed by Delhi's top
-                interventional chest & sleep specialists with modern lung
+                chest & sleep specialists with modern lung
                 & sleep Treatment.
               </p>
 
