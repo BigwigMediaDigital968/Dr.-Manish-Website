@@ -130,11 +130,6 @@ export default function WhoSeeUs() {
                 loading="lazy"
               />
 
-              {/* Dynamic Overlay Tags */}
-              <div className="absolute top-5 left-5 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-sm text-[10px] font-black text-[#0c7dc2] uppercase tracking-wider shadow-md flex items-center gap-1.5 z-10">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#6dbb45]" /> Lung Diagnostic CT Imaging Scan.<br /> Same-Day PFT Assays Available.
-              </div>
-
               {/* Bottom Info Floating Card */}
               <div className="absolute bottom-5 left-5 right-5 bg-white/90 backdrop-blur-md p-4 rounded-3xl border border-white/20 shadow-lg space-y-1.5 z-10">
                 <span className="text-[9px] font-black uppercase text-[#6dbb45] tracking-widest block">
