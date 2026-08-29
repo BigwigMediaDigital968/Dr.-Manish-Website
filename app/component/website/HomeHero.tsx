@@ -26,7 +26,7 @@ export default function HomeHero() {
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1fa8e8]/10 to-[#6dbb45]/10 border border-[#1fa8e8]/20 px-4 py-2 rounded-full self-center lg:self-start shadow-sm transition-all duration-300 hover:border-[#1fa8e8]/40">
             <Activity className="w-4 h-4 text-[#1fa8e8] animate-pulse" />
             <span className="text-xs font-bold text-[#0c7dc2] tracking-wider uppercase">
-              Advanced Lung & Sleep Solutions
+              Advanced Lung & Sleep Treatment
             </span>
           </div>
 
