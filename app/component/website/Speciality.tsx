@@ -52,7 +52,7 @@ export default function Speciality() {
     {
       id: "asthma-diagnosis",
       title: "Asthma Diagnosis & Treatment",
-      desc: "Comprehensive asthma evaluation with advanced diagnostics, personalized medication plans, and long-term respiratory care from an asthma specialist Delhi families trust.",
+      desc: "Comprehensive asthma evaluation with advanced diagnostics, personalized medication plans, and long-term respiratory care from an asthma specialist in Delhi.",
       category: "Pulmonary",
       icon: Wind,
       color: "#1fa8e8",
@@ -79,7 +79,7 @@ export default function Speciality() {
     {
       id: "pft",
       title: "Pulmonary Function Test (PFT)",
-      desc: "Advanced pulmonary function analysis to accurately measure lung capacity, airflow, and respiratory performance.",
+      desc: "Advanced pulmonary function analysis to accurately measure lung volume, airflow speed, and respiratory performance.",
       category: "Pulmonary",
       icon: Layers,
       color: "#0c7dc2",
@@ -88,7 +88,7 @@ export default function Speciality() {
     {
       id: "spirometry",
       title: "Spirometry Testing",
-      desc: "Quick and precise spirometry evaluations for asthma, COPD, and other chronic respiratory conditions, performed by a COPD specialist in Delhi.",
+      desc: "Quick and precise spirometry evaluations for asthma, COPD and other chronic respiratory conditions, performed by a COPD specialist in Delhi.",
       category: "Pulmonary",
       icon: Award,
       color: "#1fa8e8",
@@ -105,8 +105,8 @@ export default function Speciality() {
     },
     {
       id: "severe-asthma",
-      title: "Severe Asthma Management",
-      desc: "Specialized treatment protocols for difficult-to-control and severe asthma conditions.",
+      title: "Asthma Care & Exercise ",
+      desc: "Specialized treatment protocols for severe asthma conditions. Targeted diagnosis and treatment plans for breathing difficulties associated with physical activity.",
       category: "Pulmonary",
       icon: ShieldAlert,
       color: "#4d8f2d",
@@ -129,15 +129,6 @@ export default function Speciality() {
       icon: Cloud,
       color: "#4d8f2d",
       badge: "Delhi Care",
-    },
-    {
-      id: "exercise-induced-asthma",
-      title: "Exercise-Induced Asthma Care",
-      desc: "Targeted diagnosis and treatment plans for breathing difficulties associated with physical activity.",
-      category: "Pulmonary",
-      icon: Baby,
-      color: "#1fa8e8",
-      badge: "Sports Lung Care",
     },
   ];
 
@@ -262,10 +253,10 @@ export default function Speciality() {
 
             <div className="lg:col-span-8 space-y-6">
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
-               Delhi Lung & Bronchoscopy Centre: Home of the Best Pulmonologist in Delhi
+               Delhi Lung & Bronchoscopy Center: Home of the Best Pulmonologist in Delhi
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, with over 24+ years of experience. As an experienced lung specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinin in Pitampura, Delhi offers the same level of expertise in a more personal setting.
+                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, with over 24+ years of experience. As an experienced lung specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinic in Pitampura, Delhi offers the same level of expertise in a more personal setting.
 
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
