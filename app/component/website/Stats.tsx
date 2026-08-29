@@ -277,18 +277,17 @@ export default function Stats() {
           <div className="bg-gradient-to-r from-[#1fa8e8]/5 to-[#6dbb45]/5 rounded-3xl p-6 border border-[#1fa8e8]/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="space-y-1">
               <h4 className="text-xs sm:text-sm font-black text-slate-800 flex items-center justify-center sm:justify-start gap-1.5 uppercase tracking-wide">
-                <CheckCircle2 className="w-4 h-4 text-[#6dbb45]" />Evidence-Based Respiratory Care from a Pulmonary Specialist Doctor in Delhi
+                <CheckCircle2 className="w-4 h-4 text-[#6dbb45]" />Evidence Based Chest & Sleep Disorder Care from a Pulmonary Specialist Doctor in Delhi
               </h4>
               <p className="text-xs text-slate-500 font-semibold leading-normal">
-                Our clinical statistics are verified by local audits and academic
-                publications at international chest medicine congresses.
+                Breathe Better, Sleep Better — Book Your Appointment with a Chest & Sleep Disorder Specialist in Delhi Today.
               </p>
             </div>
             <a
               href="/contact"
               className="px-5 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#1fa8e8]/40 hover:bg-slate-50 text-[10px] font-black uppercase text-[#0c7dc2] tracking-wider shrink-0 transition-all shadow-sm"
             >
-              Request Diagnostic Consultation
+              Book Appointment
             </a>
           </div>
         </div>
