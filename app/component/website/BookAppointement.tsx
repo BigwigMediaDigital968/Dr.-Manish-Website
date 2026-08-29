@@ -88,7 +88,7 @@ export default function BookAppointment() {
               style={{ background: "var(--gradient-health)" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-              Delhi Lung & Bronchoscopy Centre
+              Delhi Lung & Bronchoscopy Center
             </span>
 
             <h2
@@ -106,7 +106,7 @@ export default function BookAppointment() {
             </h2>
 
             <p className="mt-5 text-base leading-relaxed text-[#64748b] lg:text-lg">
-              Breathe better, sleep well. Our pulmonology specialists deliver
+              Breathe better, sleep well. Dr. Manish Aggarwal, pulmonologist & sleep specialists deliver
               world-class diagnostics and personalised treatment, right here in
               Delhi.
             </p>
@@ -127,7 +127,7 @@ export default function BookAppointment() {
             {/* Stats row */}
             <div className="mt-10 flex flex-wrap gap-6 border-t border-[#e2e8f0] pt-8">
               {[
-                { value: "20+", label: "Specialties" },
+                { value: "17+", label: "Specialties" },
                 { value: "50k+", label: "Patients Treated" },
                 { value: "24 yr+", label: "Experience" },
               ].map((s) => (
