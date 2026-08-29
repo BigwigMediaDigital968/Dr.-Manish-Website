@@ -112,7 +112,7 @@ export default function WhoSeeUs() {
           </h2>
 
           <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-relaxed">
-            Navigating respiratory symptoms can be alarming. If you, a family member, or a patient under your care is experiencing any of the following indicators, an immediate consultation with a respiratory specialist in Delhi is highly recommended. Dr. Manish Aggarwal, a trusted chest specialist in Delhi, ensures early and accurate diagnosis for every patient.
+            Navigating respiratory symptoms can be alarming. If you, a family member, or a patient under your care is experiencing any of the following indicators, an immediate consultation with a respiratory specialist in Delhi is highly recommended. Dr. Manish Aggarwal, a trusted chest & sleep disorder specialist in Delhi, ensures early and accurate diagnosis for every patient.
 
           </p>
         </div>
@@ -169,8 +169,7 @@ export default function WhoSeeUs() {
 
                 <p className="text-xs text-white/95 leading-relaxed font-semibold">
                   Reserve a priority slot for advanced diagnostics under Dr.
-                  Manish Aggarwal. We provide same-day spirometry and next-day
-                  sleep study device dispatch.
+                  Manish Aggarwal.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
