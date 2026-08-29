@@ -33,7 +33,7 @@ export default function AboutHero({
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.12]">
             Leading Pulmonologist <br />
             <span className="text-emerald-100">
-              & Sleep Disorder Specialist in Delhi.
+              & Sleep Disorder Specialist <br />in Delhi.
             </span>
           </h1>
 
