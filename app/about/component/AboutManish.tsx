@@ -7,8 +7,8 @@ import {
   Calendar,
   Briefcase,
   Sparkles,
-  Plane,
-  ArrowRight,
+ // Plane,
+ // ArrowRight,
   Stethoscope,
   GraduationCap,
   Building2,
@@ -20,12 +20,12 @@ import {
 } from "lucide-react";
 import Popup from "@/app/component/website/Popup";
 import Link from "next/link";
-import { useModal } from "@/app/Contexts/ModalContext";
+//import { useModal } from "@/app/Contexts/ModalContext";
 
 export default function AboutManish() {
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const { openModal } = useModal();
+ // const { openModal } = useModal();
   const qualifications = [
     {
       title: "MBBS",
@@ -186,7 +186,7 @@ export default function AboutManish() {
                   <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Principal
                   Director
                 </div>
-                <h2 className="text-3xl sm:text-4.5xl font-black text-slate-950 tracking-tight leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
                   About Dr. Manish Aggarwal
                 </h2>
                 <p className="text-base sm:text-lg font-medium text-[#6dbb45] leading-snug">
@@ -281,19 +281,7 @@ export default function AboutManish() {
               </div>
             </div>
           </div>
-              {/* CTA action trigger */}
-              <div className="lg:col-span-4 flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
-                <button
-                  onClick={openModal}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0c7dc2] hover:bg-slate-50 font-extrabold text-sm tracking-wide shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer"
-                >
-                  Schedule Assessment
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </div>
-          </div>
-
+            
           {/* ================================
     Academic Leadership Section
 ================================ */}
