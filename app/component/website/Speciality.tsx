@@ -103,15 +103,6 @@ export default function Speciality() {
       color: "#6dbb45",
       badge: "Patient Education",
     },
-    {/*
-      id: "severe-asthma",
-      title: "Asthma Care & Exercise ",
-      desc: "Specialized treatment protocols for severe asthma conditions. Targeted diagnosis and treatment plans for breathing difficulties associated with physical activity.",
-      category: "Pulmonary",
-      icon: ShieldAlert,
-      color: "#4d8f2d",
-      badge: "Advanced Therapy",
-    },*/
     {
       id: "nebulization",
       title: "Nebulization Guidance",
