@@ -23,7 +23,7 @@ export default function CTA() {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 self-center lg:self-start backdrop-blur-sm">
                 <Activity className="w-3.5 h-3.5 text-white animate-pulse" />
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-100">
-                  Specialized Pulmonary Therapy
+                  Specialized Lung & Sleep Treatment
                 </span>
               </div>
 
@@ -35,9 +35,9 @@ export default function CTA() {
               </h2>
 
               <p className="text-white/90 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Don't compromise on shortness of breath, chronic coughing, or
+                Don't compromise on shortness of breath, chronic cough or
                 interrupted sleeping patterns. Get diagnosed by Delhi's top
-                interventional chest specialists with modern lung
+                interventional chest & sleep specialists with modern lung
                 & sleep Treatment.
               </p>
 
