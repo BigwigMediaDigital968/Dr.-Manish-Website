@@ -255,17 +255,17 @@ export default function Speciality() {
 
                 <p className="text-sm font-bold text-[#6dbb45] mt-1">
                   Principal Director - Department of Chest Disease &
-                  Interventional Pulmonologist{" "}
+                  Interventional Pulmonologist, Max Hospital{" "}
                 </p>
               </div>
             </div>
 
             <div className="lg:col-span-8 space-y-6">
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
-               Delhi Lung & Bronchoscopy Center: Home of the Best Pulmonologist in Delhi
+               Delhi Lung & Bronchoscopy Centre: Home of the Best Pulmonologist in Delhi
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, with over 24+ years of experience. As an experienced lung specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology hospital in Delhi offers the same level of expertise in a more personal setting.
+                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, with over 24+ years of experience. As an experienced lung specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinin in Pitampura, Delhi offers the same level of expertise in a more personal setting.
 
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
