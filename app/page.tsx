@@ -6,7 +6,7 @@ import CTA from "./component/website/CTA";
 import Testimonials from "./component/website/Testimonials";
 import BookAppointment from "./component/website/BookAppointement";
 import AppointmentProcess from "./component/website/AppointmentProcess";
-import BlogSection from "./component/website/BlogSection";
+// import BlogSection from "./component/website/BlogSection";
 import FAQs from "./component/website/FAQs";
 import { homeFaqs } from "./faqsData";
 import ClinicFeatures from "./component/website/ClinicFeatures";
@@ -74,7 +74,7 @@ export default function Home() {
       <AppointmentProcess />
       <BookAppointment />
       {/* <ClinicFeatures /> */}
-      <BlogSection />
+      {/* <BlogSection /> */}
       <FAQs
         title="Frequently Asked Questions About the Best Pulmonologist in Delhi"
         description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Center"
