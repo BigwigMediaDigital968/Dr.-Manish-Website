@@ -136,10 +136,10 @@ export default function Footer() {
                 className="text-lg font-bold leading-snug text-[#0f172a]"
                 style={{ letterSpacing: "-0.02em" }}
               >
-                Delhi Lung & Bronchoscopy Center
+                Delhi Lung & Bronchoscopy Centre
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-[#3d6b8a]">
-                Expert pulmonology & sleep medicine care in New Delhi. Breathe
+                Expert pulmonology & sleep treatment in New Delhi. Breathe
                 better, live fuller.
               </p>
 
@@ -217,7 +217,7 @@ export default function Footer() {
 
                     <p className="mt-1 text-xs bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
                       Principal Director <br /> Chest Disease & Interventional
-                      Pulmonology
+                      Pulmonology, <br/> Max Hospital
                     </p>
 
                     <div className="mt-2 inline-flex items-center rounded-full bg-[#1fa8e8]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0c7dc2]">
@@ -253,7 +253,7 @@ export default function Footer() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-4 sm:flex-row lg:px-12">
             {/* Copyright */}
             <p className="text-center text-xs text-[#2d5a78]">
-              © {new Date().getFullYear()} Delhi Lung & Bronchoscopy Center. All
+              © {new Date().getFullYear()} Delhi Lung & Bronchoscopy Centre. All
               rights reserved.
             </p>
 
