@@ -138,7 +138,7 @@ export default function FAQs({ title = "Frequently Asked Questions", description
             className="px-5 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#1fa8e8]/40 hover:bg-slate-50 text-xs font-bold text-[#0c7dc2] tracking-wide flex items-center gap-1.5 shrink-0 transition-all shadow-sm"
           >
             <MessageCircle className="w-4 h-4 text-[#1fa8e8]" /> Contact
-            Specialist Clinic
+            Clinic Desk
           </a>
         </div>
       </div>
