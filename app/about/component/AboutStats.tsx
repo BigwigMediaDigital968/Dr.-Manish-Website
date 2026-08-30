@@ -82,7 +82,7 @@ export default function AboutStats({
 
           <p className="text-slate-100 text-sm sm:text-base leading-relaxed">
             Delhi Lung & Bronchoscopy Centre operates to deliver patients reliable
-            pulmonary & slep disorder treatment.
+            pulmonary & sleep disorder treatment.
           </p>
         </div>
 
