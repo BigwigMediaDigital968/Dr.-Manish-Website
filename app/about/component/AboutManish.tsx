@@ -199,7 +199,7 @@ export default function AboutManish() {
               <div className="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
                 <p>
                   Dr. Manish Aggarwal is one of Delhi's leading
-                  Pulmonologist and Sleep disorder specialist, with over{" "}
+                  pulmonologist and sleep disorder specialist, with over{" "}
                   <span className="font-bold text-slate-800">24+ years</span> of
                   experience in respiratory medicine and sleep disorder disease management.
                   <br />
