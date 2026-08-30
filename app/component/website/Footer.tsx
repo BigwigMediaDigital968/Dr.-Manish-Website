@@ -217,7 +217,7 @@ export default function Footer() {
 
                     <p className="mt-1 text-xs bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
                       Principal Director <br /> Chest Disease & Interventional
-                      Pulmonology, <br/> Max Hospital
+                      Pulmonology, Max Hospital
                     </p>
 
                     <div className="mt-2 inline-flex items-center rounded-full bg-[#1fa8e8]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0c7dc2]">
