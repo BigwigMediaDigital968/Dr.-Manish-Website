@@ -23,7 +23,7 @@ export default function AboutStats({
       id: 1,
       value: "24+",
       label: "Years of Expert Care",
-      desc: "An unmatched tenure of respiratory medicine, chest procedures, and clinical critical care.",
+      desc: "An unmatched tenure of pulmonology and sleep disorder treatments.",
       icon: Award,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },
@@ -37,9 +37,9 @@ export default function AboutStats({
     },
     {
       id: 3,
-      value: "99.4%",
-      label: "Diagnostic Accuracy",
-      desc: "Achieved via advanced high-precision spirometry, EBUS biopsy staging, and sleep lab setups.",
+      value: "4.9",
+      label: "Rating On Google",
+      desc: "Trusted by patients for expert care and exceptional results.",
       icon: Activity,
       color: "from-[#1fa8e8] to-[#6dbb45]",
     },
@@ -81,9 +81,8 @@ export default function AboutStats({
           </h2>
 
           <p className="text-slate-100 text-sm sm:text-base leading-relaxed">
-            Delhi Lung & Bronchoscopy Center operates under absolute precision
-            and diagnostic standards, ensuring our patients receive reliable
-            pulmonary care pathways.
+            Delhi Lung & Bronchoscopy Centre operates to deliver patients reliable
+            pulmonary & slep disorder treatment.
           </p>
         </div>
 
