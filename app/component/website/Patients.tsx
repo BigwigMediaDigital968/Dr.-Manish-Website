@@ -248,7 +248,7 @@ export default function Patients() {
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-medium text-justify lg:text-left">
                   During the severe waves of the COVID-19 pandemic, our clinic
-                  served as a primary anchor of hope and safety in Delhi. Active
+                  served as a primary anchor of hope and safety in Pitampura,Delhi. Active
                   respiratory support, counselling, and specialized treatment
                   guidance were continuously rendered under highly challenging
                   conditions.
@@ -323,7 +323,7 @@ export default function Patients() {
                 </h3>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-semibold">
-                  To provide advanced yet compassionate respiratory care with a
+                  To provide advanced yet compassionate respiratory & sleep disorder care with a
                   primary focus on accurate diagnosis, minimally invasive
                   procedures, swift symptom relief, and long-term lung health
                   improvement.
@@ -355,8 +355,8 @@ export default function Patients() {
                     Expert Consultation in Delhi
                   </h4>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                    Book a consultation for expert pulmonology and advanced
-                    interventional respiratory care in Delhi at our Vikas Marg
+                    Book a consultation for expert advanced
+                    interventional respiratory & sleep disorder care at our Pitampura, Delhi
                     clinic.
                   </p>
                 </div>
