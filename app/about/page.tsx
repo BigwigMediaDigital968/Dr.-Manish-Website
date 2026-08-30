@@ -51,7 +51,7 @@ export default function About() {
       {/* <Awards /> */}
       <FAQs
         title="Frequently Asked Questions"
-        description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Center."
+        description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Centre."
         faqs={aboutFaqs}
       />
       <Footer />
