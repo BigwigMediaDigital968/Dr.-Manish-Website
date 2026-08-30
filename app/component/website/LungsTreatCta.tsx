@@ -313,7 +313,7 @@ export default function LungsTreatCta({
                       Dr. Manish Aggarwal
                     </h5>
                     <p className="text-[9px] text-white font-extrabold uppercase mt-0.5">
-                      Senior Pulmonologist
+                      Principal Director
                     </p>
                   </div>
                 </div>
