@@ -77,7 +77,7 @@ export default function Home() {
       {/* <BlogSection /> */}
       <FAQs
         title="Frequently Asked Questions About the Best Pulmonologist in Delhi"
-        description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Center"
+        description="Get instant answers to common queries regarding chest diagnostics, sleep assessments, and clinical parameters at Delhi Lung & Bronchoscopy Centre"
         faqs={homeFaqs}
       />
       <Footer />
