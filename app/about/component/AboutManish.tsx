@@ -48,7 +48,7 @@ export default function AboutManish() {
   const highlights = [
     {
       title: "24+ Years Experience",
-      desc: "Dedicated expertise in Pulmonology & Sleep Disorder",
+      desc: "Dedicated expertise in Pulmonology & Sleep Disorder treatment",
       icon: Calendar,
       color: "from-[#1fa8e8] to-[#0c7dc2]",
     },
