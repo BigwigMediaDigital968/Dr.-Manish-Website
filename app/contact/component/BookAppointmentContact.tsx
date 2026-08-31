@@ -231,7 +231,7 @@ export default function BookAppointmentContact() {
               {/* Floating badge */}
               <div className="absolute left-0 bottom-8 lg:-left-8 bg-white rounded-2xl px-5 py-4 shadow-xl border border-slate-100">
                 <p className="text-xs text-slate-500 font-medium">
-                  Trusted Pulmonology Care
+                  Trusted Pulmonologist Over
                 </p>
                 <p className="text-lg font-extrabold text-[#1fa8e8]">
                   50,000+ Patients
