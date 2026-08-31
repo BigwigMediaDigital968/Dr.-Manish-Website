@@ -87,7 +87,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
           {/* Location Title & Verified Address */}
           <div className="space-y-3">
             <h3 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight leading-none">
-              Delhi Lung & Bronchoscopy Center
+              Delhi Lung & Bronchoscopy Centre
             </h3>
 
             <div className="flex items-start gap-2.5 text-slate-500 text-xs sm:text-sm">
@@ -107,7 +107,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
             <div className="space-y-1.5 pt-1.5 text-xs font-bold text-slate-700">
               <div className="flex justify-between items-center">
                 <span>Monday - Saturday</span>
-                <span className="text-slate-900">09:00 AM - 07:00 PM</span>
+                <span className="text-slate-900">06:00 PM - 09:00 PM</span>
               </div>
               <div className="flex justify-between items-center border-t border-slate-200/50 pt-1.5">
                 <span>Sunday</span>
