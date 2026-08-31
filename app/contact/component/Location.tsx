@@ -26,9 +26,9 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
   const googleMapsUrl = `https://maps.app.goo.gl/QggTaVHkW5qS4ZD8A`;
 
   const amenities = [
-    { label: "Metro Connected (2 Min Walk)", icon: Compass },
-    { label: "Ample Patient Parking", icon: Car },
-    { label: "Wheelchair Accessible", icon: CheckCircle2 },
+    { label: "Conveniently Located", icon: Compass },
+    { label: "Easy Access by Public Transport", icon: Car },
+    { label: "Comfortable & Patient-Friendly Environment", icon: CheckCircle2 },
   ];
 
   return (
