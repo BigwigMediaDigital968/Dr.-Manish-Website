@@ -8,6 +8,7 @@ import {
   TrendingUp,
   Sparkles,
   HeartPulse,
+  Star,
 } from "lucide-react";
 
 interface AboutStatsProps {
@@ -15,7 +16,7 @@ interface AboutStatsProps {
 }
 
 export default function AboutStats({
-  onBookClick = () => {},
+  onBookClick = () => { },
 }: AboutStatsProps) {
   // Custom stats data aligned with Dr. Manish Aggarwal's clinical legacy
   const stats = [
@@ -40,7 +41,7 @@ export default function AboutStats({
       value: "4.9",
       label: "Rating On Google",
       desc: "Trusted by patients for expert care and exceptional results.",
-      icon: Activity,
+      icon: Star,
       color: "from-[#1fa8e8] to-[#6dbb45]",
     },
     {
@@ -100,20 +101,23 @@ export default function AboutStats({
 
                 <div className="space-y-6 relative z-10">
                   {/* Icon Frame */}
-                  <div
-                    className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <IconComponent className="w-5.5 h-5.5" />
-                  </div>
+
 
                   {/* Stat Metrics & Value */}
-                  <div className="space-y-1">
-                    <span className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-[#0c7dc2] via-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent tracking-tight">
-                      {item.value}
-                    </span>
-                    <h3 className="text-sm font-extrabold text-slate-800 tracking-wide mt-1.5 leading-tight">
-                      {item.label}
-                    </h3>
+                  <div className="space-y-1 flex gap-4">
+                    <div
+                      className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-[#0c7dc2] via-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent tracking-tight">
+                        {item.value}
+                      </span>
+                      <h3 className="text-sm font-extrabold text-slate-800 tracking-wide leading-tight">
+                        {item.label}
+                      </h3>
+                    </div>
                   </div>
 
                   {/* Metric Sub-text Details */}
@@ -130,7 +134,7 @@ export default function AboutStats({
         </div>
 
         {/* --- EXPANDED PATIENT SATISFACTION METRIC ROW --- */}
-        
+
       </div>
     </section>
   );
