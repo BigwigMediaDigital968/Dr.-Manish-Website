@@ -48,13 +48,13 @@ export async function POST(req: NextRequest) {
         const email = String(getValue("email") ?? "").trim();
         const service = String(getValue("service") ?? "").trim();
         const date = String(getValue("date") ?? "").trim();
-        const time = String(getValue("time") ?? "").trim();
+        // const time = String(getValue("time") ?? "").trim();
         const message = String(getValue("message") ?? "").trim();
 
         const uploadedFile = isMultipart ? body.get("file") : null;
         const image = String(getValue("image") ?? "").trim();
 
-        if (!name || !phone || !service || !date || !time) {
+        if (!name || !phone || !service || !date) {
             return NextResponse.json(
                 { success: false, message: "Missing required fields" },
                 { status: 400 }
@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
             email,
             service,
             date,
-            time,
+            // time,
             message,
             image: imageUrl,
             source: String(getValue("source") ?? "website").trim()
@@ -121,6 +121,7 @@ export async function GET() {
         const leads = await Lead.find().sort({ createdAt: -1 });
         return NextResponse.json({ success: true, data: leads });
     } catch (error) {
+        console.log(error)
         return NextResponse.json(
             { success: false, message: "Server error" },
             { status: 500 }

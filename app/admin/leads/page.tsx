@@ -25,7 +25,7 @@ interface Lead {
   email?: string;
   service: string;
   date: string;
-  time: string;
+  time?: string;
   image?: string;
   message?: string;
   status: "new" | "contacted" | "rejected";
@@ -269,7 +269,7 @@ export default function LeadsPage() {
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Date</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Patient</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Treatment</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Appt Slot</th>
+                  {/* <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Appt Slot</th> */}
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Report</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Status</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400 text-right">Actions</th>
@@ -312,7 +312,7 @@ export default function LeadsPage() {
                             weekday: "short",
                           })}
                         </div>
-                        <div className="text-[10px] text-slate-500 mt-0.5">{lead.time}</div>
+                        {/* <div className="text-[10px] text-slate-500 mt-0.5">{lead.time}</div> */}
                       </td>
 
                       {/* Uploaded Report Badge */}
@@ -503,13 +503,13 @@ export default function LeadsPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2.5">
+                    {/* <div className="flex items-center gap-2.5">
                       <Clock className="w-4 h-4 text-slate-400" />
                       <div>
                         <div className="text-xs text-slate-400 leading-none">Slot</div>
                         <div className="text-sm font-semibold text-slate-800 mt-1">{selectedLead.time}</div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

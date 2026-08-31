@@ -77,7 +77,7 @@ export default function BookAppointmentContact() {
       payload.append("email", form.email);
       payload.append("service", form.specialty);
       payload.append("date", form.date);
-      payload.append("time", form.time);
+      // payload.append("time", form.time);
       payload.append("message", form.message);
       payload.append("source", "contact-page");
 
@@ -440,7 +440,7 @@ export default function BookAppointmentContact() {
                   </div>
 
                   {/* Time slots */}
-                  <div>
+                  {/* <div>
                     <label className={labelCls}>Preferred Time</label>
                     <div className="grid grid-cols-3 gap-2">
                       {slots.map((slot) => {
@@ -472,7 +472,7 @@ export default function BookAppointmentContact() {
                         );
                       })}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Upload Reports */}

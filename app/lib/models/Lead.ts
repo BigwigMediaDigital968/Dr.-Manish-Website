@@ -6,7 +6,7 @@ export interface ILead extends Document {
     email?: string;
     service: string;
     date: string;
-    time: string;
+    time?: string;
     image?: string;
     message?: string;
     status: "new" | "contacted" | "rejected";
@@ -21,7 +21,7 @@ const LeadSchema = new Schema<ILead>(
         email: { type: String, default: "" },
         service: { type: String, required: true },
         date: { type: String, required: true },
-        time: { type: String, required: true },
+        time: { type: String, default: "" },
         image: { type: String, default: "" },
         message: { type: String, default: "" },
         status: {

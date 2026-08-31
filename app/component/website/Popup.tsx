@@ -77,10 +77,10 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       alert("Please select a treatment.");
       return;
     }
-    if (!formData.time) {
-      alert("Please select a preferred time.");
-      return;
-    }
+    // if (!formData.time) {
+    //   alert("Please select a preferred time.");
+    //   return;
+    // }
     setIsSubmitting(true);
     try {
       const source =
@@ -94,7 +94,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       payload.append("email", formData.email);
       payload.append("service", formData.specialty);
       payload.append("date", formData.date);
-      payload.append("time", formData.time);
+      // payload.append("time", formData.time);
       payload.append("message", formData.message);
       payload.append("source", source || "pop-up")
 
@@ -123,6 +123,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
         throw new Error(result.message || "Failed to submit lead");
       }
     } catch (error) {
+      console.log(error)
       console.error("Error submitting lead:", error);
       alert("Something went wrong. Please try again.");
     } finally {
@@ -424,7 +425,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
             </div>
 
             {/* Time Slots */}
-            <div>
+            {/* <div>
               <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                 Preferred time
               </label>
@@ -465,7 +466,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
 
             {/* Upload Reports */}
             <div>

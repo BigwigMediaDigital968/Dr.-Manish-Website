@@ -466,7 +466,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
             </div>
 
             {/* Time Slots Selection */}
-            <div>
+            {/* <div>
               <label className="block text-[11px] font-medium text-slate-500 mb-1.5">
                 Preferred Consultation Time Range
               </label>
@@ -501,7 +501,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
                   );
                 })}
               </div>
-            </div>
+            </div> */}
 
             {/* Message/Symptoms notes */}
             <div>

@@ -35,7 +35,7 @@ export default function BookAppointment() {
           email: form.email,
           service: form.treatment,
           date: form.date,
-          time: form.time,
+          // time: form.time,
           message: form.message,
           image: image,
           source: "home-page"
@@ -289,7 +289,7 @@ export default function BookAppointment() {
                 </div>
 
                 {/* Time Slot */}
-                <div>
+                {/* <div>
                   <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
                     Time Slot
                   </label>
@@ -303,10 +303,10 @@ export default function BookAppointment() {
                     <option value="afternoon">Afternoon</option>
                     <option value="evening">Evening</option>
                   </select>
-                </div>
+                </div> */}
 
                 {/* Treatment */}
-                <div>
+                <div className="md:col-span-2 xl:col-span-2">
                   <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
                     Treatment
                   </label>
