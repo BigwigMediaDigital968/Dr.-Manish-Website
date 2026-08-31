@@ -186,7 +186,7 @@ export default function BookAppointmentContact() {
               {/* Stats */}
               <div className="mt-10 flex flex-wrap gap-6 border-t border-[#e2e8f0] pt-8">
                 {[
-                  { value: "20+", label: "Specialties" },
+                  { value: "17+", label: "Specialties" },
                   { value: "50k+", label: "Patients Treated" },
                   { value: "24 yr+", label: "Experience" },
                 ].map((s) => (
