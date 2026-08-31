@@ -36,7 +36,7 @@ const socials = [
   },
   {
     icon: FaLinkedin,
-    href: "linkedin.com/in/dr-manish-aggarwal/",
+    href: "https://www.linkedin.com/in/dr-manish-aggarwal/",
     label: "LinkedIn",
   },
   { 
