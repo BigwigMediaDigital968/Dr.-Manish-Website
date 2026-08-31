@@ -8,7 +8,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -32,16 +31,24 @@ const socials = [
   // { icon: FaFacebook, href: "#", label: "Facebook" },
   {
     icon: FaYoutube,
-    href: "https://youtube.com/@pulmonologyworld1759?si=2Sf6HLOZ-0Tzobzb",
+    href: "https://www.youtube.com/@drmanishaggarwal",
     label: "YouTube",
   },
   {
     icon: FaLinkedin,
-    href: "https://www.linkedin.com/in/manish-aggarwal-553412207/",
+    href: "linkedin.com/in/dr-manish-aggarwal/",
     label: "LinkedIn",
   },
-  // { icon: FaTwitter, href: "#", label: "Twitter/X" },
-  // { icon: FaInstagram, href: "#", label: "Instagram" },
+  { 
+    icon: FaFacebook, 
+    href: "https://www.facebook.com/profile.php?id=61591562684744", 
+    label: "Twitter/X" 
+  },
+   { 
+     icon: FaInstagram, 
+     href: "https://www.instagram.com/dr_manish_aggarwal/", 
+     label: "Instagram" 
+   },
 ];
 
 const contactItems = [
