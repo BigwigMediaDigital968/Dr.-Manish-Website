@@ -71,9 +71,9 @@ export default function Patients() {
   ];
 
   const goalBullets = [
-    "Accurate diagnostic parameters with modern spirometry & sleep lab gear.",
-    "Focus on minimally invasive bronchial and diagnostic procedures (EBUS).",
-    "Immediate symptom relief matched with systematic lung health improvement.",
+    "Accurate treatment parameters with modern spirometry & sleep lab test.",
+    "Focus on minimally invasive bronchial and treatment procedures (EBUS).",
+    "Immediate symptom relief matched with systematic sleep disorder improvement.",
   ];
 
   return (
@@ -356,7 +356,7 @@ export default function Patients() {
                   </h4>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
                     Book a consultation for expert advanced
-                    interventional respiratory & sleep disorder care at our Pitampura, Delhi
+                    Lung & sleep disorder care at our Pitampura, Delhi
                     clinic.
                   </p>
                 </div>
