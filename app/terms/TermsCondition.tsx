@@ -167,7 +167,7 @@ export default function TermsCondition({
           {/* Welcome Intro */}
           <section className="space-y-4">
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-none">
-              Welcome to Delhi Lung & Bronchoscopy Center
+              Welcome to Delhi Lung & Bronchoscopy Centre
             </h2>
             <p className="font-semibold text-slate-600">
               Please carefully review these Terms & Conditions. By scheduling
@@ -295,7 +295,7 @@ export default function TermsCondition({
               Safety & Mutual Respect on Premises
             </h3>
             <p>
-              Delhi Lung & Bronchoscopy Center operates under strict medical
+              Delhi Lung & Bronchoscopy Centre operates under strict medical
               safety frameworks. Zero tolerance is maintained against verbal
               abuse, physical threat, or disrespectful behavior towards clinical
               assistants, laboratory staff, or doctors.
@@ -383,7 +383,7 @@ export default function TermsCondition({
               as professional diagnosis or definitive medical advice.
             </p>
             <p>
-              Delhi Lung & Bronchoscopy Center, its directors (including Dr.
+              Delhi Lung & Bronchoscopy Centre, its directors (including Dr.
               Manish Aggarwal), and its associate clinicians shall not be liable
               for any direct, indirect, incidental, or consequential damages
               resulting from clinical misinterpretations or self-administered
