@@ -22,7 +22,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
 
   // Address and coordinate specifics for Google Maps directions
   const mapAddress =
-    "Delhi Lung & Bronchoscopy Center, Vikas Marg, East Delhi, Delhi, India";
+    "Delhi Lung & Bronchoscopy Centre, Pitampura, Delhi, India";
   const googleMapsUrl = `https://maps.app.goo.gl/QggTaVHkW5qS4ZD8A`;
 
   const amenities = [
