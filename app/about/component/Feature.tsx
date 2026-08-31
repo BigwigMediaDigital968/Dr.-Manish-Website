@@ -15,10 +15,10 @@ export default function Feature() {
                 Emergency Case
               </span>
               <h3 className="text-base font-extrabold tracking-tight leading-none">
-                Urgent Chest & Airway Distress
+                Urgent Chest & Sleep Disorder
               </h3>
               <p className="text-white/80 text-[11px] leading-relaxed">
-                Connect directly with Manish Aggarwal for
+                Connect directly with Dr. Manish Aggarwal for
                 child foreign body inhalation or respiratory failure support.
               </p>
             </div>
@@ -49,7 +49,7 @@ export default function Feature() {
                 <div className="flex justify-between">
                   <span>Monday - Saturday</span>
                   <span className="font-bold text-slate-700">
-                    09:00 AM - 07:00 PM
+                    06:00 PM - 09:00 PM
                   </span>
                 </div>
                 <div className="flex justify-between border-t border-slate-50 pt-1.5">
@@ -75,11 +75,11 @@ export default function Feature() {
                 Preventative Medicine
               </span>
               <h3 className="text-base font-extrabold tracking-tight leading-none">
-                COPD & Lung Cancer Care
+                Lung & Sleep Disorder
               </h3>
               <p className="text-slate-500 text-[11px] leading-relaxed">
                 Focused early screenings incorporating low-dose CT guidance,
-                biomarker profiling, and advanced asthma therapy cycles.
+                biomarker profiling, and advanced sleep therapy cycles.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export default function Feature() {
             >
               <span className="flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-[#6dbb45]" /> Schedule
-                Lung Checkup
+                Lung & Sleep Disorder Checkup
               </span>
               <ArrowRight className="w-4 h-4" />
             </Link>
