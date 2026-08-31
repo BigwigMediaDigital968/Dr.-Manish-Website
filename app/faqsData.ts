@@ -7,7 +7,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: "Who is the best pulmonologist in Delhi?",
     answer:
-      "Dr. Manish Aggarwal, Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is widely regarded as the best pulmonologist in Delhi, with over 24 years of experience as a lung specialist and chest specialist in Delhi.",
+      "Dr. Manish Aggarwal, Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is widely regarded as the best pulmonologist in Delhi, with over 24 years of experience as a lung and chest specialist in Delhi.",
   },
   {
     question: "Do you perform bronchoscopy?",
