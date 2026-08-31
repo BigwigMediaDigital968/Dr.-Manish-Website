@@ -93,7 +93,7 @@ export default function TermsCondition({
             <p className="text-white/85 text-sm sm:text-base max-w-3xl font-medium leading-relaxed">
               Please read these terms and clinical guidelines carefully before
               utilizing any diagnostic scheduling portals, consulting programs,
-              or home-based sleep test systems offered by Delhi Lung & Sleep
+              or home-based sleep test systems offered by Delhi Lung & Bronchoscopy
               Centre.
             </p>
           </div>
