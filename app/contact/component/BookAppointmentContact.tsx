@@ -64,10 +64,10 @@ export default function BookAppointmentContact() {
       alert("Please select a treatment.");
       return;
     }
-    if (!form.time) {
-      alert("Please select a preferred time.");
-      return;
-    }
+    // if (!form.time) {
+    //   alert("Please select a preferred time.");
+    //   return;
+    // }
     setIsSubmitting(true);
 
     try {
