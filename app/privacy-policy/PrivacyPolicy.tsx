@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
               A Commitment to Patient Trust & Safety
             </h2>
             <p>
-              At <strong>Delhi Lung & Bronchoscopy Center</strong> (under the
+              At <strong>Delhi Lung & Bronchoscopy Centre</strong> (under the
               clinical administration of Dr. Manish Aggarwal and registered
               healthcare practitioners), patient confidentiality is treated as a
               core medical standard. This Privacy Policy outlines how our
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
               </div>
 
               <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-1">
-                <h4 className="font-extrabold text-slate-900 text-xs uppercase tracking-wide flex items-center gap-2">
+                <h4 className="font-extrabold text-slate-900 text-xs uppercase tracking-wide flex items- gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#6dbb45]" />{" "}
                   Personal Identifiable Information (PII)
                 </h4>
@@ -197,7 +197,7 @@ export default function PrivacyPolicy() {
               Advanced Clinical Encryption Standards
             </h2>
             <p>
-              Patient databases at Delhi Lung & Bronchoscopy Center are housed
+              Patient databases at Delhi Lung & Bronchoscopy Centre are housed
               behind highly fortified clinical firewalls. Digital files are
               protected using{" "}
               <strong>$256$-bit Advanced Encryption Standards (AES-256)</strong>{" "}
@@ -360,16 +360,16 @@ export default function PrivacyPolicy() {
                 </div>
                 <div className="space-y-1.5 text-xs text-slate-600 font-semibold">
                   <p className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-slate-400" /> Vikas
-                    Marg, East Delhi, Landmark: Metro Pillar
+                    <MapPin className="w-3.5 h-3.5 text-slate-400" /> Pitampura
+                    ,Delhi,
                   </p>
                   <p className="flex items-center gap-2">
                     <Mail className="w-3.5 h-3.5 text-slate-400" />{" "}
-                    compliance@delhilungandsleep.com
+                    Aggarmanish@gmail.com
                   </p>
                   <p className="flex items-center gap-2">
                     <PhoneCall className="w-3.5 h-3.5 text-slate-400" /> +91
-                    98765 43210 (Compliance Ext.)
+                    +91 98995 54095 (Compliance Ext.)
                   </p>
                 </div>
               </div>
