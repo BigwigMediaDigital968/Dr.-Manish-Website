@@ -77,10 +77,10 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
       alert("Please select a treatment.");
       return;
     }
-    if (!formData.time) {
-      alert("Please select a preferred time.");
-      return;
-    }
+    // if (!formData.time) {
+    //   alert("Please select a preferred time.");
+    //   return;
+    // }
     setIsSubmitting(true);
     try {
       const payload = new FormData();
@@ -89,7 +89,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
       payload.append("email", formData.email);
       payload.append("service", formData.specialty);
       payload.append("date", formData.date);
-      payload.append("time", formData.time);
+      // payload.append("time", formData.time);
       payload.append("message", formData.message);
       payload.append("source","opinion-form")
 
