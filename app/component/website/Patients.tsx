@@ -248,7 +248,7 @@ export default function Patients() {
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-medium text-justify lg:text-left">
                   During the severe waves of the COVID-19 pandemic, our clinic
-                  served as a primary anchor of hope and safety in Pitampura,Delhi. Active
+                  served as a primary anchor of hope and safety in Pitampura (Currently in Shalimar Bagh),Delhi. Active
                   respiratory support, counselling, and specialized treatment
                   guidance were continuously rendered under highly challenging
                   conditions.
@@ -356,7 +356,7 @@ export default function Patients() {
                   </h4>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
                     Book a consultation for expert advanced
-                    Lung & sleep disorder care at our Pitampura, Delhi
+                    Lung & sleep disorder care at our Pitampura (Currently in Shalimar Bagh), Delhi
                     clinic.
                   </p>
                 </div>
