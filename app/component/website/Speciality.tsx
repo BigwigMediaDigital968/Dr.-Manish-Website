@@ -247,7 +247,7 @@ export default function Speciality() {
                Delhi Lung & Bronchoscopy Centre: Home of the Best Pulmonologist in Delhi
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura, Delhi with over 24+ years of experience. As an experienced lung & sleep disorder specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and sleep apnea symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinic in Pitampura, Delhi offers the same level of expertise in a more personal setting.
+                Dr. Manish Aggarwal, MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital, is the best pulmonologist in Delhi, also practicing at his private clinic in Pitampura (Currently in Shalimar Bagh), Delhi with over 24+ years of experience. As an experienced lung & sleep disorder specialist, he provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and sleep apnea symptoms in children and adults. If you are searching for a pulmonologist, this pulmonology clinic in Pitampura, Delhi offers the same level of expertise in a more personal setting.
 
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
