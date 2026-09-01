@@ -171,10 +171,10 @@ export default function WhyChooseUs({
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-black text-slate-950">
-              Advanced Respiratory & Interventional
+              Advanced Pulmonology
               <br />
               <span className="bg-gradient-to-r from-[#1fa8e8] to-[#6dbb45] bg-clip-text text-transparent">
-                Pulmonology Care in Delhi
+                Sleep Disorder Care in Delhi
               </span>
             </h2>
 
@@ -183,8 +183,8 @@ export default function WhyChooseUs({
                 <span className="text-slate-900 font-extrabold">
                   Dr. Manish Aggarwal
                 </span>
-                , a Senior Pulmonologist & Interventional Chest Specialist in
-                Pitampura, Delhi, dedicated to provide evidence-based, ethical,
+                , Department of Chest Disease and Interventional Pulmonology, Max Hospital also practicing at his private clinic in Pitampura (Currently in Shalimar Bagh), Delhi 
+                dedicated to provide evidence-based, ethical,
                 and patient-focused respiratory care for both common and complex
                 lung diseases.
               </p>
@@ -217,7 +217,7 @@ export default function WhyChooseUs({
               </div>
               <div>
                 <span className="text-[9px] uppercase font-bold tracking-wider text-slate-400 block">
-                  Senior Specialist
+                  Principal Director
                 </span>
                 <p className="text-xs font-black text-slate-800 leading-none">
                   Dr. Manish Aggarwal
