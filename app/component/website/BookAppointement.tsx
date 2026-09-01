@@ -107,7 +107,7 @@ export default function BookAppointment() {
 
             <p className="mt-5 text-base leading-relaxed text-[#64748b] lg:text-lg">
               Breathe better, sleep well. Dr. Manish Aggarwal, pulmonologist & sleep specialists deliver
-              world-class treatment, right here in Pitampura,
+              world-class treatment, right here in Pitampura (Currently in Shalimar Bagh),
               Delhi.
             </p>
 
