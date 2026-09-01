@@ -86,7 +86,7 @@ export default function AppointmentProcess({
                       Our Location
                     </h4>
                     <p className="text-[11px] text-slate-500 font-medium mt-1">
-                      JU-12A, Block G&JU, Ranikhet, <br /> Pitampura, Delhi, 110034
+                      BM 2, opposite Prabhu Dayal Public School,<br /> Shalimar Bagh, Delhi, 110034
                     </p>
                   </div>
                 </div>
