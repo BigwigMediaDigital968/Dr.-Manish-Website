@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
                 <span className="text-slate-900 font-extrabold">
                   Dr. Manish Aggarwal
                 </span>
-                , Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital and also practising at his clinic in Pitampura, Delhi, is dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both chronic sleep disorder and complex lung diseases.
+                , Principal Director, Department of Chest Disease and Interventional Pulmonology at Max Hospital and also practising at his clinic in Pitampura (Currently in Shalimar Bagh), Delhi, is dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both chronic sleep disorder and complex lung diseases.
               </p>
               <p className="text-slate-500 font-normal">
                 As an experienced pulmonologist in Delhi, patients rely on his clinic that combines with modern treatment expertise with compassionate long-term patient care.
