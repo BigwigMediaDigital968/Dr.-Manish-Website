@@ -93,7 +93,8 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
             <div className="flex items-start gap-2.5 text-slate-500 text-xs sm:text-sm">
               <MapPin className="w-5 h-5 text-[#1fa8e8] shrink-0 mt-0.5" />
               <p className="leading-relaxed font-semibold">
-                JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034
+                BM 2, opposite Prabhu Dayal Public School,
+Shalimar Bagh, Delhi, 110034
               </p>
             </div>
           </div>

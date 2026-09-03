@@ -53,7 +53,7 @@ const socials = [
 const contactItems = [
   {
     icon: MapPin,
-    text: "JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034",
+    text: "BM 2, opposite Prabhu Dayal Public School, Shalimar Bagh, Delhi, 110034",
   },
   { icon: Phone, text: "+91 98995 54095" },
   { icon: Mail, text: "Aggarmanish@gmail.com" },

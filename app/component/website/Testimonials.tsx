@@ -114,8 +114,8 @@ export default function Testimonials() {
                 <Heart className="w-7 h-7 text-white fill-white/10 animate-pulse" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
-                99.4% Patient <br />
-                Satisfactory Care
+                Compassionate Care. <br />
+                Better Outcomes
               </h3>
               <p className="text-xs text-white/90 font-medium max-w-xs mx-auto">
                 Real recovery testimonies from chest diseases, respiratory
