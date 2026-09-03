@@ -56,8 +56,8 @@ export default function WhyChooseUs() {
             {/* Visual Frame Block */}
             <div className="relative w-full max-w-[360px] aspect-[4/5] bg-white rounded-[40px] shadow-2xl border-4 border-white overflow-hidden group">
               <img
-                src="/why-choose.png"
-                alt="Advanced Pulmonary Diagnostic Equipment"
+                src="/doc-image-1.jpeg"
+                alt="Dr. Manish Aggarwal"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />

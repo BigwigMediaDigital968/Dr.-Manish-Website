@@ -151,7 +151,7 @@ export default function AppointmentProcess({
             {/* Aspect Ratio matched precisely to image_9cb3d8.jpg */}
             <div className="relative w-full max-w-[340px] aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl border-4 border-slate-50/50 group">
               <img
-                src="/appointment.png"
+                src="/doc-image-2.jpeg"
                 alt="Doctor consulting respiratory patient"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"

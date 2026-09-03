@@ -62,7 +62,7 @@ export default function CTA() {
             {/* ================= RIGHT COLUMN: HIGH-QUALITY PULMONARY IMAGE ================= */}
             <div className="lg:col-span-5 relative h-64 lg:h-full min-h-[320px] overflow-hidden shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80"
+                src="/doc-image-3.jpeg"
                 alt="Pulmonology Consultation and Lung Care"
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 loading="lazy"
