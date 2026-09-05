@@ -5,16 +5,16 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/level-1-sleep-study-polysomnography";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Insomnia Causes, Symptoms & Treatment | Dr. Manish";
+const title = "Level 1 Sleep Study (Polysomnography) | Dr Manish Aggrawal";
 const description =
-  "Struggling to sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, explains insomnia causes, symptoms, and evidence-based CBT-I treatment. Book a consultation.";
+  "Get an accurate Level 1 Polysomnography sleep study with Dr Manish Aggrawal. Diagnose sleep apnea, insomnia, and more. Book your overnight sleep study today.";
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "insomnia treatment",
-    "insomnia specialist Delhi",
+    "Polysomnography",
+    "Polysomnography specialist Delhi",
     "sleep specialist Delhi",
     "CBT-I",
     "chronic insomnia",
