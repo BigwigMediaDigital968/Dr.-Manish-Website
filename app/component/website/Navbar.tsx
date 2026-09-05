@@ -311,7 +311,7 @@ export default function Navbar() {
         {
           title: "SLEEP INVESTIGATIONS",
           items: [
-            { name: "Level 1 Sleep Study (Polysomnography)", href: "#" },
+            { name: "Level 1 Sleep Study (Polysomnography)", href: "/level-1-sleep-study-polysomnography" },
             {
               name: "Level 2 and Level 3 Sleep Test (Home Sleep Apnoea Test) Certified by Sleep Specialist Doctor",
               href: "/level-2-level-3-home-sleep-apnoea-test",
