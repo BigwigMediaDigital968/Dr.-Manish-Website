@@ -13,6 +13,7 @@ const faqs = [
     question: "What are the risks of polysomnography? ",
     answer:
       "This test is considered very safe. It is non invasive and painless, with no needles or radiation involved. The main discomfort some people report is difficulty falling asleep with sensors attached or in an unfamiliar room, but this rarely affects the accuracy of the test.",
+  },
   {
     question: "What is the 3% rule for sleep apnea?",
     answer:
@@ -275,6 +276,7 @@ With years of experience in diagnosing and treating sleep disorders, Dr. Manish 
                   </div>
                 ))}
               </div>
+            </div>
             </div>
           
           <div className="w-full lg:w-[40%] bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col items-center justify-center text-center">
