@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import InsomniaTreatmentPage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
-const PAGE_PATH = "/insomnia-treatment";
+const PAGE_PATH = "/level-1-sleep-study-polysomnography";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title = "Insomnia Causes, Symptoms & Treatment | Dr. Manish";
