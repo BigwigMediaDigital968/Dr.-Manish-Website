@@ -5,54 +5,33 @@ import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 
 const faqs = [
   {
-    question: "What is insomnia?",
+    question: "What does polysomnography test for? ",
     answer:
-      "Insomnia is a sleep disorder involving difficulty falling asleep, staying asleep, or waking too early and being unable to fall back asleep even with enough time and opportunity to sleep.",
+      "Polysomnography tests for a wide range of sleep disorders, including obstructive sleep apnea, central sleep apnea, insomnia, narcolepsy, restless legs syndrome, periodic limb movement disorder, and other unusual sleep behaviours. It records your brain waves, breathing, oxygen levels, heart rate, and body movements to give a complete picture of your sleep health.",
   },
   {
-    question: "Is insomnia a disease or just a symptom?",
+    question: "What are the risks of polysomnography? ",
     answer:
-      "It can be either. Insomnia can occur on its own as a primary disorder, or as a symptom of another condition like anxiety, depression, or a medical illness. When persistent, it's treated as a condition requiring proper care.",
+      "This test is considered very safe. It is non invasive and painless, with no needles or radiation involved. The main discomfort some people report is difficulty falling asleep with sensors attached or in an unfamiliar room, but this rarely affects the accuracy of the test.",
+  {
+    question: "What is the 3% rule for sleep apnea?",
+    answer:
+      "The 3% rule refers to how oxygen desaturation is measured during a sleep study. If your blood oxygen level drops by at least 3% from your baseline during a breathing pause, it is counted as a significant event. This rule helps doctors calculate your Apnea Hypopnea Index (AHI) and determine the severity of sleep apnea.",
   },
   {
-    question: "What is chronic insomnia?",
+    question: "How long does polysomnography take?",
     answer:
-      "Chronic insomnia is defined as sleep difficulty occurring at least three nights a week for three months or more.",
+      "A standard Polysomnography test is done overnight and usually takes around 7 to 8 hours, matching a normal night's sleep. You arrive in the evening, sleep while being monitored, and the test ends in the morning once enough data has been recorded.",
   },
   {
-    question: "What are the main causes of insomnia?",
+    question: "Do I need a doctor's referral for a Polysomnography test?",
     answer:
-      "Stress, anxiety, depression, poor sleep habits, shift work, caffeine or alcohol use, screen time before bed, chronic illness, certain medications, and underlying sleep disorders like obstructive sleep apnea. It's usually a combination rather than one single cause.",
+      "In most cases, yes. A referral from your doctor helps ensure the test is medically necessary and that your results are reviewed by a qualified sleep specialist like Dr. Manish Aggrawal.",
   },
   {
-    question: "What are the common symptoms of insomnia?",
+    question: "Will I be able to sleep normally during the test? ",
     answer:
-      "Common symptoms include difficulty sleeping, frequent night waking, early waking, daytime fatigue, poor concentration, irritability, and mood changes.",
-  },
-  {
-    question: "What are the different types of insomnia?",
-    answer:
-      "The primary types include acute, chronic, sleep-onset (trouble falling asleep), sleep-maintenance (trouble staying asleep), early-morning-awakening, and comorbid (linked to another condition). Many people experience more than one type at once.",
-  },
-  {
-    question: "Is pregnancy insomnia normal?",
-    answer:
-      "Yes, it's common due to hormonal changes and physical discomfort. If it's severely affecting rest, it should be discussed with a doctor to find safe management strategies.",
-  },
-  {
-    question: "What is the first-line treatment for insomnia?",
-    answer:
-      "Cognitive Behavioural Therapy for Insomnia (CBT-I) is the recognized first-line treatment because it addresses the behavioral and cognitive root causes without the risks of long-term medicine use.",
-  },
-  {
-    question: "Can insomnia be treated without sleeping pills?",
-    answer:
-      "Yes, in many cases. CBT-I, sleep hygiene changes, stress management, and treating underlying medical conditions are highly effective alone, or they can be paired alongside short-term medication when clinically needed.",
-  },
-  {
-    question: "When should I see a doctor for insomnia?",
-    answer:
-      "You should consult a specialist if sleep problems last more than a few weeks, significantly affect your daily functioning, or occur alongside loud snoring, gasping, anxiety, or depression.",
+      "Most patients do sleep well enough for the technician to gather reliable data, even if it takes a little longer to fall asleep than usual. The sensors are lightweight and designed not to disturb natural sleep positions.",
   },
 ];
 
@@ -61,9 +40,9 @@ export default function InsomniaTreatmentPage() {
     <>
       {/* HERO SECTION */}
       <ServiceHero
-        title="Insomnia Treatment: Causes, Symptoms & What It Really Means"
-        description="It's 2 a.m. and your mind won't switch off. Or you fall asleep fine, then wake at 3 a.m. and lie there until morning. Almost everyone has a bad night now and then before an exam, a big meeting, a stressful week. That's normal. But when poor sleep continues night after night, for weeks or months, it's no longer 'just stress.' Dr. Manish Aggarwal, a pulmonologist and sleep specialist, explains what insomnia is, why it happens, and how it's treated so you can make an informed decision about your sleep health."
-        ctaText="Book an Appointment"
+        title="Struggling with Poor Sleep? Get Answers with a Level 1 Polysomnography Test"
+        description="A Level 1 Sleep Study, also called Polysomnography, is the most reliable way to find out what is really happening while you sleep. This overnight, fully supervised Polysomnography test is conducted under the expert care of Dr. Manish Aggrawal, helping you get a clear and accurate diagnosis for sleep-related problems."
+        ctaText="Book Your Polysomnography Test Now"
         backgroundImage="/sleep/insomnia-treatment.png"
       />
 
@@ -77,16 +56,16 @@ export default function InsomniaTreatmentPage() {
                 Condition Overview
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0f172a] leading-tight">
-                What Is Insomnia?
+                What is Polysomnography?
               </h2>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                Insomnia means having trouble falling asleep, staying asleep, or waking up too early and being unable to fall back asleep—even when you have enough time and a suitable environment to sleep.
+                <strong>Polysomnography</strong> is a detailed sleep test that records how your body behaves while you sleep. It tracks your brain waves, heartbeat, breathing pattern, oxygen levels, eye movement, and muscle activity throughout the night.
               </p>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                Everyone experiences this occasionally. It becomes <span className="font-bold text-[#0f172a]">Insomnia Disorder</span> when the pattern happens at least <span className="font-semibold text-[#0f172a]">three nights a week</span>, continues for <span className="font-semibold text-[#0f172a]">three months or longer</span>, and starts to affect how you function during the day—disrupting your energy, mood, focus, or work performance.
+                 Unlike home sleep tests, <span className="font-bold text-[#0f172a]">a Level 1 sleep study</span> is done in a sleep lab under the direct supervision of a trained technician, which makes it the gold standard for diagnosing sleep disorders.
               </p>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                This is different from a few rough nights caused by travel, temporary illness, or an acute stressful event, which usually resolve on their own. Insomnia disorder tends to build on itself: poor sleep causes stress about sleep, which makes sleep even harder—which is exactly why early professional evaluation matters.
+                This test gives doctors a complete picture of your sleep cycle, so they can spot problems that a simple checkup cannot catch. If you have been feeling tired all day, snoring loudly, or waking up gasping for air, a <strong>Polysomnography</strong> test can help find the exact cause.
               </p>
             </div>
             <div className="w-full lg:w-[45%] shrink-0">
@@ -104,20 +83,21 @@ export default function InsomniaTreatmentPage() {
           <div className="flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between">
             <div className="max-w-2xl space-y-4">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-                Tracking Sleep Quality
+                In Lab, Attended
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight">
-                Trouble Sleeping Is Usually the First Sign
+                Why Choose a Level 1 Polysomnography?
+
               </h2>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                When sleep trouble shows up, paying attention to a few clinical details helps a doctor understand exactly what is happening in your sleep cycles:
+                A Level 1 sleep study is considered the most accurate type of test because a qualified technician stays with you throughout the night. This means:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {[
-                  { label: "1. Frequency Dynamics", desc: "Tracking if it happens a few scattered nights, or most nights of the week." },
-                  { label: "2. Disruption Type", desc: "Identifying whether it is trouble falling asleep, staying asleep, or waking too early." },
-                  { label: "3. Chronicity & Duration", desc: "Pinpointing how long it has been going on—days, weeks, or consecutive months." },
-                  { label: "4. Associated Symptoms", desc: "Checking for loud snoring, breathing pauses, daytime anxiety, or low mood." },
+                  { label: "1. Equipment", desc: "Any equipment issues are fixed immediately, so you get clean and reliable data" },
+                  { label: "2. Technician", desc: "The technician can adjust your treatment (like CPAP settings) in real time if needed." },
+                  { label: "3. The Stage", desc: "Every stage of your sleep, from light sleep to deep sleep to REM sleep, is carefully recorded" },
+                  { label: "4. Patients", desc: "It is suitable for people with complex health conditions or other sleep disorders that home tests may miss" },
                 ].map((item, index) => (
                   <div key={index} className="p-3 bg-slate-50 border border-slate-100 rounded-xl">
                     <h4 className="font-bold text-sm text-[#0f172a]">{item.label}</h4>
@@ -128,7 +108,7 @@ export default function InsomniaTreatmentPage() {
             </div>
             <div className="w-full lg:w-auto shrink-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center lg:max-w-xs">
               <p className="text-sm font-medium text-[#334155] mb-4">
-                Not sure what your sleep pattern means? Talk to Dr. Manish Aggarwal today.
+                This close supervision is why doctors like Dr. Manish Aggrawal recommend Level 1 Polysomnography for patients who need a precise and dependable diagnosis.
               </p>
               <BookAppointmentButton cta="Consult Doctor 🗓" />
             </div>
@@ -141,26 +121,30 @@ export default function InsomniaTreatmentPage() {
             Clinical Classifications
           </span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight mb-4">
-            Types of Insomnia Disorders
+            Sleep Disorders Diagnosed Through Polysomnography
           </h2>
           <p className="text-sm sm:text-base text-[#64748b] mb-6 leading-relaxed">
-            Not all insomnia looks the same. Some people struggle to fall asleep, others fall asleep fine but wake up repeatedly, and some wake up far too early. Understanding which type you have helps guide the right treatment pathway.
+            This test is used to detect and confirm a wide range of sleep disorders, including:
           </p>
           <div className="overflow-x-auto border border-slate-100 rounded-2xl">
             <table className="w-full text-left text-sm border-collapse">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
-                  <th className="p-4 font-bold text-[#0f172a] w-1/3">Type of Insomnia</th>
+                  <th className="p-4 font-bold text-[#0f172a] w-1/3">Type of Tests</th>
                   <th className="p-4 font-bold text-[#0f172a] w-2/3">What It Feels Like</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-[#334155]">
                 {[
-                  { title: "Acute Insomnia", desc: "Short-term sleep trouble, usually linked to a specific stressor (exams, a family issue, travel). Often resolves within days to a few weeks." },
-                  { title: "Chronic Insomnia", desc: "Sleep difficulty occurring at least 3 nights a week for 3 months or more, often without an obvious single cause." },
-                  { title: "Sleep-Onset Insomnia", desc: "Difficulty falling asleep at the start of the night, even when you feel tired." },
-                  { title: "Sleep-Maintenance Insomnia", desc: "Falling asleep without much trouble, but waking up multiple times during the night and struggling to fall back asleep." },
-                  { title: "Early Morning Awakening Insomnia", desc: "Waking up much earlier than planned (for example, 4 a.m.) and being unable to fall back asleep, even though you're still tired." },
+                  { title: "Obstructive Sleep Apnea (OSA)", desc: "Repeated pauses in breathing caused by a blocked airway" },
+                  { title: "Central Sleep Apnea", desc: " A condition where the brain fails to send proper signals to the breathing muscles" },
+                  { title: "Insomnia", desc: "Ongoing trouble falling or staying asleep." },
+                  { title: "Narcolepsy", desc: "Sudden and uncontrollable episodes of falling asleep during the day." },
+                  { title: "Restless Legs Syndrome (RLS)", desc: "An uncomfortable urge to move the legs, especially at night." },
+                  { title: "Periodic Limb Movement Disorder", desc: " Repeated jerking or twitching of the limbs during sleep." },
+                  { title: "REM Sleep Behaviour Disorder", desc: "Acting out vivid dreams physically while asleep." },
+                  { title: "Parasomnias", desc: "Unusual behaviours during sleep, such as sleepwalking or night terrors." },
+                  { title: "Snoring related breathing problems", desc: "That affect sleep quality." },
                 ].map((row, index) => (
                   <tr key={index}>
                     <td className="p-4 font-semibold text-[#0f172a] whitespace-nowrap">{row.title}</td>
@@ -171,7 +155,7 @@ export default function InsomniaTreatmentPage() {
             </table>
           </div>
           <p className="mt-4 text-xs sm:text-sm text-[#64748b] italic">
-            Many patients experience more than one type at the same time—for instance, taking long to fall asleep and waking up frequently at night. If these patterns sound familiar, a proper sleep evaluation can help identify exactly what you are dealing with.
+If you or your family have noticed any of these symptoms, a Polysomnography test can help confirm the diagnosis and guide the right treatment plan.
           </p>
         </section>
 
@@ -184,17 +168,18 @@ export default function InsomniaTreatmentPage() {
               Nocturnal Presentation
             </span>
             <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[#0f172a] leading-tight">
-              What Your Symptoms Tell You: At Night
+              What to Expect During Your Polysomnography Test
             </h2>
             <p className="mt-3 text-sm text-[#64748b] leading-relaxed">
-              Insomnia isn't only about total lack of sleep; it displays distinct disturbances during the night hours:
+             Knowing what happens during the test can ease any worry you may have. Here is a simple breakdown:
             </p>
             <ul className="mt-6 space-y-3.5">
               {[
-                "Lying awake for hours despite feeling completely exhausted",
-                "Waking up several times and struggling to fall back asleep",
-                "Waking up permanently 2–3 hours before your scheduled alarm",
-                "Sleeping light or un-refreshingly, feeling like you never truly rested",
+                "You will arrive at the sleep lab in the evening and settle into a comfortable, private room",
+                "A technician will gently attach small sensors to your scalp, face, chest, and legs. These sensors do not hurt and simply record signals",
+                "You will sleep as you normally would, while the equipment records your brain activity, breathing, oxygen levels, heart rate, and body movements",
+                "The technician monitors everything from a nearby room and steps in only if needed",
+                "In the morning, the sensors are removed and you are free to go about your day",
               ].map((symptom, idx) => (
                 <li key={idx} className="flex gap-3 items-start text-sm text-[#334155] leading-relaxed">
                   <span className="h-5 w-5 rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
@@ -209,21 +194,21 @@ export default function InsomniaTreatmentPage() {
           {/* DAY SYMPTOMS */}
           <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:border-[#1fa8e8]/40 transition-colors duration-300">
             <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-              Diurnal Presentation
+              How to Prepare for Your Sleep Study
             </span>
             <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[#0f172a] leading-tight">
-              What Your Symptoms Tell You: During the Day
+              A few simple steps can help your test results come out more accurate:
             </h2>
             <p className="mt-3 text-sm text-[#64748b] leading-relaxed">
               Poor nighttime sleep impacts your systemic function during waking hours through multiple physical and cognitive indicators:
             </p>
             <ul className="mt-6 space-y-3.5">
               {[
-                "Constant tiredness or fatigue even after spending 7–8 hours in bed",
-                "Difficulty concentrating, noticeable forgetfulness, or mental 'fog'",
-                "Increased irritability, mood swings, or growing anxiety around bedtime",
-                "Heavy reliance on daytime tea, coffee, energy drinks, or frequent naps",
-                "Making more mistakes, experiencing slips in focus, or reduced work output",
+                "Avoid caffeine and alcohol on the day of the test",
+                "Wash your hair the night before, but skip oils, gels, or sprays",
+                "Bring your regular night clothes and any bedtime items that help you relax",
+                "Continue your usual medicines unless your doctor tells you otherwise",
+                "Try to avoid daytime naps on the day of the test",
               ].map((symptom, idx) => (
                 <li key={idx} className="flex gap-3 items-start text-sm text-[#334155] leading-relaxed">
                   <span className="h-5 w-5 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
@@ -242,10 +227,10 @@ export default function InsomniaTreatmentPage() {
             Etiology & Triggers
           </span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight mb-4">
-            Common Causes of Insomnia
+           Is Polysomnography Safe?
           </h2>
           <p className="text-sm sm:text-base text-[#64748b] mb-6 leading-relaxed">
-            Insomnia rarely has just one cause. It is often a complex combination of behavioral habits, underlying health conditions, and life circumstances working together. This is a vital reason to see a sleep specialist rather than simply reaching for a sleeping pill—if an undiagnosed condition like sleep apnea or a thyroid problem is present, treating only the symptom of "not sleeping" won't fix the real root issue.
+Yes. This test is painless and non invasive. The sensors only record information and do not send any electricity into your body. There are no needles, no radiation, and no major risks involved. Some people feel mild discomfort from the sensors or find it hard to sleep in a new place, but this does not usually affect the quality of the results.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -274,13 +259,13 @@ export default function InsomniaTreatmentPage() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-                Predisposing Factors
+                Best Doctor for Polysomnography
               </span>
               <h2 className="mt-2 text-2xl font-bold tracking-tight text-white">
-                Risk Factors for Insomnia
+                Why Choose Dr. Manish Aggrawal for Your Polysomnography Test?
               </h2>
               <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-                Having one or more risk factors doesn't mean insomnia is guaranteed—it simply means extra attention to structured sleep habits helps protect your health:
+With years of experience in diagnosing and treating sleep disorders, Dr. Manish Aggrawal offers a patient friendly approach to every sleep study. From the first consultation to the final report, patients receive clear explanations, a comfortable testing environment, and a personalised treatment plan based on their results.If poor sleep is affecting your health, mood, or daily life, do not wait. A Level 1 Polysomnography test can uncover the root cause and set you on the path to better sleep.
               </p>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200">
                 {["Age above 60 years", "Female gender (pregnancy/menopause)", "History of anxiety or depression", "Irregular or rotating work shifts", "Chronic conditions (diabetes, heart disease)", "High-stress lifestyle patterns", "Family history of sleep problems"].map((factor, i) => (
@@ -291,78 +276,10 @@ export default function InsomniaTreatmentPage() {
                 ))}
               </div>
             </div>
-
-            <div className="bg-slate-800/60 border border-slate-700/50 rounded-2xl p-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
-                Severity Assessment
-              </span>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-white">
-                Is Poor Sleep Always a Cause for Concern?
-              </h2>
-              <p className="mt-2 text-sm text-slate-300 leading-relaxed">
-                Not always. A rough night before a big day is normal. However, early evaluation prevents acute insomnia from turning into a chronic problem. You should see a specialist if you notice:
-              </p>
-              <ul className="mt-4 space-y-2.5 text-sm text-slate-200">
-                <li className="flex gap-2 items-start">
-                  <span className="text-amber-400 font-bold">⚠</span> <span>Sleep problems lasting more than 3–4 weeks consecutively</span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-amber-400 font-bold">⚠</span> <span>Daytime fatigue severely affecting work, driving safety, or daily tasks</span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-amber-400 font-bold">⚠</span> <span>Loud snoring or breathing pauses during sleep (possible sleep apnea)</span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-amber-400 font-bold">⚠</span> <span>Insomnia occurring alongside anxiety, depression, or severe mood changes</span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-amber-400 font-bold">⚠</span> <span>Pregnancy insomnia severely impacting systemic rest and well-being</span>
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-amber-400 font-bold">⚠</span> <span>Relying regularly on over-the-counter sleep aids several nights in a row</span>
-                </li>
-              </ul>
-              <div className="mt-6 text-center sm:text-left">
-                <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CLINICAL CARE & METHODOLOGY */}
-        <section className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12">
-          <div className="flex-1 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
-              Clinical Care Pathways
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight">
-              How Dr. Manish Can Help
-            </h2>
-            <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-              Dr. Manish Aggarwal is a pulmonologist and sleep specialist experienced in diagnosing and treating insomnia, sleep apnea, and related breathing conditions during sleep. During a comprehensive consultation, he maps out your sleep architecture using a thorough diagnostic workup:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-[#334155]">
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-100"><strong>Detailed Sleep History:</strong> Reviewing patterns, daily lifestyle, stress levels, and medicines.</div>
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-100"><strong>Structured Sleep Diary:</strong> Tracking precise sleep and wake times over one to two weeks.</div>
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-100"><strong>Clinical Sleep Questionnaires:</strong> Standardized diagnostic tools assessing quality and daytime lag.</div>
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-100"><strong>Sleep Study (Polysomnography):</strong> Overnight test monitoring breathing, brain activity, and oxygen if apnea is suspected.</div>
-            </div>
-            <p className="text-sm sm:text-base text-[#64748b] leading-relaxed pt-2">
-              Treatment is personalized, logical, and step-by-step:
-            </p>
-            <div className="space-y-3 pl-2">
-              <p className="text-sm text-[#334155] leading-relaxed">
-                <strong className="text-[#0f172a]">CBT-I (Cognitive Behavioural Therapy for Insomnia):</strong> The gold-standard, first-line, evidence-based treatment. It includes sleep restriction therapy, stimulus control, cognitive restructuring, and relaxation techniques. Unlike sleeping pills, CBT-I treats the actual behavioral root cause, has longer-lasting benefits, and carries zero risk of physical dependency.
-              </p>
-              <p className="text-sm text-[#334155] leading-relaxed">
-                <strong className="text-[#0f172a]">Sleep Hygiene & Underlying Support:</strong> Optimizing caffeine timings, screen habits, and bedtime environments while managing comorbid issues like sleep apnea, acid reflux, or thyroid disorders directly. Medications are reserved only when clinically appropriate, used for the shortest necessary duration under medical supervision.
-              </p>
-            </div>
-          </div>
           
           <div className="w-full lg:w-[40%] bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col items-center justify-center text-center">
             <h3 className="text-lg font-bold text-[#0f172a]">
-              Don't Ignore Ongoing Sleep Trouble
+              Consult Dr. Manish Aggrawal Now
             </h3>
             <p className="mt-2 text-sm text-[#64748b] max-w-sm mb-6 leading-relaxed">
               If you've been lying awake at night, waking up exhausted, or relying heavily on caffeine and naps to get through the day, it's worth getting checked. Insomnia is highly treatable, and early diagnosis makes resolution easier.
