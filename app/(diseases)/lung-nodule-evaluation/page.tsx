@@ -2,8 +2,7 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "Lung Nodule Evaluation in Delhi – Dr. Manish Aggarwal";
+const title = "Lung Nodule Evaluation in Delhi – Dr. Manish Aggarwal";
 
 const description =
   "Found a spot on your lung scan? Most nodules are harmless. Get an expert Lung Nodule Evaluation from Dr. Manish Aggarwal, a trusted pulmonologist in Delhi.";
@@ -26,6 +25,13 @@ export const metadata = {
     title,
     description,
     url: `${BASE_URL}/lung-nodule-evaluation`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -139,15 +145,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

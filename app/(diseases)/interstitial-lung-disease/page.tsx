@@ -2,8 +2,7 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "ILD / Lung Fibrosis Care in Delhi with Dr. Manish Aggarwal";
+const title = "ILD / Lung Fibrosis Care in Delhi with Dr. Manish Aggarwal";
 
 const description =
   "Worsening breathlessness or a dry cough that won't go away? Learn about Interstitial Lung Disease (ILD) and get expert care from Dr. Manish Aggarwal.";
@@ -28,6 +27,13 @@ export const metadata = {
     title,
     description,
     url: `${BASE_URL}/interstitial-lung-disease`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -141,15 +147,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

@@ -2,8 +2,7 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "Small Cell Lung Carcinoma (SCLC) Care – Dr. Manish Aggarwal";
+const title = "Small Cell Lung Carcinoma (SCLC) Care – Dr. Manish Aggarwal";
 
 const description =
   "SCLC grows fast: persistent cough, weight loss, or breathlessness needs urgent evaluation. Get expert diagnosis & treatment from Dr. Manish Aggarwal, Delhi.";
@@ -27,6 +26,13 @@ export const metadata = {
     title,
     description,
     url: `${BASE_URL}/small-cell-lung-carcinoma`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -140,15 +146,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

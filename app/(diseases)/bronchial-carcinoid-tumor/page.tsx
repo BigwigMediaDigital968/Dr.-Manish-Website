@@ -2,8 +2,7 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "Bronchial Carcinoid Tumor Care in Delhi – Dr. Manish Aggarwal";
+const title = "Bronchial Carcinoid Tumor Care in Delhi – Dr. Manish Aggarwal";
 
 const description =
   "Recurring chest infection or cough that won't clear? It could be a rare, treatable bronchial carcinoid tumor. Get expert care from Dr. Manish Aggarwal, Delhi.";
@@ -26,6 +25,13 @@ export const metadata = {
     title,
     description,
     url: `${BASE_URL}/bronchial-carcinoid-tumor`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -139,15 +145,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

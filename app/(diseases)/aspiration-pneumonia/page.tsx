@@ -2,8 +2,7 @@ import AspirationPneumoniaPage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "Aspiration Pneumonia Care in Delhi – Dr. Manish Aggarwal";
+const title = "Aspiration Pneumonia Care in Delhi – Dr. Manish Aggarwal";
 
 const description =
   "Fever or cough after choking or trouble swallowing? It could be aspiration pneumonia. Get expert care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
@@ -24,7 +23,13 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    image: "/services/aspiration-pneumonia.png",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     url: `${BASE_URL}/aspiration-pneumonia`,
     type: "website",
   },

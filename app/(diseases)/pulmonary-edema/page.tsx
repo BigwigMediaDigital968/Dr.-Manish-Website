@@ -23,8 +23,14 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    imaage: "/services/pulmonary-edema.png",
     url: `${BASE_URL}/pulmonary-edema`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {

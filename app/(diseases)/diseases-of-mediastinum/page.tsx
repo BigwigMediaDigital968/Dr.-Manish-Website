@@ -24,8 +24,14 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    image: "/services/diseases-of-mediastinum.png",
     url: `${BASE_URL}/diseases-of-mediastinum`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {

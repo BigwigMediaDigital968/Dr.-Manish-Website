@@ -25,7 +25,13 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    image: "/services/tubercular-pneumonia.png",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     url: `${BASE_URL}/tubercular-pneumonia`,
     type: "website",
   },

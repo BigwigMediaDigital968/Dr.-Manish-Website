@@ -28,6 +28,13 @@ export const metadata = {
     description,
     url: `${BASE_URL}/copd`,
     type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

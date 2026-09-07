@@ -24,8 +24,14 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    image: "/services/tobacco-addiction.png",
     url: `${BASE_URL}/tobacco-addiction`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {

@@ -2,8 +2,7 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "Is Your Asthma Uncontrolled or Severe? Dr. Manish Aggarwal";
+const title = "Is Your Asthma Uncontrolled or Severe? Dr. Manish Aggarwal";
 
 const description =
   "Inhaler not working? Learn the difference between uncontrolled and severe asthma, and get an accurate diagnosis from Dr. Manish Aggarwal in Delhi.";
@@ -27,6 +26,13 @@ export const metadata = {
     title,
     description,
     url: `${BASE_URL}/uncontrolled-asthma-vs-severe-asthma`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -140,15 +146,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }

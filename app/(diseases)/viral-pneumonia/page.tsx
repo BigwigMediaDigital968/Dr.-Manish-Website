@@ -2,8 +2,7 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "What Is Viral Pneumonia? Guide by Dr. Manish Aggarwal";
+const title = "What Is Viral Pneumonia? Guide by Dr. Manish Aggarwal";
 
 const description =
   "Persistent fever, cough or breathlessness? Learn about viral pneumonia (flu, H1N1, COVID-19) and get expert treatment from Dr. Manish Aggarwal in Delhi.";
@@ -28,6 +27,13 @@ export const metadata = {
     title,
     description,
     url: `${BASE_URL}/viral-pneumonia`,
+    images: [
+      {
+        url: `${BASE_URL}/_next/image?url=%2Flogo-new.png&w=750&q=75`,
+        width: 750,
+        alt: "Dr. Manish Aggarwal Logo",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -157,15 +163,15 @@ const schema = {
 };
 
 export default function page() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schema),
-                }}
-            />
-            <PageContent />
-        </>
-    )
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+      <PageContent />
+    </>
+  );
 }
