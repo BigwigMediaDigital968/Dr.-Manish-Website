@@ -3,7 +3,7 @@ import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
 import { AlertCircle } from "lucide-react";
-
+import Link from "next/link";
 
 const faqs = [
     {
@@ -159,11 +159,41 @@ export default function PageContent() {
 
                                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                                     {[
-                                        "Chest infection or bronchitis",
-                                        "Pneumonia",
-                                        "Sinus infection with mucus dripping down the throat",
-                                        "Smoking-related lung irritation",
-                                        "COPD (Chronic Obstructive Pulmonary Disease)",
+                                        (<>
+                                        <Link
+                                            href="/bronchiectasis"
+                                            className="hover:underline"
+                                        >
+                                           Chest infection or bronchitis
+                                        </Link>
+                                        </>),
+                                        (<>
+                                        <Link
+                                            href="/viral-pneumonia"
+                                            className="hover:underline"
+                                        >
+                                            Pneumonia
+                                        </Link>
+                                        </>),
+                                        (<>
+                                         Sinus infection with mucus dripping down the throat
+                                        </>),
+                                        (<>
+                                        <Link
+                                            href="/tobacco-addiction"
+                                            className="hover:underline"
+                                        >
+                                            Smoking-related lung irritation
+                                        </Link>
+                                        </>),
+                                        (<>
+                                        <Link
+                                            href="/copd"
+                                            className="hover:underline"
+                                        >
+                                            COPD (Chronic Obstructive Pulmonary Disease)
+                                        </Link>
+                                        </>),
                                     ].map((item, index) => (
                                         <div
                                             key={index}
@@ -196,11 +226,25 @@ export default function PageContent() {
 
                                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                                     {[
-                                        "Asthma",
+                                        (<>
+                                        <Link
+                                        href="/allergic-bronchitis"
+                                        className="hover:underline"
+                                        >
+                                            Asthma
+                                        </Link>
+                                        </>),
                                         "Chronic acid reflux (GERD)",
                                         "Post-nasal drip from allergies or sinus problems",
                                         "Long-term smoking",
-                                        "Tuberculosis (TB), especially if you also have weight loss, night sweats, or fever",
+                                        (<>
+                                        <Link
+                                        href="/tubercular-pneumonia"
+                                        className="hover:underline"
+                                        >
+                                            Tuberculosis (TB), especially if you also have weight loss, night sweats, or fever
+                                        </Link>
+                                        </>),
                                         "In rare cases, an early sign of lung disease",
                                     ].map((item, index) => (
                                         <div
