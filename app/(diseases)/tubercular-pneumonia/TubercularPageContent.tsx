@@ -2,6 +2,7 @@ import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointme
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -48,7 +49,6 @@ export default function TubercularPageContent() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
-        
         {/* WHAT IS TUBERCULAR PNEUMONIA */}
         <section className="bg-slate-50 rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-100">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -60,10 +60,17 @@ export default function TubercularPageContent() {
                 What Is Tubercular Pneumonia?
               </h2>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                Tubercular pneumonia is a lung infection caused by <span className="font-bold">Mycobacterium tuberculosis</span>, the bacteria responsible for tuberculosis. 
+                Tubercular pneumonia is a lung infection caused by{" "}
+                <span className="font-bold">Mycobacterium tuberculosis</span>,
+                the bacteria responsible for tuberculosis.
               </p>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                Unlike typical bacterial pneumonia, which usually comes on suddenly, TB pneumonia tends to develop more slowly, often over weeks, and can be mistaken for a lingering cold or ordinary chest infection in its early stages. It's a serious but treatable condition, and with a full course of the correct medication, most patients recover completely.
+                Unlike typical bacterial pneumonia, which usually comes on
+                suddenly, TB pneumonia tends to develop more slowly, often over
+                weeks, and can be mistaken for a lingering cold or ordinary
+                chest infection in its early stages. It's a serious but
+                treatable condition, and with a full course of the correct
+                medication, most patients recover completely.
               </p>
             </div>
             <div className="w-full lg:w-[45%] shrink-0">
@@ -78,7 +85,6 @@ export default function TubercularPageContent() {
 
         {/* SYMPTOMS & TRANSMISSION GRID */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          
           {/* SYMPTOMS */}
           <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:border-[#1fa8e8]/40 transition-colors duration-300">
             <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -88,7 +94,8 @@ export default function TubercularPageContent() {
               Symptoms of Tubercular Pneumonia
             </h2>
             <p className="mt-3 text-sm text-[#64748b] leading-relaxed">
-              TB pneumonia symptoms usually build up gradually rather than appearing suddenly. Common signs include:
+              TB pneumonia symptoms usually build up gradually rather than
+              appearing suddenly. Common signs include:
             </p>
             <ul className="mt-6 space-y-3.5">
               {[
@@ -101,7 +108,10 @@ export default function TubercularPageContent() {
                 "Fatigue and general weakness",
                 "Chest pain, especially when breathing deeply or coughing",
               ].map((symptom, idx) => (
-                <li key={idx} className="flex gap-3 items-start text-sm text-[#334155] leading-relaxed">
+                <li
+                  key={idx}
+                  className="flex gap-3 items-start text-sm text-[#334155] leading-relaxed"
+                >
                   <span className="h-5 w-5 rounded-full bg-[#1fa8e8]/10 text-[#1fa8e8] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                     ✓
                   </span>
@@ -120,7 +130,8 @@ export default function TubercularPageContent() {
               How Is Tuberculosis (TB) Spread?
             </h2>
             <p className="mt-3 text-sm text-[#64748b] leading-relaxed">
-              TB spreads from person to person through the air through specific modes of exposure:
+              TB spreads from person to person through the air through specific
+              modes of exposure:
             </p>
             <div className="mt-6 space-y-4">
               {[
@@ -141,10 +152,15 @@ export default function TubercularPageContent() {
                   desc: "People with weaker immune systems are more likely to develop active TB after exposure, even if others exposed at the same time don't.",
                 },
               ].map((item, index) => (
-                <div key={index} className="flex gap-3 items-start border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                <div
+                  key={index}
+                  className="flex gap-3 items-start border-b border-slate-100 pb-3 last:border-0 last:pb-0"
+                >
                   <div className="h-2 w-2 rounded-full bg-[#1fa8e8] mt-2 shrink-0" />
                   <p className="text-sm text-[#334155] leading-relaxed">
-                    <strong className="text-[#0f172a] font-semibold">{item.title}:</strong>{" "}
+                    <strong className="text-[#0f172a] font-semibold">
+                      {item.title}:
+                    </strong>{" "}
                     <span className="text-[#64748b]">{item.desc}</span>
                   </p>
                 </div>
@@ -164,20 +180,58 @@ export default function TubercularPageContent() {
               Diagnostic Tests for Tubercular Pneumonia
             </h2>
             <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
-              Confirming TB pneumonia and ruling out other causes of persistent cough is essential before starting treatment. <span className="font-bold text-white">Dr. Manish Aggarwal</span> uses the following tests:
+              Confirming TB pneumonia and ruling out other causes of persistent
+              cough is essential before starting treatment.{" "}
+              <span className="font-bold text-white">Dr. Manish Aggarwal</span>{" "}
+              uses the following tests:
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Chest X-ray or CT Scan", detail: "Provides detailed radiological imaging to evaluate the location and extent of lung involvement." },
-                { name: "Sputum Microscopy & Molecular Tests", detail: "Rapid diagnostic testing (like GeneXpert) to quickly identify TB DNA and detect initial drug resistance." },
-                { name: "Sputum Culture", detail: "Gold-standard test to confirm viable TB bacteria and perform comprehensive drug susceptibility testing." },
-                { name: "Targeted Blood Tests", detail: "Includes specific TB screening assays and systemic inflammatory markers when clinically required." },
-                { name: "Bronchoscopy with BAL", detail: "Bronchoalveolar Lavage used in select cases where non-invasive sputum samples are difficult to obtain." },
+                {
+                  name: "Chest X-ray or CT Scan",
+                  detail:
+                    "Provides detailed radiological imaging to evaluate the location and extent of lung involvement.",
+                },
+                {
+                  name: "Sputum Microscopy & Molecular Tests",
+                  detail:
+                    "Rapid diagnostic testing (like GeneXpert) to quickly identify TB DNA and detect initial drug resistance.",
+                },
+                {
+                  name: "Sputum Culture",
+                  detail:
+                    "Gold-standard test to confirm viable TB bacteria and perform comprehensive drug susceptibility testing.",
+                },
+                {
+                  name: "Targeted Blood Tests",
+                  detail:
+                    "Includes specific TB screening assays and systemic inflammatory markers when clinically required.",
+                },
+                {
+                  name: "Bronchoscopy with BAL",
+                  detail:
+                    "Bronchoalveolar Lavage used in select cases where non-invasive sputum samples are difficult to obtain.",
+                  href: "/procedures/bronchoalveolar-lavage-bal-in-delhi",
+                },
               ].map((test, index) => (
-                <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
-                  <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
+                <div
+                  key={index}
+                  className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200"
+                >
+                  <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">
+                    {test.href ? (
+                      <Link href={test.href} className="hover:underline">
+                        {test.name}
+                      </Link>
+                    ) : (
+                      test.name
+                    )}
+                  </h4>
+
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                    {test.detail}
+                  </p>
                 </div>
               ))}
             </div>
@@ -195,10 +249,23 @@ export default function TubercularPageContent() {
             </h2>
             <div className="text-sm sm:text-base text-[#64748b] space-y-4 leading-relaxed">
               <p>
-                Dr. Manish Aggarwal builds a treatment plan based on the extent of infection and drug resistance found through testing. This typically includes a combination of <span className="font-bold text-[#0f172a]">anti-TB antibiotics</span> taken for six months or longer, with the full course completed even after symptoms improve to avoid relapse or resistance.
+                Dr. Manish Aggarwal builds a treatment plan based on the extent
+                of infection and drug resistance found through testing. This
+                typically includes a combination of{" "}
+                <span className="font-bold text-[#0f172a]">
+                  anti-TB antibiotics
+                </span>{" "}
+                taken for six months or longer, with the full course completed
+                even after symptoms improve to avoid relapse or resistance.
               </p>
               <p>
-                Regular monitoring helps manage side effects, while targeted nutritional support aids recovery since TB can affect appetite and weight. Drug-resistant TB cases require a longer, specialized plan, and follow-up sputum tests and imaging confirm the infection has cleared. Since treatment takes months, regular follow-up with Dr. Manish Aggarwal ensures the medication is working and the course is completed successfully.
+                Regular monitoring helps manage side effects, while targeted
+                nutritional support aids recovery since TB can affect appetite
+                and weight. Drug-resistant TB cases require a longer,
+                specialized plan, and follow-up sputum tests and imaging confirm
+                the infection has cleared. Since treatment takes months, regular
+                follow-up with Dr. Manish Aggarwal ensures the medication is
+                working and the course is completed successfully.
               </p>
             </div>
           </div>
@@ -207,7 +274,8 @@ export default function TubercularPageContent() {
               Get a Treatment Plan Made for You
             </h3>
             <p className="mt-2 text-sm text-[#64748b] max-w-sm mb-6">
-              Every case of TB pneumonia is different, and so is the right treatment for it by Dr. Manish Aggarwal.
+              Every case of TB pneumonia is different, and so is the right
+              treatment for it by Dr. Manish Aggarwal.
             </p>
             <BookAppointmentButton cta="Schedule Your Appointment" />
           </div>
@@ -230,17 +298,39 @@ export default function TubercularPageContent() {
                 Pulmonology & Chest Care
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight">
-                Meet Your Pulmonologist for Tubercular Pneumonia - Dr. Manish Aggarwal
+                Meet Your Pulmonologist for Tubercular Pneumonia - Dr. Manish
+                Aggarwal
               </h2>
               <div className="text-sm sm:text-base text-[#64748b] space-y-3 leading-relaxed">
                 <p>
-                  <span className="font-bold text-[#0f172a]">Dr. Manish Aggarwal</span> is a pulmonologist with years of experience diagnosing and treating tuberculosis and other complex lung infections.
+                  <span className="font-bold text-[#0f172a]">
+                    Dr. Manish Aggarwal
+                  </span>{" "}
+                  is a pulmonologist with years of experience diagnosing and
+                  treating tuberculosis and other complex lung infections.
                 </p>
                 <p>
-                  He completed his <span className="font-bold text-[#0f172a]">MBBS and MD</span> in Tuberculosis and Chest Diseases from <span className="font-bold text-[#0f172a]">Delhi University</span>, followed by NHS clinical experience in the <span className="font-bold text-[#0f172a]">United Kingdom</span> and the prestigious <span className="font-bold text-[#0f172a]">FRCP (Glasgow)</span> from the Royal College of Physicians.
+                  He completed his{" "}
+                  <span className="font-bold text-[#0f172a]">MBBS and MD</span>{" "}
+                  in Tuberculosis and Chest Diseases from{" "}
+                  <span className="font-bold text-[#0f172a]">
+                    Delhi University
+                  </span>
+                  , followed by NHS clinical experience in the{" "}
+                  <span className="font-bold text-[#0f172a]">
+                    United Kingdom
+                  </span>{" "}
+                  and the prestigious{" "}
+                  <span className="font-bold text-[#0f172a]">
+                    FRCP (Glasgow)
+                  </span>{" "}
+                  from the Royal College of Physicians.
                 </p>
                 <p>
-                  He is known for explaining conditions in simple, easy-to-understand language and building treatment plans around each patient's specific test results, rather than offering a one-size-fits-all approach.
+                  He is known for explaining conditions in simple,
+                  easy-to-understand language and building treatment plans
+                  around each patient's specific test results, rather than
+                  offering a one-size-fits-all approach.
                 </p>
               </div>
             </div>
@@ -262,7 +352,8 @@ export default function TubercularPageContent() {
                   Ready to Breathe Easier Again?
                 </h2>
                 <p className="text-sm text-slate-300 max-w-xl leading-relaxed">
-                  Get expert diagnosis and a complete treatment plan for tubercular pneumonia from Dr. Manish Aggarwal.
+                  Get expert diagnosis and a complete treatment plan for
+                  tubercular pneumonia from Dr. Manish Aggarwal.
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
@@ -272,7 +363,6 @@ export default function TubercularPageContent() {
             </div>
           </div>
         </section>
-
       </div>
     </>
   );
