@@ -181,19 +181,19 @@ export default function PleuralThickeningPage() {
                             },
                             {
                                 name: "Pulmonary Function Test (PFT), to check how much the thickening is affecting lung capacity",
-                                link: "/pulmonary-function-test", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Pleural Aspiration, if any associated fluid needs to be tested",
-                                link: "/pleural-aspiration", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pleural-aspiration-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Medical Thoracoscopy, for direct visualisation of the pleura",
-                                link: "/medical-thoracoscopy", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/medical-thoracoscopy-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Pleural Biopsy, when needed to rule out a more serious underlying cause",
-                                link: "/pleural-biopsy", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pleural-biopsy-in-delhi", // Update with actual slug
                             },
                         ].map((test: { name: string; link?: string }, index) => (
                             <li key={index} className="flex gap-3 items-start text-xs sm:text-sm font-bold text-[#0f172a] leading-relaxed">

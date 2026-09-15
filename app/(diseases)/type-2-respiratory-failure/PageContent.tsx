@@ -228,13 +228,25 @@ export default function Type2RespiratoryFailurePage() {
                 { name: "Arterial Blood Gas (ABG)", detail: "The key clinical standard used to definitively confirm elevated carbon dioxide levels and pH alterations." },
                 { name: "Pulse Oximetry Check", detail: "Continuous monitoring of systemic blood oxygen saturation thresholds." },
                 { name: "Chest X-ray / CT Scan", detail: "Detailed radiological tracking to evaluate structural lung or chest wall status." },
-                { name: "Pulmonary Function Test", detail: "Comprehensive lung metrics gathered once the initial acute phase is safely stabilised." },
+                { name: "Pulmonary Function Test", detail: "Comprehensive lung metrics gathered once the initial acute phase is safely stabilised." , link : "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi"},
                 { name: "Advanced Spirometry", detail: "Targeted evaluation to accurately assess underlying lung conditions like chronic COPD." },
               ].map((test, index) => (
-                <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
+                test.link?(
+                  <Link href={test.link}>
+                  <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
+                  <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
+                  <p className="text-xs text-[#1fa8e8] mt-1 leading-relaxed">
+                    Know More 
+                  </p>
+                </div>
+                </Link>
+                ) : (
+                  <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
                   <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
                 </div>
+                )
               ))}
             </div>
           </div>

@@ -182,11 +182,11 @@ export default function LungNodulePage() {
                             },
                             {
                                 name: "Bronchoscopy with Transbronchial Lung Biopsy, when a tissue sample is needed",
-                                link: "#", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/bronchoscopy-in-delh", // Update with actual slug
                             },
                             {
                                 name: "EBUS (Endobronchial Ultrasound), to examine nearby lymph nodes if needed",
-                                link: "#", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/ebus-endobronchial-ultrasound-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Blood tests, to check for signs of infection or inflammation that could explain the nodule",

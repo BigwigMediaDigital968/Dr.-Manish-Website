@@ -177,15 +177,15 @@ export default function PleuralTumorPage() {
                             },
                             {
                                 name: "Pleural Aspiration, to test any associated fluid build-up",
-                                link: "/pleural-aspiration-thoracentesis", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pleural-aspiration-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Medical Thoracoscopy, for direct visualisation and tissue sampling",
-                                link: "/medical-thoracoscopy", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/medical-thoracoscopy-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Pleural Biopsy, to confirm the exact type of tumor",
-                                link: "/pleural-biopsy", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pleural-biopsy-in-delhi", // Update with actual slug
                             },
                         ].map((test:{name:string; link?:string}, index) => (
                             <li key={index} className="flex gap-3 items-start text-xs sm:text-sm font-bold text-[#0f172a] leading-relaxed">
@@ -193,7 +193,7 @@ export default function PleuralTumorPage() {
                                 {
 
                                     test.link && test?.link ? (
-                                        <Link href={test.link} className="hover:text-[#1fa8e8]"> {test.name}
+                                        <Link href={test.link} className="hover:text-[#1fa8e8] hover:underline"> {test.name}
                                         </Link>
                                     ) : (
                                         test.name

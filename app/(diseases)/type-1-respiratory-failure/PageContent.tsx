@@ -2,6 +2,7 @@ import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointme
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -179,13 +180,23 @@ export default function Type1RespiratoryFailurePage() {
                 { name: "Arterial Blood Gas (ABG)", detail: "The key clinical test used to definitively confirm the specific type and overall severity of respiratory failure." },
                 { name: "Pulse Oximetry", detail: "Continuous peripheral checking of blood oxygen level status." },
                 { name: "Chest X-ray / CT Scan", detail: "Detailed radiological visualization to check for underlying lung pathology." },
-                { name: "Pulmonary Function Test", detail: "Functional lung tracking performed once the acute initial phase is fully stabilised." },
+                { name: "Pulmonary Function Test", detail: "Functional lung tracking performed once the acute initial phase is fully stabilised.",  link: "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi"},
                 { name: "Targeted Blood Panels", detail: "Comprehensive systemic blood testing to help isolate the underlying root cause." },
               ].map((test, index) => (
+                test.link ?
+                (<Link href={test.link}>
                 <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
                   <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
+                  <p className="text-xs text-[#1fa8e8] mt-1 leading-relaxed">
+                    Know More 
+                  </p>
                 </div>
+                </Link>):
+                (<div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
+                  <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
+                </div>)
               ))}
             </div>
           </div>

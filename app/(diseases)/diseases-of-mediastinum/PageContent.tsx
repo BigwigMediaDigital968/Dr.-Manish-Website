@@ -49,7 +49,7 @@ export default function DiseasesOfMediastinumPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
-        
+
         {/* WHAT IS THE MEDIASTINUM AND DIAPHRAGM */}
         <section className="bg-slate-50 rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-100">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -61,7 +61,7 @@ export default function DiseasesOfMediastinumPage() {
                 What Is the Mediastinum and Diaphragm?
               </h2>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                The <span className="font-bold">mediastinum</span> is the central compartment of the chest, located between the two lungs, containing the heart, major blood vessels, the windpipe (trachea), the food pipe (oesophagus), the thymus gland, and lymph nodes. 
+                The <span className="font-bold">mediastinum</span> is the central compartment of the chest, located between the two lungs, containing the heart, major blood vessels, the windpipe (trachea), the food pipe (oesophagus), the thymus gland, and lymph nodes.
               </p>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
                 The <span className="font-bold">diaphragm</span> is the large muscle beneath the lungs that plays the primary role in breathing, separating the chest cavity from the abdomen. Diseases affecting the mediastinum, chest wall, or diaphragm can interfere with breathing, swallowing, or the function of nearby organs, and often need careful evaluation by a <span className="font-bold">Diseases of Mediastinum Specialist</span> to identify the exact cause.
@@ -113,7 +113,7 @@ export default function DiseasesOfMediastinumPage() {
 
         {/* CONDITIONS COMPARTMENTALIZATION */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          
+
           {/* MEDIASTINUM CONDITIONS */}
           <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:border-[#1fa8e8]/40 transition-colors duration-300">
             <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -189,19 +189,31 @@ export default function DiseasesOfMediastinumPage() {
               Identifying exactly what's causing a mediastinal, chest wall, or diaphragm problem is essential for planning the right treatment. <span className="font-bold text-white">Dr. Manish Aggarwal</span> utilizes the following diagnostic modalities:
             </p>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
               {[
                 { name: "Chest X-ray / CT Scan", detail: "Initial and high-resolution imaging to map internal thoracic structures." },
                 { name: "PET-CT Scan", detail: "Advanced metabolic imaging leveraged when a malignant tumor or cancer is suspected." },
-                { name: "Bronchoscopy & EBUS", detail: "Endobronchial Ultrasound with needle aspiration to safely sample central lymph nodes or masses." },
-                { name: "Medical Thoracoscopy", detail: "Minimally invasive visual evaluation of the pleural space when directly indicated." },
-                { name: "Pulmonary Function Test", detail: "Functional lung analysis, particularly useful for assessing diaphragm-related breathing limitations." },
+                { name: "Bronchoscopy & EBUS", detail: "Endobronchial Ultrasound with needle aspiration to safely sample central lymph nodes or masses.", link: "https://www.drmanishaggarwal.com/procedures/ebus-endobronchial-ultrasound-in-delhi" },
+                { name: "Medical Thoracoscopy", detail: "Minimally invasive visual evaluation of the pleural space when directly indicated.", link: "https://www.drmanishaggarwal.com/procedures/medical-thoracoscopy-in-delhi" },
+                { name: "Pulmonary Function Test", detail: "Functional lung analysis, particularly useful for assessing diaphragm-related breathing limitations.", link: "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi" },
                 { name: "Targeted Blood Panels", detail: "Comprehensive blood checks to screen for underlying systemic infections or tumor markers." },
               ].map((test, index) => (
-                <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
-                  <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
-                </div>
+                test.link ? (
+                  <Link href={test.link}>
+                    <div key={index} className="h-full bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
+                      <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
+                      <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
+                      <p className="text-xs text-[#1fa8e8] mt-1 leading-relaxed">
+                        Know More
+                      </p>
+                    </div>
+                  </Link>
+                ) : (
+                  <div key={index} className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-4 hover:border-[#1fa8e8]/50 transition-colors duration-200">
+                    <h4 className="font-bold text-[#1fa8e8] text-sm sm:text-base">{test.name}</h4>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">{test.detail}</p>
+                  </div>
+                )
               ))}
             </div>
           </div>

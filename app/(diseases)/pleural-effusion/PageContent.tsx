@@ -182,15 +182,15 @@ export default function PleuralEffusionPage() {
                             },
                             {
                                 name: "Pleural Aspiration (Thoracentesis), to sample and analyse the fluid",
-                                link: "/pleural-aspiration-thoracentesis", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pleural-aspiration-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Medical Thoracoscopy, for a closer look inside the pleural space when needed",
-                                link: "/medical-thoracoscopy", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/medical-thoracoscopy-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Pleural Biopsy, to check for infection, cancer, or other causes",
-                                link: "/pleural-biopsy", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pleural-biopsy-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Blood tests, to help identify the underlying condition",

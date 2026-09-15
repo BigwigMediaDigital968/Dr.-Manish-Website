@@ -182,11 +182,11 @@ export default function PulmonaryArteryHypertensionPage() {
                             },
                             {
                                 name: "Pulmonary Function Test (PFT), to rule out or assess associated lung conditions",
-                                link: "#", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/pulmonary-function-test-pft-in-delhi ", // Update with actual slug
                             },
                             {
                                 name: "6 Minute Walk Test, to assess exercise capacity and monitor treatment response",
-                                link: "#", // Update with actual slug
+                                link: "https://www.drmanishaggarwal.com/procedures/6-minute-walk-test-in-delhi", // Update with actual slug
                             },
                             {
                                 name: "Arterial Blood Gas (ABG) Analysis",
