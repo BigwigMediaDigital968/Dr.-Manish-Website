@@ -128,7 +128,7 @@ export default function BookAppointmentContact() {
                 style={{ background: "var(--gradient-health)" }}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-                Delhi Lung &amp; Sleep Centre
+                Delhi Lung &amp; Bronchoscopy Center
               </span>
 
               <h1
@@ -297,7 +297,7 @@ export default function BookAppointmentContact() {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 7859 8578 87"
+                      placeholder="+91 1234567890"
                       value={form.phone}
                       onChange={(e) => set("phone", e.target.value)}
                       className={inputCls}
