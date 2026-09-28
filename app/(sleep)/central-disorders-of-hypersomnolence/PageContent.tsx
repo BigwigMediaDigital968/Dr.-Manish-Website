@@ -126,7 +126,7 @@ export default function CentralHypersomnolencePage() {
               <p className="text-sm font-medium text-[#334155] mb-4">
                 Not sure what your daytime sleepiness means? Talk to Dr. Manish Aggarwal today.
               </p>
-              <BookAppointmentButton cta="Consult Doctor 🗓" />
+              <BookAppointmentButton cta="Consult Doctor" />
             </div>
           </div>
         </section>
@@ -263,7 +263,7 @@ export default function CentralHypersomnolencePage() {
               </p>
             </div>
             <div className="pt-2 text-center sm:text-left">
-              <BookAppointmentButton cta="Book a Sleep Evaluation with Dr. Manish Aggarwal Today 🗓" />
+              <BookAppointmentButton cta="Book a Sleep Evaluation with Dr. Manish Aggarwal Today" />
             </div>
           </div>
         </section>
@@ -352,7 +352,7 @@ export default function CentralHypersomnolencePage() {
             </div>
             <div className="pt-6 border-t border-slate-200/60 mt-6 text-center">
               <p className="text-xs text-[#64748b] mb-4">With an accurate diagnosis and a personalized care routine, most patients can build a highly manageable daily lifestyle.</p>
-              <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+              <BookAppointmentButton cta="Schedule Your Appointment" />
             </div>
           </div>
         </section>
@@ -404,7 +404,7 @@ export default function CentralHypersomnolencePage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

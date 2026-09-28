@@ -136,7 +136,7 @@ export default function WhyChooseUsPage() {
         <Navbar/>
             {/* <ServiceHero
                 title="Why Choose Us — Advanced Respiratory & Interventional Pulmonology Care in Delhi"
-                description="Dr. Manish Aggarwal is a Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both common and complex lung diseases."
+                description="Dr. Manish Aggarwal is a Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both common and complex lung diseases."
             /> */}
             <WhyChooseUsHero/>
 
@@ -365,7 +365,7 @@ export function WhyChooseUsHero() {
 
           {/* Clinical Description */}
           <p className="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-normal">
-            Dr. Manish Aggarwal is a Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both common and complex lung diseases. We combine advanced bronchoscopy, Level 1 sleep diagnostics, and NABL-compliant respiratory monitoring to ensure world-class diagnostic accuracy.
+            Dr. Manish Aggarwal is a Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, dedicated to providing evidence-based, ethical, and patient-focused respiratory care for both common and complex lung diseases. We combine advanced bronchoscopy, Level 1 sleep diagnostics, and NABL-compliant respiratory monitoring to ensure world-class diagnostic accuracy.
           </p>
 
           {/* Dual Action Buttons */}

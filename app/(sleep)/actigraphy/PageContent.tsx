@@ -113,7 +113,7 @@ export default function ActigraphyTestingPage() {
             <p className="text-xs sm:text-sm font-medium text-[#334155] text-center sm:text-left">
               Want to find out if home-based actigraphy is the best approach for your symptoms? Talk to our clinical team.
             </p>
-            <BookAppointmentButton cta="Consult Doctor 🗓" />
+            <BookAppointmentButton cta="Consult Doctor" />
           </div>
         </section>
 
@@ -336,7 +336,7 @@ export default function ActigraphyTestingPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

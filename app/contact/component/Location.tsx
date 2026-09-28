@@ -12,6 +12,7 @@ import {
   Car,
   Compass,
 } from "lucide-react";
+import { ADDRESS, BUSINESS } from "@/app/lib/constants/business";
 
 interface LocationProps {
   onBookClick?: () => void;
@@ -21,8 +22,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   // Address and coordinate specifics for Google Maps directions
-  const mapAddress =
-    "Delhi Lung & Bronchoscopy Centre, Pitampura, Delhi, India";
+  const mapAddress = `${BUSINESS.name}, ${ADDRESS.full}`;
   const googleMapsUrl = `https://maps.app.goo.gl/QggTaVHkW5qS4ZD8A`;
 
   const amenities = [

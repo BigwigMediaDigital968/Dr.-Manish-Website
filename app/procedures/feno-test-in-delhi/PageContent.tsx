@@ -1,4 +1,5 @@
 import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointmentButton";
+import { ADDRESS } from "@/app/lib/constants/business";
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
@@ -43,20 +44,6 @@ export default function PageContent() {
         backgroundImage="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg"
       />
 
-      {/* TRUST STRIP */}
-      <div className="bg-slate-900 border-y border-slate-800 py-4 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs sm:text-sm font-semibold tracking-wide text-center">
-          <div>24+ Years Clinical Experience</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>Same-Day Testing Available</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>4.9 Google Rating (350+ Verified Reviews)</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>FRCP (Glasgow)</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>50,000+ Patients Treated</div>
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
         
@@ -77,13 +64,6 @@ export default function PageContent() {
                 Because it directly reflects airway inflammation rather than just airflow, it gives the doctor information that a standard breathing test like spirometry cannot provide on its own, helping to confirm a diagnosis and fine-tune treatment.
               </p>
             </div>
-            <div className="w-full lg:w-[45%] shrink-0">
-              <img
-                src="http://googleusercontent.com/image_collection/image_retrieval/7238312153755818762_0"
-                alt="Patient performing a non-invasive FeNO breath assessment for airway inflammation tracking"
-                className="w-full h-[260px] sm:h-[340px] object-cover rounded-2xl shadow-sm border border-slate-200"
-              />
-            </div>
           </div>
         </section>
 
@@ -99,7 +79,7 @@ export default function PageContent() {
               </h2>
             </div>
             <div className="shrink-0 w-full md:w-auto">
-              <BookAppointmentButton cta="Book Your FeNO Test →" />
+              <BookAppointmentButton cta="Book Your FeNO Test" />
             </div>
           </div>
 
@@ -107,7 +87,7 @@ export default function PageContent() {
             <div className="space-y-4">
               <p>• <strong className="text-[#0f172a]">24+ years</strong> of clinical experience diagnosing and managing asthma and other airway conditions.</p>
               <p>• <strong className="text-[#0f172a]">Academic Foundations:</strong> MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), trained at premier Indian institutes.</p>
-              <p>• <strong className="text-[#0f172a]">Hospital Affiliation:</strong> Principal Director, Department of Chest Disease & Interventional Pulmonology, Max Hospital, also practicing at his private clinic in Pitampura, Delhi.</p>
+              <p>• <strong className="text-[#0f172a]">Hospital Affiliation:</strong> Principal Director, Department of Chest Disease & Interventional Pulmonology, Max Hospital, also practicing at his private clinic in Shalimar Bagh, Delhi.</p>
               <p>• <strong className="text-[#0f172a]">Holistic Approach:</strong> Results are interpreted directly by Dr. Aggarwal alongside your spirometry findings, symptoms, and treatment history, giving a fuller picture rather than a single isolated number.</p>
               <p>• <strong className="text-[#0f172a]">Therapeutic Precision:</strong> Frequently used to guide decisions on inhaled steroid therapy and to help distinguish asthma from other causes of cough or breathlessness.</p>
             </div>
@@ -172,12 +152,12 @@ export default function PageContent() {
         </section>
 
         {/* BRIDGING BANNER */}
-        <section className="relative overflow-hidden rounded-3xl bg-amber-500 p-6 sm:p-10 shadow-md text-slate-900 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <section className="relative overflow-hidden rounded-3xl bg-sky-50 border border-sky-100 p-6 sm:p-10 shadow-sm text-slate-900 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-base sm:text-xl font-bold tracking-tight text-slate-950 text-center sm:text-left">
             Wondering if inflammation is behind your symptoms?
           </p>
           <div className="shrink-0 w-full sm:w-auto">
-            <BookAppointmentButton cta="Ask About FeNO Testing →" />
+            <BookAppointmentButton cta="Ask About FeNO Testing" />
           </div>
         </section>
 
@@ -344,7 +324,7 @@ export default function PageContent() {
                   A quick FeNO test can uncover inflammation that other tests miss. Get tested and get clear answers from Dr. Manish Aggarwal, Delhi's leading pulmonologist with 24+ years of asthma and airway care experience.
                 </p>
                 <div className="text-xs text-slate-400 space-y-1 pt-1">
-                  <p>📍 <strong className="text-slate-300">Clinic Address:</strong> JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034</p>
+                  <p>📍 <strong className="text-slate-300">Clinic Address:</strong> {ADDRESS.full}</p>
                   <p>📞 <strong className="text-slate-300">Call Desk:</strong> +91 9899554095 &nbsp;|&nbsp; ✉️ <strong className="text-slate-300">Email:</strong> Aggarmanish@gmail.com</p>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Shield, PhoneCall, Mail, MapPin, Sparkles } from "lucide-react";
+import { ADDRESS } from "@/app/lib/constants/business";
 
 export default function PrivacyPolicy() {
   return (
@@ -360,8 +361,8 @@ export default function PrivacyPolicy() {
                 </div>
                 <div className="space-y-1.5 text-xs text-slate-600 font-semibold">
                   <p className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-slate-400" /> Pitampura
-                    ,Delhi,
+                    <MapPin className="w-3.5 h-3.5 text-slate-400" />{" "}
+                    {ADDRESS.full}
                   </p>
                   <p className="flex items-center gap-2">
                     <Mail className="w-3.5 h-3.5 text-slate-400" />{" "}

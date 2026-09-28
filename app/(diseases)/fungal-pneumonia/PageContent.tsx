@@ -326,7 +326,7 @@ export default function FungalPneumoniaPage() {
                 </p>
               </div>
               <div className="shrink-0">
-                <WhatsappButton cta="Book an Appointment Today" />
+                <BookAppointmentButton cta="Book an Appointment Today" />
               </div>
             </div>
           </div>

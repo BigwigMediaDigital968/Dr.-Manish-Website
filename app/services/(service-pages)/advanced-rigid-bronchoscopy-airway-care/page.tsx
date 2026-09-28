@@ -140,7 +140,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Advanced Rigid Bronchoscopy & Complex Airway Care Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, provides advanced rigid bronchoscopy services for patients with complex airway diseases, central airway obstruction, difficult foreign body removal, airway tumors, tracheal stenosis, and severe breathing difficulty."
+                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides advanced rigid bronchoscopy services for patients with complex airway diseases, central airway obstruction, difficult foreign body removal, airway tumors, tracheal stenosis, and severe breathing difficulty."
             />
 
             <div className="max-w-7xl mx-auto px-4">

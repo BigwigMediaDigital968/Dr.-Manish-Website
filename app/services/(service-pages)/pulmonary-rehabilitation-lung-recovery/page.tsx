@@ -152,7 +152,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Pulmonary Rehabilitation & Lung Recovery Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive pulmonary rehabilitation, post-ICU respiratory recovery, COPD rehabilitation, and advanced lung recovery care for patients recovering from severe lung diseases, prolonged hospitalization, oxygen therapy, and ventilator support."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive pulmonary rehabilitation, post-ICU respiratory recovery, COPD rehabilitation, and advanced lung recovery care for patients recovering from severe lung diseases, prolonged hospitalization, oxygen therapy, and ventilator support."
             />
 
             <div className="max-w-7xl mx-auto px-4">

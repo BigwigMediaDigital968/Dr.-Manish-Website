@@ -219,7 +219,7 @@ export default function HomeSleepApneaTestPage() {
               </div>
             </div>
             <div className="pt-4 lg:pt-0">
-              <BookAppointmentButton cta="Schedule Your Diagnostic Evaluation 📅" />
+              <BookAppointmentButton cta="Schedule Your Diagnostic Evaluation" />
             </div>
           </div>
         </section>
@@ -309,7 +309,7 @@ export default function HomeSleepApneaTestPage() {
             </div>
           </div>
           <div className="mt-6 text-center sm:text-left">
-            <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 📅" />
+            <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
           </div>
         </section>
 
@@ -337,7 +337,7 @@ export default function HomeSleepApneaTestPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 📅" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

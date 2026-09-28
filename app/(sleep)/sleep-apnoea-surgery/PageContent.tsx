@@ -198,7 +198,7 @@ export default function SleepApneaSurgeryEvaluationPage() {
               Whether surgery is appropriate depends on a detailed evaluation of
               your specific airway anatomy, not a simple checklist.
             </p>
-            <BookAppointmentButton cta="Consult Doctor 🗓" />
+            <BookAppointmentButton cta="Consult Doctor" />
           </div>
         </section>
 
@@ -546,7 +546,7 @@ export default function SleepApneaSurgeryEvaluationPage() {
               </div>
             </div>
             <div className="pt-4 lg:pt-0">
-              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>
         </section>
@@ -620,7 +620,7 @@ export default function SleepApneaSurgeryEvaluationPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

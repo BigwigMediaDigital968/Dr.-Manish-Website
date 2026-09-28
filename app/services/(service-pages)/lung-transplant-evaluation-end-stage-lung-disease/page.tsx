@@ -175,7 +175,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Lung Transplant Evaluation & Advanced End-Stage Lung Disease Care in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive lung transplant evaluation, transplant counselling, end-stage lung disease assessment, stabilization, rehabilitation planning, and referral guidance for patients with advanced irreversible respiratory diseases."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive lung transplant evaluation, transplant counselling, end-stage lung disease assessment, stabilization, rehabilitation planning, and referral guidance for patients with advanced irreversible respiratory diseases."
             />
 
             <div className="max-w-7xl mx-auto px-4">
@@ -192,7 +192,7 @@ export default function page() {
                             </h2>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
-                                For some patients with advanced irreversible lung disease, lung transplantation may offer a life-extending and quality-of-life improving treatment option when medicines, oxygen therapy, and conventional respiratory support are no longer sufficient. Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive evaluation, counselling, stabilization, and referral guidance for patients who may require lung transplantation.
+                                For some patients with advanced irreversible lung disease, lung transplantation may offer a life-extending and quality-of-life improving treatment option when medicines, oxygen therapy, and conventional respiratory support are no longer sufficient. Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive evaluation, counselling, stabilization, and referral guidance for patients who may require lung transplantation.
                             </p>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">

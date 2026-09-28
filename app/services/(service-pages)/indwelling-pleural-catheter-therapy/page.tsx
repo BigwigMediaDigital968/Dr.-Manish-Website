@@ -126,7 +126,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Indwelling Pleural Catheter (IPC) Clinic for Recurrent Pleural Effusion & Trapped Lung"
-                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, offers advanced Indwelling Pleural Catheter (IPC) insertion for patients suffering from recurrent pleural effusion, malignant pleural effusion, and trapped lung causing repeated breathlessness and hospital visits."
+                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, offers advanced Indwelling Pleural Catheter (IPC) insertion for patients suffering from recurrent pleural effusion, malignant pleural effusion, and trapped lung causing repeated breathlessness and hospital visits."
             />
 
             <div className="max-w-7xl mx-auto px-4">
@@ -144,7 +144,7 @@ export default function page() {
                             </h2>
 
                             <p className="text-sm sm:text-base leading-relaxed text-[#64748b]">
-                                Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, offers advanced Indwelling Pleural Catheter (IPC) insertion for patients suffering from recurrent pleural effusion, malignant pleural effusion, and trapped lung causing repeated breathlessness and hospital visits.
+                                Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, offers advanced Indwelling Pleural Catheter (IPC) insertion for patients suffering from recurrent pleural effusion, malignant pleural effusion, and trapped lung causing repeated breathlessness and hospital visits.
                             </p>
 
                             <p className="text-sm sm:text-base leading-relaxed text-[#64748b] mt-4">

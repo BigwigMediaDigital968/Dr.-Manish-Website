@@ -124,7 +124,7 @@ export default function page() {
     return (
         <>
             <ServiceHero title="Hemoptysis (Blood in Sputum) Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, provides expert evaluation and treatment for hemoptysis (blood in sputum), recurrent bleeding, unexplained cough, lung infections, tuberculosis, bronchiectasis, and suspected lung cancer." />
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, provides expert evaluation and treatment for hemoptysis (blood in sputum), recurrent bleeding, unexplained cough, lung infections, tuberculosis, bronchiectasis, and suspected lung cancer." />
             <div className="max-w-7xl mx-auto px-4">
                 <section className="relative w-full overflow-hidden bg-white">
                     <div className="max-w-7xl mx-auto px-4">
@@ -143,7 +143,7 @@ export default function page() {
 
                                     <p className="text-sm sm:text-base leading-relaxed text-[#64748b] mt-6">
                                         Coughing blood (hemoptysis) should never be ignored and requires prompt medical evaluation.
-                                        Dr. Manish Aggarwal, Senior Pulmonologist &amp; Interventional Chest Specialist in Pitampura, Delhi,
+                                        Dr. Manish Aggarwal, Senior Pulmonologist &amp; Interventional Chest Specialist in Shalimar Bagh, Delhi,
                                         provides expert diagnosis and management for patients with blood in sputum, recurrent bleeding,
                                         unexplained cough, lung infections, tuberculosis, bronchiectasis, and suspected lung cancer.
                                     </p>

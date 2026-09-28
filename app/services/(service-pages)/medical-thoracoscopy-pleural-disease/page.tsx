@@ -184,7 +184,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Medical Thoracoscopy & Pleural Disease Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, provides advanced Medical Thoracoscopy and pleural disease management for undiagnosed pleural effusion, recurrent fluid collection, pleural infections, pleural thickening, and suspected pleural malignancy."
+                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides advanced Medical Thoracoscopy and pleural disease management for undiagnosed pleural effusion, recurrent fluid collection, pleural infections, pleural thickening, and suspected pleural malignancy."
             />
             <div className="max-w-7xl mx-auto px-4">
                 <div className="pt-10">
@@ -201,7 +201,7 @@ export default function page() {
             </h2>
 
             <p className="text-sm sm:text-base leading-relaxed text-[#64748b]">
-                Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, provides advanced Medical Thoracoscopy services for evaluation and management of undiagnosed pleural effusion, pleural thickening, recurrent fluid collection, pleural infection, and suspected pleural malignancy.
+                Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides advanced Medical Thoracoscopy services for evaluation and management of undiagnosed pleural effusion, pleural thickening, recurrent fluid collection, pleural infection, and suspected pleural malignancy.
             </p>
 
             <p className="text-sm sm:text-base leading-relaxed text-[#64748b] mt-4">

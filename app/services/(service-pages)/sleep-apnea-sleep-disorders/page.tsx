@@ -229,7 +229,7 @@ export default function SleepApneaPage() {
         <>
             <ServiceHero
                 title="Sleep Apnea & Sleep Disorders - Diagnosis & Treatment in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive evaluation, sleep study coordination, CPAP/BiPAP therapy, and long-term management for Obstructive Sleep Apnea, sleep-disordered breathing, and related respiratory sleep disorders."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive evaluation, sleep study coordination, CPAP/BiPAP therapy, and long-term management for Obstructive Sleep Apnea, sleep-disordered breathing, and related respiratory sleep disorders."
             />
 
             <div className="max-w-7xl mx-auto px-4">

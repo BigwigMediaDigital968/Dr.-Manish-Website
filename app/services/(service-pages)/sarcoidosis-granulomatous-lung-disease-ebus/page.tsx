@@ -157,7 +157,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Sarcoidosis, Granulomatous Lung Disease & EBUS Diagnostic Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, provides specialized evaluation and management for sarcoidosis and complex granulomatous lung diseases that often resemble tuberculosis (TB) in clinical presentation and imaging findings."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, provides specialized evaluation and management for sarcoidosis and complex granulomatous lung diseases that often resemble tuberculosis (TB) in clinical presentation and imaging findings."
             />
 
             <div className="max-w-7xl mx-auto px-4">

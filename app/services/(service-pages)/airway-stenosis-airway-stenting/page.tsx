@@ -233,7 +233,7 @@ export default function AirwayStenosisPage() {
         <>
             <ServiceHero
                 title="Airway Stenosis & Airway Stenting - Advanced Management of Central Airway Obstruction"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Bronchoscopist in Pitampura, Delhi, provides expert bronchoscopic evaluation and airway stenting for central airway obstruction caused by malignant tumours, extrinsic compression, tracheoesophageal fistulas, and other critical airway conditions."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Bronchoscopist in Shalimar Bagh, Delhi, provides expert bronchoscopic evaluation and airway stenting for central airway obstruction caused by malignant tumours, extrinsic compression, tracheoesophageal fistulas, and other critical airway conditions."
             />
 
             <div className="max-w-7xl mx-auto px-4">

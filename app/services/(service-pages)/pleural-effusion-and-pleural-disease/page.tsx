@@ -157,7 +157,7 @@ export default function page() {
 
             <ServiceHero title="Pleural Effusion & Pleural Disease Clinic in Delhi"
 
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, provides expert evaluation and management of pleural effusion (water around the lungs), pleural infections, recurrent fluid collection, pleural thickening, and unexplained breathlessness." />
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, provides expert evaluation and management of pleural effusion (water around the lungs), pleural infections, recurrent fluid collection, pleural thickening, and unexplained breathlessness." />
             <div className="max-w-7xl mx-auto px-4">
                 <div className=" pt-10">
 

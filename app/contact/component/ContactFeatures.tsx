@@ -13,6 +13,7 @@ import {
   Award,
   ChevronRight,
 } from "lucide-react";
+import { PHONE, EMAIL } from "@/app/lib/constants/business";
 
 interface ContactFeaturesProps {
   onBookClick?: () => void;
@@ -39,9 +40,9 @@ export default function ContactFeatures({
       tag: "Global Air Transit",
       title: "Aeromed Emergency",
       desc: "Founder Director's dedicated critical patient flight transport coordinate network.",
-      detail: "+91 98995 54095",
+      detail: PHONE.display,
       actionText: "Request Air Rescue",
-      actionHref: "tel:+919999955555",
+      actionHref: PHONE.tel,
       icon: Plane,
       color: "from-[#6dbb45] to-[#4d8f2d]",
     },
@@ -50,9 +51,9 @@ export default function ContactFeatures({
       tag: "Direct Support",
       title: "Email Inquiries",
       desc: "Send your medical history files, spirometry charts, or corporate health tie-up proposals.",
-      detail: "info@delhilungandsleep.com",
+      detail: EMAIL.address,
       actionText: "Email Medical Desk",
-      actionHref: "mailto:info@delhilungandsleep.com",
+      actionHref: EMAIL.mailto,
       icon: Mail,
       color: "from-[#1fa8e8] to-[#6dbb45]",
     },

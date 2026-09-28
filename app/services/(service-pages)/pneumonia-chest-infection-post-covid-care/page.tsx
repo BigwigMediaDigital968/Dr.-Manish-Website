@@ -144,7 +144,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Pneumonia, Severe Chest Infection & Post-COVID Lung Care Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive care for pneumonia, severe chest infections, recurrent lung infections, post-viral lung complications, and respiratory failure requiring specialized pulmonary support."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive care for pneumonia, severe chest infections, recurrent lung infections, post-viral lung complications, and respiratory failure requiring specialized pulmonary support."
             />
 
             <div className="max-w-7xl mx-auto px-4">

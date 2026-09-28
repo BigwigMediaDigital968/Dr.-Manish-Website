@@ -172,7 +172,7 @@ export default function page() {
   return (
     <>
       <ServiceHero title="Pulmonary Fibrosis Clinic in Delhi"
-        description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, provides specialized care for Interstitial Lung Disease (ILD), pulmonary fibrosis, autoimmune-related lung disease, and progressive breathlessness disorders." />
+        description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, provides specialized care for Interstitial Lung Disease (ILD), pulmonary fibrosis, autoimmune-related lung disease, and progressive breathlessness disorders." />
       <div className="max-w-7xl mx-auto px-4">
         <div className=" pt-10">
 

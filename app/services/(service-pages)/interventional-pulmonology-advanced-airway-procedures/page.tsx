@@ -173,7 +173,7 @@ export default function page() {
     return (
         <>
             <ServiceHero title="Interventional Pulmonology & Advanced Airway Procedures Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, provides advanced minimally invasive airway and pleural procedures for complex respiratory diseases, central airway obstruction, lung tumors, tracheobronchial stenosis, and difficult lung conditions." />
+                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides advanced minimally invasive airway and pleural procedures for complex respiratory diseases, central airway obstruction, lung tumors, tracheobronchial stenosis, and difficult lung conditions." />
             <div className="max-w-7xl mx-auto px-4">
                 <div className=" pt-10">
 

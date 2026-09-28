@@ -123,7 +123,7 @@ export const aboutFaqs: FAQItem[] = [
   {
     question: "Who is Dr. Manish Aggarwal?",
     answer:
-      "Dr. Manish Aggarwal is an experienced Pulmonologist, Chest Physician, and Interventional Pulmonologist based in Pitampura, Delhi. He specializes in the diagnosis and treatment of asthma, COPD, chronic cough, ILD, lung fibrosis, sleep apnea, and advanced bronchoscopic procedures.",
+      "Dr. Manish Aggarwal is an experienced Pulmonologist, Chest Physician, and Interventional Pulmonologist based in Shalimar Bagh, Delhi. He specializes in the diagnosis and treatment of asthma, COPD, chronic cough, ILD, lung fibrosis, sleep apnea, and advanced bronchoscopic procedures.",
   },
   {
     question: "What conditions does Dr. Manish Aggarwal commonly treat?",
@@ -170,7 +170,7 @@ export const aboutFaqs: FAQItem[] = [
   {
     question: "Where is Dr. Manish Aggarwal's clinic located?",
     answer:
-      "Dr. Manish Aggarwal consults at Delhi Lung & Sleep Centre in Pitampura, Delhi, where patients receive comprehensive respiratory care, advanced diagnostic services, and personalized treatment plans.",
+      "Dr. Manish Aggarwal consults at Delhi Lung & Bronchoscopy Centre in Shalimar Bagh, Delhi, where patients receive comprehensive respiratory care, advanced diagnostic services, and personalized treatment plans.",
   },
 ];
 

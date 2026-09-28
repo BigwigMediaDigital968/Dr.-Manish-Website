@@ -197,7 +197,7 @@ export default function CpapBipapTitrationPageContent() {
               </div>
             </div>
             <div className="pt-4 lg:pt-0">
-              <BookAppointmentButton cta="Schedule Your Titration Evaluation 📅" />
+              <BookAppointmentButton cta="Schedule Your Titration Evaluation" />
             </div>
           </div>
         </section>
@@ -260,7 +260,7 @@ export default function CpapBipapTitrationPageContent() {
             </div>
           </div>
           <div className="mt-6 text-center sm:text-left">
-            <BookAppointmentButton cta="Book a Titration Consultation with Dr. Manish Aggarwal Today 📅" />
+            <BookAppointmentButton cta="Book a Titration Consultation with Dr. Manish Aggarwal Today" />
           </div>
         </section>
 
@@ -288,7 +288,7 @@ export default function CpapBipapTitrationPageContent() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 📅" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

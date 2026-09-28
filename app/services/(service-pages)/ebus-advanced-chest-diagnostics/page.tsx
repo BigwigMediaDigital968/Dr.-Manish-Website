@@ -172,7 +172,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="EBUS (Endobronchial Ultrasound) & Advanced Chest Diagnostics Clinic in Delhi"
-                description="Dr. Manish Aggarwal offers advanced Endobronchial Ultrasound (EBUS) in Pitampura, Delhi for accurate, minimally invasive diagnosis of lung cancer, tuberculosis, sarcoidosis, enlarged lymph nodes, and other chest diseases through real-time ultrasound-guided evaluation and sampling."
+                description="Dr. Manish Aggarwal offers advanced Endobronchial Ultrasound (EBUS) in Shalimar Bagh, Delhi for accurate, minimally invasive diagnosis of lung cancer, tuberculosis, sarcoidosis, enlarged lymph nodes, and other chest diseases through real-time ultrasound-guided evaluation and sampling."
             />
             <div className="max-w-7xl mx-auto px-4">
                 <div className=" pt-10">
@@ -189,7 +189,7 @@ export default function page() {
                             </h2>
 
                             <p className="text-sm sm:text-base leading-relaxed text-[#64748b]">
-                                Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, offers advanced Endobronchial Ultrasound (EBUS) procedures for accurate diagnosis and staging of lung diseases, mediastinal lymph node enlargement, tuberculosis, sarcoidosis, and lung cancer.
+                                Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, offers advanced Endobronchial Ultrasound (EBUS) procedures for accurate diagnosis and staging of lung diseases, mediastinal lymph node enlargement, tuberculosis, sarcoidosis, and lung cancer.
 
                             </p>
 

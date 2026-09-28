@@ -108,7 +108,7 @@ export default function SleepDiaryTestingPage() {
             <p className="text-xs sm:text-sm font-medium text-[#334155] text-center sm:text-left">
               Ready to take the first step toward understanding your sleep? Schedule a consultation to begin your evaluation.
             </p>
-            <BookAppointmentButton cta="Consult Doctor 🗓" />
+            <BookAppointmentButton cta="Consult Doctor" />
           </div>
         </section>
 
@@ -276,7 +276,7 @@ export default function SleepDiaryTestingPage() {
             ))}
           </div>
           <div className="mt-6 text-center sm:text-left">
-            <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+            <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
           </div>
         </section>
 
@@ -332,7 +332,7 @@ export default function SleepDiaryTestingPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

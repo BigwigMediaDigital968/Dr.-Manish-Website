@@ -144,7 +144,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="COPD, Smoking-Related Lung Disease & Breathlessness Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides specialized care for COPD (Chronic Obstructive Pulmonary Disease), smoker’s lung disease, chronic bronchitis, emphysema, and long-standing breathing problems affecting quality of life."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides specialized care for COPD (Chronic Obstructive Pulmonary Disease), smoker’s lung disease, chronic bronchitis, emphysema, and long-standing breathing problems affecting quality of life."
             />
 
             <div className="max-w-7xl mx-auto px-4">

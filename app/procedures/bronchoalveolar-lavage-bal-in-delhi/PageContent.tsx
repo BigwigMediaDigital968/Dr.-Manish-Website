@@ -1,4 +1,5 @@
 import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointmentButton";
+import { ADDRESS } from "@/app/lib/constants/business";
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
@@ -42,21 +43,6 @@ export default function BronchoalveolarLavageDelhiPage() {
         ctaText="Book Appointment"
         backgroundImage="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg"
       />
-
-      {/* TRUST STRIP */}
-      <div className="bg-slate-900 border-y border-slate-800 py-4 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs sm:text-sm font-semibold tracking-wide text-center">
-          <div>24+ Years Clinical Experience</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>10,000+ Bronchoscopies Performed</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>3,000+ EBUS Performed</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>4.9 Google Rating (350+ Reviews)</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>FRCP (Glasgow)</div>
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
         
@@ -208,8 +194,8 @@ export default function BronchoalveolarLavageDelhiPage() {
                 </p>
               </div>
             </div>
-            <div className="pt-4 lg:pt-0">
-              <BookAppointmentButton cta="Schedule Your Lavage Evaluation 📅" />
+            <div className="pt-4 lg:pt-4">
+              <BookAppointmentButton cta="Schedule Your Lavage Evaluation" />
             </div>
           </div>
         </section>
@@ -300,7 +286,7 @@ export default function BronchoalveolarLavageDelhiPage() {
                   Get an accurate diagnosis with BAL, performed by Dr. Manish Aggarwal, Delhi's leading interventional pulmonologist with 10,000+ bronchoscopic procedures completed.
                 </p>
                 <div className="text-xs text-slate-400 space-y-1 pt-1">
-                  <p>📍 <strong className="text-slate-300">Clinic Address:</strong> JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034</p>
+                  <p>📍 <strong className="text-slate-300">Clinic Address:</strong> {ADDRESS.full}</p>
                   <p>📞 <strong className="text-slate-300">Call Desk:</strong> +91 9899554095 &nbsp;|&nbsp; ✉️ <strong className="text-slate-300">Email:</strong> Aggarmanish@gmail.com</p>
                 </div>
               </div>

@@ -153,7 +153,7 @@ export default function CircadianRhythmDisordersPage() {
                 Not sure what your sleep timing means? Talk to Dr. Manish
                 Aggarwal today.
               </p>
-              <BookAppointmentButton cta="Consult Doctor 🗓" />
+              <BookAppointmentButton cta="Consult Doctor" />
             </div>
           </div>
         </section>
@@ -415,7 +415,7 @@ export default function CircadianRhythmDisordersPage() {
               ))}
             </div>
             <div className="pt-4 text-center sm:text-left">
-              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>
         </section>
@@ -576,7 +576,7 @@ export default function CircadianRhythmDisordersPage() {
                 Retraining an internal clock requires consistent habits and
                 steady progress, but a manageable sleep pattern is achievable.
               </p>
-              <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+              <BookAppointmentButton cta="Schedule Your Appointment" />
             </div>
           </div>
         </section>
@@ -642,7 +642,7 @@ export default function CircadianRhythmDisordersPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

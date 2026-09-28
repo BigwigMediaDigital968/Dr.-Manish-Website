@@ -116,7 +116,7 @@ export default function SleepMovementDisordersPage() {
               <p className="text-sm font-medium text-[#334155] mb-4">
                 Not sure what your nighttime movement means? Talk to Dr. Manish Aggarwal today.
               </p>
-              <BookAppointmentButton cta="Consult Doctor 🗓" />
+              <BookAppointmentButton cta="Consult Doctor" />
             </div>
           </div>
         </section>
@@ -295,7 +295,7 @@ export default function SleepMovementDisordersPage() {
               ))}
             </div>
             <div className="pt-4 text-center sm:text-left">
-              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>
         </section>
@@ -384,7 +384,7 @@ export default function SleepMovementDisordersPage() {
             </div>
             <div className="pt-6 border-t border-slate-200/60 mt-6 text-center">
               <p className="text-xs text-[#64748b] mb-4">Identifying the root cause of nighttime restlessness is the most direct path toward achieving deeper, more restorative rest.</p>
-              <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+              <BookAppointmentButton cta="Schedule Your Appointment" />
             </div>
           </div>
         </section>
@@ -437,7 +437,7 @@ export default function SleepMovementDisordersPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

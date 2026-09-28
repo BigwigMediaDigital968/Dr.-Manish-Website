@@ -20,6 +20,39 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Business Details (Constants)
+
+All clinic / business details live in one file: [`app/lib/constants/business.ts`](app/lib/constants/business.ts).
+Use these constants instead of hardcoding contact info in pages and components. If a detail changes (phone, address, timings, socials), update it there only.
+
+```tsx
+import { BUSINESS, PHONE, EMAIL, ADDRESS, HOURS } from "@/app/lib/constants/business";
+
+<a href={PHONE.tel}>{PHONE.display}</a>
+<a href={EMAIL.mailto}>{EMAIL.address}</a>
+<p>{ADDRESS.full}</p>
+```
+
+| Export      | What it holds                                                        | Common usage                               |
+| ----------- | -------------------------------------------------------------------- | ------------------------------------------ |
+| `SITE_URL`  | Base URL (`SITE_URL` env, falls back to `https://www.drmanishaggarwal.com`) | Canonical URLs, Open Graph, sitemap   |
+| `DOCTOR`    | `name`, `title`                                                      | Headings, schema `Physician`               |
+| `BUSINESS`  | Clinic `name` (Delhi Lung & Bronchoscopy Centre), `siteName`, `logo`, `locale` | Metadata, footer, schema     |
+| `PHONE`     | `display` (+91 98995 54095), `e164`, `tel`                           | Text → `display`, links → `tel`            |
+| `EMAIL`     | `address`, `mailto`                                                  | Footer, contact, policy pages              |
+| `WHATSAPP`  | `number` (no `+`), `url` (wa.me)                                     | Append `?text=` for prefilled messages     |
+| `ADDRESS`   | `street`, `locality`, `city`, `region`, `postalCode`, `country`, `full` | Text → `full`, schema → split fields   |
+| `MAP`       | `directionsUrl`, `embedUrl`, `latitude`, `longitude`                 | "Directions" button, map iframe, schema    |
+| `HOURS`     | Array of `{ days, time }`                                            | Timings list on contact / location blocks  |
+| `SOCIALS`   | `youtube`, `linkedin`, `facebook`, `instagram`                       | Footer social icons                        |
+
+Existing pages still have these values hardcoded; migrate them to the constants as pages are touched. Values currently in use that do **not** match the constants and should be replaced when migrating:
+
+- Clinic name variants: "Delhi Lung & Bronchoscopy Center" (US spelling), "Delhi Lung & Sleep Centre", "Dr. Manish Aggarwal Clinic" (schema publisher)
+- Phone formats: `+91-9899554095`, `+91 9899554095`, `+91-98995 54095`
+- Emails: `info@delhilungandsleep.com` (`app/contact/component/ContactFeatures.tsx`), `Aggarwal54095@gmail.com`
+- `app/data.ts` → `contactData` duplicates `DOCTOR.name` / `PHONE.e164`
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

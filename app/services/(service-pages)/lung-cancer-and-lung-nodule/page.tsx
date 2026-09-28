@@ -146,7 +146,7 @@ export default function LungCancerAndLungNodulePage() {
     return (
         <>
             <ServiceHero title="Lung Cancer & Lung Nodule Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, specializes in the early diagnosis and management of lung nodules, suspected lung cancer, chronic smokers, persistent cough, hemoptysis, recurrent pneumonia, and abnormal CT chest findings, helping ensure timely and effective care." />
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, specializes in the early diagnosis and management of lung nodules, suspected lung cancer, chronic smokers, persistent cough, hemoptysis, recurrent pneumonia, and abnormal CT chest findings, helping ensure timely and effective care." />
             <div className="max-w-7xl mx-auto px-4">
                 <div className=" pt-10">
 
@@ -162,7 +162,7 @@ export default function LungCancerAndLungNodulePage() {
                             <p className="text-sm sm:text-base leading-relaxed text-[#64748b]">
                                 Early diagnosis plays a crucial role in improving lung cancer outcomes. <strong className="text-[#0f172a]">
                                     {" "}Dr. Manish Aggarwal
-                                </strong>, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, offers expert evaluation for lung nodules, suspected lung cancer, persistent cough, blood in sputum, recurrent pneumonia, abnormal CT chest findings, and smoking-related lung conditions.
+                                </strong>, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, offers expert evaluation for lung nodules, suspected lung cancer, persistent cough, blood in sputum, recurrent pneumonia, abnormal CT chest findings, and smoking-related lung conditions.
                             </p>
                             <p className="text-sm sm:text-base leading-relaxed text-[#64748b] mt-4">
                                 Services include advanced bronchoscopy, endobronchial biopsy, BAL, airway assessment, lung nodule evaluation, and coordinated thoracic oncology care. Patients with chronic cough, unexplained weight loss, chest pain, breathlessness, smoking history, or abnormal chest imaging receive comprehensive, evidence-based respiratory evaluation and management.

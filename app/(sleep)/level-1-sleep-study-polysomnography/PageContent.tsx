@@ -111,7 +111,7 @@ export default function InsomniaTreatmentPage() {
               <p className="text-sm font-medium text-[#334155] mb-4">
                 This close supervision is why doctors like Dr. Manish Aggrawal recommend Level 1 Polysomnography for patients who need a precise and dependable diagnosis.
               </p>
-              <BookAppointmentButton cta="Consult Doctor 🗓" />
+              <BookAppointmentButton cta="Consult Doctor" />
             </div>
           </div>
         </section>
@@ -286,7 +286,7 @@ With years of experience in diagnosing and treating sleep disorders, Dr. Manish 
             <p className="mt-2 text-sm text-[#64748b] max-w-sm mb-6 leading-relaxed">
               If you've been lying awake at night, waking up exhausted, or relying heavily on caffeine and naps to get through the day, it's worth getting checked. Insomnia is highly treatable, and early diagnosis makes resolution easier.
             </p>
-            <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+            <BookAppointmentButton cta="Schedule Your Appointment" />
           </div>
         </section>
 

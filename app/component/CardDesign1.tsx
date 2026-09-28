@@ -183,7 +183,7 @@ export default function WhyChooseUs({
                 <span className="text-slate-900 font-extrabold">
                   Dr. Manish Aggarwal
                 </span>
-                , Department of Chest Disease and Interventional Pulmonology, Max Hospital also practicing at his private clinic in Pitampura (Currently in Shalimar Bagh), Delhi 
+                , Department of Chest Disease and Interventional Pulmonology, Max Hospital also practicing at his private clinic in Shalimar Bagh, Delhi 
                 dedicated to provide evidence-based, ethical,
                 and patient-focused respiratory care for both common and complex
                 lung diseases.

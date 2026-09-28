@@ -187,7 +187,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Pulmonary Hypertension (PH) & Advanced Breathlessness Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides specialized evaluation and management for Pulmonary Hypertension (PH), a serious condition involving increased pressure in the blood vessels of the lungs that can gradually affect heart and lung function."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides specialized evaluation and management for Pulmonary Hypertension (PH), a serious condition involving increased pressure in the blood vessels of the lungs that can gradually affect heart and lung function."
             />
 
             <div className="max-w-7xl mx-auto px-4">

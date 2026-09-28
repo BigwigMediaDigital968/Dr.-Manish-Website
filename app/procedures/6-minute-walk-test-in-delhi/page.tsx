@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ADDRESS } from "@/app/lib/constants/business";
 import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
@@ -240,9 +241,10 @@ const structuredData = {
       medicalSpecialty: "https://schema.org/Pulmonology",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "JU-12A, Block G&JU, Ranikhet",
-        addressLocality: "Pitampura, Delhi",
-        postalCode: "110034",
+        streetAddress: ADDRESS.street,
+        addressLocality: ADDRESS.locality,
+        addressRegion: ADDRESS.region,
+        postalCode: ADDRESS.postalCode,
         addressCountry: "IN",
       },
       telephone: "+91-9899554095",

@@ -138,7 +138,7 @@ export default function DaytimeSleepinessTestingPage() {
             <p className="text-xs sm:text-sm font-medium text-[#334155] text-center sm:text-left">
               Unsure which diagnostic sleep test matches your current symptoms? Schedule an expert clinical consultation today.
             </p>
-            <BookAppointmentButton cta="Consult Doctor 🗓" />
+            <BookAppointmentButton cta="Consult Doctor" />
           </div>
         </section>
 
@@ -264,7 +264,7 @@ export default function DaytimeSleepinessTestingPage() {
               ))}
             </div>
             <div className="pt-4 text-center sm:text-left">
-              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>
         </section>
@@ -320,7 +320,7 @@ export default function DaytimeSleepinessTestingPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

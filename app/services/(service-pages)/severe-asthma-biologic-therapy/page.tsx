@@ -131,7 +131,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Severe Asthma & Biologic Therapy Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides advanced evaluation and treatment for severe and difficult-to-control asthma, including patients requiring biologic therapy for persistent symptoms despite standard inhaler treatment."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides advanced evaluation and treatment for severe and difficult-to-control asthma, including patients requiring biologic therapy for persistent symptoms despite standard inhaler treatment."
             />
 
             <div className="max-w-7xl mx-auto px-4">

@@ -131,7 +131,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Cryobiopsy & Advanced Cryotherapy for Lung Diseases in Delhi"
-                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, offers advanced cryotechnology-based procedures for diagnosis and treatment of complex lung diseases, including Cryobiopsy and therapeutic cryo-interventions."
+                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, offers advanced cryotechnology-based procedures for diagnosis and treatment of complex lung diseases, including Cryobiopsy and therapeutic cryo-interventions."
             />
 
             <div className="max-w-7xl mx-auto px-4">

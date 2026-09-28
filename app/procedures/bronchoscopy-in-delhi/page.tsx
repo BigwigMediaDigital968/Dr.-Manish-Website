@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ADDRESS } from "@/app/lib/constants/business";
 import BronchoscopyDelhiPageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
@@ -142,7 +143,7 @@ const schema = {
           name: "Do you perform bronchoscopy?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Dr. Manish Aggarwal has performed 10,000+ bronchoscopies, including flexible, rigid, and EBUS-guided procedures, at Max Hospital and his Pitampura clinic.",
+            text: "Yes. Dr. Manish Aggarwal has performed 10,000+ bronchoscopies, including flexible, rigid, and EBUS-guided procedures, at Max Hospital and his clinic in Shalimar Bagh.",
           },
         },
         {
@@ -242,9 +243,10 @@ const schema = {
       medicalSpecialty: "https://schema.org/Pulmonology",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "JU-12A, Block G&JU, Ranikhet",
-        addressLocality: "Pitampura, Delhi",
-        postalCode: "110034",
+        streetAddress: ADDRESS.street,
+        addressLocality: ADDRESS.locality,
+        addressRegion: ADDRESS.region,
+        postalCode: ADDRESS.postalCode,
         addressCountry: "IN",
       },
       telephone: "+91-9899554095",

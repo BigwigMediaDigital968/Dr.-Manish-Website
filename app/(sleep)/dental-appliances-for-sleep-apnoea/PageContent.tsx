@@ -106,7 +106,7 @@ export default function OralApplianceSleepApneaPage() {
             <p className="text-xs sm:text-sm font-medium text-[#334155] text-center sm:text-left">
               Want to find out if an oral appliance can effectively manage your sleep apnea? Schedule an expert diagnostic evaluation.
             </p>
-            <BookAppointmentButton cta="Consult Doctor 📅" />
+            <BookAppointmentButton cta="Consult Doctor" />
           </div>
         </section>
 
@@ -249,7 +249,7 @@ export default function OralApplianceSleepApneaPage() {
               </div>
             </div>
             <div className="pt-4 lg:pt-0">
-              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 📅" />
+              <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>
         </section>
@@ -306,7 +306,7 @@ export default function OralApplianceSleepApneaPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 📅" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

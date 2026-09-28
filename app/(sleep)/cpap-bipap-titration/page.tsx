@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CpapBipapTitrationPageContent from "./PageContent";
+import { ADDRESS, BUSINESS, EMAIL, PHONE } from "@/app/lib/constants/business";
 
 const siteUrl = process.env.SITE_URL;
 const pageUrl = `${siteUrl}/cpap-bipap-titration`;
@@ -108,16 +109,17 @@ const physicianSchema = {
   url: `${siteUrl}/about-us`,
   worksFor: {
     "@type": "MedicalClinic",
-    name: "Delhi Lung & Bronchoscopy Center",
+    name: BUSINESS.name,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Jij-12A, Bittampura Gali",
-      addressLocality: "New Delhi",
-      addressRegion: "Delhi",
-      addressCountry: "IN",
+      streetAddress: ADDRESS.street,
+      addressLocality: ADDRESS.locality,
+      addressRegion: ADDRESS.region,
+      postalCode: ADDRESS.postalCode,
+      addressCountry: ADDRESS.country,
     },
-    telephone: "+91-98985-54095",
-    email: "Aggarwal54095@gmail.com",
+    telephone: PHONE.e164,
+    email: EMAIL.address,
   },
 };
 

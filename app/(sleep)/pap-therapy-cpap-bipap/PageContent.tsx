@@ -103,7 +103,7 @@ export default function PapTherapySleepApneaPage() {
             <p className="text-xs sm:text-sm font-medium text-[#334155] text-center sm:text-left">
               Experiencing morning headaches, loud snoring, or chronic daytime exhaustion? Let's determine if PAP support is right for you.
             </p>
-            <BookAppointmentButton cta="Consult Doctor 🗓" />
+            <BookAppointmentButton cta="Consult Doctor" />
           </div>
         </section>
 
@@ -256,7 +256,7 @@ export default function PapTherapySleepApneaPage() {
             ))}
           </div>
           <div className="mt-6 text-center sm:text-left">
-            <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+            <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
           </div>
         </section>
 
@@ -312,7 +312,7 @@ export default function PapTherapySleepApneaPage() {
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
-                <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+                <BookAppointmentButton cta="Schedule Your Appointment" />
                 <WhatsappButton />
               </div>
             </div>

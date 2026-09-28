@@ -188,7 +188,7 @@ export default function ICULungCarePage() {
         <>
             <ServiceHero
                 title="ICU Lung Care & Critical Respiratory Medicine in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Critical Care Specialist in Pitampura, Delhi, brings more than 10 years of ICU leadership experience in managing severe respiratory failure, ARDS, critical lung infections, advanced ventilatory support, and complex pulmonary emergencies."
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Critical Care Specialist in Shalimar Bagh, Delhi, brings more than 10 years of ICU leadership experience in managing severe respiratory failure, ARDS, critical lung infections, advanced ventilatory support, and complex pulmonary emergencies."
             />
 
             <div className="max-w-7xl mx-auto px-4">

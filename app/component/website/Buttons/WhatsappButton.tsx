@@ -1,17 +1,18 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import { WHATSAPP } from "@/app/lib/constants/business";
 
 type WhatsappButtonProps = {
   cta?: string;
-  phoneNumber?: string; // Must include country code without symbols, e.g., "1234567890"
+  phoneNumber?: string; // Must include country code without symbols, e.g., "919899554095"
   message?: string; // Optional pre-filled text message
   className?: string;
 };
 
 export default function WhatsappButton({
   cta = "Chat on WhatsApp",
-  phoneNumber = "1234567890",
+  phoneNumber = WHATSAPP.number,
   message = "Hello, I would like to inquire about an appointment.",
   className = "",
 }: WhatsappButtonProps) {

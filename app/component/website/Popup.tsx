@@ -255,7 +255,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                 <input
                   type="tel"
                   required
-                  placeholder="+91 97592 65242"
+                  placeholder="+91 98765 43210"
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })

@@ -165,7 +165,7 @@ export default function page() {
     return (
         <>
             <ServiceHero title="Tuberculosis (TB) & Advanced Bronchoscopy Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, provides comprehensive evaluation and treatment for pulmonary and extrapulmonary tuberculosis (TB), including difficult-to-diagnose and recurrent TB cases." />
+                description="Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive evaluation and treatment for pulmonary and extrapulmonary tuberculosis (TB), including difficult-to-diagnose and recurrent TB cases." />
             <div className="max-w-7xl mx-auto px-4">
                 <div className=" pt-10">
 

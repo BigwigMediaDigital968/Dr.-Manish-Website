@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { LiaFacebook, LiaInstagram, LiaLinkedin, LiaYoutube } from "react-icons/lia";
 import Popup from "./Popup";
+import { PHONE, EMAIL } from "@/app/lib/constants/business";
 import Image from "next/image";
 
 export default function About() {
@@ -122,18 +123,18 @@ export default function About() {
                     {/* Contacts details */}
                     <div className="flex flex-col space-y-2 text-xs font-bold text-slate-700">
                       <a
-                        href="tel:+919899554095"
+                        href={PHONE.tel}
                         className="flex items-center gap-2 hover:text-[#0c7dc2] transition-colors"
                       >
-                        <Phone className="w-3.5 h-3.5 text-[#1fa8e8]" /> +91
-                        +91-98995 54095
+                        <Phone className="w-3.5 h-3.5 text-[#1fa8e8]" />{" "}
+                        {PHONE.display}
                       </a>
                       <a
-                        href="mailto:info@delhilungandsleep.com"
+                        href={EMAIL.mailto}
                         className="flex items-center gap-2 hover:text-[#0c7dc2] transition-colors"
                       >
                         <Mail className="w-3.5 h-3.5 text-[#1fa8e8]" />{" "}
-                        Aggarmanish@gmail.com
+                        {EMAIL.address}
                       </a>
                     </div>
 

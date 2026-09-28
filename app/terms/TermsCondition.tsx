@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { ADDRESS } from "@/app/lib/constants/business";
 import {
   ShieldAlert,
   FileCheck,
@@ -226,7 +227,7 @@ export default function TermsCondition({
             </h3>
             <p>
               We prioritize medical efficiency. Patients may book appointments
-              online or directly through our clinical desk at Pitampura. To
+              online or directly through our clinical desk at Shalimar Bagh. To
               ensure optimal patient rotation and minimum delay, we enforce the
               following rules:
             </p>
@@ -445,8 +446,8 @@ export default function TermsCondition({
                 </div>
                 <div className="space-y-1.5 text-xs text-slate-600 font-semibold">
                   <p className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-slate-400" /> 
-                       Pitampura, Delhi.
+                    <MapPin className="w-3.5 h-3.5 text-slate-400" />{" "}
+                    {ADDRESS.full}
                   </p>
                   <p className="flex items-center gap-2">
                     <Mail className="w-3.5 h-3.5 text-slate-400" />{" "}
@@ -465,8 +466,8 @@ export default function TermsCondition({
                   </h4>
                   <p className="text-[11px] text-slate-400 leading-normal mt-1">
                     All formal legal notifications or medical council filings
-                    must be delivered physically to our Pitampura, Delhi
-                    headquarter with official timestamps.
+                    must be delivered physically to our clinic at{" "}
+                    {ADDRESS.full} with official timestamps.
                   </p>
                 </div>
 

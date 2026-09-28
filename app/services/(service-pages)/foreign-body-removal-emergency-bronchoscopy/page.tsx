@@ -153,7 +153,7 @@ export default function page() {
         <>
             <ServiceHero
                 title="Foreign Body Removal & Emergency Bronchoscopy Clinic in Delhi"
-                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Pitampura, Delhi, provides emergency and advanced bronchoscopy services for foreign body aspiration in children and adults."
+                description="Dr. Manish Aggarwal, Senior Interventional Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides emergency and advanced bronchoscopy services for foreign body aspiration in children and adults."
             />
             <div className="max-w-7xl mx-auto px-4">
                 <div className=" pt-10">

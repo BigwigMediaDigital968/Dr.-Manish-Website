@@ -130,7 +130,7 @@ export default function InsomniaTreatmentPage() {
               <p className="text-sm font-medium text-[#334155] mb-4">
                 Not sure what your sleep pattern means? Talk to Dr. Manish Aggarwal today.
               </p>
-              <BookAppointmentButton cta="Consult Doctor 🗓" />
+              <BookAppointmentButton cta="Consult Doctor" className="w-full" />
             </div>
           </div>
         </section>
@@ -323,7 +323,7 @@ export default function InsomniaTreatmentPage() {
                 </li>
               </ul>
               <div className="mt-6 text-center sm:text-left">
-                <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today 🗓" />
+                <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
               </div>
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function InsomniaTreatmentPage() {
             <p className="mt-2 text-sm text-[#64748b] max-w-sm mb-6 leading-relaxed">
               If you've been lying awake at night, waking up exhausted, or relying heavily on caffeine and naps to get through the day, it's worth getting checked. Insomnia is highly treatable, and early diagnosis makes resolution easier.
             </p>
-            <BookAppointmentButton cta="Schedule Your Appointment 🗓" />
+            <BookAppointmentButton cta="Schedule Your Appointment" />
           </div>
         </section>
 

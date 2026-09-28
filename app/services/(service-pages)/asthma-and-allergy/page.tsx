@@ -156,7 +156,7 @@ export default function page() {
   return (
     <>
       <ServiceHero title="Asthma & Allergy Clinic in Delhi"
-        description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults." />
+        description="Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive care for asthma, allergy-related breathing problems, wheezing, chronic cough, chest tightness, and recurrent respiratory symptoms in children and adults." />
       <div className="max-w-7xl mx-auto px-4">
         <div className=" pt-10">
 

@@ -170,7 +170,7 @@ export default function page() {
                             </h2>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
-                                Persistent cough lasting more than a few weeks should never be ignored, especially when associated with breathlessness, wheezing, fever, weight loss, recurrent infections, or abnormal imaging. Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Pitampura, Delhi, provides advanced evaluation and management for chronic cough and difficult-to-diagnose respiratory conditions in children and adults.
+                                Persistent cough lasting more than a few weeks should never be ignored, especially when associated with breathlessness, wheezing, fever, weight loss, recurrent infections, or abnormal imaging. Dr. Manish Aggarwal, Senior Pulmonologist & Interventional Chest Specialist in Shalimar Bagh, Delhi, provides advanced evaluation and management for chronic cough and difficult-to-diagnose respiratory conditions in children and adults.
                             </p>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">

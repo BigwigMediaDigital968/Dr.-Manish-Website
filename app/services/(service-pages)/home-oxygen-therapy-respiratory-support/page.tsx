@@ -196,7 +196,7 @@ export default function page() {
                             </h2>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">
-                                Many patients with COPD, Interstitial Lung Disease (ILD), hypersensitivity pneumonitis, pulmonary fibrosis, post-COVID lung disease, and chronic respiratory illness may require oxygen support to maintain healthy oxygen levels and protect vital organs. Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Pitampura, Delhi, provides comprehensive assessment and guidance for safe and appropriate home oxygen therapy.
+                                Many patients with COPD, Interstitial Lung Disease (ILD), hypersensitivity pneumonitis, pulmonary fibrosis, post-COVID lung disease, and chronic respiratory illness may require oxygen support to maintain healthy oxygen levels and protect vital organs. Dr. Manish Aggarwal, Senior Pulmonologist & Chest Specialist in Shalimar Bagh, Delhi, provides comprehensive assessment and guidance for safe and appropriate home oxygen therapy.
                             </p>
 
                             <p className="text-sm sm:text-base text-[#64748b] leading-relaxed mt-4">

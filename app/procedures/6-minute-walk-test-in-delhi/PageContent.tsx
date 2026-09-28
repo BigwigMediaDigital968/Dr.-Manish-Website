@@ -1,4 +1,5 @@
 import BookAppointmentButton from "@/app/component/website/Buttons/BookAppointmentButton";
+import { ADDRESS } from "@/app/lib/constants/business";
 import WhatsappButton from "@/app/component/website/Buttons/WhatsappButton";
 import FAQs from "@/app/component/website/FAQs";
 import ServiceHero from "@/app/services/(service-pages)/component/ServiceHero";
@@ -43,21 +44,6 @@ export default function PageContent() {
         backgroundImage="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg"
       />
 
-      {/* TRUST STRIP */}
-      <div className="bg-slate-900 border-y border-slate-800 py-4 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs sm:text-sm font-semibold tracking-wide text-center">
-          <div>24+ Years Clinical Experience</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>Same-Day Testing Available</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>4.9 Google Rating (350+ Verified Reviews)</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>FRCP (Glasgow)</div>
-          <div className="hidden sm:block text-slate-700">|</div>
-          <div>50,000+ Patients Treated</div>
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
         
         {/* OVERVIEW SECTION */}
@@ -99,7 +85,7 @@ export default function PageContent() {
               </h2>
             </div>
             <div className="shrink-0 w-full md:w-auto">
-              <BookAppointmentButton cta="Book Your 6 Minute Walk Test →" />
+              <BookAppointmentButton cta="Book Your 6 Minute Walk Test" />
             </div>
           </div>
 
@@ -107,7 +93,7 @@ export default function PageContent() {
             <div className="space-y-4">
               <p>• <strong className="text-[#0f172a]">24+ years</strong> of clinical experience managing chronic respiratory and lung conditions.</p>
               <p>• <strong className="text-[#0f172a]">Credentials:</strong> MBBS, MD (Tuberculosis & Chest Diseases), FRCP (Glasgow), trained at premier Indian institutes.</p>
-              <p>• <strong className="text-[#0f172a]">Current Role:</strong> Principal Director, Department of Chest Disease & Interventional Pulmonology, Max Hospital, also practicing at his private clinic in Pitampura, Delhi.</p>
+              <p>• <strong className="text-[#0f172a]">Current Role:</strong> Principal Director, Department of Chest Disease & Interventional Pulmonology, Max Hospital, also practicing at his private clinic in Shalimar Bagh, Delhi.</p>
               <p>• <strong className="text-[#0f172a]">Integrated Review:</strong> Test results, including distance walked and oxygen desaturation, are personally reviewed by Dr. Aggarwal in the context of your diagnosis and treatment plan.</p>
               <p>• <strong className="text-[#0f172a]">Dynamic Insight:</strong> Frequently used to assess conditions such as interstitial lung disease and COPD, where this test provides insight that resting measurements cannot capture.</p>
             </div>
@@ -173,12 +159,12 @@ export default function PageContent() {
         </section>
 
         {/* CTA BANNER */}
-        <section className="relative overflow-hidden rounded-3xl bg-amber-500 p-6 sm:p-10 shadow-md text-slate-900 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <section className="relative overflow-hidden rounded-3xl bg-sky-50 border border-sky-100 p-6 sm:p-10 shadow-sm text-slate-900 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-base sm:text-xl font-bold tracking-tight text-slate-950 text-center sm:text-left">
             Breathless with activity but resting tests look fine?
           </p>
           <div className="shrink-0 w-full sm:w-auto">
-            <BookAppointmentButton cta="Get a Functional Assessment →" />
+            <BookAppointmentButton cta="Get a Functional Assessment" />
           </div>
         </section>
 
@@ -346,7 +332,7 @@ export default function PageContent() {
                   Get an objective, real-world assessment with the 6 minute walk test, reviewed personally by Dr. Manish Aggarwal, Delhi's leading pulmonologist with 24+ years of respiratory care experience.
                 </p>
                 <div className="text-xs text-slate-400 space-y-1 pt-1">
-                  <p>📍 <strong className="text-slate-300">Clinic Address:</strong> JU-12A, Block G&JU, Ranikhet, Pitampura, Delhi, 110034</p>
+                  <p>📍 <strong className="text-slate-300">Clinic Address:</strong> {ADDRESS.full}</p>
                   <p>📞 <strong className="text-slate-300">Call Desk:</strong> +91 9899554095 &nbsp;|&nbsp; ✉️ <strong className="text-slate-300">Email:</strong> Aggarmanish@gmail.com</p>
                 </div>
               </div>
