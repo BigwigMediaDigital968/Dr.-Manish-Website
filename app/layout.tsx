@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.jpeg",
   },
+  verification: {
+    //Binge Webmaster Tool
+    other: {
+      "msvalidate.01": "CAF4A46F3E14340310B4851B09003565",
+    },
+  },
 };
 
 export default function RootLayout({
