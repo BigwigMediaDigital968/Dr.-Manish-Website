@@ -71,6 +71,7 @@ export default function RootLayout({
           })(window, document, "clarity", "script", "yps23nwzcs");
           `}
         </Script>
+
       </body>
     </html>
   );

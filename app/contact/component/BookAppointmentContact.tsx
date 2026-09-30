@@ -175,12 +175,6 @@ export default function BookAppointmentContact() {
                     />
                   </svg>
                 </a>
-                <a
-                  href="/services"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#e2e8f0] bg-white px-6 py-3 text-sm font-semibold text-[#0f172a] transition-colors hover:bg-slate-50"
-                >
-                  Learn More
-                </a>
               </div>
 
               {/* Stats */}

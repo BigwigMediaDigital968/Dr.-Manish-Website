@@ -43,7 +43,7 @@ export default function CbtiInsomniaTherapyPage() {
         backgroundImage="https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16 my-12 sm:my-16">
         
         {/* OVERVIEW SECTION */}
         <section className="bg-slate-50 rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-100">
@@ -67,7 +67,7 @@ export default function CbtiInsomniaTherapyPage() {
             </div>
             <div className="w-full lg:w-[45%] shrink-0">
               <img
-                src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg"
+                src="https://images.pexels.com/photos/6541168/pexels-photo-6541168.jpeg"
                 alt="A relaxed individual winding down and reading comfortably in bed before falling asleep naturally"
                 className="w-full h-[260px] sm:h-[340px] object-cover rounded-2xl shadow-sm border border-slate-200"
               />
@@ -263,7 +263,7 @@ export default function CbtiInsomniaTherapyPage() {
                 </p>
               </div>
             </div>
-            <div className="pt-4 lg:pt-0">
+            <div className="pt-4">
               <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>

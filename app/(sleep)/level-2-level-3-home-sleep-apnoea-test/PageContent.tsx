@@ -218,7 +218,7 @@ export default function HomeSleepApneaTestPage() {
                 </p>
               </div>
             </div>
-            <div className="pt-4 lg:pt-0">
+            <div className="pt-4">
               <BookAppointmentButton cta="Schedule Your Diagnostic Evaluation" />
             </div>
           </div>

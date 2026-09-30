@@ -77,7 +77,7 @@ export default function DaytimeSleepinessTestingPage() {
             </div>
             <div className="w-full lg:w-[45%] shrink-0">
               <img
-                src="https://images.pexels.com/photos/10682245/pexels-photo-10682245.jpeg"
+                src="https://images.pexels.com/photos/9615248/pexels-photo-9615248.jpeg"
                 alt="Patient resting in a private, quiet sleep laboratory during a daytime sleep latency test"
                 className="w-full h-[260px] sm:h-[340px] object-cover rounded-2xl shadow-sm border border-slate-200"
               />

@@ -48,7 +48,7 @@ export default function InsomniaTreatmentPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-16 sm:space-y-24 my-12 sm:my-16">
-        
+
         {/* WHAT IS INSOMNIA OVERVIEW */}
         <section className="bg-slate-50 rounded-3xl p-6 border border-slate-100">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -63,7 +63,7 @@ export default function InsomniaTreatmentPage() {
                 <strong>Polysomnography</strong> is a detailed sleep test that records how your body behaves while you sleep. It tracks your brain waves, heartbeat, breathing pattern, oxygen levels, eye movement, and muscle activity throughout the night.
               </p>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
-                 Unlike home sleep tests, <span className="font-bold text-[#0f172a]">a Level 1 sleep study</span> is done in a sleep lab under the direct supervision of a trained technician, which makes it the gold standard for diagnosing sleep disorders.
+                Unlike home sleep tests, <span className="font-bold text-[#0f172a]">a Level 1 sleep study</span> is done in a sleep lab under the direct supervision of a trained technician, which makes it the gold standard for diagnosing sleep disorders.
               </p>
               <p className="text-sm sm:text-base text-[#64748b] leading-relaxed">
                 This test gives doctors a complete picture of your sleep cycle, so they can spot problems that a simple checkup cannot catch. If you have been feeling tired all day, snoring loudly, or waking up gasping for air, a <strong>Polysomnography</strong> test can help find the exact cause.
@@ -111,7 +111,7 @@ export default function InsomniaTreatmentPage() {
               <p className="text-sm font-medium text-[#334155] mb-4">
                 This close supervision is why doctors like Dr. Manish Aggrawal recommend Level 1 Polysomnography for patients who need a precise and dependable diagnosis.
               </p>
-              <BookAppointmentButton cta="Consult Doctor" />
+              <BookAppointmentButton cta="Consult Doctor" className="w-full" />
             </div>
           </div>
         </section>
@@ -156,13 +156,13 @@ export default function InsomniaTreatmentPage() {
             </table>
           </div>
           <p className="mt-4 text-xs sm:text-sm text-[#64748b] italic">
-If you or your family have noticed any of these symptoms, a Polysomnography test can help confirm the diagnosis and guide the right treatment plan.
+            If you or your family have noticed any of these symptoms, a Polysomnography test can help confirm the diagnosis and guide the right treatment plan.
           </p>
         </section>
 
         {/* SYMPTOMS: NIGHT VS DAY GRID */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          
+
           {/* NIGHT SYMPTOMS */}
           <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:border-[#1fa8e8]/40 transition-colors duration-300">
             <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
@@ -172,7 +172,7 @@ If you or your family have noticed any of these symptoms, a Polysomnography test
               What to Expect During Your Polysomnography Test
             </h2>
             <p className="mt-3 text-sm text-[#64748b] leading-relaxed">
-             Knowing what happens during the test can ease any worry you may have. Here is a simple breakdown:
+              Knowing what happens during the test can ease any worry you may have. Here is a simple breakdown:
             </p>
             <ul className="mt-6 space-y-3.5">
               {[
@@ -228,10 +228,10 @@ If you or your family have noticed any of these symptoms, a Polysomnography test
             Etiology & Triggers
           </span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight mb-4">
-           Is Polysomnography Safe?
+            Is Polysomnography Safe?
           </h2>
           <p className="text-sm sm:text-base text-[#64748b] mb-6 leading-relaxed">
-Yes. This test is painless and non invasive. The sensors only record information and do not send any electricity into your body. There are no needles, no radiation, and no major risks involved. Some people feel mild discomfort from the sensors or find it hard to sleep in a new place, but this does not usually affect the quality of the results.
+            Yes. This test is painless and non invasive. The sensors only record information and do not send any electricity into your body. There are no needles, no radiation, and no major risks involved. Some people feel mild discomfort from the sensors or find it hard to sleep in a new place, but this does not usually affect the quality of the results.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -256,9 +256,9 @@ Yes. This test is painless and non invasive. The sensors only record information
 
         {/* RISK FACTORS & SEVERITY ASSESSMENT PANEL */}
         <section className="bg-slate-900 rounded-3xl p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#1fa8e8]/10 rounded-full blur-3xl -z-0 pointer-events-none" />
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div>
+          {/* <div className="absolute top-0 right-0 w-64 h-64 bg-[#1fa8e8]/10 rounded-full blur-3xl -z-0 pointer-events-none" /> */}
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-10">
+            <div className="flex-1 min-w-0">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1fa8e8]">
                 Best Doctor for Polysomnography
               </span>
@@ -266,7 +266,7 @@ Yes. This test is painless and non invasive. The sensors only record information
                 Why Choose Dr. Manish Aggrawal for Your Polysomnography Test?
               </h2>
               <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-With years of experience in diagnosing and treating sleep disorders, Dr. Manish Aggrawal offers a patient friendly approach to every sleep study. From the first consultation to the final report, patients receive clear explanations, a comfortable testing environment, and a personalised treatment plan based on their results.If poor sleep is affecting your health, mood, or daily life, do not wait. A Level 1 Polysomnography test can uncover the root cause and set you on the path to better sleep.
+                With years of experience in diagnosing and treating sleep disorders, Dr. Manish Aggrawal offers a patient friendly approach to every sleep study. From the first consultation to the final report, patients receive clear explanations, a comfortable testing environment, and a personalised treatment plan based on their results.If poor sleep is affecting your health, mood, or daily life, do not wait. A Level 1 Polysomnography test can uncover the root cause and set you on the path to better sleep.
               </p>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200">
                 {["Age above 60 years", "Female gender (pregnancy/menopause)", "History of anxiety or depression", "Irregular or rotating work shifts", "Chronic conditions (diabetes, heart disease)", "High-stress lifestyle patterns", "Family history of sleep problems"].map((factor, i) => (
@@ -277,16 +277,15 @@ With years of experience in diagnosing and treating sleep disorders, Dr. Manish 
                 ))}
               </div>
             </div>
+            <div className="w-full lg:w-[36%] shrink-0 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col items-center justify-center text-center">
+              <h3 className="text-lg font-bold text-[#0f172a]">
+                Consult Dr. Manish Aggrawal Now
+              </h3>
+              <p className="mt-2 text-sm text-[#64748b] max-w-sm mb-6 leading-relaxed">
+                If you've been lying awake at night, waking up exhausted, or relying heavily on caffeine and naps to get through the day, it's worth getting checked. Insomnia is highly treatable, and early diagnosis makes resolution easier.
+              </p>
+              <BookAppointmentButton cta="Schedule Your Appointment" className="w-full" />
             </div>
-          
-          <div className="w-full lg:w-[40%] bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col items-center justify-center text-center">
-            <h3 className="text-lg font-bold text-[#0f172a]">
-              Consult Dr. Manish Aggrawal Now
-            </h3>
-            <p className="mt-2 text-sm text-[#64748b] max-w-sm mb-6 leading-relaxed">
-              If you've been lying awake at night, waking up exhausted, or relying heavily on caffeine and naps to get through the day, it's worth getting checked. Insomnia is highly treatable, and early diagnosis makes resolution easier.
-            </p>
-            <BookAppointmentButton cta="Schedule Your Appointment" />
           </div>
         </section>
 

@@ -72,7 +72,7 @@ export default function SleepDiaryTestingPage() {
             </div>
             <div className="w-full lg:w-[45%] shrink-0">
               <img
-                src="https://images.pexels.com/photos/5996667/pexels-photo-5996667.jpeg"
+                src="https://images.pexels.com/photos/6541081/pexels-photo-6541081.jpeg"
                 alt="A person completing their sleep diary log in a notebook by their bedside during the morning hours"
                 className="w-full h-[260px] sm:h-[340px] object-cover rounded-2xl shadow-sm border border-slate-200"
               />

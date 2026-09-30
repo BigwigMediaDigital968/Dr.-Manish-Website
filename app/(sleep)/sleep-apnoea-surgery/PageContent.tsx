@@ -545,7 +545,7 @@ export default function SleepApneaSurgeryEvaluationPage() {
                 </p>
               </div>
             </div>
-            <div className="pt-4 lg:pt-0">
+            <div className="pt-4">
               <BookAppointmentButton cta="Book a Consultation with Dr. Manish Aggarwal Today" />
             </div>
           </div>

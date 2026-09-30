@@ -68,7 +68,7 @@ export default function Location({ onBookClick = () => {} }: LocationProps) {
       {/* ==========================================================
          FOREGROUND CARD CONTAINER (Overlaps left side on desktop)
          ========================================================== */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-8 lg:py-0 flex items-center justify-center lg:justify-start pointer-events-none">
+      <div className="relative z-10 w-full max-w-[1300px] mx-auto px-4 md:px-2 py-8 lg:py-0 flex items-center justify-center lg:justify-end pointer-events-none">
         {/* Availability & Location Card Block - Replicating image_e71083.jpg */}
         <div className="w-full max-w-[440px] bg-white/95 backdrop-blur-md rounded-[36px] border border-slate-100 p-6 sm:p-8 shadow-2xl shadow-slate-900/15 space-y-6 pointer-events-auto transition-all duration-300 hover:shadow-sky-100/50 hover:-translate-y-1">
           {/* Tag and Verified Status header */}

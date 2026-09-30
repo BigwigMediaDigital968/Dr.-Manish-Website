@@ -146,7 +146,7 @@ export default function ParasomniaDisorderPage() {
               <p className="text-sm font-medium text-[#334155] mb-4">
                 Not sure what your sleep behaviour means? Talk to Dr. Manish Aggarwal today.
               </p>
-              <BookAppointmentButton cta="Consult Doctor" />
+              <BookAppointmentButton cta="Consult Doctor" className="w-full" />
             </div>
           </div>
         </section>
@@ -406,7 +406,7 @@ export default function ParasomniaDisorderPage() {
             </div>
             <div className="pt-6 border-t border-slate-200/60 mt-6 text-center">
               <p className="text-xs text-[#64748b] mb-4">Frequent, dangerous, or highly disruptive parasomnia symptoms do not have to just be accepted.</p>
-              <BookAppointmentButton cta="Schedule Your Appointment" />
+              <BookAppointmentButton cta="Schedule Your Appointment" className="w-full" />
             </div>
           </div>
         </section>

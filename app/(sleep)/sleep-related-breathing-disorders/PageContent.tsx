@@ -200,8 +200,8 @@ export default function SleepRelatedBreathingDisordersPage() {
                 <p>• <strong className="text-white">Safety Vulnerabilities:</strong> Chronic exhaustion leads to a significantly higher risk of daytime motor vehicle and workplace accidents.</p>
               </div>
             </div>
-            <div className="pt-4 lg:pt-0 text-center sm:text-left">
-              <BookAppointmentButton cta="Consult Doctor" />
+            <div className="pt-4 text-center sm:text-left">
+              <BookAppointmentButton cta="Consult Doctor" className="w-full" />
             </div>
           </div>
         </section>

@@ -52,7 +52,7 @@ export default function ActigraphyTestingPage() {
         backgroundImage="https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 my-12 sm:my-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16 my-12 sm:my-16">
         
         {/* OVERVIEW SECTION */}
         <section className="bg-slate-50 rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-100">
@@ -313,7 +313,7 @@ export default function ActigraphyTestingPage() {
         </section>
 
         {/* FAQ ACCORDION SECTION */}
-        <div className="pt-4">
+        <div className="">
           <FAQs faqs={faqs} />
         </div>
 
