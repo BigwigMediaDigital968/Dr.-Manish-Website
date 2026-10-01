@@ -15,7 +15,6 @@ interface BlogForm {
   slug: string;
   excerpt: string;
   author: string;
-  category: string;
   tags: string;
   status: "draft" | "published";
   featured: boolean;
@@ -30,10 +29,8 @@ type ImageModalTab = "url" | "upload";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const CATEGORIES = ["SEO", "Content", "Social", "PPC", "Technology", "Health", "Lifestyle"];
-
 const EMPTY_FORM: BlogForm = {
-  title: "", slug: "", excerpt: "", author: "", category: "SEO",
+  title: "", slug: "", excerpt: "", author: "",
   tags: "", status: "draft", featured: false, metaTitle: "",
   metaDescription: "", metaKeywords: "", structuredData: "",
   faqs: [],
@@ -387,7 +384,6 @@ export default function BlogFormPage({ slug }: BlogFormPageProps) {
           slug: b.slug ?? "",
           excerpt: b.excerpt ?? "",
           author: b.author ?? "",
-          category: b.category ?? "SEO",
           tags: (b.tags ?? []).join(", "),
           status: b.status ?? "draft",
           featured: b.featured ?? false,
@@ -446,7 +442,6 @@ export default function BlogFormPage({ slug }: BlogFormPageProps) {
       fd.append("excerpt", form.excerpt);
       fd.append("content", editorContent);
       fd.append("author", form.author);
-      fd.append("category", form.category);
       fd.append("status", status);
       fd.append("featured", String(form.featured));
       fd.append("tags", JSON.stringify(form.tags.split(",").map((t) => t.trim()).filter(Boolean)));
@@ -688,27 +683,16 @@ export default function BlogFormPage({ slug }: BlogFormPageProps) {
             </label>
           </div>
 
-          {/* Category & Tags */}
+          {/* Tags */}
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
-            <h2 className="text-sm font-medium text-slate-700">Categorisation</h2>
-            <div>
-              <label className="block text-xs text-slate-500 mb-1">Category</label>
-              <select
-                name="category"
-                value={form.category}
-                onChange={handleChange}
-                className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1fa8e8]"
-              >
-                {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
-              </select>
-            </div>
+            <h2 className="text-sm font-medium text-slate-700">Tags</h2>
             <div>
               <label className="block text-xs text-slate-500 mb-1">Tags (comma separated)</label>
               <input
                 name="tags"
                 value={form.tags}
                 onChange={handleChange}
-                placeholder="seo, tips, marketing"
+                placeholder="asthma, copd, sleep apnea"
                 className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1fa8e8]"
               />
               {form.tags && (

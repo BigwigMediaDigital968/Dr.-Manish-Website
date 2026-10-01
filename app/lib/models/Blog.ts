@@ -10,7 +10,7 @@ export interface IBlog extends Document {
   };
   faqs: IFaq[];
   author: string;
-  category: string;
+  category?: string;
   tags: string[];
   status?: "draft" | "published" | string;
   featured: boolean;
@@ -86,9 +86,9 @@ const BlogSchema = new Schema<IBlog>(
       type: String,
       required: true,
     },
+    // Legacy field — blogs are now grouped by tags
     category: {
       type: String,
-      required: true,
       index: true,
     },
     tags: [

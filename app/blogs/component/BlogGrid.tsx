@@ -20,261 +20,58 @@ import { formatDate } from "@/app/lib/Helpers/Date";
 import Link from "next/link";
 
 /* ============================================================================
-   1. STREAMING_CHUNK: Defining Type Interfaces for Blogs & API responses
+   1. Types
    ============================================================================ */
 
 export interface BlogPost {
-  id: number;
+  _id: string;
   title: string;
-  date: string; // e.g. "NOVEMBER 20, 2026"
-  image: string;
-  category:
-    | "Pulmonary"
-    | "Sleep Disorders"
-    | "Diagnostics"
-    | "Pediatric"
-    | "General";
-  commentsCount: number;
-  sharesCount: number;
   slug: string;
+  excerpt: string;
+  tags: string[];
+  category?: string;
+  featuredImage?: { url: string; alt: string };
+  publishedAt?: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 interface APIResponse {
   posts: BlogPost[];
+  tags: string[];
   totalCount: number;
   totalPages: number;
   currentPage: number;
 }
 
 /* ============================================================================
-   2. STREAMING_CHUNK: Constructing mock database items representing image_a8743a.jpg
+   2. API client — only published blogs are shown publicly
    ============================================================================ */
 
-const MOCK_BLOGS_DATABASE: BlogPost[] = [
-  {
-    id: 1,
-    title: "THIS IS AN EXAMPLE OF A PULMONARY ACTION PLAN",
-    date: "NOVEMBER 20, 2026",
-    image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
-    category: "Pulmonary",
-    commentsCount: 0,
-    sharesCount: 14,
-    slug: "pulmonary-action-plan-example",
-  },
-  {
-    id: 2,
-    title: "THIS IS A POST TITLE HIGHLIGHTING SLEEP APNEA WARNINGS",
-    date: "OCTOBER 12, 2026",
-    image:
-      "https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&w=800&q=80",
-    category: "Sleep Disorders",
-    commentsCount: 12,
-    sharesCount: 22,
-    slug: "sleep-apnea-warning-signals",
-  },
-  {
-    id: 3,
-    title: "THIS IS A POST TITLE EXPLORING MODERN SPIROMETRY",
-    date: "MARCH 18, 2026",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
-    category: "Diagnostics",
-    commentsCount: 3,
-    sharesCount: 8,
-    slug: "modern-spirometry-evaluation",
-  },
-  {
-    id: 4,
-    title: "THIS IS ANOTHER POST TITLE FOR ASTHMA TRIGGERS",
-    date: "FEBRUARY 26, 2026",
-    image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
-    category: "Pulmonary",
-    commentsCount: 5,
-    sharesCount: 19,
-    slug: "asthma-triggers-and-airway-care",
-  },
-  {
-    id: 5,
-    title: "THIS IS AN EXAMPLE OF A PEDIATRIC BRONCHOSCOPY RECOVERY",
-    date: "FEBRUARY 12, 2026",
-    image:
-      "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=800&q=80",
-    category: "Pediatric",
-    commentsCount: 0,
-    sharesCount: 7,
-    slug: "pediatric-bronchoscopy-recovery",
-  },
-  {
-    id: 6,
-    title: "THIS IS A POST TITLE FOR ADVANCED MEDIASTINAL STAGING",
-    date: "FEBRUARY 11, 2026",
-    image:
-      "https://images.unsplash.com/photo-1579153138244-3917f01f01d7?auto=format&fit=crop&w=800&q=80",
-    category: "Diagnostics",
-    commentsCount: 9,
-    sharesCount: 31,
-    slug: "advanced-mediastinal-staging-ebus",
-  },
-  {
-    id: 7,
-    title: "UNDERSTANDING THE BIOLOGY OF CHRONIC COUGH",
-    date: "JANUARY 15, 2026",
-    image:
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
-    category: "Pulmonary",
-    commentsCount: 2,
-    sharesCount: 11,
-    slug: "biology-of-chronic-cough",
-  },
-  {
-    id: 8,
-    title: "HOW HOME SLEEP STUDIES REVOLUTIONIZED OSA DIAGNOSIS",
-    date: "JANUARY 08, 2026",
-    image:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
-    category: "Sleep Disorders",
-    commentsCount: 14,
-    sharesCount: 45,
-    slug: "home-sleep-studies-revolution",
-  },
-  {
-    id: 9,
-    title: "THE IMPACT OF DELHI SMOG ON RESPIRATORY DEFENSES",
-    date: "DECEMBER 14, 2025",
-    image:
-      "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80",
-    category: "General",
-    commentsCount: 27,
-    sharesCount: 88,
-    slug: "delhi-smog-respiratory-defenses",
-  },
-  {
-    id: 10,
-    title: "SARCOIDOSIS PROTOCOLS & STAGING EXPLAINED",
-    date: "DECEMBER 02, 2025",
-    image:
-      "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
-    category: "Pulmonary",
-    commentsCount: 1,
-    sharesCount: 4,
-    slug: "sarcoidosis-protocols-staging",
-  },
-  {
-    id: 11,
-    title: "BRONCHIAL REACTIVITY TESTS: STANDARDS AND VALUES",
-    date: "NOVEMBER 18, 2025",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
-    category: "Diagnostics",
-    commentsCount: 4,
-    sharesCount: 12,
-    slug: "bronchial-reactivity-tests",
-  },
-  {
-    id: 12,
-    title: "OXYGEN TITRATION AND THERAPY COMPLIANCE AT HOME",
-    date: "OCTOBER 24, 2025",
-    image:
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    category: "General",
-    commentsCount: 6,
-    sharesCount: 17,
-    slug: "oxygen-titration-therapy-compliance",
-  },
-];
-
-/* ============================================================================
-   3. STREAMING_CHUNK: Simulated API Client Function for Easy Swapping
-   ============================================================================ */
-
-/**
- * Simulates a server-side paginated & filtered REST API call.
- * Swap this mock with an actual fetch/axios implementation in production.
- */
 export async function fetchBlogsAPI(
   page: number = 1,
   limit: number = 6,
-  category: string = "All",
+  tag: string = "All",
   searchQuery: string = "",
-): Promise<APIResponse> {
-  // Simulate network latency (500ms delay)
-  await new Promise((resolve) => setTimeout(resolve, 550));
-
-  // const searchParams =  {
-
-  // }
-  // const response = await fetch(
-  //   `/api/blogs?${searchParams.toString()}`,
-  //   {
-  //     method: "GET",
-  //     cache: "no-store",
-  //   }
-  // );
-
-  let filtered = [...MOCK_BLOGS_DATABASE];
-  // Apply Category Filters
-  if (category !== "All") {
-    filtered = filtered.filter(
-      (post) => post.category.toLowerCase() === category.toLowerCase(),
-    );
-  }
-
-  // Apply Search Query Filters
-  if (searchQuery.trim()) {
-    const query = searchQuery.toLowerCase().trim();
-    filtered = filtered.filter(
-      (post) =>
-        post.title.toLowerCase().includes(query) ||
-        post.category.toLowerCase().includes(query),
-    );
-  }
-
-  const totalCount = filtered.length;
-  const totalPages = Math.ceil(totalCount / limit);
-  const startIndex = (page - 1) * limit;
-  const paginatedPosts = filtered.slice(startIndex, startIndex + limit);
-
-  return {
-    posts: paginatedPosts,
-    totalCount,
-    totalPages,
-    currentPage: page,
-  };
-}
-
-export async function fetchBlogsAPI2(
-  page: number = 1,
-  limit: number = 6,
-  category: string = "All",
-  searchQuery: string = "",
-  featured?: boolean
 ): Promise<APIResponse> {
   const searchParams = new URLSearchParams();
 
+  searchParams.set("status", "published");
   searchParams.set("page", page.toString());
   searchParams.set("limit", limit.toString());
 
-  if (category && category !== "All") {
-    searchParams.set("category", category);
+  if (tag && tag !== "All") {
+    searchParams.set("tag", tag);
   }
 
   if (searchQuery.trim()) {
     searchParams.set("search", searchQuery.trim());
   }
 
-  if (featured !== undefined) {
-    searchParams.set("featured", featured.toString());
-  }
-
-  const response = await fetch(
-    `/api/blogs?${searchParams.toString()}`,
-    {
-      method: "GET",
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`/api/blogs?${searchParams.toString()}`, {
+    method: "GET",
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Failed to fetch blogs");
@@ -284,6 +81,7 @@ export async function fetchBlogsAPI2(
 
   return {
     posts: result.data,
+    tags: result.tags ?? [],
     totalCount: result.pagination.total,
     totalPages: result.pagination.pages,
     currentPage: result.pagination.page,
@@ -307,12 +105,13 @@ export default function BlogGrid({
   const [navMode, setNavMode] = useState<"infinite" | "paginated">("paginated");
 
   // Filtering & Search State
-  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [activeTag, setActiveTag] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [debouncedQuery, setDebouncedQuery] = useState<string>("");
 
   // Grid Data States
-  const [posts, setPosts] = useState<BlogPost[] | any[]>([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [tags, setTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -320,7 +119,8 @@ export default function BlogGrid({
 
   // Scroll Virtualization Sentinel Ref
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const scrollSentinel = useRef<HTMLDivElement | null>(null);
+  // Latest request id — responses from superseded requests are ignored
+  const requestIdRef = useRef(0);
 
   // Handle Search Input Debounce
   useEffect(() => {
@@ -330,36 +130,36 @@ export default function BlogGrid({
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
-  console.log(posts)
   // Reset parameters when filters, query, or mode switches
   useEffect(() => {
     setPosts([]);
     setCurrentPage(1);
     setHasMore(true);
-  }, [activeCategory, debouncedQuery, navMode]);
+  }, [activeTag, debouncedQuery, navMode]);
 
   /* ============================================================================
-     5. STREAMING_CHUNK: Data Fetching Coordinator (Swappable for API integrations)
+     5. Data Fetching Coordinator
      ============================================================================ */
   const loadBlogData = useCallback(
     async (pageNum: number, append: boolean = false) => {
-      if (isLoading) return;
+      const requestId = ++requestIdRef.current;
       setIsLoading(true);
 
       try {
         const result = await fetchBlogsAPI(
           pageNum,
           postsPerPage,
-          activeCategory,
+          activeTag,
           debouncedQuery,
         );
+        if (requestId !== requestIdRef.current) return;
 
         if (append) {
           setPosts((prev) => {
             // Remove duplicates if any exist
-            const existingIds = new Set(prev.map((p) => p.id));
+            const existingIds = new Set(prev.map((p) => p._id));
             const uniqueNewPosts = result.posts.filter(
-              (p) => !existingIds.has(p.id),
+              (p) => !existingIds.has(p._id),
             );
             return [...prev, ...uniqueNewPosts];
           });
@@ -367,21 +167,25 @@ export default function BlogGrid({
           setPosts(result.posts);
         }
 
+        setTags(result.tags);
         setTotalPages(result.totalPages);
         setHasMore(pageNum < result.totalPages);
       } catch (error) {
-        console.error("API Integration failed to retrieve posts:", error);
+        if (requestId !== requestIdRef.current) return;
+        console.error("Failed to retrieve blogs:", error);
+        if (!append) setPosts([]);
+        setHasMore(false);
       } finally {
-        setIsLoading(false);
+        if (requestId === requestIdRef.current) setIsLoading(false);
       }
     },
-    [activeCategory, debouncedQuery, postsPerPage, isLoading],
+    [activeTag, debouncedQuery, postsPerPage],
   );
 
   // Trigger loading when page changes
   useEffect(() => {
     loadBlogData(currentPage, navMode === "infinite");
-  }, [currentPage, activeCategory, debouncedQuery, navMode]);
+  }, [currentPage, activeTag, debouncedQuery, navMode]);
 
   /* ============================================================================
      6. STREAMING_CHUNK: Intersection Observer Scroll Virtualizer Hook Setup
@@ -419,14 +223,8 @@ export default function BlogGrid({
     }
   };
 
-  const categories = [
-    "All",
-    "Pulmonary",
-    "Sleep Disorders",
-    "Diagnostics",
-    "Pediatric",
-    "General",
-  ];
+  // Tags come from published blogs in the database
+  const tagFilters = ["All", ...tags];
 
   return (
     <div className="w-full bg-white text-slate-900 py-5 sm:py-10 selection:bg-[#1fa8e8] selection:text-white">
@@ -486,17 +284,17 @@ export default function BlogGrid({
 
         {/* Filters and Search Fields */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-          {/* Category Scrollers */}
+          {/* Tag Filters */}
           <div className="lg:col-span-8 flex flex-wrap items-center gap-1.5 justify-center lg:justify-start">
             <span className="text-xs font-extrabold text-slate-400 uppercase tracking-widest flex items-center gap-1.5 mr-2">
-              <Filter className="w-3.5 h-3.5" /> Category:
+              <Filter className="w-3.5 h-3.5" /> Tags:
             </span>
-            {categories.map((cat) => (
+            {tagFilters.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => setActiveTag(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                  activeCategory === cat
+                  activeTag === cat
                     ? "bg-gradient-to-r from-[#1fa8e8] to-[#0c7dc2] text-white shadow-md shadow-sky-400/20"
                     : "bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200/50"
                 }`}
@@ -530,7 +328,7 @@ export default function BlogGrid({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {posts.map((post, idx) => (
               <div
-                key={`${post.id}-${idx}`}
+                key={post._id}
                 className="animate-blog-card bg-white transition-all duration-300 flex flex-col justify-between"
                 style={{ animationDelay: `${(idx % 6) * 100}ms` }}
               >
@@ -539,7 +337,7 @@ export default function BlogGrid({
                   {/* Top: Metadata & Post Title Block (Capitalized thin header) */}
                   <div className="space-y-1.5 text-left">
                     <span className="text-[10px] md:text-xs font-medium text-slate-400 tracking-widest uppercase block font-mono">
-                      {formatDate(post.updatedAt)}
+                      {formatDate(post.publishedAt || post.createdAt)}
                     </span>
                     <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug line-clamp-2 uppercase">
                       {post.title}
@@ -548,24 +346,28 @@ export default function BlogGrid({
 
                   {/* Mid: Bound Image Frame */}
                   <div className="relative h-64 overflow-hidden bg-slate-100 border border-slate-100">
-                    <img
-                      src={post?.featuredImage?.url || post.image}
-                      alt={post?.featuredImage?.alt}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      loading="lazy"
-                    />
+                    {post.featuredImage?.url && (
+                      <img
+                        src={post.featuredImage.url}
+                        alt={post.featuredImage.alt || post.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        loading="lazy"
+                      />
+                    )}
 
-                    {/* Category Overlay Tag */}
+                    {/* Tag Overlay */}
+                    {(post.tags?.[0] || post.category) && (
                     <span className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[9px] font-extrabold text-[#0c7dc2] uppercase tracking-wider shadow-sm">
-                      {post.category}
+                      {post.tags?.[0] || post.category}
                     </span>
+                    )}
                   </div>
 
                   {/* Action Link: Bordered Box Centered Button (Strict mapping of image_a8743a.jpg) */}
                   <div className="pt-2">
                     <Link
-                    href={`/blogs/${post?.slug}`}
-                      // onClick={() => onPostSelect?.(post)}
+                      href={`/blogs/${post.slug}`}
+                      onClick={() => onPostSelect?.(post)}
                       className="w-full py-3.5 border border-slate-200 hover:border-slate-400 hover:bg-slate-50/50 text-xs font-extrabold text-slate-600 hover:text-slate-900 tracking-widest uppercase text-center transition-all focus:outline-none flex items-center justify-center gap-1.5 cursor-pointer"
                     >
                       Read More{" "}
@@ -587,8 +389,9 @@ export default function BlogGrid({
                 No Articles Found
               </h3>
               <p className="text-sm text-slate-400 max-w-sm mx-auto mt-1">
-                We couldn't locate diagnostic journals matching "{searchQuery}".
-                Please attempt another search keyword or category filter.
+                {debouncedQuery.trim() || activeTag !== "All"
+                  ? `We couldn't locate articles matching your search. Please try another keyword or tag.`
+                  : "New articles are on the way. Please check back soon."}
               </p>
             </div>
           )

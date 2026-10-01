@@ -1,40 +1,39 @@
 "use client";
 
-import React from "react";
-import {
-  Calendar,
-  MessageCircle,
-  ArrowRight,
-  Sparkles,
-  BookOpen,
-  ArrowUpRight,
-} from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Calendar, ArrowRight, BookOpen, ArrowUpRight } from "lucide-react";
+import { formatDate } from "@/app/lib/Helpers/Date";
+import { fetchBlogsAPI, type BlogPost } from "@/app/blogs/component/BlogGrid";
 
 interface BlogCardProps {
-  image: string;
+  image?: string;
   date: string;
-  comments: number;
+  tag?: string;
   title: string;
   desc: string;
   href: string;
 }
 
-function BlogCard({ image, date, comments, title, desc, href }: BlogCardProps) {
+function BlogCard({ image, date, tag, title, desc, href }: BlogCardProps) {
   return (
     <div className="group bg-white rounded-[32px] border border-slate-100 hover:border-[#1fa8e8]/30 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden h-full">
       {/* Card Image Wrapper with padding matching reference image_9bd201.jpg */}
       <div className="p-4 pb-0">
         <div className="relative aspect-[16/10] w-full rounded-[24px] overflow-hidden bg-slate-50">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-          />
-          {/* Subtle brand tag */}
-          <span className="absolute top-3.5 left-3.5 px-3 py-1.5 rounded-xl bg-white/90 backdrop-blur-sm text-[9px] font-black text-[#0c7dc2] uppercase tracking-wider shadow-sm">
-            Clinical Guide
-          </span>
+          {image && (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          )}
+          {/* First tag */}
+          {tag && (
+            <span className="absolute top-3.5 left-3.5 px-3 py-1.5 rounded-xl bg-white/90 backdrop-blur-sm text-[9px] font-black text-[#0c7dc2] uppercase tracking-wider shadow-sm">
+              {tag}
+            </span>
+          )}
         </div>
       </div>
 
@@ -51,10 +50,6 @@ function BlogCard({ image, date, comments, title, desc, href }: BlogCardProps) {
             <span className="flex items-center gap-1.5 hover:text-[#1fa8e8] transition-colors">
               <Calendar className="w-3.5 h-3.5 text-[#1fa8e8]" />
               {date}
-            </span>
-            <span className="flex items-center gap-1.5 hover:text-[#6dbb45] transition-colors">
-              <MessageCircle className="w-3.5 h-3.5 text-[#6dbb45]" />
-              {comments} {comments === 1 ? "Comment" : "Comments"}
             </span>
           </div>
 
@@ -80,26 +75,13 @@ function BlogCard({ image, date, comments, title, desc, href }: BlogCardProps) {
 }
 
 export default function BlogSection() {
-  const blogs = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
-      date: "November 29, 2023",
-      comments: 0,
-      title: "Understanding Chronic Snoring: When is it Sleep Apnea?",
-      desc: "An in-depth look at how upper airway collapse leads to oxygen desaturation, morning fatigue, and sleep disruptions.",
-      href: "#sleep-apnea-article",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
-      date: "November 29, 2023",
-      comments: 0,
-      title: "Managing Asthma Cycles During Delhi's High Pollution Months",
-      desc: "Essential preventative strategies, inhaler techniques, and air pollution defense routines curated by senior pulmonologists.",
-      href: "#asthma-pollution-article",
-    },
-  ];
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    fetchBlogsAPI(1, 2)
+      .then((result) => setBlogs(result.posts))
+      .catch((error) => console.error("Failed to retrieve blogs:", error));
+  }, []);
 
   return (
     <section
@@ -114,9 +96,16 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* ================= LEFT SIDE: 2 BLOG CARDS GRID (8 Columns) ================= */}
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 order-2 lg:order-1">
-            {blogs.map((blog, idx) => (
-              <div key={idx} className="h-full">
-                <BlogCard {...blog} />
+            {blogs.map((blog) => (
+              <div key={blog._id} className="h-full">
+                <BlogCard
+                  image={blog.featuredImage?.url}
+                  date={formatDate(blog.publishedAt || blog.createdAt)}
+                  tag={blog.tags?.[0] || blog.category}
+                  title={blog.title}
+                  desc={blog.excerpt}
+                  href={`/blogs/${blog.slug}`}
+                />
               </div>
             ))}
           </div>

@@ -15,11 +15,14 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function WhatsappFloat() {
   const [isOpen, setIsOpen] = useState(false);
   const [customMessage, setCustomMessage] = useState("");
   const [showNotificationBadge, setShowNotificationBadge] = useState(true);
+
+  const pathname = usePathname();
 
   const whatsappNumber = "919899554095"; // Configured target number
 
@@ -82,6 +85,9 @@ export default function WhatsappFloat() {
       setCustomMessage("");
     }
   };
+
+  // Hide on admin panel
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999] font-sans text-slate-800 pointer-events-none">

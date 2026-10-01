@@ -1,6 +1,6 @@
 'use client';
 import { useModal } from "@/app/Contexts/ModalContext";
-import { contactData } from "@/app/data";
+import { PHONE } from "@/app/lib/constants/business";
 import { Share } from "lucide-react";
 import Link from "next/link";
 import React, { useState, useMemo, useEffect, useRef } from "react";
@@ -17,7 +17,7 @@ interface RelatedPost {
     title: string;
     slug: string;
     excerpt: string;
-    category: string;
+    category?: string;
     tags: string[];
     author: string;
     featuredImage?: { url: string; alt: string };
@@ -33,7 +33,7 @@ interface IBlogPost {
     featuredImage?: { url: string; alt: string };
     faqs?: IFaq[];
     author: string;
-    category: string;
+    category?: string;
     tags: string[];
     status?: string;
     featured?: boolean;
@@ -342,7 +342,7 @@ export default function BlogDetailsPage({ post }: { post: IBlogPost }) {
                     <div className="max-w-4xl">
                         <div className="mb-4 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white bg-[#1fa8e8]">
                             <span className="h-1.5 w-1.5 rounded-full bg-[#6dbb45]" />
-                            {post.category}
+                            {post.tags?.[0] || post.category || "Blog"}
                         </div>
 
                         <h1
@@ -620,11 +620,11 @@ export default function BlogDetailsPage({ post }: { post: IBlogPost }) {
                                     </button>
 
                                     <a
-                                        href={`tel:${contactData.phone}`}
+                                        href={PHONE.tel}
                                         className="flex w-full items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-xs font-extrabold text-white hover:bg-white/15 transition-colors"
                                     >
                                         <PhoneIcon />
-                                        <span>Call Helpline</span>
+                                        <span>Call Clinic Desk</span>
                                     </a>
                                 </div>
                             </div>
@@ -641,7 +641,7 @@ export default function BlogDetailsPage({ post }: { post: IBlogPost }) {
                                 Related Articles
                             </h3>
                             <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                                {post.category}
+                                {post.tags?.[0] || post.category}
                             </span>
                         </div>
 
@@ -678,7 +678,7 @@ export default function BlogDetailsPage({ post }: { post: IBlogPost }) {
                                         </div>
                                         <div className="p-4">
                                             <span className="text-[10px] font-bold text-[#1fa8e8] block uppercase tracking-wider">
-                                                {blog.category}
+                                                {blog.tags?.[0] || blog.category}
                                             </span>
                                             <h4 className="text-sm font-bold text-[#0f172a] mt-1 line-clamp-2 leading-snug group-hover:text-[#1fa8e8] transition-colors duration-200">
                                                 {blog.title}

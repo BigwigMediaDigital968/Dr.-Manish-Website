@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL as BASE_URL } from "@/app/lib/constants/business";
+import Blog from "@/app/lib/models/Blog";
+import { connectDB } from "@/app/lib/mongodb";
 
-const BASE_URL = "https://www.drmanishaggarwal.com";
+// Rebuild hourly so newly published blogs show up
+export const revalidate = 3600;
 
 const routes = [
   // Main pages
@@ -364,13 +368,36 @@ const routes = [
   },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+async function getBlogEntries(): Promise<MetadataRoute.Sitemap> {
+  try {
+    await connectDB();
+    const blogs = await Blog.find({ status: "published" })
+      .select("slug updatedAt")
+      .sort({ publishedAt: -1 })
+      .lean();
+
+    return blogs.map((blog) => ({
+      url: `${BASE_URL}/blogs/${blog.slug}`,
+      lastModified: blog.updatedAt,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
+  } catch (error) {
+    // Don't break the sitemap if the database is unreachable
+    console.error("Sitemap: failed to load blogs", error);
+    return [];
+  }
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date("2026-09-05");
 
-  return routes.map((route) => ({
+  const staticEntries = routes.map((route) => ({
     url: `${BASE_URL}${route.path}`,
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
+
+  return [...staticEntries, ...(await getBlogEntries())];
 }

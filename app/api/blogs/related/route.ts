@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
           { status: 404 }
         );
       }
-      category = category || current.category;
+      category = category || current.category || null;
       tags = tags.length ? tags : current.tags;
       currentId = current._id;
     }

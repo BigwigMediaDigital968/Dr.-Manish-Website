@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/app/lib/constants/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         "/api/",
       ],
     },
-    sitemap: "https://www.mastertrader.co.in/sitemap.xml",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

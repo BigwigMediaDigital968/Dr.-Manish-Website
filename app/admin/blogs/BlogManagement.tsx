@@ -11,7 +11,6 @@ interface Blog {
   content?: string;
   featuredImage?: { url: string; alt: string };
   author: string;
-  category: string;
   tags: string[];
   status: "draft" | "published";
   featured: boolean;
@@ -27,7 +26,6 @@ interface Pagination {
   pages: number;
 }
 
-const CATEGORIES = ["SEO", "Content", "Social", "PPC"];
 const PER_PAGE = 8;
 
 const emptyForm = {
@@ -35,7 +33,6 @@ const emptyForm = {
   slug: "",
   excerpt: "",
   author: "",
-  category: "SEO",
   tags: "",
   status: "draft" as "draft" | "published",
   featured: false,
@@ -62,7 +59,7 @@ export default function BlogManagement() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState("");
-  const [filterCategory, setFilterCategory] = useState("");
+  const [filterTag, setFilterTag] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -83,7 +80,7 @@ export default function BlogManagement() {
     try {
       const params = new URLSearchParams();
       if (filterStatus) params.set("status", filterStatus);
-      if (filterCategory) params.set("category", filterCategory);
+      if (filterTag.trim()) params.set("tag", filterTag.trim());
       if (search) params.set("search", search);
       params.set("page", String(currentPage));
       params.set("limit", String(PER_PAGE));
@@ -105,7 +102,7 @@ export default function BlogManagement() {
   useEffect(() => {
     fetchBlogs();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterStatus, filterCategory, currentPage]);
+  }, [filterStatus, filterTag, currentPage]);
 
   // Debounce search
   useEffect(() => {
@@ -157,7 +154,6 @@ export default function BlogManagement() {
       slug: blog.slug,
       excerpt: blog.excerpt,
       author: blog.author,
-      category: blog.category,
       tags: blog.tags.join(", "),
       status: blog.status,
       featured: blog.featured,
@@ -190,7 +186,6 @@ export default function BlogManagement() {
       fd.append("slug", form.slug || toSlug(form.title));
       fd.append("excerpt", form.excerpt);
       fd.append("author", form.author);
-      fd.append("category", form.category);
       fd.append("status", form.status);
       fd.append("featured", String(form.featured));
       fd.append("tags", JSON.stringify(form.tags.split(",").map((t) => t.trim()).filter(Boolean)));
@@ -268,14 +263,13 @@ export default function BlogManagement() {
           <option value="published">Published</option>
           <option value="draft">Draft</option>
         </select>
-        <select
-          value={filterCategory}
-          onChange={(e) => { setFilterCategory(e.target.value); setCurrentPage(1); }}
-          className="border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1fa8e8]"
-        >
-          <option value="">All categories</option>
-          {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
-        </select>
+        <input
+          type="text"
+          placeholder="Filter by tag…"
+          value={filterTag}
+          onChange={(e) => { setFilterTag(e.target.value); setCurrentPage(1); }}
+          className="border border-slate-200 rounded-xl px-3 py-2 text-sm w-40 focus:outline-none focus:ring-2 focus:ring-[#1fa8e8]"
+        />
         </div>
         <Link
         //   onClick={openCreate}
@@ -298,7 +292,7 @@ export default function BlogManagement() {
               <tr>
                 <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[28%]">Title</th>
                 <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[20%]">Slug</th>
-                <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[13%]">Category</th>
+                <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[13%]">Tags</th>
                 <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[17%]">Status</th>
                 <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[12%]">Date</th>
                 <th className="text-left px-4 py-3 text-xs font-medium text-slate-500 uppercase tracking-wide w-[10%]">Actions</th>
@@ -319,9 +313,13 @@ export default function BlogManagement() {
                       <p className="text-slate-400 font-mono text-xs truncate max-w-[150px]">/{blog.slug}</p>
                     </td>
                     <td className="px-4 py-3">
-                      <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                        {blog.category}
-                      </span>
+                      <div className="flex flex-wrap gap-1">
+                        {blog.tags.map((tag) => (
+                          <span key={tag} className="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-1.5 flex-wrap">
@@ -461,19 +459,8 @@ export default function BlogManagement() {
                 />
               </div>
 
-              {/* Category + Author */}
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs text-slate-500 mb-1">Category</label>
-                  <select
-                    name="category"
-                    value={form.category}
-                    onChange={handleFormChange}
-                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1fa8e8]"
-                  >
-                    {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
-                  </select>
-                </div>
+              {/* Author */}
+              <div>
                 <div>
                   <label className="block text-xs text-slate-500 mb-1">Author</label>
                   <input

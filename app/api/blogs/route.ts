@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
 
     const { searchParams } = new URL(req.url);
     const status    = searchParams.get("status");     // "draft" | "published"
-    const category  = searchParams.get("category");
+    const tag       = searchParams.get("tag");
     const featured  = searchParams.get("featured");
     const page      = parseInt(searchParams.get("page") || "1");
     const limit     = parseInt(searchParams.get("limit") || "10");
@@ -20,24 +20,26 @@ export async function GET(req: NextRequest) {
 
     const query: any = {};
     if (status)   query.status   = status;
-    if (category) query.category = category;
+    if (tag)      query.tags     = tag;
     if (featured) query.featured = featured === "true";
     if (search)   query.$text    = { $search: search };
 
     const skip = (page - 1) * limit;
 
-    const [blogs, total] = await Promise.all([
+    const [blogs, total, tags] = await Promise.all([
       Blog.find(query)
         .sort({ createdAt: -1 })
         .skip(skip)
         .limit(limit)
         .select("-content"), // exclude heavy content in list view
       Blog.countDocuments(query),
+      Blog.distinct("tags", status ? { status } : {}),
     ]);
 
     return NextResponse.json({
       success: true,
       data: blogs,
+      tags: tags.filter(Boolean).sort(),
       pagination: { page, limit, total, pages: Math.ceil(total / limit) },
     });
   } catch (error) {
@@ -62,7 +64,6 @@ export async function POST(req: NextRequest) {
     const excerpt       = formData.get("excerpt") as string;
     const content       = formData.get("content") as string;
     const author        = formData.get("author") as string;
-    const category      = formData.get("category") as string;
     const status        = (formData.get("status") as string) || "draft";
     const featured      = formData.get("featured") === "true";
     const faqs = JSON.parse(
@@ -76,7 +77,7 @@ export async function POST(req: NextRequest) {
     const imageAlt      = (formData.get("featuredImageAlt") as string) || title;
 
     // Required field check
-    if (!title || !excerpt || !content || !author || !category) {
+    if (!title || !excerpt || !content || !author) {
       return NextResponse.json(
         { success: false, message: "Missing required fields" },
         { status: 400 }
@@ -103,7 +104,6 @@ export async function POST(req: NextRequest) {
       excerpt,
       content,
       author,
-      category,
       status,
       featured,
       faqs,
