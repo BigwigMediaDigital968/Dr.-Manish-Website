@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/ebus-endobronchial-ultrasound-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "EBUS in Delhi | Endobronchial Ultrasound - Dr. Aggarwal";
+const title = "EBUS Procedure in Delhi | Dr. Manish Aggarwal";
 const description =
-  "EBUS (Endobronchial Ultrasound) in Delhi by Dr. Manish Aggarwal — 3,000+ EBUS procedures for accurate lung cancer staging & lymph node diagnosis. Book now.";
+  "EBUS (endobronchial ultrasound) in Delhi by Dr. Manish Aggarwal. 3,000+ procedures for lung cancer staging. Book now.";
 
 export const metadata: Metadata = {
   title,

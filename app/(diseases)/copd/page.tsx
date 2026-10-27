@@ -2,11 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title =
-  "COPD: Symptoms, Treatment & Specialist Care in Delhi";
+const title = "COPD Specialist in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Learn about COPD symptoms, causes & treatment options. Consult Dr. Manish Aggarwal, a trusted COPD specialist in Delhi, for expert diagnosis and care.";
+  "Looking for a COPD specialist in Delhi? Dr. Manish Aggarwal offers expert diagnosis and treatment. 24+ years' experience. Book now.";
 
 export const metadata = {
   title,
@@ -50,9 +49,8 @@ const schema = {
       "@type": "MedicalWebPage",
       "@id": `${BASE_URL}/copd#webpage`,
       url: `${BASE_URL}/copd`,
-      name: "COPD: Symptoms, Treatment & Specialist Care in Delhi",
-      description:
-        "Learn about COPD symptoms, causes & treatment options. Consult Dr. Manish Aggarwal, a trusted COPD specialist in Delhi, for expert diagnosis and care.",
+      name: title,
+      description,
       inLanguage: "en-IN",
       about: {
         "@type": "MedicalCondition",

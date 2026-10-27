@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/transbronchial-lung-biopsy-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Transbronchial Lung Biopsy in Delhi | Dr. Aggarwal";
+const title = "Transbronchial Biopsy in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Transbronchial lung biopsy & cryobiopsy in Delhi by Dr. Manish Aggarwal for accurate ILD & lung disease diagnosis. 24+ years' experience.";
+  "Transbronchial lung biopsy and cryobiopsy in Delhi for ILD and lung shadows. Dr. Manish Aggarwal, 24+ years. Book a consultation.";
 
 export const metadata: Metadata = {
   title,

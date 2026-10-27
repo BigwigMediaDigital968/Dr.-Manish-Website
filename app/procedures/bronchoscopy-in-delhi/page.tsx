@@ -8,7 +8,7 @@ const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title = "Bronchoscopy in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Advanced bronchoscopy in Delhi by Dr. Manish Aggarwal — 24+ years' experience, 10,000+ procedures performed. Accurate lung diagnosis & care. Book now.";
+  "Bronchoscopy in Delhi by Dr. Manish Aggarwal, Max Hospital. 10,000+ procedures, accurate lung diagnosis. Book a consultation.";
 
 export const metadata: Metadata = {
   title,
