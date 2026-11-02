@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Is Your Asthma Uncontrolled or Severe? Dr. Manish Aggarwal";
+const title = "Uncontrolled Asthma vs Severe Asthma | Dr. Manish Aggarwal";
 
 const description =
-  "Inhaler not working? Learn the difference between uncontrolled and severe asthma, and get an accurate diagnosis from Dr. Manish Aggarwal in Delhi.";
+  "Still wheezing despite inhalers? Uncontrolled vs severe asthma explained: causes, tests, biologics and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

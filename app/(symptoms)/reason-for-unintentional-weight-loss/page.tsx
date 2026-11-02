@@ -5,9 +5,9 @@ const PAGE_PATH = "/reason-for-unintentional-weight-loss";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title =
-  "Reason for Unintentional Weight Loss? Consult with Dr. Manish Aggarwal";
+  "Reason for Unintentional Weight Loss: Causes & Symptoms";
 const description =
-  "Losing weight without trying? Discover the Reason for Unintentional Weight Loss behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.";
+  "Unintentional weight loss may be linked to thyroid disorders, diabetes, digestive problems, infections, or other medical conditions.";
 
 export const metadata = {
   title,

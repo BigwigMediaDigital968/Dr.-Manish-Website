@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/causes-of-wheezing";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Causes of Wheezing? Consult Dr. Manish Aggarwal | Book Now";
+const title = "Causes of Wheezing: Common Causes & Symptoms";
 const description =
-  "Struggling with wheezing? Get expert diagnosis from Dr. Manish Aggarwal, pulmonologist. Same-day spirometry available. Book your consultation today.";
+  "Asthma, COPD, bronchitis, and allergies can cause wheezing. Recognizing symptoms helps identify possible respiratory conditions.";
 
 export const metadata = {
   title,

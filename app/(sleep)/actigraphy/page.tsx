@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/actigraphy";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Actigraphy Sleep Test in Delhi | Dr. Manish Aggarwal";
+const title = "Actigraphy: What It Is Sleep, Assessment & Monitoring";
 const description =
-  "Struggling with irregular sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist, uses actigraphy to track your natural sleep-wake pattern over days to weeks.";
+  "Actigraphy tracks movement and sleep patterns using a wearable device to help assess sleep quality and identify possible sleep disorders.";
 
 export const metadata: Metadata = {
   title,

@@ -2,10 +2,10 @@ import DiseasesOfMediastinumPage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Diseases of Mediastinum Care in Delhi – Dr. Manish Aggarwal";
+const title = "Diseases of Mediastinum in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Mass found on your chest scan? It could involve the mediastinum. Get expert evaluation from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Mediastinal mass, thymoma or lymph node enlargement? Learn causes, symptoms and diagnosis, including EBUS. Consult Dr. Manish Aggarwal in Delhi.";
 
 export const metadata = {
   title,

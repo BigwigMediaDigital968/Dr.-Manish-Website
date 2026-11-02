@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "ILD / Lung Fibrosis Care in Delhi with Dr. Manish Aggarwal";
+const title = "Interstitial Lung Disease (ILD) Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Worsening breathlessness or a dry cough that won't go away? Learn about Interstitial Lung Disease (ILD) and get expert care from Dr. Manish Aggarwal.";
+  "Dry cough and breathlessness? Learn ILD and lung fibrosis causes, HRCT and PFT tests, and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/dental-appliances-for-sleep-apnoea";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Dental Appliance for Sleep Apnoea | CPAP Alternative";
+const title = "Dental Appliances for Sleep Apnoea: Benefits & Uses";
 const description =
-  "Struggling with CPAP? Learn how dental (oral) appliances treat mild-moderate sleep apnoea & snoring. Expert evaluation by Dr. Manish Aggarwal, Delhi.";
+  "Looking for a CPAP alternative? Learn how oral appliances treat sleep apnoea and who they suit. Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

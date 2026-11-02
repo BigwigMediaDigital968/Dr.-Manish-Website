@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/level-1-sleep-study-polysomnography";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Level 1 Sleep Study (Polysomnography) | Dr Manish Aggrawal";
+const title = "Polysomnography: Sleep Study & Diagnosis";
 const description =
-  "Get an accurate Level 1 Polysomnography sleep study with Dr Manish Aggrawal. Diagnose sleep apnea, insomnia, and more. Book your overnight sleep study today.";
+  "Get a polysomnography sleep study to assess sleep patterns, breathing, and oxygen levels and help diagnose sleep disorders.";
 
 export const metadata: Metadata = {
   title,

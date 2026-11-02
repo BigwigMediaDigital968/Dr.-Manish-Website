@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Bronchiectasis Care in Delhi with Dr. Manish Aggarwal";
+const title = "Bronchiectasis Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Daily mucus cough or repeated chest infections? Learn about bronchiectasis symptoms & causes, and get expert care from Dr. Manish Aggarwal in Delhi.";
+  "Chronic cough with daily sputum or repeated chest infections? Bronchiectasis causes, CT diagnosis and treatment. Book with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

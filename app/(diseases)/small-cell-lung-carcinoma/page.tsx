@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Small Cell Lung Carcinoma (SCLC) Care – Dr. Manish Aggarwal";
+const title = "Small Cell Lung Carcinoma (SCLC) Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "SCLC grows fast: persistent cough, weight loss, or breathlessness needs urgent evaluation. Get expert diagnosis & treatment from Dr. Manish Aggarwal, Delhi.";
+  "Smoker with cough, weight loss or blood in sputum? Learn SCLC symptoms, staging and treatment options. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

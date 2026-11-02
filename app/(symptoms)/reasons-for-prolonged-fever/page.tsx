@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/reasons-for-prolonged-fever";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Prolonged Fever Not Going Away? Consult Dr. Manish Aggarwal";
+const title = "Reasons for Prolonged Fever in Adults: Causes & Symptoms";
 const description =
-  "Fever lasting over a week? Know the causes for prolonged fever and consult Dr. Manish Aggarwal, pulmonologist. Book today.";
+  "Prolonged fever may result from infections, tuberculosis, or inflammatory conditions. Persistent fever needs medical evaluation.";
 
 export const metadata = {
   title,

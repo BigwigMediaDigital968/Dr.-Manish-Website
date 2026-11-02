@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "What Is Viral Pneumonia? Guide by Dr. Manish Aggarwal";
+const title = "Viral Pneumonia Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Persistent fever, cough or breathlessness? Learn about viral pneumonia (flu, H1N1, COVID-19) and get expert treatment from Dr. Manish Aggarwal in Delhi.";
+  "Flu, influenza, H1N1 or COVID-19 with cough, fever and breathlessness? Know symptoms, tests and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

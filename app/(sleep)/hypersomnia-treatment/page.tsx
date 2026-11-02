@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/hypersomnia-treatment";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Hypersomnia Treatment in Delhi | Dr. Manish Aggarwal";
+const title = "Hypersomnia Treatment & Sleep Disorder Symptoms";
 const description =
-  "Excessively sleepy during the day despite a full night's sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses and treats hypersomnia. Book a consultation.";
+  "Hypersomnia causes excessive daytime sleepiness and difficulty staying awake. Treatment depends on the underlying cause.";
 
 export const metadata: Metadata = {
   title,

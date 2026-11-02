@@ -2,10 +2,10 @@ import PulmonaryEdemaPage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pulmonary Edema Care in Delhi – Dr. Manish Aggarwal";
+const title = "Pulmonary Edema Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Struggling to breathe lying down or coughing up pink froth? It could be pulmonary edema. Get urgent care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Fluid in the lungs causing breathlessness? Learn the cardiac and non-cardiac causes, symptoms and treatment. Book a consult with Dr. Manish Aggarwal.";
 
 export const metadata = {
   title,

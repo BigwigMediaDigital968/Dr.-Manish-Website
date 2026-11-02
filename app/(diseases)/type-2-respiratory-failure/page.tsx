@@ -2,10 +2,10 @@ import Type2RespiratoryFailurePage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Type 2 Respiratory Failure Care – Dr. Manish Aggarwal";
+const title = "Type 2 Respiratory Failure in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Drowsy, confused & breathless? It could be Type 2 Respiratory Failure, not just tiredness. Get urgent care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Drowsy or breathless with high CO2? Hypercapnic (Type 2) respiratory failure: causes, NIV/BiPAP and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

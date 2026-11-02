@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Allergic Bronchopulmonary Aspergillosis Specialist in Delhi";
+const title = "Allergic Bronchopulmonary Aspergillosis (ABPA) Delhi";
 
 const description =
-  "Persistent cough or asthma not responding to treatment? Learn about ABPA (Allergic Bronchopulmonary Aspergillosis) & get expert care from Dr. Manish Aggarwal.";
+  "Asthma with brown mucus plugs or recurrent flare-ups? ABPA symptoms, IgE and CT tests, and steroid or antifungal treatment. Consult Dr. Manish Aggarwal.";
 
 export const metadata = {
   title,

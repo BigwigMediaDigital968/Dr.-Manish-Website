@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pleural Thickening Care in Delhi – Dr. Manish Aggarwal";
+const title = "Pleural Thickening Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Diagnosed with pleural thickening? Learn about its causes, symptoms, and treatment options. Get expert evaluation from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Pleural thickening on CT or X-ray? Learn causes like TB, asbestos or past infection, symptoms and follow-up. Book an evaluation with Dr. Manish Aggarwal.";
 
 export const metadata = {
   title,

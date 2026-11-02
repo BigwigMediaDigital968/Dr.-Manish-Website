@@ -2,10 +2,10 @@ import TobaccoAddictionPage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Tobacco Addiction Treatment in Delhi by Dr. Manish Aggarwal";
+const title = "Tobacco Addiction Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Get expert help to quit tobacco and nicotine addiction in Delhi from Dr. Manish Aggarwal. Personalised de-addiction support and lung health care. Book now.";
+  "Want to quit smoking or tobacco? Get proven de-addiction support: counselling, medicines and lung-health follow-up with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

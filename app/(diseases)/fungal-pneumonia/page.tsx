@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Fungal Pneumonia: Symptoms & Causes – Dr. Manish Aggarwal";
+const title = "Fungal Pneumonia Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Cough not improving with antibiotics? Learn about fungal pneumonia symptoms & causes, and get expert care from Dr. Manish Aggarwal in Delhi.";
+  "Fever or cough with diabetes, low immunity or steroids? Learn fungal pneumonia causes, tests and antifungal treatment. Book with Dr. Manish Aggarwal.";
 
 export const metadata = {
   title,

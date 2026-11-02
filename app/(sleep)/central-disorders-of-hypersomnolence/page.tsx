@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/central-disorders-of-hypersomnolence";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Excessive Daytime Sleepiness: Causes & Treatment | Dr. Manish";
+const title = "Central Disorders of Hypersomnolence: Symptoms & Care";
 const description =
-  "Sleepy all day despite a full night's sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses narcolepsy and hypersomnolence disorders. Book a consultation.";
+  "Central disorders of hypersomnolence cause excessive daytime sleepiness and include narcolepsy and idiopathic hypersomnia.";
 
 export const metadata: Metadata = {
   title,

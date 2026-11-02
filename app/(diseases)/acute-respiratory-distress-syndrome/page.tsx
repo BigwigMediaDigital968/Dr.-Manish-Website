@@ -2,10 +2,10 @@ import ArdsPage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "ARDS Care & Recovery in Delhi | Dr. Manish Aggarwal";
+const title = "Acute Respiratory Distress Syndrome (ARDS) in Delhi";
 
 const description =
-  "Sudden, severe breathlessness after an injury or infection? It could be ARDS. Get urgent evaluation from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "ARDS is a life-threatening lung injury needing ICU-level care. Learn causes, symptoms, ventilation and recovery. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

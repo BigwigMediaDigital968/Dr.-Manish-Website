@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/parasomnia-treatment";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Parasomnia Treatment in Delhi | Dr. Manish Aggarwal";
+const title = "Parasomnia: Sleep Behaviors & Treatment Options";
 const description =
-  "Sleepwalking, night terrors, or acting out dreams? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses and treats parasomnia disorders. Book a consultation.";
+  "Parasomnia causes unusual sleep behaviors, including sleepwalking and night terrors. Treatment depends on the underlying cause.";
 
 export const metadata: Metadata = {
   title,

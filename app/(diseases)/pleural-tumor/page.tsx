@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pleural Tumor: Benign or Malignant? | Dr. Manish Aggarwal";
+const title = "Pleural Tumor Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Told you have a growth on your lung lining? Find out if it's benign or malignant with expert evaluation from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Benign or malignant? Causes, symptoms and diagnosis of pleural tumor by thoracoscopy or biopsy. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/pap-therapy-cpap-bipap";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "PAP Therapy (CPAP/BiPAP) in Delhi | Dr. Manish Aggarwal";
+const title = "PAP Therapy: CPAP, BiPAP & Mask Options";
 const description =
-  "Advanced PAP therapy (CPAP/BiPAP) and mask interface solutions in Delhi by Dr. Manish Aggarwal for effective sleep apnoea management.";
+  "Struggling with snoring or sleep apnoea? Learn how CPAP, BiPAP and the right mask work, from sleep specialist Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

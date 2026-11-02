@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/cognitive-behavioral-therapy-insomnia";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "CBT-I for Insomnia Treatment | Dr. Manish Aggarwal";
+const title = "CBT-I: Cognitive Behavioral Therapy for Insomnia";
 const description =
-  "Tired of relying on sleeping pills? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, offers CBT-I, the first-line treatment for insomnia.";
+  "CBT-I is a first-line, drug-free treatment for chronic insomnia. Learn how it works and what to expect with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

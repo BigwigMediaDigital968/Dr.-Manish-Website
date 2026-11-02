@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/sleep-apnoea-surgery";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Sleep Apnoea Surgery in Delhi | Dr. Manish Aggarwal";
+const title = "Sleep Apnoea Surgery: Types & What to Expect";
 const description =
-  "Wondering if you need surgery for sleep apnoea? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, evaluates whether surgery is right for you. Book a consultation.";
+  "Considering sleep apnoea surgery? Learn the options, benefits and risks, and when it’s advised, with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/reason-for-chest-pain";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Reason for Chest Pain? Consult Dr. Manish Aggarwal | Book Now";
+const title = "Reason for Chest Pain: Beyond Heart Problems";
 const description =
-  "Struggling with pain in chest? Get expert diagnosis from Dr. Manish Aggarwal, pulmonologist. Same-day evaluation available. Book your consultation today.";
+  "Chest pain may be linked to lung problems, acid reflux, muscle strain, or heart conditions. Other symptoms can help identify the cause.";
 
 export const metadata = {
   title,

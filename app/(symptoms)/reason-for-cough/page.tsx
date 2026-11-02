@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/reason-for-cough";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Know Reason for Cough? Consult Now | Dr. Manish Aggarwal";
+const title = "Reasons for Cough: Causes & Symptoms | Dr. Manish Aggarwal";
 const description =
-  "Persistent cough? Find the exact cause of coughing and get expert treatment from Dr. Manish Aggarwal, pulmonologist in Delhi. Book your appointment today.";
+  "Common cough causes include allergies, asthma, respiratory infections, and acid reflux. Explore the reasons for cough, associated symptoms, and available treatment options.";
 
 export const metadata = {
   title,

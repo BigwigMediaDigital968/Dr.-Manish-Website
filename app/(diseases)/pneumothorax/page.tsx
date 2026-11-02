@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pneumothorax Care in Delhi – Dr. Manish Aggarwal";
+const title = "Pneumothorax Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Sudden chest pain & breathlessness out of nowhere? It could be a collapsed lung. Get urgent care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Sudden chest pain or breathlessness could be a collapsed lung. Learn causes, symptoms and treatment, including ICD, with Dr. Manish Aggarwal in Delhi.";
 
 export const metadata = {
   title,

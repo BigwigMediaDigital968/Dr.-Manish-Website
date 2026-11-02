@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Bacterial Pneumonia: Symptoms & Care – Dr. Manish Aggarwal";
+const title = "Bacterial Pneumonia Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "High fever, chills or thick mucus? Learn about bacterial pneumonia symptoms & causes, and get expert care from Dr. Manish Aggarwal in Delhi.";
+  "Fever, productive cough and chest pain? Learn bacterial pneumonia causes, antibiotic treatment and when to be admitted. Book with Dr. Manish Aggarwal.";
 
 export const metadata = {
   title,

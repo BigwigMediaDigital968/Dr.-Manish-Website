@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Lung Nodule Evaluation in Delhi – Dr. Manish Aggarwal";
+const title = "Lung Nodule Evaluation in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Found a spot on your lung scan? Most nodules are harmless. Get an expert Lung Nodule Evaluation from Dr. Manish Aggarwal, a trusted pulmonologist in Delhi.";
+  "Found a lung nodule on CT? Learn how nodules are assessed, when biopsy or EBUS is needed, and book an evaluation with Dr. Manish Aggarwal in Delhi.";
 
 export const metadata = {
   title,

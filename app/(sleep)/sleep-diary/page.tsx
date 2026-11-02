@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/sleep-diary";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Sleep Diary: How to Track Your Sleep | Dr. Manish Aggarwal";
+const title = "Sleep Diary: How to Keep One & Why It Matters";
 const description =
-  "Struggling to understand your sleep pattern? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, uses sleep diaries to guide accurate diagnosis.";
+  "Track your sleep, naps and habits for 1-2 weeks. See how a sleep diary works and how Dr. Manish Aggarwal uses it to guide diagnosis.";
 
 export const metadata: Metadata = {
   title,

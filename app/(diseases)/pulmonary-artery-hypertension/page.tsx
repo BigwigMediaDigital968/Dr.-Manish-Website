@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pulmonary Hypertension Care in Delhi – Dr. Manish Aggarwal";
+const title = "Pulmonary Artery Hypertension in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Breathless or fatigued for no clear reason? It could be Pulmonary Artery Hypertension. Get expert care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Persistent breathlessness or fainting? Learn pulmonary artery hypertension (PAH) symptoms, tests and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

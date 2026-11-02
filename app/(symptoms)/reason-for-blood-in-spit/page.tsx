@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/reason-for-blood-in-spit";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Reason for Blood in Spit? Consult with Dr. Manish Aggarwal";
+const title = "Reason for Blood in Spit: Causes & Symptoms";
 const description =
-  "Worried about blood in your spit? Discover the Reason for Blood in Spit behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.";
+  "Blood in spit may result from gum disease, infections, nosebleeds, or respiratory conditions. Recognize possible causes and warning signs.";
 
 export const metadata = {
   title,

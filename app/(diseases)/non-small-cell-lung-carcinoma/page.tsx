@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "NSCLC Diagnosis & Care in Delhi with Dr. Manish Aggarwal";
+const title = "Non-Small Cell Lung Carcinoma in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Persistent cough, weight loss or chest pain? Learn about Non-Small Cell Lung Carcinoma (NSCLC) and get expert care from Dr. Manish Aggarwal in Delhi.";
+  "Diagnosed with NSCLC or suspect lung cancer? Learn staging, EBUS biopsy, targeted therapy and care options. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

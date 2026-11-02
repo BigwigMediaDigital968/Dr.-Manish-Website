@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/reason-for-breathlessness";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Reason for Breathlessness? Consult with Dr. Manish Aggarwal";
+const title = "Reason for Breathlessness: Causes & Symptoms";
 const description =
-  "Worried about breathlessness? Discover the Reason for Breathlessness behind your symptoms. Book your consultation with Dr. Manish Aggarwal now.";
+  "Asthma, COPD, respiratory infections, and heart conditions can cause breathing difficulties. Identifying the reason for breathlessness can help determine appropriate treatment and when to seek medical care.";
 
 export const metadata = {
   title,

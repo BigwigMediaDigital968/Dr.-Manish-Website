@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/mslt-mwt-sleep-test";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "MSLT & MWT Sleep Testing in Delhi | Dr. Manish Aggarwal";
+const title = "MSLT & MWT Sleep Tests in Delhi";
 const description =
-  "Sleepy all day despite a full night's sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, offers MSLT and MWT testing to diagnose the cause. Book a consultation.";
+  "MSLT measures daytime sleepiness, while MWT assesses the ability to stay awake. These tests help evaluate sleep disorders and alertness.";
 
 export const metadata: Metadata = {
   title,

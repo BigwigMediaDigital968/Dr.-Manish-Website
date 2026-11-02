@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/sleep-related-breathing-disorders";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Sleep-Related Breathing Disorders: Symptoms & Treatment";
+const title = "Sleep-Related Breathing Disorders: Diagnosis & Care";
 const description =
-  "Loud snoring, gasping, or daytime fatigue? Learn about sleep-related breathing disorders, causes, diagnosis & treatment from Sleep Specialist Dr. Manish, Delhi.";
+  "Get expert care for sleep-related breathing disorders, including sleep apnea and nighttime breathing difficulties, to support healthier sleep.";
 
 export const metadata: Metadata = {
   title,

@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Bronchial Carcinoid Tumor Care in Delhi – Dr. Manish Aggarwal";
+const title = "Bronchial Carcinoid Tumor in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Recurring chest infection or cough that won't clear? It could be a rare, treatable bronchial carcinoid tumor. Get expert care from Dr. Manish Aggarwal, Delhi.";
+  "Slow-growing lung tumor causing cough or wheeze? Learn bronchial carcinoid diagnosis, bronchoscopy and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

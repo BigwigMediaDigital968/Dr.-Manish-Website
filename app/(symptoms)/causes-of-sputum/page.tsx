@@ -4,9 +4,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/causes-of-sputum";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Causes of Sputum in Throat | Consult Dr. Manish Aggarwal";
+const title = "Causes of Sputum: Symptoms & Treatment";
 const description =
-  "Dealing with sputum in throat? Understand the causes of sputum and get expert advice from pulmonologist Dr. Manish Aggarwal. Book your consultation now.";
+  "Respiratory infections, allergies, asthma, and COPD can lead to excess mucus production. Understanding the causes of sputum and changes in its color may help identify underlying conditions.";
 
 export const metadata = {
   title,

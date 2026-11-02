@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/circadian-rhythm-sleep-disorder-treatment";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Circadian Rhythm Sleep Disorder Treatment | Dr. Manish";
+const title = "Circadian Rhythm Sleep: Disorders & Treatment";
 const description =
-  "Wide awake at night, exhausted by day? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses and treats circadian rhythm sleep-wake disorders. Book a consultation.";
+  "Get expert care for circadian rhythm sleep disorders. Find treatment options to improve sleep patterns and restore a healthy sleep-wake cycle.";
 
 export const metadata: Metadata = {
   title,

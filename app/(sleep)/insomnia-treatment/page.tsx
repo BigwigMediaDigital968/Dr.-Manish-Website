@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/insomnia-treatment";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Insomnia Causes, Symptoms & Treatment | Dr. Manish";
+const title = "Insomnia: Causes, Symptoms & Treatment";
 const description =
-  "Struggling to sleep? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, explains insomnia causes, symptoms, and evidence-based CBT-I treatment. Book a consultation.";
+  "Insomnia affects sleep quality and may be linked to stress, anxiety, or health conditions. Explore common causes and treatment options.";
 
 export const metadata: Metadata = {
   title,

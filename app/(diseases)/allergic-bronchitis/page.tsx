@@ -3,10 +3,10 @@ import PageContent from "./PageContent";
 const BASE_URL = process.env.SITE_URL;
 
 const title =
-  "Know about Allergic Bronchitis: Guide by Dr. Manish Aggarwal";
+  "Allergic Bronchitis & Asthma in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Persistent cough, wheezing, or chest tightness? Learn about allergic bronchitis symptoms, causes & treatment from Dr. Manish Aggarwal, specialist in Delhi.";
+  "Wheezing, night cough or tight chest? Understand allergic bronchitis (asthma) triggers, tests and treatment. Book with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

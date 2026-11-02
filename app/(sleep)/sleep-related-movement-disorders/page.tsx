@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/sleep-related-movement-disorders";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Sleep Movement Disorder Treatment in Delhi | Dr. Manish";
+const title = "Sleep-Related Movement Disorders: Diagnosis & Treatment";
 const description =
-  "Restless legs, kicking, or teeth grinding at night? Dr. Manish Aggarwal, pulmonologist & sleep specialist in Delhi, diagnoses sleep-related movement disorders. Book a consultation.";
+  "Get expert care for sleep-related movement disorders, including restless legs syndrome and periodic limb movements, to improve sleep quality.";
 
 export const metadata: Metadata = {
   title,

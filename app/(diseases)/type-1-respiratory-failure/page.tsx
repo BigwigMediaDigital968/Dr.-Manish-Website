@@ -2,10 +2,10 @@ import Type1RespiratoryFailurePage from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Type 1 Respiratory Failure Care – Dr. Manish Aggarwal";
+const title = "Type 1 Respiratory Failure in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Low oxygen levels but breathing doesn't feel hard? It could be Type 1 Respiratory Failure. Get urgent care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Low blood oxygen with normal CO2? Hypoxemic (Type 1) respiratory failure: causes, oxygen therapy and treatment. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

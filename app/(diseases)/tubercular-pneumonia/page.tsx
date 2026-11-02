@@ -2,10 +2,10 @@ import TubercularPageContent from "./TubercularPageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "TB Treatment in Delhi | Dr. Manish Aggarwal";
+const title = "Tubercular Pneumonia (TB) in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Cough for weeks, fever or night sweats? TB diagnosis and complete treatment in Delhi by Dr. Manish Aggarwal. Book now.";
+  "Fever, weight loss and cough for weeks? Learn how TB pneumonia is diagnosed and treated, including drug-resistant TB. Consult Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

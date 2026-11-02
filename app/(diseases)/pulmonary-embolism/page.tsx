@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pulmonary Embolism Treatment in Delhi – Dr. Manish Aggarwal";
+const title = "Pulmonary Embolism Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Learn about pulmonary embolism, its causes, symptoms, diagnosis, and treatment. Get expert care from Dr. Manish Aggarwal, Pulmonary Embolism Specialist in Delhi.";
+  "Sudden breathlessness or chest pain can signal a pulmonary embolism. Know the symptoms, risks and treatment. Consult with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata = {
   title,

@@ -2,10 +2,10 @@ import PageContent from "./PageContent";
 
 const BASE_URL = process.env.SITE_URL;
 
-const title = "Pleural Effusion Care in Delhi – Dr. Manish Aggarwal";
+const title = "Pleural Effusion Treatment in Delhi | Dr. Manish Aggarwal";
 
 const description =
-  "Can't breathe lying down or have sharp chest pain? It could be fluid around your lungs. Get expert care from Dr. Manish Aggarwal, pulmonologist in Delhi.";
+  "Breathless with fluid around the lungs? Know the causes, symptoms and treatment, from drainage to pleural biopsy. Book a consult with Dr. Manish Aggarwal.";
 
 export const metadata = {
   title,

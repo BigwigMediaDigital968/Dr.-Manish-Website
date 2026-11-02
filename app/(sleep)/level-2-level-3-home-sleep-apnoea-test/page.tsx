@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/level-2-level-3-home-sleep-apnoea-test";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Level 2 & Level 3 Sleep Test (Home Sleep Apnoea Test)";
+const title = "Home Sleep Apnoea Test in Delhi: Level 2 & 3";
 const description =
-  "Snoring, gasping, or daytime fatigue? Get a Level 2/3 Home Sleep Apnoea Test from Sleep Specialist Dr. Manish, Delhi - convenient, accurate, comfortable.";
+  "A home sleep apnoea test checks breathing, oxygen levels, and heart rate during sleep to help diagnose sleep apnoea.";
 
 export const metadata: Metadata = {
   title,
