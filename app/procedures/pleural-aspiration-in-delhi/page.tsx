@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/pleural-aspiration-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Pleural Aspiration (Thoracentesis) in Delhi | Dr. Aggarwal";
+const title = "Pleural Aspiration in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Ultrasound-guided pleural aspiration in Delhi by Dr. Manish Aggarwal for fast relief & diagnosis of fluid around the lungs. 24+ years' experience. Book now.";
+  "Pleural aspiration (thoracentesis) drains fluid around the lungs to ease breathlessness and find the cause. Book with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

@@ -8,7 +8,7 @@ const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title = "6 Minute Walk Test in Delhi | Dr. Manish Aggarwal";
 const description =
-  "6 minute walk test (6MWT) in Delhi by Dr. Manish Aggarwal to assess exertional breathlessness & oxygen levels in lung disease. Book your assessment today.";
+  "The 6 minute walk test checks exercise capacity and oxygen levels in lung and heart disease. Book your test with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

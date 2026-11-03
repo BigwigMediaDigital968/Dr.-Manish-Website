@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/feno-test-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "FeNO Test in Delhi | Airway Inflammation - Dr. Aggarwal";
+const title = "FeNO Test for Asthma in Delhi | Dr. Manish Aggarwal";
 const description =
-  "FeNO (exhaled nitric oxide) testing in Delhi by Dr. Manish Aggarwal to detect airway inflammation & guide asthma treatment. Book your FeNO test today.";
+  "FeNO is a quick, painless breath test that measures airway inflammation to diagnose and manage asthma. Book your test with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

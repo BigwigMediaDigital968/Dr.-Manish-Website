@@ -8,7 +8,7 @@ const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title = "Medical Thoracoscopy in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Medical thoracoscopy (pleuroscopy) in Delhi by Dr. Manish Aggarwal for direct pleural visualization, biopsy & pleurodesis. 24+ years' experience. Book now.";
+  "Medical thoracoscopy lets doctors see inside the pleural cavity to diagnose unexplained effusion, TB or cancer. Book with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,

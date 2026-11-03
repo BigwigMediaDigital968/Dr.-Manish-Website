@@ -8,7 +8,7 @@ const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
 const title = "Spirometry Test in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Quick, painless spirometry testing in Delhi by Dr. Manish Aggarwal to diagnose asthma, COPD & lung conditions. Same-day results. Book your test today.";
+  "Spirometry measures how much air you breathe out and how fast. Used to diagnose asthma and COPD. Book your test with Dr. Manish Aggarwal in Delhi.";
 
 export const metadata: Metadata = {
   title,

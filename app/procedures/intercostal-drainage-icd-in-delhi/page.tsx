@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/intercostal-drainage-icd-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Intercostal Drainage (ICD) in Delhi | Dr. Aggarwal";
+const title = "Intercostal Drainage (ICD) in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Safe, ultrasound-guided chest tube (ICD) insertion in Delhi by Dr. Manish Aggarwal for pneumothorax, effusion & empyema. 24+ years' experience. Book now.";
+  "Intercostal drainage (ICD) removes air, fluid or pus from the chest. Know when it is needed, how it is done and recovery. Book with Dr. Manish Aggarwal.";
 
 export const metadata: Metadata = {
   title,

@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/pulmonary-function-test-pft-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Pulmonary Function Test (PFT) in Delhi | Dr. Aggarwal";
+const title = "Pulmonary Function Test (PFT) in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Complete pulmonary function test (PFT) in Delhi by Dr. Manish Aggarwal — spirometry, lung volumes & DLCO. Same-day results. Book your PFT today.";
+  "A pulmonary function test (PFT) checks lung volume and airflow to diagnose asthma, COPD and ILD. Book with Dr. Manish Aggarwal in Delhi.";
 
 export const metadata: Metadata = {
   title,

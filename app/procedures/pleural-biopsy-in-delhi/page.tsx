@@ -6,9 +6,9 @@ const BASE_URL = process.env.SITE_URL || "https://www.drmanishaggarwal.com";
 const PAGE_PATH = "/procedures/pleural-biopsy-in-delhi";
 const FULL_URL = `${BASE_URL}${PAGE_PATH}`;
 
-const title = "Pleural Biopsy in Delhi | Dr. Manish Aggarwal";
+const title = "Pleural Biopsy Procedure in Delhi | Dr. Manish Aggarwal";
 const description =
-  "Closed needle, image-guided & thoracoscopic pleural biopsy in Delhi by Dr. Manish Aggarwal for reliable pleural disease diagnosis. Book a consultation.";
+  "Pleural biopsy helps diagnose TB, cancer or unexplained pleural effusion. Learn how it is done, safety and results. Book with Dr. Manish Aggarwal, Delhi.";
 
 export const metadata: Metadata = {
   title,
