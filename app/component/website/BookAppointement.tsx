@@ -225,7 +225,7 @@ export default function BookAppointment() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 {/* Name */}
                 <div>
                   <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
@@ -328,7 +328,7 @@ export default function BookAppointment() {
                 </div> */}
 
                 {/* Message */}
-                <div className="md:col-span-2 xl:col-span-2">
+                <div className="md:col-span-2 xl:col-span-3">
                   <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
                     Symptoms / Message
                   </label>
