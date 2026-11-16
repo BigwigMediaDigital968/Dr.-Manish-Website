@@ -60,10 +60,10 @@ export default function BookAppointmentContact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!form.specialty) {
-      alert("Please select a treatment.");
-      return;
-    }
+    // if (!form.specialty) {
+    //   alert("Please select a treatment.");
+    //   return;
+    // }
     // if (!form.time) {
     //   alert("Please select a preferred time.");
     //   return;
@@ -75,8 +75,8 @@ export default function BookAppointmentContact() {
       payload.append("name", form.name);
       payload.append("phone", form.phone);
       payload.append("email", form.email);
-      payload.append("service", form.specialty);
-      payload.append("date", form.date);
+      // payload.append("service", form.specialty);
+      // payload.append("date", form.date);
       // payload.append("time", form.time);
       payload.append("message", form.message);
       payload.append("source", "contact-page");
@@ -300,7 +300,7 @@ export default function BookAppointmentContact() {
                 </div>
 
                 {/* Row 2 — Service grid */}
-                <div className="hidden md:block">
+                {/* <div className="hidden md:block">
                   <label className={labelCls}>Select Treatment</label>
                   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                     {services.map((s) => {
@@ -326,13 +326,12 @@ export default function BookAppointmentContact() {
                       );
                     })}
                   </div>
-                </div>
+                </div> */}
 
-                <div className="w-full block md:hidden" ref={dropdownRef}>
+                {/* <div className="w-full block md:hidden" ref={dropdownRef}>
                   <label className={labelCls}>Select Treatment</label>
 
                   <div className="relative mt-2">
-                    {/* Dropdown Trigger */}
                     <button
                       type="button"
                       onClick={() => setIsOpen(!isOpen)}
@@ -357,7 +356,6 @@ export default function BookAppointmentContact() {
                         )}
                       </div>
 
-                      {/* Chevron Indicator */}
                       <svg
                         className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                         fill="none"
@@ -368,7 +366,6 @@ export default function BookAppointmentContact() {
                       </svg>
                     </button>
 
-                    {/* Dropdown Menu Overlay */}
                     {isOpen && (
                       <div className="absolute z-50 w-full mt-1.5 bg-white border border-[#e2e8f0] rounded-xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
                         <div className="max-h-52 overflow-y-auto p-1.5 [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]">
@@ -402,12 +399,11 @@ export default function BookAppointmentContact() {
                       </div>
                     )}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Row 3 — Date + Time slots */}
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                  {/* Date */}
-                  <div>
+                  {/* <div>
                     <label className={labelCls}>Appointment Date</label>
                     <div className="relative">
                       <svg
@@ -431,7 +427,7 @@ export default function BookAppointmentContact() {
                         className={`${inputCls} pl-10`}
                       />
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Time slots */}
                   {/* <div>

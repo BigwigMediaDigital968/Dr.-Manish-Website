@@ -268,7 +268,7 @@ export default function LeadsPage() {
                 <tr className="bg-slate-50/50 border-b border-slate-100">
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Date</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Patient</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Treatment</th>
+                  {/* <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Treatment</th> */}
                   {/* <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Appt Slot</th> */}
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Report</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-400">Status</th>
@@ -297,14 +297,14 @@ export default function LeadsPage() {
                       </td>
 
                       {/* Treatment (Specialty) */}
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      {/* <td className="px-6 py-4 whitespace-nowrap">
                         <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200/40">
                           {lead.service}
                         </span>
-                      </td>
+                      </td> */}
 
                       {/* Appointment date and slot */}
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      {/* <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-xs font-semibold text-slate-700">
                           {new Date(lead.date).toLocaleDateString(undefined, {
                             month: "short",
@@ -312,8 +312,8 @@ export default function LeadsPage() {
                             weekday: "short",
                           })}
                         </div>
-                        {/* <div className="text-[10px] text-slate-500 mt-0.5">{lead.time}</div> */}
-                      </td>
+                        <div className="text-[10px] text-slate-500 mt-0.5">{lead.time}</div>
+                      </td> */}
 
                       {/* Uploaded Report Badge */}
                       <td className="px-6 py-4 whitespace-nowrap">
@@ -438,14 +438,26 @@ export default function LeadsPage() {
             {/* Body */}
             <div className="p-6 space-y-6 max-h-[70vh] overflow-y-auto [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]">
               {/* Main Grid: Patient details & Appt Slot */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div
+                className={`grid grid-cols-1 gap-6 ${
+                  selectedLead.service || selectedLead.date
+                    ? "sm:grid-cols-2"
+                    : ""
+                }`}
+              >
                 {/* Patient Information */}
-                <div className="space-y-4">
+                <div className="space-y-4 min-w-0">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Patient Details
                   </h4>
 
-                  <div className="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                  <div
+                    className={`bg-slate-50 p-4 rounded-2xl border border-slate-100 ${
+                      selectedLead.service || selectedLead.date
+                        ? "space-y-3"
+                        : "grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4"
+                    }`}
+                  >
                     <div className="flex items-center gap-2.5">
                       <User className="w-4 h-4 text-slate-400" />
                       <div>
@@ -462,7 +474,7 @@ export default function LeadsPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center gap-2.5 sm:col-span-2">
                       <Mail className="w-4 h-4 text-slate-400" />
                       <div>
                         <div className="text-xs text-slate-400 leading-none">Email</div>
@@ -475,33 +487,36 @@ export default function LeadsPage() {
                 </div>
 
                 {/* Consultation Details */}
-                <div className="space-y-4">
+                { (selectedLead.service || selectedLead.date ) && (
+                  <div className="space-y-4">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Appointment Details
                   </h4>
 
                   <div className="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                    <div>
+                    {selectedLead.service ? (
+                      <div>
                       <div className="text-xs text-slate-400 leading-none">Selected Service</div>
-                      <div className="text-sm font-bold text-[#0c7dc2] mt-1.5 inline-block bg-sky-50 border border-sky-100 px-3 py-1 rounded-lg">
+                      <div className="text-sm font-bold text-[#0c7dc2] mt-1.5 inline-block max-w-full bg-sky-50 border border-sky-100 px-3 py-1 rounded-lg">
+
                         {selectedLead.service}
                       </div>
-                    </div>
+                    </div>) : null}
 
-                    <div className="flex items-center gap-2.5">
+                    {selectedLead.date ? (<div className="flex items-center gap-2.5">
                       <Calendar className="w-4 h-4 text-slate-400" />
                       <div>
                         <div className="text-xs text-slate-400 leading-none">Date</div>
-                        <div className="text-sm font-semibold text-slate-800 mt-1">
+                        <div className="text-sm font-semibold text-slate-800 mt-1 whitespace-nowrap">
                           {new Date(selectedLead.date).toLocaleDateString(undefined, {
-                            weekday: "long",
-                            month: "long",
+                            weekday: "short",
+                            month: "short",
                             day: "numeric",
                             year: "numeric",
                           })}
                         </div>
                       </div>
-                    </div>
+                    </div>):null}
 
                     {/* <div className="flex items-center gap-2.5">
                       <Clock className="w-4 h-4 text-slate-400" />
@@ -511,7 +526,7 @@ export default function LeadsPage() {
                       </div>
                     </div> */}
                   </div>
-                </div>
+                </div>)}
               </div>
 
               {/* Status and Submission date */}

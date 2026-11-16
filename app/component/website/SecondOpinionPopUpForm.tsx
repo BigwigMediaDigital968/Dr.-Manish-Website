@@ -73,10 +73,10 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
   const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.specialty) {
-      alert("Please select a treatment.");
-      return;
-    }
+    // if (!formData.specialty) {
+    //   alert("Please select a treatment.");
+    //   return;
+    // }
     // if (!formData.time) {
     //   alert("Please select a preferred time.");
     //   return;
@@ -87,8 +87,8 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
       payload.append("name", formData.name);
       payload.append("phone", formData.phone);
       payload.append("email", formData.email);
-      payload.append("service", formData.specialty);
-      payload.append("date", formData.date);
+      // payload.append("service", formData.specialty);
+      // payload.append("date", formData.date);
       // payload.append("time", formData.time);
       payload.append("message", formData.message);
       payload.append("source","opinion-form")
@@ -364,7 +364,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
             </div>
 
             {/* Email + Treatment Selection */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <div>
                 <label className="block text-[11px] font-medium text-slate-500 mb-1.5">
                   Email Address
@@ -383,7 +383,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
                     transition-all duration-200 focus:bg-white"
                 />
               </div>
-              <div className="relative" ref={dropdownRef}>
+              {/* <div className="relative" ref={dropdownRef}>
                 <label className="block text-[11px] font-medium text-slate-500 mb-1.5">
                   Treatment / Disease Context
                 </label>
@@ -441,11 +441,11 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Date Selection */}
-            <div>
+            {/* <div>
               <label className="block text-[11px] font-medium text-slate-500 mb-1.5">
                 Preferred Consultation Date
               </label>
@@ -463,7 +463,7 @@ export default function SecondOpinionPopUpForm({ isOpen, onClose }: PopupProps) 
                     transition-all duration-200 focus:bg-white"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Time Slots Selection */}
             {/* <div>

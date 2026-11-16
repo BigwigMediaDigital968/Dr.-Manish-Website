@@ -73,10 +73,10 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
   const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.specialty) {
-      alert("Please select a treatment.");
-      return;
-    }
+    // if (!formData.specialty) {
+    //   alert("Please select a treatment.");
+    //   return;
+    // }
     // if (!formData.time) {
     //   alert("Please select a preferred time.");
     //   return;
@@ -92,8 +92,8 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       payload.append("name", formData.name);
       payload.append("phone", formData.phone);
       payload.append("email", formData.email);
-      payload.append("service", formData.specialty);
-      payload.append("date", formData.date);
+      // payload.append("service", formData.specialty);
+      // payload.append("date", formData.date);
       // payload.append("time", formData.time);
       payload.append("message", formData.message);
       payload.append("source", source || "pop-up")
@@ -269,7 +269,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
             </div>
 
             {/* Service Selection */}
-            <div className="hidden">
+            {/* <div className="hidden">
               <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                 Select treatment
               </label>
@@ -308,9 +308,9 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <div>
                 <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                   Email
@@ -329,13 +329,12 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                     transition-all duration-200"
                 />
               </div>
-              <div className="" ref={dropdownRef}>
+              {/* <div className="" ref={dropdownRef}>
                 <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                   Select treatment
                 </label>
 
                 <div className="relative">
-                  {/* Dropdown Trigger Button */}
                   <button
                     type="button"
                     onClick={() => setIsSelectOpen(!isSelectOpen)}
@@ -358,11 +357,9 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                       )}
                     </div>
 
-                    {/* Chevron Icon */}
                     <div className={`${isSelectOpen ? "rotate-180" : ""} transition-transform duration-200`}><ChevronDown className="w-4 h-4 text-slate-400" /></div>
                   </button>
 
-                  {/* Dropdown Menu Menu Options */}
                   {isSelectOpen && (
                     <div className="absolute z-50 w-full mt-1.5 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
                       <div
@@ -398,12 +395,12 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
 
 
             {/* Date */}
-            <div>
+            {/* <div>
               <label className="block text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                 Appointment date
               </label>
@@ -422,7 +419,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
                     transition-all duration-200"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Time Slots */}
             {/* <div>

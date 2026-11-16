@@ -46,15 +46,15 @@ export async function POST(req: NextRequest) {
         const name = String(getValue("name") ?? "").trim();
         const phone = String(getValue("phone") ?? "").trim();
         const email = String(getValue("email") ?? "").trim();
-        const service = String(getValue("service") ?? "").trim();
-        const date = String(getValue("date") ?? "").trim();
+        // const service = String(getValue("service") ?? "").trim();
+        // const date = String(getValue("date") ?? "").trim();
         // const time = String(getValue("time") ?? "").trim();
         const message = String(getValue("message") ?? "").trim();
 
         const uploadedFile = isMultipart ? body.get("file") : null;
         const image = String(getValue("image") ?? "").trim();
 
-        if (!name || !phone || !service || !date) {
+        if (!name || !phone ) {
             return NextResponse.json(
                 { success: false, message: "Missing required fields" },
                 { status: 400 }
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
             ) {
                 console.error("Cloudinary credentials are not configured in .env.local.");
                 return NextResponse.json(
-                    { success: false, message: "Cloudinary is not configured. Please set credentials in .env.local" },
+                    { success: false, message: "Unable to upload the doc. Please try later." },
                     { status: 500 }
                 );
             }
@@ -94,8 +94,8 @@ export async function POST(req: NextRequest) {
             name,
             phone,
             email,
-            service,
-            date,
+            // service,
+            // date,
             // time,
             message,
             image: imageUrl,

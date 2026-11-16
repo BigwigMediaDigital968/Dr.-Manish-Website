@@ -33,8 +33,8 @@ export default function BookAppointment() {
           name: form.name,
           phone: form.phone,
           email: form.email,
-          service: form.treatment,
-          date: form.date,
+          // service: form.treatment,
+          // date: form.date,
           // time: form.time,
           message: form.message,
           image: image,
@@ -275,7 +275,7 @@ export default function BookAppointment() {
                 </div>
 
                 {/* Date */}
-                <div>
+                {/* <div>
                   <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
                     Preferred Date
                   </label>
@@ -286,7 +286,7 @@ export default function BookAppointment() {
                     onChange={(e) => setForm({ ...form, date: e.target.value })}
                     className="w-full rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 text-sm text-[#0f172a] outline-none transition-all focus:border-[#1fa8e8] focus:ring-2 focus:ring-[#1fa8e8]/15"
                   />
-                </div>
+                </div> */}
 
                 {/* Time Slot */}
                 {/* <div>
@@ -306,7 +306,7 @@ export default function BookAppointment() {
                 </div> */}
 
                 {/* Treatment */}
-                <div className="md:col-span-2 xl:col-span-2">
+                {/* <div className="md:col-span-2 xl:col-span-2">
                   <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-[#64748b]">
                     Treatment
                   </label>
@@ -325,7 +325,7 @@ export default function BookAppointment() {
                       </option>
                     ))}
                   </select>
-                </div>
+                </div> */}
 
                 {/* Message */}
                 <div className="md:col-span-2 xl:col-span-2">
