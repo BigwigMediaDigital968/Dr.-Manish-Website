@@ -16,7 +16,7 @@ import {
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Case Studies", href: "/case-studies" },
-  // { label: "Gallery", href: "#" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 const supportLinks = [
