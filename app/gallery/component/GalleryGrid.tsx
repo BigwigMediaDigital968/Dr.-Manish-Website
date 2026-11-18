@@ -155,7 +155,7 @@ export default function GalleryGrid({
         </h2>
 
         {/* Horizontal X-Overflow Category Pills for All Devices */}
-        <div className="w-full pt-3">
+        {/* <div className="w-full pt-3">
           <div
             role="tablist"
             aria-label="Gallery Categories"
@@ -189,7 +189,7 @@ export default function GalleryGrid({
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Pinterest-Style True Aspect-Ratio Masonry Grid (Full Width Adaptive) */}
