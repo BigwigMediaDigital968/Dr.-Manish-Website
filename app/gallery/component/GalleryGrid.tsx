@@ -9,6 +9,10 @@ import {
   Camera,
   Pause,
   Play,
+  MapPin,
+  Building2,
+  Mic,
+  Calendar,
 } from "lucide-react";
 
 export interface GalleryItem {
@@ -40,11 +44,21 @@ const GALLERY_ITEMS: GalleryItem[] = [
 interface GalleryGridProps {
   items?: GalleryItem[];
   autoPlayInterval?: number;
+  eventTitle?: string;
+  eventSubtitle?: string;
+  place?: string;
+  location?: string;
+  date?: string;
 }
 
 export default function GalleryGrid({
   items = GALLERY_ITEMS,
   autoPlayInterval = 4000,
+  eventTitle = "Health Talk — Protect Your Lungs",
+  eventSubtitle = "Understanding Current AQI Conditions, Air Pollution & Respiratory Health",
+  place = "Mount Abu Public School (in association with Max Hospital, Shalimar Bagh)",
+  location = "Sector 5, Rohini, New Delhi - 110085",
+  date = "17 November 2026",
 }: GalleryGridProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -141,15 +155,60 @@ export default function GalleryGrid({
   return (
     <section className="w-full max-w-full overflow-hidden py-10 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0">
-        {/* Section Header */}
+        {/* Section Header + Health Talk, Place & Location Details */}
         <div className="flex flex-col items-center text-center space-y-3 mb-7 sm:mb-10 px-1">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1fa8e8] bg-[#1fa8e8]/10 px-3.5 py-1.5 rounded-full">
             <Camera className="w-3.5 h-3.5 shrink-0" />
             <span>Visual Showcase</span>
           </span>
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-black text-[#0f172a] tracking-tight leading-snug max-w-2xl break-words">
+
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-black text-[#0f172a] tracking-tight leading-snug max-w-3xl break-words">
             Moments from Talks, Training &amp; Community Outreach
           </h2>
+
+          {/* Health Talk Event Details Card */}
+          <div className="w-full max-w-4xl mt-3 pt-4 pb-4 px-4 sm:px-6 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs text-left sm:text-center space-y-3">
+            <div className="space-y-1">
+              <div className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-[#1fa8e8]">
+                <Mic className="w-3.5 h-3.5 shrink-0" />
+                <span>{eventTitle}</span>
+              </div>
+              <p className="text-xs sm:text-sm font-semibold text-[#334155]">
+                {eventSubtitle}
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-center gap-2.5 sm:gap-5 pt-2 border-t border-slate-200/70 text-xs sm:text-sm text-[#475569]">
+              <div className="flex items-start sm:items-center gap-1.5">
+                <Building2 className="w-4 h-4 text-[#1fa8e8] shrink-0 mt-0.5 sm:mt-0" />
+                <span>
+                  <strong className="text-[#0f172a]">Place:</strong> {place}
+                </span>
+              </div>
+
+              <span className="hidden sm:inline text-slate-300">|</span>
+
+              <div className="flex items-start sm:items-center gap-1.5">
+                <MapPin className="w-4 h-4 text-[#1fa8e8] shrink-0 mt-0.5 sm:mt-0" />
+                <span>
+                  <strong className="text-[#0f172a]">Location:</strong>{" "}
+                  {location}
+                </span>
+              </div>
+
+              {date && (
+                <>
+                  <span className="hidden sm:inline text-slate-300">|</span>
+                  <div className="flex items-start sm:items-center gap-1.5">
+                    <Calendar className="w-4 h-4 text-[#1fa8e8] shrink-0 mt-0.5 sm:mt-0" />
+                    <span>
+                      <strong className="text-[#0f172a]">Date:</strong> {date}
+                    </span>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Single-Slide One-by-One Responsive Carousel */}
@@ -182,7 +241,7 @@ export default function GalleryGrid({
                 {/* Main Crisp Photo (Centered & fitted inside mobile/desktop frame) */}
                 <img
                   src={item.src}
-                  alt={item.alt || `Dr. Manish Aggarwal Gallery ${idx + 1}`}
+                  alt={item.alt || `${eventTitle} - Photo ${idx + 1}`}
                   loading={idx === 0 ? "eager" : "lazy"}
                   className="relative z-10 max-h-[82%] sm:max-h-[90%] max-w-[85%] sm:max-w-[90%] w-auto h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.02]"
                 />
@@ -325,7 +384,7 @@ export default function GalleryGrid({
           >
             <img
               src={items[lightboxIndex].src}
-              alt={`Dr. Manish Aggarwal Gallery ${lightboxIndex + 1}`}
+              alt={`${eventTitle} - Photo ${lightboxIndex + 1}`}
               className="max-h-[80vh] w-auto max-w-full object-contain rounded-2xl shadow-2xl select-none"
             />
             <span className="px-4 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-white">
